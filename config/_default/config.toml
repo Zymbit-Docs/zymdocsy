@@ -1,4 +1,4 @@
-baseurl = "nickanderegg.github.io/zymbit-docs/"
+baseurl = "https://nickanderegg.github.io/zymbit-docs/"
 disableAliases = true
 disableHugoGeneratorInject = true
 enableEmoji = true
