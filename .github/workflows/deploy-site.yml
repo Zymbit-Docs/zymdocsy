@@ -32,8 +32,16 @@ jobs:
           hugo-version: "0.79.1"
           extended: true
 
+      - uses: c-hive/gha-npm-cache@v1
+
+      - name: Install npm dependencies
+        run: npm install
+
       - name: Build static site
         run: hugo --gc --minify
+
+      - name: Set truncated SHA hash
+        run: echo "short_hash=${GITHUB_SHA::6}" >> $GITHUB_ENV
 
       - name: Deploy static site to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -42,4 +50,4 @@ jobs:
           publish_dir: ./public
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
-          full_commit_message: ${GITHUB_SHA::8} ${{ github.event.head_commit.message }}
+          full_commit_message: "[${{ env.short_hash }}] ${{ github.event.head_commit.message }}"
