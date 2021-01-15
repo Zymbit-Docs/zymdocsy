@@ -271,6 +271,14 @@ body.dark .logo-dark {
   display: inline-block !important;
 }
 
+body:not(.dark) .logo-light {
+    display: inline-block !important;
+}
+
+body:not(.dark) .logo-dark {
+    display: none !important;
+}
+
 body.dark .bg-light {
   background: darken($body-bg-dark, 1.5%) !important;
 }
