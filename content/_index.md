@@ -1,9 +1,17 @@
 ---
-title : "Zymbit + Hugo = <3"
+title : "Introduction"
 description: "Hugo is an extremely flexible static site generator that allows for creating beautiful, maintainable documentation sites."
 lead: "Hugo is an extremely flexible static site generator that allows for creating beautiful, maintainable documentation sites."
 date: 2020-10-06T08:47:36+00:00
 lastmod: 2020-10-06T08:47:36+00:00
 draft: false
 images: []
+type: "docs"
+layout: "single"
+menu:
+  docs:
+    parent: "getting-started"
+weight: 50
 ---
+
+This is the documentation site for Zymbit.
