@@ -1,7 +1,6 @@
 ---
 title : "Introduction"
-description: "Hugo is an extremely flexible static site generator that allows for creating beautiful, maintainable documentation sites."
-lead: "Hugo is an extremely flexible static site generator that allows for creating beautiful, maintainable documentation sites."
+description: "At Zymbit, we design and build specialized products that protect digital assets in vulnerable IoT and edge devices. Our embedded security modules are easy to integrate and tough to infiltrate, giving developers the freedom to innovate, securely."
 date: 2020-10-06T08:47:36+00:00
 lastmod: 2020-10-06T08:47:36+00:00
 draft: false
@@ -14,4 +13,4 @@ menu:
 weight: 50
 ---
 
-This is the documentation site for Zymbit.
+This is the documentation site for Zymbit. This is the homepage.
