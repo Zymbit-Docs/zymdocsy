@@ -8,6 +8,8 @@
 @import "bootstrap/scss/bootstrap";
 
 /** Import theme styles */
+@import "vendor/sourcesans";
+@import "vendor/montserrat";
 @import "common/fonts";
 @import "common/global";
 @import "common/dark";
@@ -24,3 +26,6 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/sidebar";
+
+/** Import custom styles for site */
+@import "vendor/layouts"
