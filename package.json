@@ -1,6 +1,7 @@
 {
-  "name": "doks",
-  "version": "0.1.5",
+  "name": "zymbit-docs",
+  "version": "0.1.0",
+  "license": "CC-BY-SA-4.0",
   "private": true,
   "hugo-bin": {
     "buildTags": "extended"
