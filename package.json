@@ -10,13 +10,11 @@
     "defaults"
   ],
   "scripts": {
-    "init": "rimraf .git && git init -b main",
     "create": "hugo new",
     "prestart": "npm run clean",
     "start": "hugo server --disableFastRender",
     "prebuild": "npm run clean",
-    "build": "hugo --gc --minify && npm run build:functions",
-    "build:functions": "netlify-lambda build assets/lambda",
+    "build": "hugo --gc --minify",
     "build:preview": "npm run build -D -F",
     "clean": "rimraf public resources functions docs",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:markdown",
@@ -42,7 +40,6 @@
     "instant.page": "^5.1",
     "lazysizes": "^5.3",
     "markdownlint-cli": "^0.26",
-    "netlify-lambda": "^2.0",
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3",
     "purgecss-whitelister": "^2.4",
