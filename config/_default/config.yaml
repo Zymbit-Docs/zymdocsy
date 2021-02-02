@@ -1,9 +1,57 @@
-# baseurl: "https://nickanderegg.github.io/zymbit-docs"
-# disableAliases: true
-# disableHugoGeneratorInject: true
-# enableEmoji: true
-# enableGitInfo: false
-# enableRobotsTXT: true
-# languageCode: "en-US"
-# paginate: 7
-# rssLimit: 10
+baseurl: "https://nickanderegg.github.io/zymbit-docs"
+disableAliases: true
+disableHugoGeneratorInject: true
+enableEmoji: true
+enableGitInfo: false
+enableRobotsTXT: true
+languageCode: "en-US"
+paginate: 7
+rssLimit: 10
+
+theme:
+  - docs-theme
+
+outputs:
+  home:
+    - HTML
+  section:
+    - HTML
+    - SITEMAP
+
+outputFormats:
+  SITEMAP:
+    mediaType: application/xml
+    baseName: sitemap
+    isHTML: false
+    isPlainText: true
+    noUgly: true
+    rel: sitemap
+
+markup:
+  goldmark:
+    extensions:
+      linkify: false
+    renderer:
+      unsafe: true
+  highlight:
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: false
+    style: monokai
+    tabWidth: 4
+
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.5
+
+taxonomies:
+  category: categories
+  tag: tags
+
+permalinks:
+  docs: "/:sections/:slug/"
