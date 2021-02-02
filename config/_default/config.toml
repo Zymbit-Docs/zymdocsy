@@ -8,7 +8,7 @@ languageCode = "en-US"
 paginate = 7
 rssLimit = 10
 
-theme = "docs-theme"
+theme = ["docs-theme"]
 
 # add redirects/headers
 [outputs]
@@ -73,8 +73,14 @@ rel  = "sitemap"
 
 [module]
   [[module.mounts]]
-    source = "assets"
+    source = "themes/docs-theme/layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "themes/docs-theme/assets"
     target = "assets"
   [[module.mounts]]
-    source = "static"
-    target = "static"
+    source = "assets"
+    target = "assets"

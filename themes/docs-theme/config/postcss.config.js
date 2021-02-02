@@ -8,14 +8,18 @@ module.exports = {
     purgecss({
       content: [
         './layouts/**/*.html',
-        './content/**/*.md',      
+        './themes/*/layouts/**/*.html',
+        './content/**/*.md',
       ],
       safelist: [
         'lazyloaded',
         ...whitelister([
           './assets/scss/components/_code.scss',
+          './themes/*/assets/scss/components/_code.scss',
           './assets/scss/components/_search.scss',
+          './themes/*/assets/scss/components/_search.scss',
           './assets/scss/common/_dark.scss',
+          './themes/*/assets/scss/common/_dark.scss',
         ]),
       ],
     }),
