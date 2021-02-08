@@ -2,22 +2,8 @@
 
 main:
   - name: Docs
-    url: /docs/getting-started/
+    url: /
     weight: 10
-
-docs:
-  - name: Proposal
-    weight: 10
-    identifier: proposal
-    url: /docs/proposal/
-  - name: Test Section
-    weight: 35
-    identifier: test
-    url: /docs/test-section/
-  - name: Getting Started
-    weight: 50
-    identifier: getting-started
-    url: /docs/getting-started/
 
 social:
   - name: GitHub

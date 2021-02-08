@@ -21,4 +21,19 @@
 		</a>
 	{{ end -}}
 	</div>
+{{ else }}
+  {{- $numberOfSubPages := (add (len .Pages) (len .Sections)) -}}
+  {{ if (ne $numberOfSubPages 0) }}
+  <div class="docs-navigation d-flex justify-content-between">
+    {{ range first 1 .CurrentSection.Pages -}}
+      <a class="ml-auto" href="{{ .Permalink }}">
+        <div class="card my-1">
+          <div class="card-body py-2">
+            {{ .Title }} &rarr;
+          </div>
+        </div>
+      </a>
+    {{ end -}}
+  </div>
+  {{ end }}
 {{ end -}}
