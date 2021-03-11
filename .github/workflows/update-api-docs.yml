@@ -74,6 +74,6 @@ jobs:
             --base main \
             --draft \
             --head api-docs-update \
-            --reviewer @Zymbit-Docs/docs-maintainers \
+            --reviewer "@Zymbit-Docs/docs-maintainers" \
             --label "api" --label "automated pr" \
             --no-maintainer-edit
