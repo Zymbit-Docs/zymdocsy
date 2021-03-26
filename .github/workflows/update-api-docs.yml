@@ -31,7 +31,7 @@ jobs:
           git rm -r ./content/GENERATED/
 
           LAST_COMMIT_MSG=$(git log -1 --grep="^docs" --format="%s" -- content/GENERATED/)
-          LAST_HASH=$(expr "$LAST_COMMIT_MSG" : '.* \([0-9a-fA-F]*\)')
+          LAST_HASH=$(expr "$LAST_COMMIT_MSG" : '.* \([0-9a-fA-F]*\)' || echo "MANUAL_UPDATE")
 
           GHA_HUGOIFY_LOG=$(cat .GHA-LOG)
           echo -e "docs: format latest zkapputils (${LAST_HASH}) docs\n" > .NEW_COMMIT_MSG
