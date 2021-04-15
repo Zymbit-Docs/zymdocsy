@@ -1,0 +1,22 @@
+
+div.class {
+  div.method {
+    .signature {
+      span.param-list {
+        &:before {
+          content: "(";
+        }
+
+        span.param {
+          &:not(:last-of-type):after {
+            content: ",";
+          }
+        }
+
+        &:after {
+          content: " )";
+        }
+      }
+    }
+  }
+}

@@ -6,3 +6,4 @@ resources
 # Utility files for CI purposes that should be ignored
 .GHA-LOG
 .NEW_COMMIT_MSG
+/.gtm/
