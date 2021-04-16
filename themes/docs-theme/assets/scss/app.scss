@@ -16,7 +16,6 @@
 @import "components/alerts";
 @import "components/buttons";
 @import "components/code";
-@import "vendor/api";
 
 /** @import "components/syntax"; */
 @import "components/comments";
@@ -32,3 +31,4 @@
 /** Import custom styles for site */
 @import "vendor/layouts";
 @import "vendor/menu";
+@import "vendor/api";
