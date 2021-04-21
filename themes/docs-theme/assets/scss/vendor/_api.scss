@@ -1,4 +1,4 @@
-div.class {
+.api-docs {
 
   h4, .h4 {
     font-size: $header-size-h4 * 0.85;
@@ -7,121 +7,164 @@ div.class {
   h5, .h5 {
     font-size: $header-size-h5 * 0.85;
   }
+}
 
-  div.method {
-    .signature {
-      font-weight: 400;
+.context > .method {
+  h3, .h3 {
+    font-size: $header-size-h4 * 0.85;
+  }
+
+  h4, .h4 {
+    font-size: $header-size-h5 * 0.85;
+  }
+
+  h5, .h5 {
+    font-size: $header-size-h6 * 0.85;
+  }
+}
+
+div.method {
+
+  .returns {
+    .return_type {
+        font-family: $font-family-monospace;
+        font-weight: 600;
+        font-size: 0.9em;
+        background-color: $gray-100;
+
+        &:after {
+          background-color: $body-bg;
+          font-weight: 400;
+          content: " — ";
+        }
+    }
+  }
+
+  .signature {
+    font-weight: 400;
+    font-family: $font-family-monospace;
+
+    // * {
+    //   font-size: $header-size-h5;
+    // }
+
+    & > .name {
+      font-weight: 700;
       font-family: $font-family-monospace;
 
-      // * {
-      //   font-size: $header-size-h5;
-      // }
-
-      & > .name {
-        font-weight: 700;
-        font-family: $font-family-monospace;
-
-        &:after {
-          content: "(";
-        }
-      }
-      span.param-list {
-        font-family: $font-family-monospace;
-        // white-space: nowrap;
-
-        span.param {
-          // font-family: $font-family-sans-serif;
-          white-space: nowrap;
-          // margin: 0;
-          // padding: 0;
-
-          // &:not(:last-of-type) {
-          //   padding-right: 0.2ex;
-          // }
-
-          & > .name {
-            font-style: italic;
-          }
-
-          *:not(.default-val):not(:last-child):after {
-            content: " =";
-          }
-
-          &:not(:last-of-type) > *:last-child:after {
-            font-family: $font-family-sans-serif;
-            font-style: normal;
-            content: ",";
-          }
-
-          span:last-child {
-            margin-right: 3px;
-          }
-
-          span.default-val {
-            font-family: $font-family-monospace;
-            font-size: 0.9em;
-
-            // &:before {
-            //   // font-size: 0.5em;
-            //   font-family: $font-family-sans-serif;
-            //   content: " = ";
-
-            //   // margin: auto 1ex auto 0.25ex;
-            // }
-          }
-        }
-
-        &:after {
-          content: ")";
-          font-weight: 700;
-        }
+      &:after {
+        content: "(";
       }
     }
 
-    .body {
-      margin-left: 1em;
-      margin-bottom: 4em;
-      .parameters, .exceptions {
+    span.param-list {
+      font-family: $font-family-monospace;
+      // white-space: nowrap;
 
-        h5, h6, .h5, .h6 {
-          font-weight: 600;
+      span.param {
+        // font-family: $font-family-sans-serif;
+        white-space: nowrap;
+        // margin: 0;
+        // padding: 0;
+
+        // &:not(:last-of-type) {
+        //   padding-right: 0.2ex;
+        // }
+
+        & > .annotation {
+          font-style: italic;
+          color: $gray-500;
         }
 
-        margin-left: 1em;
-        .param-item, .exc-item {
-          margin-bottom: 0.5em;
-          .name {
-            font-family: $font-family-monospace;
-            font-weight: 600;
-            font-size: 0.9em;
-            background-color: $gray-100;
-            padding: 3px;
-            line-height: 3;
+        & > .type {
+          // color: $gray-500;
+          font-weight: 300;
+        }
 
-            // &:after {
-            //   content: " ";
-            // }
+        & > .name {
+          font-style: italic;
+          font-weight: 700;
+        }
+
+        .name:not(:last-child):after {
+          content: " =";
+          font-weight: 400;
+        }
+
+        &:not(:last-of-type) > *:last-child:after {
+          font-family: $font-family-sans-serif;
+          font-style: normal;
+          content: ",";
+        }
+
+        span:last-child {
+          margin-right: 3px;
+        }
+
+        span.default-val {
+          font-family: $font-family-monospace;
+          font-size: 0.9em;
+
+          // &:before {
+          //   // font-size: 0.5em;
+          //   font-family: $font-family-sans-serif;
+          //   content: " = ";
+
+          //   // margin: auto 1ex auto 0.25ex;
+          // }
+        }
+      }
+
+      &:after {
+        content: ")";
+        font-weight: 700;
+      }
+    }
+  }
+
+  .body {
+    margin-left: 1em;
+    margin-bottom: 4em;
+    .parameters, .exceptions {
+
+      h5, h6, .h5, .h6 {
+        font-weight: 600;
+      }
+
+      margin-left: 1em;
+      .param-item, .exc-item {
+        margin-bottom: 0.5em;
+        .name {
+          font-family: $font-family-monospace;
+          font-weight: 600;
+          font-size: 0.9em;
+          background-color: $gray-100;
+          padding: 3px;
+          line-height: 3;
+
+          // &:after {
+          //   content: " ";
+          // }
+        }
+
+        .type {
+          font-family: $font-family-monospace;
+          font-size: 0.9em;
+
+          &:before {
+            content: " (";
           }
 
-          .type {
-            font-family: $font-family-monospace;
-            font-size: 0.9em;
-
-            &:before {
-              content: " (";
-            }
-
-            &:after {
-              content: ")";
-            }
+          &:after {
+            content: ")";
           }
+        }
 
-          .description {
-            &:before {
-              content: " — ";
-              margin-left: 5px;
-              margin-right: 5px;
-            }
+        .description {
+          &:before {
+            content: " — ";
+            margin-left: 5px;
+            margin-right: 5px;
           }
         }
       }
@@ -138,11 +181,29 @@ div.class {
       margin-left: 4ex;
       margin-top: 10px;
       margin-bottom: 10px;
+
+      .annotation {
+        display: inline-block;
+        min-width: 6ex;
+      }
     }
   }
 }
 
 body.dark {
+  .method {
+
+    .returns {
+      .return_type {
+          background-color: $gray-800 !important;
+
+          &:after {
+            background-color: $body-bg-dark;
+          }
+      }
+    }
+  }
+
   .parameters, .exceptions {
     .param-item, .exc-item {
       .name {

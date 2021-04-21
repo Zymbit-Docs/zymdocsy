@@ -10,7 +10,7 @@ weight: 0
 toc: false
 ---
 
-<div>
+<div class="api-docs">
     <h2>Introduction</h2>
     <p>Python interface module to Zymkey Application Utilities Library.</p>
     <p>This file contains a Python class which interfaces to the the Zymkey Application Utilities library. This class facilitates writing user space applications which use Zymkey to perform cryptographic operations, such as:</p>
@@ -23,7 +23,7 @@ toc: false
     </ol>
     <p>Additionally, there are methods for changing the i2c address (i2c units only), setting tap sensitivity, and controlling the LED.</p>
 </div>
-<div>
+<div class="api-docs">
     <h2>Classes</h2>
     <div class="class">
         <h3 class="signature">
@@ -188,6 +188,11 @@ toc: false
                             </li>
                         </ul>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">bytearray</span>
+                        <span class="return_value">An array of bytes returned by the random number generator.</span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -302,6 +307,14 @@ toc: false
                             </li>
                         </ul>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">bytearray or None</span>
+                        <span class="return_value">The locked data is returned as a bytearray if no destination is
+                                        specified when this method is called. Otherwise, <p>
+                                <span classes="title-reference">None</span> is returned. </p>
+                        </span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -384,6 +397,14 @@ toc: false
                             </li>
                         </ul>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">bytearray or None</span>
+                        <span class="return_value">The locked data is returned as a bytearray if no destination is
+                                        specified when this method is called. Otherwise, <p>
+                                <span classes="title-reference">None</span> is returned. </p>
+                        </span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -417,6 +438,11 @@ toc: false
                                 <span class="description">The key slot used for signing.</span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">bytearray</span>
+                        <span class="return_value">A bytearray of the signature.</span>
                     </div>
                 </div>
             </div>
@@ -460,6 +486,11 @@ toc: false
                                 <span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">bytearray</span>
+                        <span class="return_value">The signature of the SHA-256 digest passed to this method.</span>
                     </div>
                 </div>
             </div>
@@ -525,6 +556,14 @@ toc: false
                             </li>
                         </ul>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">bool</span>
+                        <span class="return_value">Returns <p>
+                                <span classes="title-reference">True</span> for a good verification or <span classes="title-reference">False</span> for a bad
+                                        verification when the <span classes="title-reference">raise_exception</span> parameters is <span classes="title-reference">False</span>. </p>
+                        </span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -588,6 +627,14 @@ toc: false
                                                 public key store is referenced.<strong>Note:</strong> This parameter is only applicable for model &gt;= HSM6. </span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">bool</span>
+                        <span class="return_value">Returns <p>
+                                <span classes="title-reference">True</span> for a good verification or <span classes="title-reference">False</span> for a bad
+                                        verification when <span classes="title-reference">raise_exception</span> is <span classes="title-reference">False</span>. </p>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -695,6 +742,11 @@ toc: false
                                 <span class="description">TODO_DESCRIPTION</span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">bytearray</span>
+                        <span class="return_value">The computed signature.</span>
                     </div>
                 </div>
             </div>
@@ -833,6 +885,11 @@ toc: false
                             </li>
                         </ul>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">bytearray</span>
+                        <span class="return_value">The public key in binary form.</span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -878,6 +935,11 @@ toc: false
                             </li>
                         </ul>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">bytearray</span>
+                        <span class="return_value">The public key in binary form.</span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -913,6 +975,11 @@ toc: false
                                 <span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">Tuple[list, int]</span>
+                        <span class="return_value">The allocation list and the maximum number of keys</span>
                     </div>
                 </div>
             </div>
@@ -956,6 +1023,11 @@ toc: false
                                 <span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">int</span>
+                        <span class="return_value">The slot allocated to the key, or less than one for failure.</span>
                     </div>
                 </div>
             </div>
@@ -1018,6 +1090,11 @@ toc: false
                                 <span class="description">This parameter indicates the EC curve type that should be associated with the new key pair.</span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">TYPE</span>
+                        <span class="return_value">the slot allocated to the key or less than one for failure.</span>
                     </div>
                 </div>
             </div>
@@ -1124,6 +1201,11 @@ toc: false
                             </li>
                         </ul>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">int</span>
+                        <span class="return_value">TODO</span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -1175,6 +1257,11 @@ toc: false
                             </li>
                         </ul>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">TYPE</span>
+                        <span class="return_value">a tuple with the slot and the BIP39 mnemonic if specified</span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -1216,6 +1303,11 @@ toc: false
                                 <span class="description">If true, the key is a hardened key.</span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">TYPE</span>
+                        <span class="return_value">the allocated slot on success</span>
                     </div>
                 </div>
             </div>
@@ -1262,6 +1354,11 @@ toc: false
                             </li>
                         </ul>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">TYPE</span>
+                        <span class="return_value">the allocated slot on success</span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -1287,6 +1384,11 @@ toc: false
                                 <span class="description">The key slot assignment.</span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">TYPE</span>
+                        <span class="return_value">the node address, wallet name and master seed key slot.</span>
                     </div>
                 </div>
             </div>
@@ -1331,6 +1433,11 @@ toc: false
                                 <span class="description">The master seed slot that the node address belongs to. Either this parameter or wallet_name must be specified or this function will fail.</span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">TYPE</span>
+                        <span class="return_value">the key slot.</span>
                     </div>
                 </div>
             </div>
@@ -1397,14 +1504,22 @@ toc: false
                             <li class="param-item">
                                 <span class="name">axis</span>
                                 <span class="type"></span>
-                                <span class="description">
-                  </span>
+                                <span class="description">The axis to configure. Valid values include:<ol>
+                                        <li>&#8217;all&#8217;: Configure all axes with the specified sensitivity value.</li>
+                                        <li>&#8217;x&#8217; or &#8220;X&#8221;: Configure only the x-axis.</li>
+                                        <li>&#8217;y&#8217; or &#8220;Y&#8221;: Configure only the y-axis.</li>
+                                        <li>&#8217;z&#8217; or &#8220;Z&#8221;: Configure only the z-axis.</li>
+                                    </ol>
+                                </span>
                             </li>
                             <li class="param-item">
                                 <span class="name">pct</span>
                                 <span class="type"></span>
-                                <span class="description">
-                  </span>
+                                <span class="description">The sensitivity expressed as percentage.<ol>
+                                        <li>0% = Shut down: Tap detection should not occur along the axis.</li>
+                                        <li>100% = Maximum sensitivity.</li>
+                                    </ol>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -1480,6 +1595,28 @@ toc: false
                         <p>Get current accelerometer data and tap info.</p>
                         <p>This function gets the most recent accelerometer data in units of g forces plus the tap direction per axis.</p>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_value">
+                            <ul>
+                                <li>
+                                    <em>An array of accelerometer readings in units of g-force.</em>
+                                </li>
+                                <li>
+                                    <em>array index 0 = x axis</em> &#8211; 1 = y axis
+                                                    2 = z axis </li>
+                                <li>
+                                    <em>A value of -1 indicates that the tap event was detected in a</em>
+                                </li>
+                                <li>
+                                    <em>negative direction for the axis, +1 for a positive direction</em>
+                                </li>
+                                <li>
+                                    <em>and 0 for stationary.</em>
+                                </li>
+                            </ul>
+                        </span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -1540,6 +1677,17 @@ toc: false
                         <p>Get current binding info.</p>
                         <p>This function gets the current binding lock state as well as the current binding state. This API is only valid for devices in the HSM family.</p>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_value">
+                            <ul>
+                                <li>
+                                    <em>binding_is_locked</em> &#8211; Binary value which expresses the current binding lock state. </li>
+                                <li>
+                                    <em>is_bound</em> &#8211; Binary value which expresses the current bind state. </li>
+                            </ul>
+                        </span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -1563,6 +1711,12 @@ toc: false
                     <div class="description">
                         <p>Set perimeter breach action.</p>
                         <p>This function specifies the action to take when a perimeter breach event occurs. The possible actions are any combination of:</p>
+                        <blockquote>
+                            <ul>
+                                <li>Notify host.</li>
+                                <li>Zymkey self-destruct.</li>
+                            </ul>
+                        </blockquote>
                     </div>
                     <div class="parameters">
                         <h5>Parameters</h5>
@@ -1709,6 +1863,11 @@ toc: false
                         <p>Get current perimeter detect info.</p>
                         <p>This function gets the timestamp of the first perimeter detect event for the given channel. The index corresponds to the channel specified in set_perimeter_event_actions.</p>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">TYPE</span>
+                        <span class="return_value">The array of timestamps for each channel for the first detected event in epoch seconds</span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -1732,6 +1891,11 @@ toc: false
                         <p>Get current CPU temperature (model &gt;= HSM6).</p>
                         <p>This function gets the current HSM CPU temperature.</p>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">TYPE</span>
+                        <span class="return_value">The CPU temperature in celsius as a float</span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -1743,6 +1907,11 @@ toc: false
                     <div class="description">
                         <p>Get RTC drift (model &gt;= HSM6).</p>
                         <p>This function gets the current RTC drift.</p>
+                    </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">TYPE</span>
+                        <span class="return_value">The RTC drift as a float</span>
                     </div>
                 </div>
             </div>
@@ -1756,6 +1925,11 @@ toc: false
                         <p>Get current battery voltage (model &gt;= HSM6).</p>
                         <p>This function gets the current battery voltage.</p>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">TYPE</span>
+                        <span class="return_value">The battery voltage as a float</span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -1767,6 +1941,11 @@ toc: false
                     <div class="description">
                         <p>Get Zymkey model number.</p>
                         <p>This function gets the Zymkey model number.</p>
+                    </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">TYPE</span>
+                        <span class="return_value">The model number as a string.</span>
                     </div>
                 </div>
             </div>
@@ -1780,6 +1959,11 @@ toc: false
                         <p>Get Zymkey firmware version.</p>
                         <p>This function gets the Zymkey firmware version.</p>
                     </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">TYPE</span>
+                        <span class="return_value">The firmware version as a string.</span>
+                    </div>
                 </div>
             </div>
             <div class="method">
@@ -1791,6 +1975,11 @@ toc: false
                     <div class="description">
                         <p>Get Zymkey serial number.</p>
                         <p>This function gets the Zymkey serial number.</p>
+                    </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">TYPE</span>
+                        <span class="return_value">The serial number as a string.</span>
                     </div>
                 </div>
             </div>
@@ -1812,6 +2001,13 @@ toc: false
                     <div class="description">
                         <p>Set battery voltage action. (model &gt;= HSM6).</p>
                         <p>This function specifies the action to take when the battery voltage falls below the threshold set by set_battery_voltage_threshold. If this function is never called, do nothing is default. There are three actions:</p>
+                        <blockquote>
+                            <ul>
+                                <li>Do nothing.</li>
+                                <li>Go to sleep until battery is replaced.</li>
+                                <li>Self-destruct.</li>
+                            </ul>
+                        </blockquote>
                         <p>With sleep and self_destruct set to False, it removes a previously set sleep or self_destruct action.</p>
                     </div>
                     <div class="parameters">
@@ -1871,6 +2067,12 @@ toc: false
                     <div class="description">
                         <p>Set HSM CPU temperature threshold action. (model &gt;= HSM6).</p>
                         <p>This function specifies the action to take when the HSM CPU temperature falls below the threshold set by set_cpu_low_temp_threshold, or rises above the threshold set by set_cpu_high_temp_threshold. There are two actions to apply:</p>
+                        <blockquote>
+                            <ul>
+                                <li>Do nothing.</li>
+                                <li>Self-destruct.</li>
+                            </ul>
+                        </blockquote>
                         <p>To remove a previously set self-destruct action, call this function with self_destruct=False.</p>
                     </div>
                     <div class="parameters">
@@ -1882,6 +2084,11 @@ toc: false
                                 <span class="description">Set the self_destruct action.</span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="returns">
+                        <h5>Returns</h5>
+                        <span class="return_type">TYPE</span>
+                        <span class="return_value">0 for success, less than 0 for failure.</span>
                     </div>
                 </div>
             </div>
