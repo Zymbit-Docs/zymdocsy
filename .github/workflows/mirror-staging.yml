@@ -11,15 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: set ssh_config
-        run: |
-          echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
-
       - name: load ssh private key
         env:
           SSH_PRIVATE_KEY: ${{ secrets.STAGING_DEPLOY_KEY }}
         run: |
           mkdir -p ${HOME}/.ssh
+
+          cp /etc/ssh/ssh_config ${HOME}/.ssh/config || true
+          echo -e "Host *\n\tStrictHostKeyChecking no" >> ${HOME}/.ssh/config
+
           echo "${SSH_PRIVATE_KEY}" > ${HOME}/.ssh/id_rsa
           chmod 600 ${HOME}/.ssh/id_rsa
 
