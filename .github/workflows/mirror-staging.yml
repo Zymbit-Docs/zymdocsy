@@ -1,0 +1,20 @@
+name: Push Repo to Staging Mirror
+
+on:
+  - push
+  - delete
+  - create
+  - workflow_dispatch
+
+jobs:
+  mirror-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repository under $GITHUB_WORKSPACE
+      - uses: wearerequired/git-mirror-action@v1
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.STAGING_DEPLOY_KEY }}
+        with:
+          source-repo: "git@github.com:Zymbit-Docs/docs.git"
+          destination-repo: "git@github.com:Zymbit-Docs/docs-staging.git"
