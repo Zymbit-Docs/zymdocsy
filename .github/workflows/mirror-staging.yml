@@ -11,10 +11,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repository under $GITHUB_WORKSPACE
-      - uses: wearerequired/git-mirror-action@v1
+      - name: set ssh_config
+        run: |
+          echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
+
+      - name: load ssh private key
         env:
           SSH_PRIVATE_KEY: ${{ secrets.STAGING_DEPLOY_KEY }}
+        run: |
+          mkdir -p ${HOME}/.ssh
+          echo "${SSH_PRIVATE_KEY}" > ${HOME}/.ssh/id_rsa
+          chmod 600 ${HOME}/.ssh/id_rsa
+
+      # Checkout repository under $GITHUB_WORKSPACE
+      - uses: actions/checkout@v2
         with:
-          source-repo: "git@github.com:Zymbit-Docs/docs.git"
-          destination-repo: "git@github.com:Zymbit-Docs/docs-staging.git"
+          submodules: true
+          fetch-depth: 0
+
+      - name: configure mirror
+        env:
+          MIRROR_REPO: ${{ secrets.MIRROR_REPO }}
+        run: |
+          cd ${GITHUB_WORKSPACE}
+
+          git remote add staging "${MIRROR_REPO}"
+          git remote remove origin
+
+          git update-ref -d refs/heads/main
+          git update-ref -d refs/heads/gh-pages
+
+          git push --prune --force --atomic staging refs/heads/*:refs/upsteream/*
