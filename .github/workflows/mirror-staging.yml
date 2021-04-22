@@ -19,6 +19,17 @@ jobs:
       }}
 
     steps:
+      - name: "[debug] evaluate expression"
+        run: |
+          IF_EXPR=${{
+            (github.event_name == 'push' ||
+            github.event_name == 'create' ||
+            github.event_name == 'workflow_dispatch') &&
+            (github.ref != 'refs/heads/main' &&
+            github.ref != 'refs/heads/gh-pages')
+          }}
+
+          echo -e "::debug::IF_EXPR: ${IF_EXPR}"
       - name: load ssh private key
         env:
           SSH_PRIVATE_KEY: ${{ secrets.STAGING_DEPLOY_KEY }}
