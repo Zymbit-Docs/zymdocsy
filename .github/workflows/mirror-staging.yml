@@ -6,28 +6,20 @@ on:
   - create
   - workflow_dispatch
 
+env:
+  IS_CREATION_EVENT: ${{ contains('push, create, workflow_dispatch', github.event_name) }}
+  IS_PRIMARY: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/gh-pages' }}
 jobs:
   mirror-branch:
     runs-on: ubuntu-latest
-    if: |
-      ${{
-        (github.event_name == 'push' ||
-        github.event_name == 'create' ||
-        github.event_name == 'workflow_dispatch') &&
-        (github.ref != 'refs/heads/main' &&
-        github.ref != 'refs/heads/gh-pages')
-      }}
+    if: ${{ env.IS_CREATION_EVENT && !env.ISPRIMARY }}
 
     steps:
       - name: "[debug] evaluate expression"
         run: |
-          IF_EXPR=${{
-            (github.event_name == 'push' ||
-            github.event_name == 'create' ||
-            github.event_name == 'workflow_dispatch') &&
-            (github.ref != 'refs/heads/main' &&
-            github.ref != 'refs/heads/gh-pages')
-          }}
+          echo -e "::debug::IS_CREATION_EVENT: ${IS_CREATION_EVENT}"
+          echo -e "::debug::IS_PRIMARY: ${IS_PRIMARY}"
+          IF_EXPR=${{ env.IS_CREATION_EVENT && !env.ISPRIMARY }}
 
           echo -e "::debug::IF_EXPR: ${IF_EXPR}"
       - name: load ssh private key
