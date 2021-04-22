@@ -9,11 +9,27 @@ on:
     branches-ignore:
       - main
       - gh-pages
+  delete:
+    branches-ignore:
+      - main
+      - gh-pages
   workflow_dispatch:
 
 jobs:
+  check-repo:
+    runs-on: ubuntu-latest
+    outputs:
+      is_staging: ${{ steps.check.outputs.is_staging }}
+
+    steps:
+      - name: check repo
+        id: check
+        run: echo "::set-output name=is_staging::${{ contains(github.repository, '-staging') }}"
+
   mirror-branch:
     runs-on: ubuntu-latest
+    needs: check-repo
+    if: ${{ github.event_name != "delete" && (! needs.check-repo.outputs.is_staging) }}
 
     steps:
       - name: load ssh private key
@@ -44,3 +60,35 @@ jobs:
           git remote remove origin
 
           git push --force staging ${{ github.ref }}
+
+  delete-branch:
+    runs-on: ubuntu-latest
+    needs: check-repo
+    if: ${{ github.event_name == "delete" && (! needs.check-repo.outputs.is_staging) }}
+
+    steps:
+      - name: load ssh private key
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.STAGING_DEPLOY_KEY }}
+        run: |
+          mkdir -p ${HOME}/.ssh
+
+          cp /etc/ssh/ssh_config ${HOME}/.ssh/config || true
+          echo -e "Host *\n\tStrictHostKeyChecking no" >> ${HOME}/.ssh/config
+
+          echo "${SSH_PRIVATE_KEY}" > ${HOME}/.ssh/id_rsa
+          chmod 600 ${HOME}/.ssh/id_rsa
+
+      # Checkout repository under $GITHUB_WORKSPACE
+      - uses: actions/checkout@v2
+
+      - name: delete mirrored branch
+        env:
+          MIRROR_REPO: ${{ secrets.MIRROR_REPO }}
+        run: |
+          cd ${GITHUB_WORKSPACE}
+
+          git remote add staging "${MIRROR_REPO}"
+          git remote remove origin
+
+          git push --force staging --delete ${{ github.ref }}
