@@ -5,6 +5,8 @@ on:
     branches-ignore:
       - main
       - gh-pages
+    paths-ignore:
+      - '.github/**'
   create:
     branches-ignore:
       - main
