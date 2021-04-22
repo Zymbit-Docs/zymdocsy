@@ -29,7 +29,7 @@ jobs:
   mirror-branch:
     runs-on: ubuntu-latest
     needs: check-repo
-    if: ${{ github.event_name != "delete" && (! needs.check-repo.outputs.is_staging) }}
+    if: ${{ github.event_name != 'delete' && needs.check-repo.outputs.is_staging == 'false' }}
 
     steps:
       - name: load ssh private key
@@ -64,7 +64,7 @@ jobs:
   delete-branch:
     runs-on: ubuntu-latest
     needs: check-repo
-    if: ${{ github.event_name == "delete" && (! needs.check-repo.outputs.is_staging) }}
+    if: ${{ github.event_name == 'delete' && needs.check-repo.outputs.is_staging == 'false' }}
 
     steps:
       - name: load ssh private key
