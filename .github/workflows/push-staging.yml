@@ -1,4 +1,4 @@
-name: Push Repo to Staging Mirror
+name: push to staging
 
 on:
   push:
