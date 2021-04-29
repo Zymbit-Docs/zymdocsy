@@ -7,5 +7,6 @@ draft: false
 images: []
 type: "docs"
 layout: "single"
-weight: -100
+weight: -50
+headless: true
 ---

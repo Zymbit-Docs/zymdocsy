@@ -1,3 +1,10 @@
+nav.docs-links {
+  ul.docs-menu-top-list:first-child {
+    padding-top: 1.125rem;
+    margin-top: 0.75rem;
+  }
+}
+
 .docs-menu-top-list {
   @extend .list-unstyled;
 }
