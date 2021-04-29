@@ -8,6 +8,8 @@
 }
 
 .anchor {
+  color: $gray-500;
+  opacity: 0.5;
   visibility: hidden;
   padding-left: 0.5rem;
 }
@@ -16,6 +18,7 @@ h1:hover a,
 h2:hover a,
 h3:hover a,
 h4:hover a {
+  color: $gray-500;
   visibility: visible;
   text-decoration: none;
 }
