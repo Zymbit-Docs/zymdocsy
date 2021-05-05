@@ -7,7 +7,7 @@
   h5,
   h6 {
     font-style: italic;
-    font-weight: normal;
+    // font-weight: normal;
   }
 }
 
@@ -27,12 +27,12 @@ h2,
 .h2 {
   font-weight: 800;
   font-size: $header-size-h2;
-  // color: $blue;
+  color: $blue;
 }
 
 h3,
 .h3 {
-  font-weight: 700;
+  font-weight: 600;
   font-size: $header-size-h3;
 }
 
@@ -44,7 +44,7 @@ h4,
 
 h5,
 .h5 {
-  font-weight: 500;
+  font-weight: 400;
   font-size: $header-size-h5;
 }
 

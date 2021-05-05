@@ -7,6 +7,40 @@
   h5, .h5 {
     font-size: $header-size-h5 * 0.85;
   }
+
+  .h2, .h3, h2, h3, .signature {
+    margin-top: 1rem !important;
+  }
+
+  .type {
+    .signature {
+      font-size: $header-size-h4 * 0.85;
+
+      .name {
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  .enum {
+    .body {
+      margin-left: 1em;
+
+      .enum-value {
+
+        display: list-item;
+        margin-left: 2em;
+
+        .enum-signature {
+          font-family: $font-family-monospace;
+
+          .annotation {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
 }
 
 .context > .method {
@@ -28,7 +62,7 @@ div.method {
   .returns {
     .return_type {
         font-family: $font-family-monospace;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 0.9em;
         background-color: $gray-100;
 
@@ -41,20 +75,31 @@ div.method {
   }
 
   .signature {
-    font-weight: 400;
+    // font-weight: 400;
     font-family: $font-family-monospace;
+    font-size: $header-size-h5;
+    margin-bottom: 1.5rem !important;
+    font-weight: 600;
 
     // * {
     //   font-size: $header-size-h5;
     // }
 
+    & > .returns {
+      font-weight: 800;
+    }
+
     & > .name {
-      font-weight: 700;
+      font-weight: 600;
       font-family: $font-family-monospace;
 
       &:after {
         content: "(";
       }
+    }
+
+    & > .name:first-child {
+      font-weight: 600;
     }
 
     span.param-list {
@@ -78,17 +123,21 @@ div.method {
 
         & > .type {
           // color: $gray-500;
-          font-weight: 300;
+          font-weight: 800;
         }
 
         & > .name {
           font-style: italic;
+          font-weight: 600;
+        }
+
+        & > .name:first-child {
           font-weight: 700;
         }
 
         .name:not(:last-child):after {
           content: " =";
-          font-weight: 400;
+          font-weight: 600;
         }
 
         &:not(:last-of-type) > *:last-child:after {
@@ -117,21 +166,36 @@ div.method {
 
       &:after {
         content: ")";
-        font-weight: 700;
+        font-weight: 400;
       }
     }
   }
 
   .body {
-    margin-left: 1em;
+    // margin-left: 1em;
     margin-bottom: 4em;
-    .parameters, .exceptions {
 
-      h5, h6, .h5, .h6 {
+    & > .returns {
+      margin-left: 2.25em;
+
+      h4, h5 {
+        margin-left: -2.25em;
+      }
+    }
+
+    & > .parameters, .exceptions {
+      // margin-left: 1em;
+    }
+
+    & > .returns, .parameters, .exceptions {
+
+      margin-top: 2em;
+
+      h4, h5, h6, .h4, .h5, .h6 {
         font-weight: 600;
+        color: $blue;
       }
 
-      margin-left: 1em;
       .param-item, .exc-item {
         margin-bottom: 0.5em;
         .name {

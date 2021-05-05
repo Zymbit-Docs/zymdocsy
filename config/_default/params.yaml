@@ -45,3 +45,6 @@ alertText: "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/d
 # Edit Page
 docsRepo: "https://github.com/zymbit-docs/docs"
 editPage: true
+
+options:
+  flexSearch: true

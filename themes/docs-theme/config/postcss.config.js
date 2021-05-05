@@ -20,6 +20,8 @@ module.exports = {
           './themes/*/assets/scss/components/_search.scss',
           './assets/scss/common/_dark.scss',
           './themes/*/assets/scss/common/_dark.scss',
+          './assets/scss/common/_fonts.scss',
+          './themes/*/assets/scss/common/_fonts.scss',
         ]),
       ],
     }),

@@ -28,6 +28,9 @@ outputFormats:
     rel: sitemap
 
 markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
   goldmark:
     extensions:
       linkify: false
@@ -56,3 +59,26 @@ taxonomies:
 
 permalinks:
   docs: "/:sections/:slug/"
+
+module:
+  mounts:
+    - source: content
+      target: content
+    - source: assets
+      target: assets
+    - source: layouts
+      target: layouts
+    - source: data
+      target: data
+    - source: static
+      target: static
+    - source: archetypes
+      target: archetypes
+    - source: node_modules/lazysizes
+      target: assets/js/vendor/lazysizes
+    - source: node_modules/instant.page
+      target: assets/js/vendor/instant.page
+    - source: node_modules/flexsearch
+      target: assets/js/vendor/flexsearch
+    - source: node_modules/clipboard
+      target: assets/js/vendor/clipboard
