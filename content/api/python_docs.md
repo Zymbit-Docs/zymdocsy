@@ -676,7 +676,7 @@ weight: 0
                 </h4>
                 <div class="body">
                     <div class="description">
-                        <p>Derive a key or a pre-master secret from an ECDH operation.</p>
+                        <p>Derive a key or a pre-master secret from an ECDH operation. (model >= HSM6).</p>
                     </div>
                     <div class="parameters">
                         <h5>Parameters</h5>
