@@ -5,17 +5,25 @@ on:
     branches-ignore:
       - main
       - gh-pages
+      - api-docs-update
     paths-ignore:
       - '.github/**'
   create:
     branches-ignore:
       - main
       - gh-pages
+      - api-docs-update
   delete:
     branches-ignore:
       - main
       - gh-pages
   workflow_dispatch:
+  workflow_run:
+    workflows: ["process api docs update"]
+    branches:
+      - api-docs-update
+    types:
+      - completed
 
 jobs:
   check-repo:
