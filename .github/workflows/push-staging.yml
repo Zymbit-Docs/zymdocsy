@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       workflow_trigger: ${{ steps.check-trigger.outputs.workflow_trigger }}
-      run_metadata: ${{ steps.check-trigger.outputs.run_metadata }}
+      head_branch: ${{ steps.check-trigger.outputs.head_branch }}
       origin_triggered: ${{ steps.check-trigger.outputs.origin_triggered }}
 
     steps:
@@ -52,14 +52,14 @@ jobs:
           TRIGGER_EVENT_NAME=$(echo "$GITHUB_CONTEXT" | jq --raw-output '.event_name')
           echo "::set-output name=workflow_trigger::$TRIGGER_EVENT_NAME"
 
-          RUN_METADATA='{}'
+          HEAD_BRANCH=''
           if [[ "${TRIGGER_EVENT_NAME}" == "workflow_run" ]]; then
-            RUN_METADATA=$(echo "$GITHUB_CONTEXT" | jq --raw-output --compact-output '.event.workflow_run | {conclusion, event, head_branch, status, name}')
+            HEAD_BRANCH=$(echo "$GITHUB_CONTEXT" | jq --raw-output --compact-output '.event.workflow_run.head_branch')
             echo "::set-output name=origin_triggered::false"
           else
             echo "::set-output name=origin_triggered::true"
           fi
-          echo "::set-output name=run_metadata::$RUN_METADATA"
+          echo "::set-output name=run_metadata::$HEAD_BRANCH"
 
 
   check-repo:
@@ -78,8 +78,8 @@ jobs:
     if: ${{ github.event_name != 'delete' && needs.check-repo.outputs.is_staging == 'false' }}
     env:
       WORKFLOW_TRIGGER: ${{ needs.get-trigger.outputs.workflow_trigger }}
-      RUN_METADATA: ${{ needs.get-trigger.outputs.run_metadata }}
       ORIGIN_TRIGGERED: ${{ needs.get-trigger.outputs.origin_triggered }}
+      ORIGIN_BRANCH: ${{ needs.get-trigger.outputs.head_branch }}
 
     steps:
       - name: load ssh private key
@@ -113,12 +113,18 @@ jobs:
           submodules: true
           path: branch
           fetch-depth: 0
-          ref: ${{ toJSON(needs.get-trigger.outputs.run_metadata).head_branch }}
+          ref: ${{ needs.get-trigger.outputs.head_branch }}
 
       - name: configure mirror
         env:
           MIRROR_REPO: ${{ secrets.MIRROR_REPO }}
         run: |
+          if [[ "${ORIGIN_TRIGGERED}" == 'false' ]]; then
+            BRANCH_REF="${ORIGIN_BRANCH}"
+          else
+            BRANCH_REF=${{ github.ref }}
+          fi
+
           git clone ${{ secrets.MIRROR_REPO }} upstream-staging
 
           cd ${GITHUB_WORKSPACE}/branch
@@ -134,7 +140,7 @@ jobs:
           git add .github
           git commit -m "add upstream workflows to branch"
 
-          git push --force staging ${{ github.ref }}
+          git push --force staging ${BRANCH_REF}
 
   delete-branch:
     runs-on: ubuntu-latest
