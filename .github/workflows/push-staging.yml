@@ -59,7 +59,7 @@ jobs:
           else
             echo "::set-output name=origin_triggered::true"
           fi
-          echo "::set-output name=run_metadata::$HEAD_BRANCH"
+          echo "::set-output name=head_branch::$HEAD_BRANCH"
 
 
   check-repo:
