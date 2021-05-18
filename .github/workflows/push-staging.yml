@@ -26,15 +26,41 @@ on:
       - completed
 
 jobs:
-  debug_output:
+  # debug_output:
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - name: Dump `github` context
+  #       env:
+  #         GITHUB_CONTEXT: ${{ toJSON(github) }}
+  #       run: |
+  #         echo "$GITHUB_CONTEXT" | jq 'del(. | .token)'
+
+  get-trigger:
     runs-on: ubuntu-latest
+    outputs:
+      workflow_trigger: ${{ steps.check-trigger.outputs.workflow_trigger }}
+      run_metadata: ${{ steps.check-trigger.outputs.run_metadata }}
+      origin_triggered: ${{ steps.check-trigger.outputs.origin_triggered }}
 
     steps:
-      - name: Dump `github` context
+      - name: Check workflow trigger
+        id: check-trigger
         env:
           GITHUB_CONTEXT: ${{ toJSON(github) }}
         run: |
-          echo "$GITHUB_CONTEXT" | jq 'del(. | .token)'
+          TRIGGER_EVENT_NAME=$(echo "$GITHUB_CONTEXT" | jq --raw-output '.event_name')
+          echo "::set-output name=workflow_trigger::$TRIGGER_EVENT_NAME"
+
+          RUN_METADATA='{}'
+          if [[ "${TRIGGER_EVENT_NAME}" == "workflow_run" ]]; then
+            RUN_METADATA=$(echo "$GITHUB_CONTEXT" | jq --raw-output --compact-output '.event.workflow_run | {conclusion, event, head_branch, status, name}')
+            echo "::set-output name=origin_triggered::false"
+          else
+            echo "::set-output name=origin_triggered::true"
+          fi
+          echo "::set-output name=run_metadata::$RUN_METADATA"
+
 
   check-repo:
     runs-on: ubuntu-latest
@@ -48,8 +74,12 @@ jobs:
 
   mirror-branch:
     runs-on: ubuntu-latest
-    needs: check-repo
+    needs: [check-repo, get-trigger]
     if: ${{ github.event_name != 'delete' && needs.check-repo.outputs.is_staging == 'false' }}
+    env:
+      WORKFLOW_TRIGGER: ${{ needs.get-trigger.outputs.workflow_trigger }}
+      RUN_METADATA: ${{ needs.get-trigger.outputs.run_metadata }}
+      ORIGIN_TRIGGERED: ${{ needs.get-trigger.outputs.origin_triggered }}
 
     steps:
       - name: load ssh private key
@@ -68,11 +98,24 @@ jobs:
           git config --global user.email github-actions[bot]@users.noreply.github.com
 
       # Checkout repository under $GITHUB_WORKSPACE
-      - uses: actions/checkout@v2
+      - name: Checkout origin branch
+        if: ${{ needs.get-trigger.outputs.origin_triggered == 'true' }}
+        uses: actions/checkout@v2
         with:
           submodules: true
           path: branch
           fetch-depth: 0
+
+      - name: Checkout workflow-triggering branch
+        if: ${{ needs.get-trigger.outputs.origin_triggered == 'false' }}
+        uses: actions/checkout@v2
+        env:
+          ORIGIN_BRANCH: ${{ toJSON(needs.get-trigger.outputs.run_metadata).head_branch }}
+        with:
+          submodules: true
+          path: branch
+          fetch-depth: 0
+          ref: $ORIGIN_BRANCH
 
       - name: configure mirror
         env:
