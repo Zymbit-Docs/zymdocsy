@@ -109,13 +109,11 @@ jobs:
       - name: Checkout workflow-triggering branch
         if: ${{ needs.get-trigger.outputs.origin_triggered == 'false' }}
         uses: actions/checkout@v2
-        env:
-          ORIGIN_BRANCH: ${{ toJSON(needs.get-trigger.outputs.run_metadata).head_branch }}
         with:
           submodules: true
           path: branch
           fetch-depth: 0
-          ref: $ORIGIN_BRANCH
+          ref: ${{ toJSON(needs.get-trigger.outputs.run_metadata).head_branch }}
 
       - name: configure mirror
         env:
