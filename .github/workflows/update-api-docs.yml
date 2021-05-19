@@ -14,6 +14,11 @@ jobs:
       has_unprocessed: ${{ steps.check.outputs.has_unprocessed }}
 
     steps:
+      - name: Checkout the branch with updated API docs
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
       - name: Check for unprocessed API docs files
         id: check
         run: |
