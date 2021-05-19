@@ -18,7 +18,7 @@ jobs:
         id: check
         run: |
           if [[ -d "./content/GENERATED/" ]]; then
-            if [[ $(find ./content/GENERATED -name 'GENERATED_*' | wc -l) -gt 0 ]]; then
+            if [[ $(find ./content/GENERATED -name '*.xml' -o -name '*.md' | wc -l) -gt 0 ]]; then
               echo "::set-output name=has_unprocessed::true"
             else
               echo "::set-output name=has_unprocessed::false"
