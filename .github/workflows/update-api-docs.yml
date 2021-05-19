@@ -27,9 +27,6 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
 
-          ls -lAh ./content/api/
-          ls -lAh ./content/GENERATED/
-
           git add ./content/api/
           git rm -r ./content/GENERATED/
 
