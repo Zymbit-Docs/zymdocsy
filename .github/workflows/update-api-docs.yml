@@ -8,8 +8,29 @@ on:
   workflow_dispatch:
 
 jobs:
-  prepare_hugo_environment:
+  check-unprocessed-docs:
     runs-on: ubuntu-20.04
+    outputs:
+      has_unprocessed: ${{ steps.check.outputs.has_unprocessed }}
+
+    steps:
+      - name: Check for unprocessed API docs files
+        id: check
+        run: |
+          if [[ -d "./content/GENERATED/" ]]; then
+            if [[ $(find ./content/GENERATED -name 'GENERATED_*' | wc -l) -gt 0 ]]; then
+              echo "::set-output name=has_unprocessed::true"
+            else
+              echo "::set-output name=has_unprocessed::false"
+            fi
+          else
+            echo "::set-output name=has_unprocessed::false"
+          fi
+
+  prepare-hugo-environment:
+    runs-on: ubuntu-20.04
+    needs: check-unprocessed-docs
+    if: ${{ needs.check-unprocessed-docs.outputs.has_unprocessed == 'true' }}
     steps:
       - name: Checkout the branch with updated API docs
         uses: actions/checkout@v2
