@@ -3,7 +3,8 @@ name: process api docs update
 on:
   push:
     branches:
-      - "api-docs-update"
+      - api-docs-update
+      - api-docs-update/**
   workflow_dispatch:
 
 jobs:
@@ -13,7 +14,6 @@ jobs:
       - name: Checkout the branch with updated API docs
         uses: actions/checkout@v2
         with:
-          ref: "api-docs-update"
           submodules: true
           fetch-depth: 0
 
@@ -23,7 +23,11 @@ jobs:
 
       - name: Prepare processed files for commit
         id: prepare-commit
+        env:
+          BRANCH: ${{ github.ref }}
         run: |
+          BRANCH=${BRANCH##refs/heads/}
+
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
 
@@ -48,9 +52,10 @@ jobs:
 
           echo -e "::debug::Git status:\n$(git status)"
 
-          git push origin api-docs-update
+          git push origin ${BRANCH}
 
       - name: Install the latest GitHub CLI
+        if: ${{ github.ref == 'refs/heads/api-docs-update' }}
         run: |
           sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
           sudo apt-add-repository https://cli.github.com/packages
@@ -58,6 +63,7 @@ jobs:
           sudo apt install -y gh
 
       - name: Create pull request
+        if: ${{ github.ref == 'refs/heads/api-docs-update' }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
           UPSTREAM_COMMIT_HASH: ${{ env.UPSTREAM_COMMIT_HASH }}
