@@ -6,7 +6,7 @@ on:
       - main
       - gh-pages
       - api-docs-update
-      - api-docs-update_**
+      - api-docs-update**
     paths-ignore:
       - '.github/**'
   create:
@@ -14,7 +14,7 @@ on:
       - main
       - gh-pages
       - api-docs-update
-      - api-docs-update_**
+      - api-docs-update**
   delete:
     branches-ignore:
       - main
@@ -24,7 +24,7 @@ on:
     workflows: ["process api docs update"]
     branches:
       - api-docs-update
-      - api-docs-update_**
+      - api-docs-update**
     types:
       - completed
 
