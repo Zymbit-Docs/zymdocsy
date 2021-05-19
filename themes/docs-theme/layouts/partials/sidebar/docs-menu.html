@@ -63,5 +63,10 @@
   {{- else -}}
     <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink | absURL }}">{{ .Name }}</a></li>
   {{- end -}}
+  {{- if ne .Params.toc false -}}
+  {{- if $active -}}
+    {{ partial "sidebar/docs-toc.html" $currentPage }}
+  {{- end -}}
+  {{- end -}}
 {{ end -}}
 {{ end }}
