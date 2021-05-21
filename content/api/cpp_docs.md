@@ -31,7 +31,7 @@ toc: true
 
 <span class="type">
 
-### <span class="markdown-h3 signature include-toc"><span class="annotation">typedef</span><span class="type">std::vector&lt;uint8_t&gt;</span><span class="name">byteArray</span></span>
+### <span class="markdown-h3 signature include-toc"><span class="annotation">typedef</span> <span class="type">std::vector&lt;uint8_t&gt;</span><span class="name">byteArray</span></span>
 
 <div class="body">
 <p>Typedef for a simple unsigned bytes container.</p>
@@ -39,7 +39,7 @@ toc: true
 </span>
 <span class="type">
 
-### <span class="markdown-h3 signature include-toc"><span class="annotation">typedef</span><span class="type">std::vector&lt;int&gt;</span><span class="name">intArray</span></span>
+### <span class="markdown-h3 signature include-toc"><span class="annotation">typedef</span> <span class="type">std::vector&lt;int&gt;</span><span class="name">intArray</span></span>
 
 <div class="body">
 <p>Typedef for a simple integer container.</p>
@@ -52,7 +52,7 @@ toc: true
 
 <div class="struct">
 
-### <span class="markdown-h3 signature include-toc"><span class="annotation">struct </span><span class="name">accelData</span></span>
+### <span class="markdown-h3 signature include-toc"><span class="annotation">struct </span> <span class="name">accelData</span></span>
 
 <div class="body">
 <div class="description">
@@ -110,7 +110,7 @@ toc: true
 
 <div class="class">
 
-### <span class="markdown-h3 signature include-toc"><span class="annotation">class</span><span class="name">zkClass</span></span>
+### <span class="markdown-h3 signature include-toc"><span class="annotation">class</span> <span class="name">zkClass</span></span>
 
 <div class="body">
 <span class="source-file">zkAppUtilsClass.h</span>
@@ -119,7 +119,7 @@ toc: true
 <h4 class="context-name">Zymkey Context</h4>
 <div class="method">
 
-#### <span><span class="name">zkClass</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param-paren paren-close"> )</span></span></span> {id="zkClass_f24db7dc" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">zkClass</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="zkClass-f24db7dc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -138,10 +138,10 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="annotation">virtual</span><span class="name">~zkClass</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param-paren paren-close"> )</span></span></span> {id="virtual_~zkClass_f24db7dc" class="markdown-h4 signature include-toc"}
+#### <span><span class="annotation">virtual</span> <span class="name">~zkClass</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="virtual-~zkClass-f24db7dc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
-<div class="description"/>
+<div class="description"></div>
 <p>Destructor: the Zymkey context is closed.</p>
 </div>
 </div>
@@ -150,7 +150,7 @@ toc: true
 <h4 class="context-name">Random Number Generation</h4>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">createRandDataFile</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">dst\_filename</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">rdata\_sz</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_createRandDataFile_e3444204" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">createRandDataFile</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">dst\_filename</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">rdata\_sz</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--createRandDataFile-e3444204" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -160,14 +160,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">dst_filename</span>
-<span class="description">
+<span class="name">dst_filename</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>A string containing the absolute path to the file where random data is written.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">rdata_sz</span>
-<span class="description">
+<span class="name">rdata_sz</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The number of random bytes to generate.</p>
 </span>
 </li>
@@ -186,7 +184,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">*</span><span class="name">getRandBytes</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">rdata\_sz</span></span><span class="param-paren paren-close"> )</span></span></span> {id="getRandBytes_745f6a2c" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">\*</span> <span class="name">getRandBytes</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">rdata\_sz</span></span> <span class="param-paren paren-close">)</span></span></span> {id="getRandBytes-745f6a2c" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -196,8 +194,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">rdata_sz</span>
-<span class="description">
+<span class="name">rdata_sz</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The number of random bytes to generate.</p>
 </span>
 </li>
@@ -225,7 +222,7 @@ toc: true
 <h4 class="context-name">Lock Data</h4>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">lockData</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation">const</span><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">src\_pt\_filename</span></span>, <span class="param"><span class="annotation">const</span><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">dst\_ct\_filename</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_lockData_ec438417" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">lockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation">const</span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">src\_pt\_filename</span></span>, <span class="param"><span class="annotation">const</span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">dst\_ct\_filename</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--lockData-ec438417" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -235,20 +232,17 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">src_pt_filename</span>
-<span class="description">
+<span class="name">src_pt_filename</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Absolute path to source plaintext file.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">dst_ct_filename</span>
-<span class="description">
+<span class="name">dst_ct_filename</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Absolute path to destination file which will contain locked data object.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">use_shared_key</span>
-<span class="description">
+<span class="name">use_shared_key</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Determines whether one-way or shared key is used for locking. Default = false.</p>
 </span>
 </li>
@@ -267,7 +261,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">lockData</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation">const</span><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">src\_pt\_data</span></span>, <span class="param"><span class="annotation">const</span><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">dst\_ct\_filename</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_lockData_942434d8" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">lockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation">const</span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">src\_pt\_data</span></span>, <span class="param"><span class="annotation">const</span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">dst\_ct\_filename</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--lockData-942434d8" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -277,20 +271,17 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">src_pt_data</span>
-<span class="description">
+<span class="name">src_pt_data</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Unsigned byte container which holds source plaintext data.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">dst_ct_filename</span>
-<span class="description">
+<span class="name">dst_ct_filename</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Absolute path to destination file which will contain locked data object.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">use_shared_key</span>
-<span class="description">
+<span class="name">use_shared_key</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Determines whether one-way or shared key is used for locking. Default = false.</p>
 </span>
 </li>
@@ -309,7 +300,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">*</span><span class="name">lockData</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation">const</span><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">src\_pt\_filename</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span><span class="param-paren paren-close"> )</span></span></span> {id="lockData_f6af014d" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">\*</span> <span class="name">lockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation">const</span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">src\_pt\_filename</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span> <span class="param-paren paren-close">)</span></span></span> {id="lockData-f6af014d" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -319,14 +310,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">src_pt_filename</span>
-<span class="description">
+<span class="name">src_pt_filename</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Absolute path to source plaintext file.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">use_shared_key</span>
-<span class="description">
+<span class="name">use_shared_key</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Determines whether one-way or shared key is used for locking. Default = false.</p>
 </span>
 </li>
@@ -351,7 +340,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">*</span><span class="name">lockData</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation">const</span><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">src\_pt\_data</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span><span class="param-paren paren-close"> )</span></span></span> {id="lockData_acb5e31b" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">\*</span> <span class="name">lockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation">const</span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">src\_pt\_data</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span> <span class="param-paren paren-close">)</span></span></span> {id="lockData-acb5e31b" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -361,14 +350,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">src_pt_data</span>
-<span class="description">
+<span class="name">src_pt_data</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Unsigned byte container which holds source plaintext data.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">use_shared_key</span>
-<span class="description">
+<span class="name">use_shared_key</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Determines whether one-way or shared key is used for locking. Default = false.</p>
 </span>
 </li>
@@ -396,7 +383,7 @@ toc: true
 <h4 class="context-name">Unlock Data</h4>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">unlockData</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation">const</span><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">src\_ct\_filename</span></span>, <span class="param"><span class="annotation">const</span><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">dst\_pt\_filename</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_unlockData_ec438417" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">unlockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation">const</span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">src\_ct\_filename</span></span>, <span class="param"><span class="annotation">const</span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">dst\_pt\_filename</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--unlockData-ec438417" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -406,20 +393,17 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">src_ct_filename</span>
-<span class="description">
+<span class="name">src_ct_filename</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Absolute path to source file which contains locked data object.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">dst_pt_filename</span>
-<span class="description">
+<span class="name">dst_pt_filename</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Absolute path to destination file which will contain unlocked plaintext data.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">use_shared_key</span>
-<span class="description">
+<span class="name">use_shared_key</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Determines whether one-way or shared key is used for locking. Default = false.</p>
 </span>
 </li>
@@ -438,7 +422,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">unlockData</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation">const</span><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">src\_ct\_data</span></span>, <span class="param"><span class="annotation">const</span><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">dst\_pt\_filename</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_unlockData_942434d8" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">unlockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation">const</span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">src\_ct\_data</span></span>, <span class="param"><span class="annotation">const</span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">dst\_pt\_filename</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--unlockData-942434d8" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -448,20 +432,17 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">src_ct_data</span>
-<span class="description">
+<span class="name">src_ct_data</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Unsigned byte container which holds locked data object.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">dst_pt_filename</span>
-<span class="description">
+<span class="name">dst_pt_filename</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Absolute path to destination file which will contain unlocked plaintext data.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">use_shared_key</span>
-<span class="description">
+<span class="name">use_shared_key</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Determines whether one-way or shared key is used for locking. Default = false.</p>
 </span>
 </li>
@@ -480,7 +461,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">*</span><span class="name">unlockData</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation">const</span><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">src\_ct\_filename</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span><span class="param-paren paren-close"> )</span></span></span> {id="unlockData_f6af014d" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">\*</span> <span class="name">unlockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation">const</span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">src\_ct\_filename</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span> <span class="param-paren paren-close">)</span></span></span> {id="unlockData-f6af014d" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -490,14 +471,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">src_ct_filename</span>
-<span class="description">
+<span class="name">src_ct_filename</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Absolute path to source file which contains locked data object.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">use_shared_key</span>
-<span class="description">
+<span class="name">use_shared_key</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Determines whether one-way or shared key is used for locking. Default = false.</p>
 </span>
 </li>
@@ -522,7 +501,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">*</span><span class="name">unlockData</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation">const</span><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">src\_ct\_bytes</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span><span class="param-paren paren-close"> )</span></span></span> {id="unlockData_acb5e31b" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">\*</span> <span class="name">unlockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation">const</span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">src\_ct\_bytes</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span> <span class="param-paren paren-close">)</span></span></span> {id="unlockData-acb5e31b" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -532,14 +511,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">src_ct_data</span>
-<span class="description">
+<span class="name">src_ct_data</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Unsigned byte container which holds locked data object.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">use_shared_key</span>
-<span class="description">
+<span class="name">use_shared_key</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Determines whether one-way or shared key is used for locking. Default = false.</p>
 </span>
 </li>
@@ -567,7 +544,7 @@ toc: true
 <h4 class="context-name">ECDSA</h4>
 <div class="method">
 
-#### <span><span class="pointer-ref">*</span><span class="name">genECDSASigFromDigest</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">digest</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">slot</span> = <span class="default-val">0</span></span><span class="param-paren paren-close"> )</span></span></span> {id="genECDSASigFromDigest_067907b4" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">\*</span> <span class="name">genECDSASigFromDigest</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">digest</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">slot</span> = <span class="default-val">0</span></span> <span class="param-paren paren-close">)</span></span></span> {id="genECDSASigFromDigest-067907b4" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -577,14 +554,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">digest</span>
-<span class="description">
+<span class="name">digest</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Currently, this should be a SHA256 digest.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">slot</span>
-<span class="description">
+<span class="name">slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The key slot to use for verification.</p>
 </span>
 </li>
@@ -609,7 +584,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">bool</span><span class="pointer-ref"/><span class="name">verifyECDSASigFromDigest</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">digest</span></span>, <span class="param"><span class="annotation"/><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">sig</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">pub\_key\_slot</span> = <span class="default-val">0</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">pub\_key\_is\_foreign</span> = <span class="default-val">false</span></span><span class="param-paren paren-close"> )</span></span></span> {id="bool_verifyECDSASigFromDigest_e0555bcd" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">bool</span> <span class="pointer-ref"></span> <span class="name">verifyECDSASigFromDigest</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">digest</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">sig</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">pub\_key\_slot</span> = <span class="default-val">0</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">pub\_key\_is\_foreign</span> = <span class="default-val">false</span></span> <span class="param-paren paren-close">)</span></span></span> {id="bool--verifyECDSASigFromDigest-e0555bcd" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -619,32 +594,27 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">digest</span>
-<span class="description">
+<span class="name">digest</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Currently, this should be a SHA256 digest.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">sig</span>
-<span class="description">
+<span class="name">sig</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The signature to verify.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">pub_key_slot</span>
-<span class="description">
+<span class="name">pub_key_slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The key slot to use for verification.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">pub_key_is_foreign</span>
-<span class="description">
+<span class="name">pub_key_is_foreign</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>If false, the normal key store is referenced. Otherwise, the foreign public key store is referenced.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">pub_key_is_foreign</span>
-<span class="description">
+<span class="name">pub_key_is_foreign</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>If false, the normal key store is referenced. Otherwise, the foreign public key store is referenced.</p>
 </span>
 </li>
@@ -663,7 +633,7 @@ toc: true
 <h4 class="context-name">ECDH and KDF</h4>
 <div class="method">
 
-#### <span><span class="pointer-ref">*</span><span class="name">doRawECDH</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">slot</span></span>, <span class="param"><span class="annotation"/><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">peer\_pubkey</span></span><span class="param-paren paren-close"> )</span></span></span> {id="doRawECDH_a77442d1" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">\*</span> <span class="name">doRawECDH</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">slot</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">peer\_pubkey</span></span> <span class="param-paren paren-close">)</span></span></span> {id="doRawECDH-a77442d1" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -674,14 +644,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">slot</span>
-<span class="description">
+<span class="name">slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The key slot to use for the local key. If this parameter is -1, the ephemeral key is used.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">peer_pubkey</span>
-<span class="description">
+<span class="name">peer_pubkey</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The peer public key.</p>
 </span>
 </li>
@@ -697,7 +665,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">*</span><span class="name">doRawECDHWithIntPeerPubkey</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">slot</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">peer\_pubkey\_slot</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">peer\_pubkey\_slot\_is\_foreign</span></span><span class="param-paren paren-close"> )</span></span></span> {id="doRawECDHWithIntPeerPubkey_d788e54d" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">\*</span> <span class="name">doRawECDHWithIntPeerPubkey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">slot</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">peer\_pubkey\_slot</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">peer\_pubkey\_slot\_is\_foreign</span></span> <span class="param-paren paren-close">)</span></span></span> {id="doRawECDHWithIntPeerPubkey-d788e54d" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -708,20 +676,17 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">slot</span>
-<span class="description">
+<span class="name">slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The key slot to use for the local key. If this parameter is -1, the ephemeral key is used.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">peer_pubkey_slot</span>
-<span class="description">
+<span class="name">peer_pubkey_slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The peer public key slot where the peer public key is to be found.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">peer_pubkey_slot_is_foreign</span>
-<span class="description">
+<span class="name">peer_pubkey_slot_is_foreign</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>If true, the peer public key slot is found in the foreign public keyring.</p>
 </span>
 </li>
@@ -737,7 +702,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">*</span><span class="name">doECDHAndKDF</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">ZK\_ECDH\_KDF\_TYPE</span><span class="pointer-ref"/><span class="name">kdf\_type</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">slot</span></span>, <span class="param"><span class="annotation"/><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">peer\_pubkey</span></span>, <span class="param"><span class="annotation"/><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">salt</span></span>, <span class="param"><span class="annotation"/><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">info</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">num\_iterations</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">derived\_key\_sz</span></span><span class="param-paren paren-close"> )</span></span></span> {id="doECDHAndKDF_f1769cf8" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">\*</span> <span class="name">doECDHAndKDF</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">ZK\_ECDH\_KDF\_TYPE</span> <span class="pointer-ref"></span><span class="name">kdf\_type</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">slot</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">peer\_pubkey</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">salt</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">info</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">num\_iterations</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">derived\_key\_sz</span></span> <span class="param-paren paren-close">)</span></span></span> {id="doECDHAndKDF-f1769cf8" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -748,38 +713,32 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">slot</span>
-<span class="description">
+<span class="name">slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The key slot to use for the local key. If this parameter is -1, the ephemeral key is used.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">peer_pubkey</span>
-<span class="description">
+<span class="name">peer_pubkey</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The peer public key.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">salt</span>
-<span class="description">
+<span class="name">salt</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The salt to use for the selected KDF.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">info</span>
-<span class="description">
+<span class="name">info</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The info field to use for RFC 5869. Ignored for PBKDF2.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">num_iterations</span>
-<span class="description">
+<span class="name">num_iterations</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Number of iterations to carry out (PBKDF only).</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">derived_key_sz</span>
-<span class="description">
+<span class="name">derived_key_sz</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The desired number of bytes to return for the KDF. For RFC 5869, this value must be less than 8160 bytes (SHA256) or 16320 (SHA512).</p>
 </span>
 </li>
@@ -795,7 +754,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">*</span><span class="name">doECDHAndKDFWithIntPeerPubkey</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">ZK\_ECDH\_KDF\_TYPE</span><span class="pointer-ref"/><span class="name">kdf\_type</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">slot</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">peer\_pubkey\_slot</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">peer\_pubkey\_slot\_is\_foreign</span></span>, <span class="param"><span class="annotation"/><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">salt</span></span>, <span class="param"><span class="annotation"/><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">info</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">num\_iterations</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">derived\_key\_sz</span></span><span class="param-paren paren-close"> )</span></span></span> {id="doECDHAndKDFWithIntPeerPubkey_c33b0f50" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">\*</span> <span class="name">doECDHAndKDFWithIntPeerPubkey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">ZK\_ECDH\_KDF\_TYPE</span> <span class="pointer-ref"></span><span class="name">kdf\_type</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">slot</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">peer\_pubkey\_slot</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">peer\_pubkey\_slot\_is\_foreign</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">salt</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">info</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">num\_iterations</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">derived\_key\_sz</span></span> <span class="param-paren paren-close">)</span></span></span> {id="doECDHAndKDFWithIntPeerPubkey-c33b0f50" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -806,44 +765,37 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">slot</span>
-<span class="description">
+<span class="name">slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The key slot to use for the local key. If this parameter is -1, the ephemeral key is used.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">peer_pubkey_slot</span>
-<span class="description">
+<span class="name">peer_pubkey_slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The peer public key slot where the peer public key is to be found.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">peer_pubkey_slot_is_foreign</span>
-<span class="description">
+<span class="name">peer_pubkey_slot_is_foreign</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>If true, the peer public key slot is found in the foreign public keyring.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">salt</span>
-<span class="description">
+<span class="name">salt</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The salt to use for the selected KDF.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">info</span>
-<span class="description">
+<span class="name">info</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The info field to use for RFC 5869. Ignored for PBKDF2.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">num_iterations</span>
-<span class="description">
+<span class="name">num_iterations</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Number of iterations to carry out (PBKDF only).</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">derived_key_sz</span>
-<span class="description">
+<span class="name">derived_key_sz</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The desired number of bytes to return for the KDF. For RFC 5869, this value must be less than 8160 bytes (SHA256) or 16320 (SHA512).</p>
 </span>
 </li>
@@ -862,7 +814,7 @@ toc: true
 <h4 class="context-name">Key Management</h4>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">saveECDSAPubKey2File</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">std::string</span><span class="pointer-ref"/><span class="name">dst\_filename</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">slot</span> = <span class="default-val">0</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_saveECDSAPubKey2File_c6fe22fc" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">saveECDSAPubKey2File</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref"></span><span class="name">dst\_filename</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">slot</span> = <span class="default-val">0</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--saveECDSAPubKey2File-c6fe22fc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -872,14 +824,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">dst_filename</span>
-<span class="description">
+<span class="name">dst_filename</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Absolute location where the PEM formatted file is to be stored.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">slot</span>
-<span class="description">
+<span class="name">slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Reserved for future use.</p>
 </span>
 </li>
@@ -898,7 +848,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">exportPubKey2File</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">std::string</span><span class="pointer-ref"/><span class="name">dst\_filename</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">pubkey\_slot</span> = <span class="default-val">0</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">slot\_is\_foreign</span> = <span class="default-val">false</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_exportPubKey2File_c75fa5f6" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">exportPubKey2File</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref"></span><span class="name">dst\_filename</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">pubkey\_slot</span> = <span class="default-val">0</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">slot\_is\_foreign</span> = <span class="default-val">false</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--exportPubKey2File-c75fa5f6" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -909,20 +859,17 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">dst_filename</span>
-<span class="description">
+<span class="name">dst_filename</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Filename where PEM formatted public key is to be stored.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">pubkey_slot</span>
-<span class="description">
+<span class="name">pubkey_slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The key slot to retrieve. Zymkey and HSM4 have slots 0, 1, and 2.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">slot_is_foreign</span>
-<span class="description">
+<span class="name">slot_is_foreign</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>If true, designates the pubkey slot to come from the foreign keystore. (model &gt;= HSM6).</p>
 </span>
 </li>
@@ -941,7 +888,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">*</span><span class="name">getECDSAPubKey</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">slot</span> = <span class="default-val">0</span></span><span class="param-paren paren-close"> )</span></span></span> {id="getECDSAPubKey_baa17d4d" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">\*</span> <span class="name">getECDSAPubKey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">slot</span> = <span class="default-val">0</span></span> <span class="param-paren paren-close">)</span></span></span> {id="getECDSAPubKey-baa17d4d" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -951,8 +898,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">slot</span>
-<span class="description">
+<span class="name">slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Reserved for future use.</p>
 </span>
 </li>
@@ -977,7 +923,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">*</span><span class="name">exportPubKey</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">pubkey\_slot</span> = <span class="default-val">0</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">slot\_is\_foreign</span> = <span class="default-val">0</span></span><span class="param-paren paren-close"> )</span></span></span> {id="exportPubKey_2bc8a24f" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">\*</span> <span class="name">exportPubKey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">pubkey\_slot</span> = <span class="default-val">0</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">slot\_is\_foreign</span> = <span class="default-val">0</span></span> <span class="param-paren paren-close">)</span></span></span> {id="exportPubKey-2bc8a24f" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -987,14 +933,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">pubkey_slot</span>
-<span class="description">
+<span class="name">pubkey_slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The key slot to retrieve. Zymkey and HSM4 have slots 0, 1, and 2.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">slot_is_foreign</span>
-<span class="description">
+<span class="name">slot_is_foreign</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>If true, designates the pubkey slot to come from the foreign keystore. (model &gt;= HSM6).</p>
 </span>
 </li>
@@ -1013,7 +957,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">*</span><span class="name">getAllocSlotsList</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">foreign\_key\_pool</span></span><span class="param-paren paren-close"> )</span></span></span> {id="getAllocSlotsList_aae7e3e9" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">\*</span> <span class="name">getAllocSlotsList</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">foreign\_key\_pool</span></span> <span class="param-paren paren-close">)</span></span></span> {id="getAllocSlotsList-aae7e3e9" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1024,8 +968,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">foreign_key_pool</span>
-<span class="description">
+<span class="name">foreign_key_pool</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) if true, retrieve allocation list of the foreign keys.</p>
 </span>
 </li>
@@ -1041,7 +984,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">int</span><span class="pointer-ref"/><span class="name">storeForeignPubKey</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">ZK\_EC\_KEY\_TYPE</span><span class="pointer-ref"/><span class="name">pk\_type</span></span>, <span class="param"><span class="annotation"/><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">pk</span></span><span class="param-paren paren-close"> )</span></span></span> {id="int_storeForeignPubKey_607a7919" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">int</span> <span class="pointer-ref"></span> <span class="name">storeForeignPubKey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">ZK\_EC\_KEY\_TYPE</span> <span class="pointer-ref"></span><span class="name">pk\_type</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">pk</span></span> <span class="param-paren paren-close">)</span></span></span> {id="int--storeForeignPubKey-607a7919" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1052,14 +995,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">pk_type</span>
-<span class="description">
+<span class="name">pk_type</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The type of the public key. {ZK_NISTP256, ZK_SECP256R1 = ZK_NISTP256, ZK_SECP256K1}.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">pk</span>
-<span class="description">
+<span class="name">pk</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Public key to store.</p>
 </span>
 </li>
@@ -1084,7 +1025,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">disablePubKeyExport</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">pubkey\_slot</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">slot\_is\_foreign</span> = <span class="default-val">false</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_disablePubKeyExport_9a723be9" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">disablePubKeyExport</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">pubkey\_slot</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">slot\_is\_foreign</span> = <span class="default-val">false</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--disablePubKeyExport-9a723be9" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1095,14 +1036,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">pubkey_slot</span>
-<span class="description">
+<span class="name">pubkey_slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The key slot to disable pubkey export on.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">slot_is_foreign</span>
-<span class="description">
+<span class="name">slot_is_foreign</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The slot parameter refers to a slot in the foreign keyring.</p>
 </span>
 </li>
@@ -1121,7 +1060,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">int</span><span class="pointer-ref"/><span class="name">genKeyPair</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">ZK\_EC\_KEY\_TYPE</span><span class="pointer-ref"/><span class="name">type</span></span><span class="param-paren paren-close"> )</span></span></span> {id="int_genKeyPair_a92324d5" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">int</span> <span class="pointer-ref"></span> <span class="name">genKeyPair</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">ZK\_EC\_KEY\_TYPE</span> <span class="pointer-ref"></span><span class="name">type</span></span> <span class="param-paren paren-close">)</span></span></span> {id="int--genKeyPair-a92324d5" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1132,8 +1071,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">type</span>
-<span class="description">
+<span class="name">type</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The type of key to generate (ZK_EC_KEY_TYPE). {ZK_NISTP256, ZK_SECP256R1 = ZK_NISTP256, ZK_SECP256K1}.</p>
 </span>
 </li>
@@ -1158,7 +1096,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">genEphemeralKeyPair</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">ZK\_EC\_KEY\_TYPE</span><span class="pointer-ref"/><span class="name">type</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_genEphemeralKeyPair_a92324d5" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">genEphemeralKeyPair</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">ZK\_EC\_KEY\_TYPE</span> <span class="pointer-ref"></span><span class="name">type</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--genEphemeralKeyPair-a92324d5" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1169,8 +1107,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">type</span>
-<span class="description">
+<span class="name">type</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The type of key to generate (ZK_EC_KEY_TYPE). {ZK_NISTP256, ZK_SECP256R1 = ZK_NISTP256, ZK_SECP256K1}.</p>
 </span>
 </li>
@@ -1189,7 +1126,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">removeKey</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">slot</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">slot\_is\_foreign</span> = <span class="default-val">false</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_removeKey_ac3a53a7" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">removeKey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">slot</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">slot\_is\_foreign</span> = <span class="default-val">false</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--removeKey-ac3a53a7" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1200,14 +1137,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">slot</span>
-<span class="description">
+<span class="name">slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The slot.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">slot_is_foreign</span>
-<span class="description">
+<span class="name">slot_is_foreign</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The slot parameter refers to a slot in the foreign keyring.</p>
 </span>
 </li>
@@ -1226,7 +1161,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">invalidateEphemeralKey</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param-paren paren-close"> )</span></span></span> {id="void_invalidateEphemeralKey_f24db7dc" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">invalidateEphemeralKey</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="void--invalidateEphemeralKey-f24db7dc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1249,7 +1184,7 @@ toc: true
 <h4 class="context-name">Digital Wallet (BIP32/39/44)</h4>
 <div class="method">
 
-#### <span><span class="returns">int</span><span class="pointer-ref"/><span class="name">genBIP32WalletMasterSeed</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">ZK\_EC\_KEY\_TYPE</span><span class="pointer-ref"/><span class="name">type</span></span>, <span class="param"><span class="annotation"/><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">wallet\_name</span></span>, <span class="param"><span class="annotation"/><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">master\_generator\_key</span></span><span class="param-paren paren-close"> )</span></span></span> {id="int_genBIP32WalletMasterSeed_05540bde" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">int</span> <span class="pointer-ref"></span> <span class="name">genBIP32WalletMasterSeed</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">ZK\_EC\_KEY\_TYPE</span> <span class="pointer-ref"></span><span class="name">type</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">wallet\_name</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">master\_generator\_key</span></span> <span class="param-paren paren-close">)</span></span></span> {id="int--genBIP32WalletMasterSeed-05540bde" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1260,20 +1195,17 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">type</span>
-<span class="description">
+<span class="name">type</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The type of key to generate (ZK_EC_KEY_TYPE). {ZK_NISTP256, ZK_SECP256R1 = ZK_NISTP256, ZK_SECP256K1}.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">wallet_name</span>
-<span class="description">
+<span class="name">wallet_name</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>An ASCII string which contains the name of the wallet.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">master_generator_key</span>
-<span class="description">
+<span class="name">master_generator_key</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The master generator key used to help generate the master seed.</p>
 </span>
 </li>
@@ -1298,7 +1230,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">std::string *</span><span class="pointer-ref"/><span class="name">genBIP39WalletMasterSeed</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">ZK\_EC\_KEY\_TYPE</span><span class="pointer-ref"/><span class="name">type</span></span>, <span class="param"><span class="annotation"/><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">wallet\_name</span></span>, <span class="param"><span class="annotation"/><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">master\_generator\_key</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref">*</span><span class="name">slot\_num</span></span><span class="param-paren paren-close"> )</span></span></span> {id="std::stringgenBIP39WalletMasterSeed_6cde3522" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">std::string \*</span> <span class="pointer-ref"></span> <span class="name">genBIP39WalletMasterSeed</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">ZK\_EC\_KEY\_TYPE</span> <span class="pointer-ref"></span><span class="name">type</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">wallet\_name</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">master\_generator\_key</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref">\*</span><span class="name">slot\_num</span></span> <span class="param-paren paren-close">)</span></span></span> {id="std::string-genBIP39WalletMasterSeed-aada1e84" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1309,26 +1241,22 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">type</span>
-<span class="description">
+<span class="name">type</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The type of key to generate (ZK_EC_KEY_TYPE). {ZK_NISTP256, ZK_SECP256R1 = ZK_NISTP256, ZK_SECP256K1}.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">wallet_name</span>
-<span class="description">
+<span class="name">wallet_name</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>An ASCII string which contains the name of the wallet.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">master_generator_key</span>
-<span class="description">
+<span class="name">master_generator_key</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The master generator key used to help generate the master seed.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">(output)</span>
-<span class="description">
+<span class="name">(output)</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Allocated slot number if successful.</p>
 </span>
 </li>
@@ -1344,7 +1272,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">int</span><span class="pointer-ref"/><span class="name">genWalletChildKey</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">parent\_key\_slot</span></span>, <span class="param"><span class="annotation"/><span class="type">uint32\_t</span><span class="pointer-ref"/><span class="name">index</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">is\_hardened</span></span><span class="param-paren paren-close"> )</span></span></span> {id="int_genWalletChildKey_7b498800" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">int</span> <span class="pointer-ref"></span> <span class="name">genWalletChildKey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">parent\_key\_slot</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">uint32\_t</span> <span class="pointer-ref"></span><span class="name">index</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">is\_hardened</span></span> <span class="param-paren paren-close">)</span></span></span> {id="int--genWalletChildKey-7b498800" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1355,20 +1283,17 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">parent_key_slot</span>
-<span class="description">
+<span class="name">parent_key_slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The parent key slot to base the child key derivation on.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">index</span>
-<span class="description">
+<span class="name">index</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The index of the child seed. This determines the node address as well as the outcome of the key generation.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">is_hardened</span>
-<span class="description">
+<span class="name">is_hardened</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>If true, a hardened key is generated.</p>
 </span>
 </li>
@@ -1393,7 +1318,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">int</span><span class="pointer-ref"/><span class="name">restoreWalletMasterSeedFromBIP39Mnemonic</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">ZK\_EC\_KEY\_TYPE</span><span class="pointer-ref"/><span class="name">type</span></span>, <span class="param"><span class="annotation"/><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">wallet\_name</span></span>, <span class="param"><span class="annotation"/><span class="type">zkAppUtils::byteArray</span><span class="pointer-ref">&amp;</span><span class="name">master\_generator\_key</span></span>, <span class="param"><span class="annotation"/><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">bip39\_mnemonic</span></span><span class="param-paren paren-close"> )</span></span></span> {id="int_restoreWalletMasterSeedFromBIP39Mnemonic_2b185ae7" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">int</span> <span class="pointer-ref"></span> <span class="name">restoreWalletMasterSeedFromBIP39Mnemonic</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">ZK\_EC\_KEY\_TYPE</span> <span class="pointer-ref"></span><span class="name">type</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">wallet\_name</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span><span class="name">master\_generator\_key</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">bip39\_mnemonic</span></span> <span class="param-paren paren-close">)</span></span></span> {id="int--restoreWalletMasterSeedFromBIP39Mnemonic-2b185ae7" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1404,26 +1329,22 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">type</span>
-<span class="description">
+<span class="name">type</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The type of key to generate (ZK_KEY_TYPE). {ZK_NISTP256, ZK_SECP256R1 = ZK_NISTP256, ZK_SECP256K1}.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">wallet_name</span>
-<span class="description">
+<span class="name">wallet_name</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>An ASCII string which contains the name of the wallet.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">master_generator_key</span>
-<span class="description">
+<span class="name">master_generator_key</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The master generator key used to help generate the master seed.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">bip39_mnemonic</span>
-<span class="description">
+<span class="name">bip39_mnemonic</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The bip39_mnemonic string, null terminated and UTF-8 NFKD encoded from the BIP39 English dictionary.</p>
 </span>
 </li>
@@ -1448,7 +1369,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">int</span><span class="pointer-ref"/><span class="name">getWalletNodeAddrFromKeySlot</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">slot</span></span>, <span class="param"><span class="annotation"/><span class="type">std::string</span><span class="pointer-ref">*</span><span class="name">out\_node\_addr</span></span>, <span class="param"><span class="annotation"/><span class="type">std::string</span><span class="pointer-ref">*</span><span class="name">out\_wallet\_name</span> = <span class="default-val">NULL</span></span><span class="param-paren paren-close"> )</span></span></span> {id="int_getWalletNodeAddrFromKeySlot_93c3b698" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">int</span> <span class="pointer-ref"></span> <span class="name">getWalletNodeAddrFromKeySlot</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">slot</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">\*</span><span class="name">out\_node\_addr</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">\*</span><span class="name">out\_wallet\_name</span> = <span class="default-val">NULL</span></span> <span class="param-paren paren-close">)</span></span></span> {id="int--getWalletNodeAddrFromKeySlot-978d739e" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1459,20 +1380,17 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">slot</span>
-<span class="description">
+<span class="name">slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) A key slot number that is part of a digital wallet.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">out_node_addr</span>
-<span class="description">
+<span class="name">out_node_addr</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(output) A pointer to a string which will contain the node address in ASCII.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">wallet_name</span>
-<span class="description">
+<span class="name">wallet_name</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(output) A pointer to a string which will contain the wallet name in ASCII. If NULL, this parameter will not be retrieved.</p>
 </span>
 </li>
@@ -1497,7 +1415,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">int</span><span class="pointer-ref"/><span class="name">getWalletKeySlotFromNodeAddr</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">node\_addr</span></span>, <span class="param"><span class="annotation"/><span class="type">std::string</span><span class="pointer-ref">&amp;</span><span class="name">wallet\_name</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">master\_seed\_slot</span></span><span class="param-paren paren-close"> )</span></span></span> {id="int_getWalletKeySlotFromNodeAddr_f97fd4f4" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">int</span> <span class="pointer-ref"></span> <span class="name">getWalletKeySlotFromNodeAddr</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">node\_addr</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span><span class="name">wallet\_name</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">master\_seed\_slot</span></span> <span class="param-paren paren-close">)</span></span></span> {id="int--getWalletKeySlotFromNodeAddr-f97fd4f4" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1508,20 +1426,17 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">node_addr</span>
-<span class="description">
+<span class="name">node_addr</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) A pointer which contains the node address in ASCII.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">wallet_name</span>
-<span class="description">
+<span class="name">wallet_name</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) A pointer which contains the wallet name in ASCII, used to identify the wallet identity. If desired, this parameter can be NULL and the master_seed_slot parameter can be specified instead.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">master_seed_slot</span>
-<span class="description">
+<span class="name">master_seed_slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) The master seed slot. Can be used to specify the wallet identity instead of the wallet name.</p>
 </span>
 </li>
@@ -1549,7 +1464,7 @@ toc: true
 <h4 class="context-name">LED Control</h4>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">ledOff</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param-paren paren-close"> )</span></span></span> {id="void_ledOff_f24db7dc" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">ledOff</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="void--ledOff-f24db7dc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1568,7 +1483,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">ledOn</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param-paren paren-close"> )</span></span></span> {id="void_ledOn_f24db7dc" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">ledOn</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="void--ledOn-f24db7dc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1587,7 +1502,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">ledFlash</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">uint32\_t</span><span class="pointer-ref"/><span class="name">on\_ms</span></span>, <span class="param"><span class="annotation"/><span class="type">uint32\_t</span><span class="pointer-ref"/><span class="name">off\_ms</span> = <span class="default-val">0</span></span>, <span class="param"><span class="annotation"/><span class="type">uint32\_t</span><span class="pointer-ref"/><span class="name">num\_flashes</span> = <span class="default-val">0</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_ledFlash_1c61cd28" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">ledFlash</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">uint32\_t</span> <span class="pointer-ref"></span><span class="name">on\_ms</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">uint32\_t</span> <span class="pointer-ref"></span><span class="name">off\_ms</span> = <span class="default-val">0</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">uint32\_t</span> <span class="pointer-ref"></span><span class="name">num\_flashes</span> = <span class="default-val">0</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--ledFlash-1c61cd28" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1597,20 +1512,17 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">on_ms</span>
-<span class="description">
+<span class="name">on_ms</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Number of milliseconds that the LED will be on during a flash cycle.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">off_ms</span>
-<span class="description">
+<span class="name">off_ms</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Number of milliseconds that the LED will be off during a flash cycle.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">num_flashes</span>
-<span class="description">
+<span class="name">num_flashes</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Number of flash cycles to execute. 0 = infinite.</p>
 </span>
 </li>
@@ -1632,7 +1544,7 @@ toc: true
 <h4 class="context-name">Administrative</h4>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">setI2CAddr</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">addr</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_setI2CAddr_b2a46129" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">setI2CAddr</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">addr</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--setI2CAddr-b2a46129" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1642,8 +1554,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">addr</span>
-<span class="description">
+<span class="name">addr</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The i2c address to set. Upon successful change, the Zymkey will reset itself. However, if the address is the same as the current setting, the Zymkey will not reset. Valid address ranges are 0x30 - 0x37 and 0x60 - 0x67.</p>
 </span>
 </li>
@@ -1665,7 +1576,7 @@ toc: true
 <h4 class="context-name">Time</h4>
 <div class="method">
 
-#### <span><span class="returns">uint32\_t</span><span class="pointer-ref"/><span class="name">getTime</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref"/><span class="name">precise\_time</span> = <span class="default-val">false</span></span><span class="param-paren paren-close"> )</span></span></span> {id="uint32t_getTime_64df3f4b" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">uint32\_t</span> <span class="pointer-ref"></span> <span class="name">getTime</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span><span class="name">precise\_time</span> = <span class="default-val">false</span></span> <span class="param-paren paren-close">)</span></span></span> {id="uint32t--getTime-64df3f4b" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1676,8 +1587,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">precise_time</span>
-<span class="description">
+<span class="name">precise_time</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) If true, this API returns the time after the next second falls. This means that the caller could be blocked up to one second. If false, the API returns immediately with the current time reading.</p>
 </span>
 </li>
@@ -1705,7 +1615,7 @@ toc: true
 <h4 class="context-name">Accelerometer</h4>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">setTapSensitivity</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">float</span><span class="pointer-ref"/><span class="name">pct</span></span>, <span class="param"><span class="annotation"/><span class="type">ZK\_ACCEL\_AXIS\_TYPE</span><span class="pointer-ref"/><span class="name">axis</span> = <span class="default-val">ZK\_ACCEL\_AXIS\_ALL</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_setTapSensitivity_d4990882" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">setTapSensitivity</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">float</span> <span class="pointer-ref"></span><span class="name">pct</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">ZK\_ACCEL\_AXIS\_TYPE</span> <span class="pointer-ref"></span><span class="name">axis</span> = <span class="default-val">ZK\_ACCEL\_AXIS\_ALL</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--setTapSensitivity-d4990882" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1715,14 +1625,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">pct</span>
-<span class="description">
+<span class="name">pct</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>Sensitivity expressed in percentage. 0% = off, 100% = maximum.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">axis</span>
-<span class="description">
+<span class="name">axis</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>X, Y, Z or all (default).</p>
 </span>
 </li>
@@ -1741,7 +1649,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">waitForTap</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">uint32\_t</span><span class="pointer-ref"/><span class="name">timeout\_ms</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_waitForTap_31151db6" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">waitForTap</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">uint32\_t</span> <span class="pointer-ref"></span><span class="name">timeout\_ms</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--waitForTap-31151db6" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1752,8 +1660,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">timeout_ms</span>
-<span class="description">
+<span class="name">timeout_ms</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) The maximum amount of time in milliseconds to wait for a tap event to arrive.</p>
 </span>
 </li>
@@ -1772,7 +1679,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">getAccelerometerData</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">zkAppUtils::accelData</span><span class="pointer-ref">&amp;</span><span class="name">accel\_data</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_getAccelerometerData_76968e99" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">getAccelerometerData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::accelData</span> <span class="pointer-ref">&amp;</span><span class="name">accel\_data</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--getAccelerometerData-76968e99" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1783,8 +1690,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">accel_data</span>
-<span class="description">
+<span class="name">accel_data</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(output) The current accelerometer data and tap information.</p>
 </span>
 </li>
@@ -1806,7 +1712,7 @@ toc: true
 <h4 class="context-name">Binding Management</h4>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">lockBinding</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param-paren paren-close"> )</span></span></span> {id="void_lockBinding_f24db7dc" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">lockBinding</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="void--lockBinding-f24db7dc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1826,7 +1732,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">getCurrentBindingInfo</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref">&amp;</span><span class="name">binding\_is\_locked</span></span>, <span class="param"><span class="annotation"/><span class="type">bool</span><span class="pointer-ref">&amp;</span><span class="name">is\_bound</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_getCurrentBindingInfo_223d6c78" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">getCurrentBindingInfo</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref">&amp;</span><span class="name">binding\_is\_locked</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref">&amp;</span><span class="name">is\_bound</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--getCurrentBindingInfo-223d6c78" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1837,8 +1743,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">binding_is_locked</span>
-<span class="description">
+<span class="name">binding_is_locked</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(output) Binary value which expresses the current binding lock state. is_bound (output) Binary value which expresses the current bind state.</p>
 </span>
 </li>
@@ -1860,7 +1765,7 @@ toc: true
 <h4 class="context-name">Perimeter Detect</h4>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">setPerimeterEventAction</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">channel</span></span>, <span class="param"><span class="annotation"/><span class="type">uint32\_t</span><span class="pointer-ref"/><span class="name">action\_flags</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_setPerimeterEventAction_8cb52c8f" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">setPerimeterEventAction</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">channel</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">uint32\_t</span> <span class="pointer-ref"></span><span class="name">action\_flags</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--setPerimeterEventAction-8cb52c8f" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1875,14 +1780,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">channel</span>
-<span class="description">
+<span class="name">channel</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) The channel (0 or 1) that the action flags will be applied to.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">action_flags</span>
-<span class="description">
+<span class="name">action_flags</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) The actions to apply to the perimeter event channel:</p>
 <ul>
 <li>Notify (ZK_PERIMETER_EVENT_ACTION_NOTIFY).</li>
@@ -1905,7 +1808,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">setDigitalPerimeterDetectLPPeriod</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">lp\_period</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_setDigitalPerimeterDetectLPPeriod_42acacc4" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">setDigitalPerimeterDetectLPPeriod</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">lp\_period</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--setDigitalPerimeterDetectLPPeriod-42acacc4" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1916,8 +1819,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">lp_period</span>
-<span class="description">
+<span class="name">lp_period</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) low power period in microseconds.</p>
 </span>
 </li>
@@ -1942,7 +1844,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">setDigitalPerimeterDetectLPMaxBits</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">max\_num\_bits</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_setDigitalPerimeterDetectLPMaxBits_4e385e59" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">setDigitalPerimeterDetectLPMaxBits</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">max\_num\_bits</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--setDigitalPerimeterDetectLPMaxBits-4e385e59" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1953,8 +1855,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">max_num_bits</span>
-<span class="description">
+<span class="name">max_num_bits</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) max number of bits.</p>
 </span>
 </li>
@@ -1979,7 +1880,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">setDigitalPerimeterDetectDelays</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">min\_delay\_ns</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref"/><span class="name">max\_delay\_ns</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_setDigitalPerimeterDetectDelays_16d29912" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">setDigitalPerimeterDetectDelays</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">min\_delay\_ns</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span><span class="name">max\_delay\_ns</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--setDigitalPerimeterDetectDelays-16d29912" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1990,14 +1891,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">min_delay_ns</span>
-<span class="description">
+<span class="name">min_delay_ns</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) minimum delay in nanoseconds.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">max_delay_ns</span>
-<span class="description">
+<span class="name">max_delay_ns</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) maximum delay in nanoseconds.</p>
 </span>
 </li>
@@ -2022,7 +1921,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">waitForPerimeterEvent</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">uint32\_t</span><span class="pointer-ref"/><span class="name">timeout\_ms</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_waitForPerimeterEvent_31151db6" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">waitForPerimeterEvent</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">uint32\_t</span> <span class="pointer-ref"></span><span class="name">timeout\_ms</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--waitForPerimeterEvent-31151db6" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -2033,8 +1932,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">timeout_ms</span>
-<span class="description">
+<span class="name">timeout_ms</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) The maximum amount of time in milliseconds to wait for a perimeter event to arrive.</p>
 </span>
 </li>
@@ -2053,7 +1951,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">getPerimeterDetectInfo</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">uint32\_t</span><span class="pointer-ref">**</span><span class="name">timestamp\_sec</span></span>, <span class="param"><span class="annotation"/><span class="type">int</span><span class="pointer-ref">&amp;</span><span class="name">num\_timestamps</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_getPerimeterDetectInfo_4e0780c9" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">getPerimeterDetectInfo</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">uint32\_t</span> <span class="pointer-ref">\*\*</span><span class="name">timestamp\_sec</span></span>, <span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref">&amp;</span><span class="name">num\_timestamps</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--getPerimeterDetectInfo-6a2843a7" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -2064,14 +1962,12 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">timestamps_sec</span>
-<span class="description">
+<span class="name">timestamps_sec</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(output) The timestamps for when any events occurred. The index in this array corresponds to the channel number used by zkSetPerimeterEventAction. A 0 value means no breach has occurred on this channel. This array is allocated by this routine and so it must be freed by the caller.</p>
 </span>
 </li>
 <li class="param-item">
-<span class="name">num_timestamps</span>
-<span class="description">
+<span class="name">num_timestamps</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(output) The number of timestamps in the returned array.</p>
 </span>
 </li>
@@ -2090,7 +1986,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">clearPerimeterDetectEvents</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param-paren paren-close"> )</span></span></span> {id="void_clearPerimeterDetectEvents_f24db7dc" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">clearPerimeterDetectEvents</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="void--clearPerimeterDetectEvents-f24db7dc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -2110,7 +2006,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">std::string *</span><span class="pointer-ref"/><span class="name">getModelNumberString</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param-paren paren-close"> )</span></span></span> {id="std::stringgetModelNumberString_f24db7dc" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">std::string \*</span> <span class="pointer-ref"></span> <span class="name">getModelNumberString</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="std::string-getModelNumberString-f24db7dc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -2136,7 +2032,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">std::string *</span><span class="pointer-ref"/><span class="name">getFirmwareVersionString</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param-paren paren-close"> )</span></span></span> {id="std::stringgetFirmwareVersionString_f24db7dc" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">std::string \*</span> <span class="pointer-ref"></span> <span class="name">getFirmwareVersionString</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="std::string-getFirmwareVersionString-f24db7dc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -2162,7 +2058,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">std::string *</span><span class="pointer-ref"/><span class="name">getSerialNumberString</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param-paren paren-close"> )</span></span></span> {id="std::stringgetSerialNumberString_f24db7dc" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">std::string \*</span> <span class="pointer-ref"></span> <span class="name">getSerialNumberString</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="std::string-getSerialNumberString-f24db7dc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -2191,7 +2087,7 @@ toc: true
 <h4 class="context-name">Module Info</h4>
 <div class="method">
 
-#### <span><span class="returns">float</span><span class="pointer-ref"/><span class="name">getCPUTemp</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param-paren paren-close"> )</span></span></span> {id="float_getCPUTemp_f24db7dc" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">float</span> <span class="pointer-ref"></span> <span class="name">getCPUTemp</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="float--getCPUTemp-f24db7dc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -2217,7 +2113,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">float</span><span class="pointer-ref"/><span class="name">getRTCDrift</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param-paren paren-close"> )</span></span></span> {id="float_getRTCDrift_f24db7dc" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">float</span> <span class="pointer-ref"></span> <span class="name">getRTCDrift</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="float--getRTCDrift-f24db7dc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -2243,7 +2139,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">float</span><span class="pointer-ref"/><span class="name">getBatteryVoltage</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param-paren paren-close"> )</span></span></span> {id="float_getBatteryVoltage_f24db7dc" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">float</span> <span class="pointer-ref"></span> <span class="name">getBatteryVoltage</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="float--getBatteryVoltage-f24db7dc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -2272,7 +2168,7 @@ toc: true
 <h4 class="context-name">Battery Voltage Monitor</h4>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">setBatteryVoltageAction</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">ZK\_THRESHOLD\_ACTION\_TYPE</span><span class="pointer-ref"/><span class="name">action</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_setBatteryVoltageAction_bc64806b" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">setBatteryVoltageAction</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">ZK\_THRESHOLD\_ACTION\_TYPE</span> <span class="pointer-ref"></span><span class="name">action</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--setBatteryVoltageAction-bc64806b" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -2288,8 +2184,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">action</span>
-<span class="description">
+<span class="name">action</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) The action to apply, specify one of the ZK_THRESHOLD_ACTION_TYPE:</p>
 <ul>
 <li>Do nothing (ZK_ACTION_NONE).</li>
@@ -2313,7 +2208,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">setBatteryVoltageThreshold</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">float</span><span class="pointer-ref"/><span class="name">threshold</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_setBatteryVoltageThreshold_c78fde9a" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">setBatteryVoltageThreshold</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">float</span> <span class="pointer-ref"></span><span class="name">threshold</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--setBatteryVoltageThreshold-c78fde9a" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -2324,8 +2219,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">threshold</span>
-<span class="description">
+<span class="name">threshold</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) The threshold in Volts.</p>
 </span>
 </li>
@@ -2347,7 +2241,7 @@ toc: true
 <h4 class="context-name">CPU Temperature Monitor</h4>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">setCPUTempAction</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">ZK\_THRESHOLD\_ACTION\_TYPE</span><span class="pointer-ref"/><span class="name">action</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_setCPUTempAction_bc64806b" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">setCPUTempAction</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">ZK\_THRESHOLD\_ACTION\_TYPE</span> <span class="pointer-ref"></span><span class="name">action</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--setCPUTempAction-bc64806b" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -2362,8 +2256,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">action</span>
-<span class="description">
+<span class="name">action</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) The action to apply, used it&#8217;s named constant from ZK_THRESHOLD_ACTION_TYPE:</p>
 <ul>
 <li>Do nothing (ZK_ACTION_NONE).</li>
@@ -2386,7 +2279,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">setCPULowTempThreshold</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">float</span><span class="pointer-ref"/><span class="name">threshold</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_setCPULowTempThreshold_c78fde9a" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">setCPULowTempThreshold</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">float</span> <span class="pointer-ref"></span><span class="name">threshold</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--setCPULowTempThreshold-c78fde9a" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -2397,8 +2290,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">threshold</span>
-<span class="description">
+<span class="name">threshold</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) The threshold in celsius.</p>
 </span>
 </li>
@@ -2417,7 +2309,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">void</span><span class="pointer-ref"/><span class="name">setCPUHighTempThreshold</span><span class="param-list"><span class="param-paren paren-open">( </span><span class="param"><span class="annotation"/><span class="type">float</span><span class="pointer-ref"/><span class="name">threshold</span></span><span class="param-paren paren-close"> )</span></span></span> {id="void_setCPUHighTempThreshold_c78fde9a" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">void</span> <span class="pointer-ref"></span> <span class="name">setCPUHighTempThreshold</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="annotation"></span>  <span class="type">float</span> <span class="pointer-ref"></span><span class="name">threshold</span></span> <span class="param-paren paren-close">)</span></span></span> {id="void--setCPUHighTempThreshold-c78fde9a" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -2428,8 +2320,7 @@ toc: true
 <h5>Parameters</h5>
 <ul>
 <li class="param-item">
-<span class="name">threshold</span>
-<span class="description">
+<span class="name">threshold</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(input) The threshold in celsius.</p>
 </span>
 </li>

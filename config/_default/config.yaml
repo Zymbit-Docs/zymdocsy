@@ -10,7 +10,7 @@ rssLimit: 10
 
 theme:
   - docsy
-  - docs-theme
+  # - docs-theme
 
 outputs:
   home:
