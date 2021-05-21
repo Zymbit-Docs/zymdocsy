@@ -5,13 +5,35 @@ $h4-api-size: $font-size-base * 1.35 !default;
 $h5-api-size: $font-size-base * 1.15 !default;
 $h6-api-size: $font-size-base !default;
 
-#TableOfContents {
-  .param-list {
-    display: none;
+#InlineTOC {
+
+  padding-left: 6px;
+
+  nav#TableOfContents {
+    .param-list {
+      display: none;
+    }
+
+    a {
+      white-space: nowrap;
+    }
+
+    ul {
+      padding-left: 12px;
+    }
   }
 }
 
 .api-docs {
+
+  .param-paren {
+    color: $gray-900;
+  }
+
+  .param-desc-divider {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 
   h4, .h4 {
     font-size: $h4-api-size;
@@ -88,15 +110,10 @@ div.method {
   }
 
   .signature {
-    // font-weight: 400;
     font-family: $font-family-monospace;
     font-size: $h5-api-size;
     margin-bottom: 1.5rem !important;
     font-weight: 600;
-
-    // * {
-    //   font-size: $header-size-h5;
-    // }
 
     & > .returns {
       font-weight: 800;
@@ -105,10 +122,6 @@ div.method {
     & > .name {
       font-weight: 600;
       font-family: $font-family-monospace;
-
-      // &:after {
-      //   content: "(";
-      // }
     }
 
     & > .name:first-child {
@@ -117,17 +130,9 @@ div.method {
 
     span.param-list {
       font-family: $font-family-monospace;
-      // white-space: nowrap;
 
       span.param {
-        // font-family: $font-family-sans-serif;
         white-space: nowrap;
-        // margin: 0;
-        // padding: 0;
-
-        // &:not(:last-of-type) {
-        //   padding-right: 0.2ex;
-        // }
 
         & > .annotation {
           font-style: italic;
@@ -148,17 +153,6 @@ div.method {
           font-weight: 700;
         }
 
-        .name:not(:last-child):after {
-          // content: " =";
-          font-weight: 600;
-        }
-
-        &:not(:last-of-type) > *:last-child:after {
-          font-family: $font-family-sans-serif;
-          font-style: normal;
-          // content: ",";
-        }
-
         span:last-child {
           margin-right: 3px;
         }
@@ -166,26 +160,12 @@ div.method {
         span.default-val {
           font-family: $font-family-monospace;
           font-size: 0.9em;
-
-          // &:before {
-          //   // font-size: 0.5em;
-          //   font-family: $font-family-sans-serif;
-          //   content: " = ";
-
-          //   // margin: auto 1ex auto 0.25ex;
-          // }
         }
-      }
-
-      &:after {
-        // content: ")";
-        font-weight: 400;
       }
     }
   }
 
   .body {
-    // margin-left: 1em;
     margin-bottom: 4em;
 
     & > .returns {
@@ -194,10 +174,6 @@ div.method {
       h4, h5 {
         margin-left: -2.25em;
       }
-    }
-
-    & > .parameters, .exceptions {
-      // margin-left: 1em;
     }
 
     & > .returns, .parameters, .exceptions {
@@ -218,31 +194,11 @@ div.method {
           background-color: $gray-100;
           padding: 3px;
           line-height: 3;
-
-          // &:after {
-          //   content: " ";
-          // }
         }
 
         .type {
           font-family: $font-family-monospace;
           font-size: 0.9em;
-
-          // &:before {
-          //   content: " (";
-          // }
-
-          // &:after {
-          //   content: ")";
-          // }
-        }
-
-        .description {
-          &:before {
-            content: " — ";
-            margin-left: 5px;
-            margin-right: 5px;
-          }
         }
       }
     }
@@ -266,26 +222,3 @@ div.method {
     }
   }
 }
-
-// body.dark {
-//   .method {
-
-//     .returns {
-//       .return_type {
-//           background-color: $gray-800 !important;
-
-//           &:after {
-//             background-color: $body-bg-dark;
-//           }
-//       }
-//     }
-//   }
-
-//   .parameters, .exceptions {
-//     .param-item, .exc-item {
-//       .name {
-//         background-color: $gray-800 !important;
-//       }
-//     }
-//   }
-// }
