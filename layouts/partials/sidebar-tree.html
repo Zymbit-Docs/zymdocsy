@@ -59,7 +59,7 @@
   {{- end }}
     {{- if and (default false $p.Params.api_docs) ($active) -}}
       {{ $ulNr := add $ulNr 1 }}
-      <ul class="pr-md-3 ul-{{ $ulNr }}">
+      <ul class="pr-md-3 ul-{{ $ulNr }}" id="InlineTOC">
         {{ $p.TableOfContents }}
       </ul>
     {{- end -}}
