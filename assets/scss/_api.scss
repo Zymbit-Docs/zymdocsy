@@ -39,6 +39,20 @@ $h6-api-size: $font-size-base !default;
     margin-right: 5px;
   }
 
+  .method {
+    .signature {
+      padding: 1rem;
+      margin-top: 8rem !important;
+      border-left: 10px solid $gray-300;
+    }
+  }
+
+  .signature::before {
+    margin: auto;
+    background-color: none;
+    height: 0;
+  }
+
   h4, .h4 {
     font-size: $h4-api-size;
   }
@@ -118,6 +132,7 @@ div.method {
     font-size: $h5-api-size;
     margin-bottom: 1.5rem !important;
     font-weight: 600;
+    background-color: $gray-100;
 
     & > .returns {
       font-weight: 800;
