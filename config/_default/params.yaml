@@ -28,6 +28,8 @@ siteLinksSearchBox: false
 ## Chrome Browser
 themeColor: "#fff"
 
+navbar_logo: true
+
 # Images
 quality: 85
 bgColor: "#fff"
