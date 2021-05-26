@@ -75,11 +75,3 @@ module:
       target: static
     - source: archetypes
       target: archetypes
-    - source: node_modules/lazysizes
-      target: assets/js/vendor/lazysizes
-    - source: node_modules/instant.page
-      target: assets/js/vendor/instant.page
-    - source: node_modules/flexsearch
-      target: assets/js/vendor/flexsearch
-    - source: node_modules/clipboard
-      target: assets/js/vendor/clipboard

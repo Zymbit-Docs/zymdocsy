@@ -95,7 +95,7 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
@@ -103,7 +103,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">led\_flash</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">on\_ms</span></span>, <span class="param"><span class="name">off\_ms</span> = <span class="default-val">0</span></span>, <span class="param"><span class="name">num\_flashes</span> = <span class="default-val">0</span></span> <span class="param-paren paren-close">)</span></span></span> {id="ledflash-81aed609" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">led\_flash</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">on\_ms</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">off\_ms</span> = <span class="default-val">0</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">num\_flashes</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="ledflash-81aed609" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -134,7 +134,7 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
@@ -142,7 +142,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">get\_random</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">num\_bytes</span></span> <span class="param-paren paren-close">)</span></span></span> {id="getrandom-62a0d7c0" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">get\_random</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">num\_bytes</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="getrandom-62a0d7c0" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -162,20 +162,20 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">bytearray</span>
+<span class="return_type">bytearray</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">An array of bytes returned by the random number generator.</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">create\_random\_file</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">file\_path</span></span>, <span class="param"><span class="name">num\_bytes</span></span> <span class="param-paren paren-close">)</span></span></span> {id="createrandomfile-de88101e" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">create\_random\_file</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">file\_path</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">num\_bytes</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="createrandomfile-de88101e" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -199,7 +199,7 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
@@ -207,7 +207,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">lock</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">src</span></span>, <span class="param"><span class="name">dst</span> = <span class="default-val">None</span></span>, <span class="param"><span class="name">encryption\_key</span> = <span class="default-val">"zymkey"</span></span> <span class="param-paren paren-close">)</span></span></span> {id="lock-2edac6fa" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">lock</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">src</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">dst</span> = <span class="default-val">None</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">encryption\_key</span> = <span class="default-val">"zymkey"</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="lock-2edac6fa" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -226,18 +226,18 @@ toc: true
 <span class="name">src</span>
 <span class="type-paren paren-open">(</span><span class="type">Union[str, bytes]</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The source (plaintext) data to lock.</p>
-<p>If a  <span classes="title-reference">str</span> is passed to this method, the value is assumed to be
-                                                    the absolute path to the location of the source file. If <span classes="title-reference">bytes</span>
-                                                    or <span classes="title-reference">bytesarray</span> is passed, it is assumed to contain binary data. </p>
+<p>If a  <span class="title-reference">str</span> is passed to this method, the value is assumed to be
+                                                    the absolute path to the location of the source file. If <span class="title-reference">bytes</span>
+                                                    or <span class="title-reference">bytesarray</span> is passed, it is assumed to contain binary data. </p>
 </span>
 </li>
 <li class="param-item">
 <span class="name">dst</span>
 <span class="type-paren paren-open">(</span><span class="type">Optional[str]</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The destination (ciphertext) of the locked data.</p>
-<p>If a  <span classes="title-reference">str</span> is passed to this method, the value is assumed to be
+<p>If a  <span class="title-reference">str</span> is passed to this method, the value is assumed to be
                                                     the absolute path to the location of the file where the destination
-                                                    data is meant to be written. Otherwise, if <span classes="title-reference">None</span> is passed to the
+                                                    data is meant to be written. Otherwise, if <span class="title-reference">None</span> is passed to the
                                                     method (the default), the locked data is returned from the method
                                                     as a bytearray. </p>
 </span>
@@ -255,23 +255,23 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">bytearray or None</span>
+<span class="return_type">bytearray or None</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The locked data is returned as a bytearray if no destination is
                                         specified when this method is called. Otherwise, <p>
-<span classes="title-reference">None</span> is returned. </p>
+<span class="title-reference">None</span> is returned. </p>
 </span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">unlock</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">src</span></span>, <span class="param"><span class="name">dst</span> = <span class="default-val">None</span></span>, <span class="param"><span class="name">encryption\_key</span> = <span class="default-val">"zymkey"</span></span>, <span class="param"><span class="name">raise\_exception</span> = <span class="default-val">True</span></span> <span class="param-paren paren-close">)</span></span></span> {id="unlock-a836f9e9" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">unlock</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">src</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">dst</span> = <span class="default-val">None</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">encryption\_key</span> = <span class="default-val">"zymkey"</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">raise\_exception</span> = <span class="default-val">True</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="unlock-a836f9e9" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -290,18 +290,18 @@ toc: true
 <span class="name">src</span>
 <span class="type-paren paren-open">(</span><span class="type">Union[str, bytes]</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The source (ciphertext) data to verify and decrypt.</p>
-<p>If a  <span classes="title-reference">str</span> is passed to this method, the value is assumed to be
-                                                    the absolute path to the location of the source file. If <span classes="title-reference">bytes</span>
-                                                    or <span classes="title-reference">bytesarray</span> is passed, it is assumed to contain binary data. </p>
+<p>If a  <span class="title-reference">str</span> is passed to this method, the value is assumed to be
+                                                    the absolute path to the location of the source file. If <span class="title-reference">bytes</span>
+                                                    or <span class="title-reference">bytesarray</span> is passed, it is assumed to contain binary data. </p>
 </span>
 </li>
 <li class="param-item">
 <span class="name">dst</span>
 <span class="type-paren paren-open">(</span><span class="type">Optional[str]</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The destination of the decrypted data (plaintext).</p>
-<p>If a  <span classes="title-reference">str</span> is passed to this method, the value is assumed to be
+<p>If a  <span class="title-reference">str</span> is passed to this method, the value is assumed to be
                                                     the absolute path to the location of the file where the destination
-                                                    data is meant to be written. Otherwise, if <span classes="title-reference">None</span> is passed to the
+                                                    data is meant to be written. Otherwise, if <span class="title-reference">None</span> is passed to the
                                                     method (the default), the locked data is returned from the method
                                                     as a bytearray. </p>
 </span>
@@ -324,23 +324,23 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">bytearray or None</span>
+<span class="return_type">bytearray or None</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The locked data is returned as a bytearray if no destination is
                                         specified when this method is called. Otherwise, <p>
-<span classes="title-reference">None</span> is returned. </p>
+<span class="title-reference">None</span> is returned. </p>
 </span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">sign</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">src</span></span>, <span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span> <span class="param-paren paren-close">)</span></span></span> {id="sign-6a6a9010" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">sign</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">src</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="sign-6a6a9010" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -361,14 +361,14 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">bytearray</span>
+<span class="return_type">bytearray</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">A bytearray of the signature.</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">sign\_digest</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">sha256</span></span>, <span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span> <span class="param-paren paren-close">)</span></span></span> {id="signdigest-fb1afb00" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">sign\_digest</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">sha256</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="signdigest-fb1afb00" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -392,20 +392,20 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">bytearray</span>
+<span class="return_type">bytearray</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The signature of the SHA-256 digest passed to this method.</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">verify</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">src</span></span>, <span class="param"><span class="name">sig</span></span>, <span class="param"><span class="name">raise\_exception</span> = <span class="default-val">True</span></span>, <span class="param"><span class="name">pubkey\_slot</span> = <span class="default-val">0</span></span>, <span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span> <span class="param-paren paren-close">)</span></span></span> {id="verify-4d37323f" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">verify</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">src</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">sig</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">raise\_exception</span> = <span class="default-val">True</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">pubkey\_slot</span> = <span class="default-val">0</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="verify-4d37323f" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -425,8 +425,8 @@ toc: true
 </li>
 <li class="param-item">
 <span class="name">raise_exception</span>
-<span class="type-paren paren-open">(</span><span class="type">bool</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">By default, when verification fails a <span classes="title-reference">VerificationError</span> will be
-                                                raised, unless this is set to <span classes="title-reference">False</span>. </span>
+<span class="type-paren paren-open">(</span><span class="type">bool</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">By default, when verification fails a <span class="title-reference">VerificationError</span> will be
+                                                raised, unless this is set to <span class="title-reference">False</span>. </span>
 </li>
 <li class="param-item">
 <span class="name">pubkey_slot</span>
@@ -442,17 +442,17 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">bool</span>
+<span class="return_type">bool</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">Returns <p>
-<span classes="title-reference">True</span> for a good verification or <span classes="title-reference">False</span> for a bad
-                                        verification when the <span classes="title-reference">raise_exception</span> parameters is <span classes="title-reference">False</span>. </p>
+<span class="title-reference">True</span> for a good verification or <span class="title-reference">False</span> for a bad
+                                        verification when the <span class="title-reference">raise_exception</span> parameters is <span class="title-reference">False</span>. </p>
 </span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">verify\_digest</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">sha256</span></span>, <span class="param"><span class="name">sig</span></span>, <span class="param"><span class="name">raise\_exception</span> = <span class="default-val">True</span></span>, <span class="param"><span class="name">pubkey\_slot</span> = <span class="default-val">0</span></span>, <span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span> <span class="param-paren paren-close">)</span></span></span> {id="verifydigest-28fb1759" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">verify\_digest</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">sha256</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">sig</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">raise\_exception</span> = <span class="default-val">True</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">pubkey\_slot</span> = <span class="default-val">0</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="verifydigest-28fb1759" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -472,8 +472,8 @@ toc: true
 </li>
 <li class="param-item">
 <span class="name">raise_exception</span>
-<span class="type-paren paren-open">(</span><span class="type">bool</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">By default, when verification fails, a <span classes="title-reference">VerificationError</span> will be
-                                                raised, unless this is set to <span classes="title-reference">False</span>. </span>
+<span class="type-paren paren-open">(</span><span class="type">bool</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">By default, when verification fails, a <span class="title-reference">VerificationError</span> will be
+                                                raised, unless this is set to <span class="title-reference">False</span>. </span>
 </li>
 <li class="param-item">
 <span class="name">pubkey_slot</span>
@@ -489,17 +489,17 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">bool</span>
+<span class="return_type">bool</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">Returns <p>
-<span classes="title-reference">True</span> for a good verification or <span classes="title-reference">False</span> for a bad
-                                        verification when <span classes="title-reference">raise_exception</span> is <span classes="title-reference">False</span>. </p>
+<span class="title-reference">True</span> for a good verification or <span class="title-reference">False</span> for a bad
+                                        verification when <span class="title-reference">raise_exception</span> is <span class="title-reference">False</span>. </p>
 </span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">ecdh</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">local\_slot</span></span>, <span class="param"><span class="name">peer\_pubkey</span></span>, <span class="param"><span class="name">kdf\_func\_type</span> = <span class="default-val">"none"</span></span>, <span class="param"><span class="name">salt</span> = <span class="default-val">[]</span></span>, <span class="param"><span class="name">info</span> = <span class="default-val">[]</span></span>, <span class="param"><span class="name">num\_iterations</span> = <span class="default-val">1</span></span>, <span class="param"><span class="name">peer\_pubkey\_slot\_is\_foreign</span> = <span class="default-val">True</span></span>, <span class="param"><span class="name">derived\_key\_size</span> = <span class="default-val">32</span></span> <span class="param-paren paren-close">)</span></span></span> {id="ecdh-de073f94" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">ecdh</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">local\_slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">peer\_pubkey</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">kdf\_func\_type</span> = <span class="default-val">"none"</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">salt</span> = <span class="default-val">[]</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">info</span> = <span class="default-val">[]</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">num\_iterations</span> = <span class="default-val">1</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">peer\_pubkey\_slot\_is\_foreign</span> = <span class="default-val">True</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">derived\_key\_size</span> = <span class="default-val">32</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="ecdh-de073f94" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -515,8 +515,8 @@ toc: true
 <li class="param-item">
 <span class="name">peer_pubkey</span>
 <span class="type-paren paren-open">(</span><span class="type">Union[List[bytes], int]</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">The public key of the peer used to generate the pre-master secret
-                                                against the private key located in <span classes="title-reference">local_slot</span>. This parameter can
-                                                be a list of <span classes="title-reference">bytes</span> if the key is provided explicitly or an <span classes="title-reference">int</span>
+                                                against the private key located in <span class="title-reference">local_slot</span>. This parameter can
+                                                be a list of <span class="title-reference">bytes</span> if the key is provided explicitly or an <span class="title-reference">int</span>
                                                 if it refers to a key slot. </span>
 </li>
 <li class="param-item">
@@ -525,24 +525,24 @@ toc: true
 <p>Specifies the KDF (Key Derivation Function) to use for the returned derived key. Valid values are:</p>
 <ul>
 <li>
-<span classes="title-reference">&#8220;none&#8221;</span>: just return the pre-master secret. NOTE: The raw pre-master
+<span class="title-reference">&#8220;none&#8221;</span>: just return the pre-master secret. NOTE: The raw pre-master
                                                             secret should not be used as a derived key should be put through a
                                                             suitable KDF. Use &#8220;none&#8221; when it is desired to use a different KDF
                                                             than what is offered by this method. </li>
 <li>
-<span classes="title-reference">&#8220;rfc5869-sha256&#8221;</span>: RFC5869 with SHA256 </li>
+<span class="title-reference">&#8220;rfc5869-sha256&#8221;</span>: RFC5869 with SHA256 </li>
 <li>
-<span classes="title-reference">&#8220;rfc5869-sha512&#8221;</span>: RFC5869 with SHA512 </li>
+<span class="title-reference">&#8220;rfc5869-sha512&#8221;</span>: RFC5869 with SHA512 </li>
 <li>
-<span classes="title-reference">&#8220;pbkdf2-sha256&#8221;</span>: PBKDF2 with SHA256 </li>
+<span class="title-reference">&#8220;pbkdf2-sha256&#8221;</span>: PBKDF2 with SHA256 </li>
 <li>
-<span classes="title-reference">&#8220;pbkdf2-sha512&#8221;</span>: PBKDF2 with SHA512 </li>
+<span class="title-reference">&#8220;pbkdf2-sha512&#8221;</span>: PBKDF2 with SHA512 </li>
 </ul>
 </span>
 </li>
 <li class="param-item">
 <span class="name">salt</span>
-<span class="type-paren paren-open">(</span><span class="type">Optional[List[bytes]]</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">A unique identifier for KDF. Ignored for <span classes="title-reference">kdf_func_type=&#8217;none&#8217;</span>. </span>
+<span class="type-paren paren-open">(</span><span class="type">Optional[List[bytes]]</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">A unique identifier for KDF. Ignored for <span class="title-reference">kdf_func_type=&#8217;none&#8217;</span>. </span>
 </li>
 <li class="param-item">
 <span class="name">info</span>
@@ -564,20 +564,20 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">bytearray</span>
+<span class="return_type">bytearray</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The computed signature.</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">create\_ecdsa\_public\_key\_file</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">filename</span></span>, <span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span> <span class="param-paren paren-close">)</span></span></span> {id="createecdsapublickeyfile-72ef0aae" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">create\_ecdsa\_public\_key\_file</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">filename</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="createecdsapublickeyfile-72ef0aae" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
 <p>Create a file with the PEM-formatted ECDSA public key.</p>
 <p>
-<strong>[DEPRECATED]:</strong> Use <span classes="title-reference">create_public_key_file</span> instead. </p>
+<strong>[DEPRECATED]:</strong> Use <span class="title-reference">create_public_key_file</span> instead. </p>
 <p>This method is useful for generating a Certificate Signing Request.</p>
 </div>
 <div class="parameters">
@@ -598,7 +598,7 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
@@ -606,7 +606,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">create\_public\_key\_file</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">filename</span></span>, <span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span>, <span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span> <span class="param-paren paren-close">)</span></span></span> {id="createpublickeyfile-44496e61" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">create\_public\_key\_file</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">filename</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="createpublickeyfile-44496e61" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -626,7 +626,7 @@ toc: true
 </li>
 <li class="param-item">
 <span class="name">foreign</span>
-<span class="type-paren paren-open">(</span><span class="type">bool</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">If <span classes="title-reference">True</span>, designates the pubkey slot to come from the foreign keystore (model &gt;= HSM6). </span>
+<span class="type-paren paren-open">(</span><span class="type">bool</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">If <span class="title-reference">True</span>, designates the pubkey slot to come from the foreign keystore (model &gt;= HSM6). </span>
 </li>
 </ul>
 </div>
@@ -635,7 +635,7 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
@@ -643,13 +643,13 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">get\_ecdsa\_public\_key</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span> <span class="param-paren paren-close">)</span></span></span> {id="getecdsapublickey-fbc4390c" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">get\_ecdsa\_public\_key</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="getecdsapublickey-fbc4390c" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
 <p>Retrieves the ECDSA public key as a binary bytearray.</p>
 <p>
-<strong>[DEPRECATED]:</strong> Use <span classes="title-reference">get_public_key</span> instead. </p>
+<strong>[DEPRECATED]:</strong> Use <span class="title-reference">get_public_key</span> instead. </p>
 <p>This method is used to retrieve the public key in binary form.</p>
 </div>
 <div class="parameters">
@@ -666,20 +666,20 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">bytearray</span>
+<span class="return_type">bytearray</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The public key in binary form.</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">get\_public\_key</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span>, <span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span> <span class="param-paren paren-close">)</span></span></span> {id="getpublickey-b8a4d7e8" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">get\_public\_key</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="getpublickey-b8a4d7e8" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -695,7 +695,7 @@ toc: true
 </li>
 <li class="param-item">
 <span class="name">foreign</span>
-<span class="type-paren paren-open">(</span><span class="type">bool</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">If <span classes="title-reference">True</span>, designates the pubkey slot to come from the foreign keystore (model &gt;= HSM6). </span>
+<span class="type-paren paren-open">(</span><span class="type">bool</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">If <span class="title-reference">True</span>, designates the pubkey slot to come from the foreign keystore (model &gt;= HSM6). </span>
 </li>
 </ul>
 </div>
@@ -704,20 +704,20 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">bytearray</span>
+<span class="return_type">bytearray</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The public key in binary form.</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">get\_slot\_alloc\_list</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span> <span class="param-paren paren-close">)</span></span></span> {id="getslotalloclist-16480112" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">get\_slot\_alloc\_list</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="getslotalloclist-16480112" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -729,7 +729,7 @@ toc: true
 <ul>
 <li class="param-item">
 <span class="name">foreign</span>
-<span class="type-paren paren-open">(</span><span class="type">bool</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">If <span classes="title-reference">True</span>, designates the pubkey slot to come from the foreign keystore (model &gt;= HSM6). </span>
+<span class="type-paren paren-open">(</span><span class="type">bool</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">If <span class="title-reference">True</span>, designates the pubkey slot to come from the foreign keystore (model &gt;= HSM6). </span>
 </li>
 </ul>
 </div>
@@ -738,20 +738,20 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">Tuple[list, int]</span>
+<span class="return_type">Tuple[list, int]</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The allocation list and the maximum number of keys</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">store\_foreign\_public\_key</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">key\_type</span></span>, <span class="param"><span class="name">pubkey</span></span> <span class="param-paren paren-close">)</span></span></span> {id="storeforeignpublickey-174b85e0" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">store\_foreign\_public\_key</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">key\_type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">pubkey</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="storeforeignpublickey-174b85e0" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -776,20 +776,20 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">int</span>
+<span class="return_type">int</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The slot allocated to the key, or less than one for failure.</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">disable\_public\_key\_export</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span>, <span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span> <span class="param-paren paren-close">)</span></span></span> {id="disablepublickeyexport-b8a4d7e8" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">disable\_public\_key\_export</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="disablepublickeyexport-b8a4d7e8" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -813,7 +813,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">gen\_key\_pair</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">key\_type</span></span> <span class="param-paren paren-close">)</span></span></span> {id="genkeypair-1773df3b" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">gen\_key\_pair</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">key\_type</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="genkeypair-1773df3b" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -831,14 +831,14 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">TYPE</span>
+<span class="return_type">TYPE</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">the slot allocated to the key or less than one for failure.</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">gen\_ephemeral\_key\_pair</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">key\_type</span></span> <span class="param-paren paren-close">)</span></span></span> {id="genephemeralkeypair-1773df3b" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">gen\_ephemeral\_key\_pair</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">key\_type</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="genephemeralkeypair-1773df3b" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -858,7 +858,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">remove\_key</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">slot</span></span>, <span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span> <span class="param-paren paren-close">)</span></span></span> {id="removekey-de6d0145" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">remove\_key</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="removekey-de6d0145" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -882,7 +882,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">invalidate\_ephemeral\_key</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">slot</span></span>, <span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span> <span class="param-paren paren-close">)</span></span></span> {id="invalidateephemeralkey-de6d0145" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">invalidate\_ephemeral\_key</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="invalidateephemeralkey-de6d0145" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -907,20 +907,20 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">int</span>
+<span class="return_type">int</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">TODO</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">gen\_wallet\_master\_seed</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">key\_type</span></span>, <span class="param"><span class="name">master\_gen\_key</span></span>, <span class="param"><span class="name">wallet\_name</span></span>, <span class="param"><span class="name">bip39</span> = <span class="default-val">False</span></span> <span class="param-paren paren-close">)</span></span></span> {id="genwalletmasterseed-d9fe906e" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">gen\_wallet\_master\_seed</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">key\_type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">master\_gen\_key</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">wallet\_name</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">bip39</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="genwalletmasterseed-d9fe906e" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -950,14 +950,14 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">TYPE</span>
+<span class="return_type">TYPE</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">a tuple with the slot and the BIP39 mnemonic if specified</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">gen\_wallet\_child\_key</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">parent\_key\_slot</span></span>, <span class="param"><span class="name">index</span></span>, <span class="param"><span class="name">hardened</span></span> <span class="param-paren paren-close">)</span></span></span> {id="genwalletchildkey-271a087b" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">gen\_wallet\_child\_key</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">parent\_key\_slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">index</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">hardened</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="genwalletchildkey-271a087b" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -983,14 +983,14 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">TYPE</span>
+<span class="return_type">TYPE</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">the allocated slot on success</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">restore\_wallet\_master\_seed\_from\_bip39\_mnemonic</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">key\_type</span></span>, <span class="param"><span class="name">master\_gen\_key</span></span>, <span class="param"><span class="name">wallet\_name</span></span>, <span class="param"><span class="name">bip39\_mnemonic</span></span> <span class="param-paren paren-close">)</span></span></span> {id="restorewalletmasterseedfrombip39mnemonic-ab9d87fd" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">restore\_wallet\_master\_seed\_from\_bip39\_mnemonic</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">key\_type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">master\_gen\_key</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">wallet\_name</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">bip39\_mnemonic</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="restorewalletmasterseedfrombip39mnemonic-ab9d87fd" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1016,14 +1016,14 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">TYPE</span>
+<span class="return_type">TYPE</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">the allocated slot on success</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">get\_wallet\_node\_addr</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">slot</span></span> <span class="param-paren paren-close">)</span></span></span> {id="getwalletnodeaddr-89c43c31" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">get\_wallet\_node\_addr</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">slot</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="getwalletnodeaddr-89c43c31" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1041,14 +1041,14 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">TYPE</span>
+<span class="return_type">TYPE</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">the node address, wallet name and master seed key slot.</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">get\_wallet\_key\_slot</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">node\_addr</span></span>, <span class="param"><span class="name">wallet\_name</span> = <span class="default-val">None</span></span>, <span class="param"><span class="name">master\_seed\_slot</span> = <span class="default-val">None</span></span> <span class="param-paren paren-close">)</span></span></span> {id="getwalletkeyslot-182951d7" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">get\_wallet\_key\_slot</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">node\_addr</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">wallet\_name</span> = <span class="default-val">None</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">master\_seed\_slot</span> = <span class="default-val">None</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="getwalletkeyslot-182951d7" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1074,14 +1074,14 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">TYPE</span>
+<span class="return_type">TYPE</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">the key slot.</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">set\_i2c\_address</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">address</span></span> <span class="param-paren paren-close">)</span></span></span> {id="seti2caddress-3585162d" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">set\_i2c\_address</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">address</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="seti2caddress-3585162d" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1105,7 +1105,7 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
@@ -1113,7 +1113,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">set\_tap\_sensitivity</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">axis</span> = <span class="default-val">"all"</span></span>, <span class="param"><span class="name">pct</span> = <span class="default-val">50.0</span></span> <span class="param-paren paren-close">)</span></span></span> {id="settapsensitivity-3db7ba6a" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">set\_tap\_sensitivity</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">axis</span> = <span class="default-val">"all"</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">pct</span> = <span class="default-val">50.0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="settapsensitivity-3db7ba6a" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1147,7 +1147,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">wait\_for\_tap</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">timeout\_ms</span> = <span class="default-val">-1</span></span> <span class="param-paren paren-close">)</span></span></span> {id="waitfortap-1a0b4c74" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">wait\_for\_tap</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">timeout\_ms</span> = <span class="default-val">-1</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="waitfortap-1a0b4c74" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1167,12 +1167,12 @@ toc: true
 </div>
 <div class="class">
 
-#### <span><span class="annotation">class </span> <span class="name">ZymkeyAccelAxisData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">g\_force</span></span>, <span class="param"><span class="name">tap\_dir</span></span> <span class="param-paren paren-close">)</span></span></span> {id="class-ZymkeyAccelAxisData-842b7190" class="markdown-h4 signature include-toc"}
+#### <span><span class="annotation">class </span> <span class="name">ZymkeyAccelAxisData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">g\_force</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">tap\_dir</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="class-ZymkeyAccelAxisData-842b7190" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="method">
 
-##### <span><span class="name">\_\_init\_\_</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">g\_force</span></span>, <span class="param"><span class="name">tap\_dir</span></span> <span class="param-paren paren-close">)</span></span></span> {id="init-842b7190" class="markdown-h5 signature include-toc"}
+##### <span><span class="name">\_\_init\_\_</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">g\_force</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">tap\_dir</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="init-842b7190" class="markdown-h5 signature include-toc"}
 
 <div class="body">
 <div class="description"></div>
@@ -1216,7 +1216,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">get\_time</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">precise</span> = <span class="default-val">False</span></span> <span class="param-paren paren-close">)</span></span></span> {id="gettime-eaaeb14b" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">get\_time</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">precise</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="gettime-eaaeb14b" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1248,7 +1248,7 @@ toc: true
 <ul>
 <li class="exc-item">
 <span class="name">AssertionError</span>
-<span class="description">If <span classes="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
 </div>
@@ -1278,7 +1278,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">set\_perimeter\_event\_actions</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">channel</span></span>, <span class="param"><span class="name">action\_notify</span> = <span class="default-val">True</span></span>, <span class="param"><span class="name">action\_self\_destruct</span> = <span class="default-val">False</span></span> <span class="param-paren paren-close">)</span></span></span> {id="setperimetereventactions-b637d497" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">set\_perimeter\_event\_actions</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">channel</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">action\_notify</span> = <span class="default-val">True</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">action\_self\_destruct</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="setperimetereventactions-b637d497" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1312,7 +1312,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">set\_digital\_perimeter\_lp\_period</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">lp\_period</span></span> <span class="param-paren paren-close">)</span></span></span> {id="setdigitalperimeterlpperiod-cb8cfe14" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">set\_digital\_perimeter\_lp\_period</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">lp\_period</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="setdigitalperimeterlpperiod-cb8cfe14" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1332,7 +1332,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">set\_digital\_perimeter\_lp\_max\_bits</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">max\_num\_bits</span></span> <span class="param-paren paren-close">)</span></span></span> {id="setdigitalperimeterlpmaxbits-651126cb" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">set\_digital\_perimeter\_lp\_max\_bits</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">max\_num\_bits</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="setdigitalperimeterlpmaxbits-651126cb" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1352,7 +1352,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">set\_digital\_perimeter\_delays</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">min\_delay\_ns</span></span>, <span class="param"><span class="name">max\_delay\_ns</span></span> <span class="param-paren paren-close">)</span></span></span> {id="setdigitalperimeterdelays-f3d7f920" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">set\_digital\_perimeter\_delays</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">min\_delay\_ns</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">max\_delay\_ns</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="setdigitalperimeterdelays-f3d7f920" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1376,7 +1376,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">wait\_for\_perimeter\_event</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">timeout\_ms</span> = <span class="default-val">-1</span></span> <span class="param-paren paren-close">)</span></span></span> {id="waitforperimeterevent-1a0b4c74" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">wait\_for\_perimeter\_event</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">timeout\_ms</span> = <span class="default-val">-1</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="waitforperimeterevent-1a0b4c74" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1405,7 +1405,7 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">TYPE</span>
+<span class="return_type">TYPE</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The array of timestamps for each channel for the first detected event in epoch seconds</span>
 </div>
 </div>
@@ -1431,7 +1431,7 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">TYPE</span>
+<span class="return_type">TYPE</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The CPU temperature in celsius as a float</span>
 </div>
 </div>
@@ -1447,7 +1447,7 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">TYPE</span>
+<span class="return_type">TYPE</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The RTC drift as a float</span>
 </div>
 </div>
@@ -1463,7 +1463,7 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">TYPE</span>
+<span class="return_type">TYPE</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The battery voltage as a float</span>
 </div>
 </div>
@@ -1479,7 +1479,7 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">TYPE</span>
+<span class="return_type">TYPE</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The model number as a string.</span>
 </div>
 </div>
@@ -1495,7 +1495,7 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">TYPE</span>
+<span class="return_type">TYPE</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The firmware version as a string.</span>
 </div>
 </div>
@@ -1511,14 +1511,14 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">TYPE</span>
+<span class="return_type">TYPE</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The serial number as a string.</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">set\_battery\_voltage\_action</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">sleep</span> = <span class="default-val">False</span></span>, <span class="param"><span class="name">self\_destruct</span> = <span class="default-val">False</span></span> <span class="param-paren paren-close">)</span></span></span> {id="setbatteryvoltageaction-45bcda8a" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">set\_battery\_voltage\_action</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">sleep</span> = <span class="default-val">False</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">self\_destruct</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="setbatteryvoltageaction-45bcda8a" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1550,7 +1550,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">set\_battery\_voltage\_threshold</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">threshold</span></span> <span class="param-paren paren-close">)</span></span></span> {id="setbatteryvoltagethreshold-d303a69f" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">set\_battery\_voltage\_threshold</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">threshold</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="setbatteryvoltagethreshold-d303a69f" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1570,7 +1570,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">set\_cpu\_temp\_action</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">self\_destruct</span> = <span class="default-val">False</span></span> <span class="param-paren paren-close">)</span></span></span> {id="setcputempaction-00fce96b" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">set\_cpu\_temp\_action</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">self\_destruct</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="setcputempaction-00fce96b" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1595,14 +1595,14 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">TYPE</span>
+<span class="return_type">TYPE</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">0 for success, less than 0 for failure.</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">set\_cpu\_low\_temp\_threshold</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">threshold</span></span> <span class="param-paren paren-close">)</span></span></span> {id="setcpulowtempthreshold-d303a69f" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">set\_cpu\_low\_temp\_threshold</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">threshold</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="setcpulowtempthreshold-d303a69f" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1622,7 +1622,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">set\_cpu\_high\_temp\_threshold</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param"><span class="name">threshold</span></span> <span class="param-paren paren-close">)</span></span></span> {id="setcpuhightempthreshold-d303a69f" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">set\_cpu\_high\_temp\_threshold</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">threshold</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="setcpuhightempthreshold-d303a69f" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
