@@ -53,4 +53,4 @@ $.fn.extend({
 });
 
 //Initialization of treeviews
-$('#TableOfContents > ul').treed({openedClass:'fa-chevron-down', closedClass:'fa-chevron-right'});
+$('#InlineTOC #TableOfContents > ul').treed({openedClass:'fa-chevron-down', closedClass:'fa-chevron-right'});
