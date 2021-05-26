@@ -30,6 +30,14 @@ $h6-api-size: $font-size-base !default;
 
 .api-docs {
 
+  .title-reference {
+    display: inline;
+  }
+
+  & > .class > .body > .attribute {
+    display: none;
+  }
+
   .param-paren {
     color: $gray-900;
   }
@@ -43,7 +51,7 @@ $h6-api-size: $font-size-base !default;
     .signature {
       padding: 1rem;
       margin-top: 8rem !important;
-      border-left: 10px solid $gray-300;
+      border-left: 10px solid $blue;
     }
   }
 
@@ -118,12 +126,6 @@ div.method {
         font-weight: 700;
         font-size: 0.9em;
         background-color: $gray-100;
-
-        &:after {
-          background-color: $body-bg;
-          font-weight: 400;
-          content: " — ";
-        }
     }
   }
 
@@ -132,7 +134,7 @@ div.method {
     font-size: $h5-api-size;
     margin-bottom: 1.5rem !important;
     font-weight: 600;
-    background-color: $gray-100;
+    background-color: lighten($blue, 35%) !important;
 
     & > .returns {
       font-weight: 800;
@@ -228,7 +230,7 @@ div.method {
   .param-list {
     // display: table;
 
-    .param {
+    .param-item-wrapper {
       display: block;
       margin-left: 4ex;
       margin-top: 10px;
