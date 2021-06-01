@@ -26,6 +26,10 @@ $h6-api-size: $font-size-base !default;
       white-space: nowrap;
     }
   }
+
+  .attribute-signature {
+    display: none;
+  }
 }
 
 .api-docs {
