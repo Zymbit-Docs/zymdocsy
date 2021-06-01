@@ -54,7 +54,7 @@ $h6-api-size: $font-size-base !default;
   .method {
     .signature {
       padding: 1rem;
-      margin-top: 8rem !important;
+      margin-top: 4rem !important;
       border-left: 10px solid $blue;
     }
   }
@@ -192,14 +192,7 @@ div.method {
 
   .body {
     margin-bottom: 4em;
-
-    & > .returns {
-      margin-left: 2.25em;
-
-      h4, h5 {
-        margin-left: -2.25em;
-      }
-    }
+    margin-left: 2rem;
 
     & > .returns, .parameters, .exceptions {
 
