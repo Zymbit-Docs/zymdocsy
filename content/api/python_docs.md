@@ -39,7 +39,7 @@ toc: true
 <p>This class provides access to the Zymkey within Python.</p>
 <div class="attribute">
 
-#### <span class="markdown-h4 signature include-toc"><span class="name">EPHEMERAL_KEY_SLOT</span><span class="annotation"> = -1</span> </span>
+#### <span class="markdown-h4 signature include-toc attribute-signature"><span class="name">EPHEMERAL_KEY_SLOT</span><span class="annotation"> = -1</span> </span>
 
 <div class="body">
                     </div>
