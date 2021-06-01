@@ -48,10 +48,16 @@
   {{ $pages_tmp := where (union $s.Pages $s.Sections).ByWeight ".Params.toc_hide" "!=" true }}
   {{ $pages := $pages_tmp | first $sidebarMenuTruncate }}
   {{ $withChild := or (gt (len $pages) 0) (.Params.api_docs) }}
-  {{ $manualLink := cond (isset $s.Params "manuallink") $s.Params.manualLink ( cond (isset $s.Params "manuallinkrelref") (relref $s $s.Params.manualLinkRelref) $s.RelPermalink) }}
+
+  {{- $sectionPermalink := $s.RelPermalink -}}
+  {{ $manualLink := cond (isset $s.Params "manuallink") $s.Params.manualLink ( cond (isset $s.Params "manuallinkrelref") (relref $s $s.Params.manualLinkRelref) $sectionPermalink) }}
   {{ $manualLinkTitle := cond (isset $s.Params "manuallinktitle") $s.Params.manualLinkTitle $s.Title }}
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section{{ if $withChild }} with-child{{ else }} without-child{{ end }}{{ if $activePath }} active-path{{ end }}{{ if not $show }} collapse{{ end }}" id="{{ $mid }}-li">
+    {{- if not (default false $s.Params.headless) -}}
     <a href="{{ $manualLink }}"{{ if ne $s.LinkTitle $manualLinkTitle }} title="{{ $manualLinkTitle }}"{{ end }}{{ with $s.Params.manualLinkTarget }} target="{{ . }}"{{ if eq . "_blank" }} rel="noopener"{{ end }}{{ end }} class="align-left pl-0 pr-2{{ if $active}} active{{ end }} td-sidebar-link{{ if $s.IsPage }} td-sidebar-link__page{{ else }} td-sidebar-link__section{{ end }}{{ if $treeRoot }} tree-root{{ end }}" id="{{ $mid }}">{{ with $s.Params.Icon}}<i class="{{ . }}"></i>{{ end }}<span class="{{ if $active }}td-sidebar-nav-active-item{{ end }}">{{ $s.LinkTitle }}</span></a>
+    {{- else -}}
+    <span class="align-left pl-0 pr-2{{ if $active}} active{{ end }} td-sidebar-link{{ if $s.IsPage }} td-sidebar-link__page{{ else }} td-sidebar-link__section{{ end }}{{ if $treeRoot }} tree-root{{ end }}">{{ with $s.Params.Icon}}<i class="{{ . }}"></i>{{ end }}<span class="{{ if $active }}td-sidebar-nav-active-item{{ end }}">{{ $s.LinkTitle }}</span></span>
+    {{- end }}
     {{- if and (default false $p.Params.api_docs) ($active) -}}
       {{ $ulNr := add $ulNr 1 }}
       <ul class="pr-md-3 ul-{{ $ulNr }}" id="InlineTOC">
