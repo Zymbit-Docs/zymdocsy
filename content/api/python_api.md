@@ -68,7 +68,15 @@ toc: true
 <div class="body">
 <div class="description">
 <p>Turn the LED on.</p>
-<p>import zymkey zymkey.client.led_on().</p>
+</div>
+<div class="exceptions">
+<h5>Exceptions</h5>
+<ul>
+<li class="exc-item">
+<span class="name">AssertionError</span>
+<span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
+</li>
+</ul>
 </div>
 </div>
 </div>
