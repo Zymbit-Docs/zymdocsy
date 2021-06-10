@@ -1,5 +1,5 @@
 ---
-title : "Get Started with Zymkey 4i"
+title : "Get Started with Zymbit Security Modules"
 description: ""
 date: 2020-10-06T08:47:36+00:00
 lastmod: 2020-10-06T08:47:36+00:00
@@ -10,4 +10,6 @@ layout: "single"
 weight: -50
 ---
 
-This is the Getting Started page for the Zymkey 4i.
+Please see the [Zymbit Community](https://community.zymbit.com/) for *Getting Started* information, examples, and tutorials.
+
+Currently, only the Application Programmer Interface (API) reference documentation is included on this site.
