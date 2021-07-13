@@ -12,4 +12,4 @@ weight: -50
 
 Please see the [Zymbit Community](https://community.zymbit.com/) for *Getting Started* information, examples, and tutorials.
 
-Currently, only the Application Programmer Interface (API) reference documentation is included on this site.
+Only the Application Programmer Interface (API) reference documentation is included on this site.
