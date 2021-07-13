@@ -10,4 +10,11 @@ layout: "single"
 weight: -1000
 ---
 
-This is the documentation site for Zymbit. This is the homepage.
+<h3 id="welcome-to-the-homepage-of-zymbit-s-documentation-site-">Welcome to the homepage of Zymbit&#39;s documentation site.</h3>
+
+<p><a href="https://www.zymbit.com/">Zymbit Website</a></p>
+<p><a href="https://community.zymbit.com/">Community Site</a></p>
+<p><a href="https://www.zymbit.com/blog-grid/">Explore Zymbit</a></p>
+<p><a href="https://twitter.com/zymbit?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a></p>
+<p><a href="https://www.facebook.com/zymbit/">Facebook</a></p>
+<p><a href="https://www.linkedin.com/company/zymbit/">LinkedIn</a></p>
