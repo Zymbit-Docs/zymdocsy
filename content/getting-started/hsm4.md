@@ -7,7 +7,7 @@ draft: false
 images: []
 type: "docs"
 layout: "single"
-weight: -50
+weight: -670
 ---
 
 # Install HSM4 Developer Kit onto Raspberry Pi
