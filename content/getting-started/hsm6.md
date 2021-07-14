@@ -7,7 +7,7 @@ draft: false
 images: []
 type: "docs"
 layout: "single"
-weight: -50
+weight: -660
 ---
 
 # Install HSM6 Developer Kit onto Raspberry Pi
