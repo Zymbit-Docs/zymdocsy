@@ -7,7 +7,7 @@ draft: false
 images: []
 type: "docs"
 layout: "single"
-weight: -50
+weight: -690
 ---
 
 <h1 id="zymkey4i-the-security-module-for-raspberry-pi">ZYMKEY4i.  The Security Module for Raspberry Pi</h1>
