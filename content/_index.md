@@ -17,3 +17,13 @@ weight: -1000
 <p><a href="https://twitter.com/zymbit?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener noreferrer">Twitter</a></p>
 <p><a href="https://www.facebook.com/zymbit/" target="_blank" rel="noopener noreferrer">Facebook</a></p>
 <p><a href="https://www.linkedin.com/company/zymbit/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+
+<p>
+<button class="btn"><i class="glyphicon glyphicon-home"></i></button>
+<a href="https://www.zymbit.com/" target="_blank" rel="noopener noreferrer">Zymbit Website</a>
+</p>
+
+<p>
+<button class="btn"><i class="fab fa-facebook"></i></button>
+<a href="https://www.facebook.com/zymbit/" target="_blank" rel="noopener noreferrer">Facebook</a>
+</p>
