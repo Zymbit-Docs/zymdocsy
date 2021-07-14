@@ -7,7 +7,7 @@ draft: false
 images: []
 type: "docs"
 layout: "single"
-weight: -500
+weight: -790
 ---
 
 <p><a href="https://www.zymbit.com/wp-content/uploads/2018/12/Zymbit-Data-Sheet-Zymkey-4i-DATA-SHEET-04100910A2.pdf">Zymkey4 Datasheet</a></p>
