@@ -4,7 +4,7 @@ description: ""
 date: ""
 lastmod: ""
 draft: false
-images: [/static/HSM6-hero-transparent.png]
+images: []
 type: "docs"
 layout: "single"
 weight: -690
