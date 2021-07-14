@@ -68,9 +68,9 @@ weight: -690
 <h2 id="0-hardware-connectors">0. HARDWARE &amp; CONNECTORS</h2>
 <p><img src="/static/HSM6-hero-transparent.png" alt="hsm6 test"></p>
 <p><img src="/static/HSM6-hero-transparent.png" alt="hsm6 test resize scale" width=50%></p>
-<p><img src="/static/HSM6-hero-transparent.png" alt="hsm6 test resize px" width="150"></p>
+<p><img src="https://aws1.discourse-cdn.com/standard10/uploads/zymbit/original/1X/39e3c8673e7b8b6ba69428386d3d8e06a8260de0.jpeg" alt="test url" width="150"></p>
 <img src="https://www.zymbit.com/wp-content/uploads/2017/09/Zymbit-Logo-Horizontal-Stack.png" alt="zymbit">
-<p>testing url</p>
+<p>testing url1</p>
 <hr>
 <h2 id="1-battery-installation-recommended-">1. BATTERY  INSTALLATION  (Recommended)</h2>
 <p>Your Zymkey 4i  can be fitted with a <strong>3V CR1025  coincell</strong> battery that is used to maintain operation of the real-time-clock (RTC) and tamper detect features in the event that main power (from the GPIO header) is lost. </p>
