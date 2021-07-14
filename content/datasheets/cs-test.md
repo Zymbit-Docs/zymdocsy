@@ -7,6 +7,6 @@ draft: false
 images: []
 type: "docs"
 layout: "single"
-externalUrl: "https://community.zymbit.com/"
+url: "https://community.zymbit.com/"
 weight: -1
 ---
