@@ -4,7 +4,7 @@ description: ""
 date: ""
 lastmod: ""
 draft: false
-images: []
+images: ["/static"]
 type: "docs"
 layout: "single"
 weight: -690
