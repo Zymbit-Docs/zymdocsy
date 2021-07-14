@@ -1,8 +1,8 @@
 ---
 title : "Getting Started with Zymkey4"
 description: ""
-date: ""
-lastmod: ""
+date: now
+lastmod: .now
 draft: false
 images: []
 type: "docs"
