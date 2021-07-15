@@ -66,7 +66,13 @@ weight: -690
 <p><strong><a href="https://community.zymbit.com/c/operating-system/23">Learn about Linux OS support for Zymkey.</a></strong></p>
 <hr>
 <h2 id="0-hardware-connectors">0. HARDWARE &amp; CONNECTORS</h2>
-<p><img src="/docs/content/getting-started/HSM4-hero-transparent.png" alt="hsm4 test"></p>
+
+
+<p><img src="/content/getting-started/HSM4-hero-transparent.png" alt="hsm4 test"></p>
+<p><img src="/HSM4-hero-transparent.png" alt="hsm4 test1"></p>
+<p><img src="HSM4-hero-transparent.png" alt="hsm4 test2"></p>
+
+
 <p><img src="https://aws1.discourse-cdn.com/standard10/uploads/zymbit/original/1X/39e3c8673e7b8b6ba69428386d3d8e06a8260de0.jpeg" alt="test url" width="150"></p>
 <img src="https://www.zymbit.com/wp-content/uploads/2017/09/Zymbit-Logo-Horizontal-Stack.png" alt="zymbit">
 <p>testing with quotes !</p>
