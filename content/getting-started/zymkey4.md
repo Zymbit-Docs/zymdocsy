@@ -70,7 +70,7 @@ weight: -690
 
 <p><img src="/content/getting-started/HSM4-hero-transparent.png" alt="hsm4 test"></p>
 <p><img src="/HSM4-hero-transparent.png" alt="hsm4 test1"></p>
-<p><img src="HSM4-hero-transparent.png" alt="hsm4 test2"></p>
+<p><img src="../HSM4-hero-transparent.png" alt="hsm4 test2"></p>
 
 
 <p><img src="https://aws1.discourse-cdn.com/standard10/uploads/zymbit/original/1X/39e3c8673e7b8b6ba69428386d3d8e06a8260de0.jpeg" alt="test url" width="150"></p>
