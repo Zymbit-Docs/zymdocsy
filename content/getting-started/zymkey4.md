@@ -4,7 +4,7 @@ description: ""
 date: ""
 lastmod: ""
 draft: false
-images: ["/static"]
+images: ["/docs/content/getting-started"]
 type: "docs"
 layout: "single"
 weight: -690
@@ -66,8 +66,7 @@ weight: -690
 <p><strong><a href="https://community.zymbit.com/c/operating-system/23">Learn about Linux OS support for Zymkey.</a></strong></p>
 <hr>
 <h2 id="0-hardware-connectors">0. HARDWARE &amp; CONNECTORS</h2>
-<p><img src="/static/HSM6-hero-transparent.png" alt="hsm6 test"></p>
-<p><img src="/static/HSM6-hero-transparent.png" alt="hsm6 test resize scale" width=50%></p>
+<p><img src="/docs/content/getting-started/HSM4-hero-transparent.png" alt="hsm4 test"></p>
 <p><img src="https://aws1.discourse-cdn.com/standard10/uploads/zymbit/original/1X/39e3c8673e7b8b6ba69428386d3d8e06a8260de0.jpeg" alt="test url" width="150"></p>
 <img src="https://www.zymbit.com/wp-content/uploads/2017/09/Zymbit-Logo-Horizontal-Stack.png" alt="zymbit">
 <p>testing with quotes !</p>
