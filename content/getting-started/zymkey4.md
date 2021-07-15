@@ -4,7 +4,7 @@ description: ""
 date: ""
 lastmod: ""
 draft: false
-images: ["/docs/content/getting-started"]
+images: []
 type: "docs"
 layout: "single"
 weight: -690
