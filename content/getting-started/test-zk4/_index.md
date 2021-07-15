@@ -4,7 +4,7 @@ description: ""
 date: ""
 lastmod: ""
 draft: false
-images: []
+images: ["/images"]
 type: "docs"
 layout: "single"
 weight: -690
@@ -81,7 +81,7 @@ weight: -690
 <p><strong>Power down your Raspberry Pi first!</strong></p>
 <p><strong>IMPORTANT:</strong> Installing your hardware correctly is important to avoid destroying your Pi or Zymkey. 
 Be sure to follow the images below to ensure the first 10 GPIO pins are correctly aligned with the Zymkey header. Note: the coin cell battery should be facing up.</p>
-<p><img src="upload://7GoPKkdgTvav574Rimkph5bAY3o.png" alt="rpi|660x500"> </p>
+<p><img src="/images/HSM6-hero-transparent.png" alt="hsm testing!"> </p>
 <p><img src="upload://jmbojBHB8lSK4JlOadcMlpLGTdt.png" alt="|660x440"></p>
 <p><img src="upload://hmGGDnOfDu6z0p2B69rfzgGLQww.png" alt="|690x490"></p>
 <p>Fit the Zymkey 4i with LED and battery holder facing upwards. Be sure the black connector is properly aligned with the first 10 GPIO pins and that pressed firmly down onto the header. If misaligned, this could cause damage to the Zymkey and/or your Raspberry Pi. Your Zymkey should fit relatively snug and maintain a tight interference fit around the pins.</p>
