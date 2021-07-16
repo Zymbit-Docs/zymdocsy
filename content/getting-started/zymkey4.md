@@ -11,6 +11,8 @@ weight: -690
 toc: true
 ---
 
+<div id='toc'></div>
+
 <p>ZYMKEY4i is the fourth generation of the Zymbit security module designed specifically to work with Raspberry Pi and NVIDIA Jetson. It connects to the GPIO header of the SBC and uses the I2C bus and GPIO-4 to communicate with the SBC CPU via an encrypted channel. </p>
 
 <hr>
@@ -107,7 +109,7 @@ Be sure to follow the images below to ensure the first 10 GPIO pins are correctl
 <hr>
 <p><strong>Option (RPi):</strong> Using Zymkey with another Pi Plate fitted.
 
-<img src="../ZK4-pi-fitted.png" alt="Zymkey Pi Plate Fitted"> </p>
+<p><img src="../ZK4-pi-fitted.png" alt="Zymkey Pi Plate Fitted"> </p>
 
 <h3 id="power-on-confirm-operation">Power On, Confirm Operation</h3>
 <p>Finally, power up the device and you will see a blue LED blinking rapidly and consistently (5 blinks per second)</p>
@@ -261,4 +263,3 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter<
 <li><a href="https://community.zymbit.com/t/zymkey-encrypting-decrypting-sensor-data-on-disk/94">Encrypting &amp; decrypting sensor data on disk</a></li>
 <li><a href="https://community.zymbit.com/t/zymkey-rtc-real-time-clock-support/84">Real Time Clock</a></li>
 </ul>
-<p>----------<div data-theme-toc="true"> </div></p>
