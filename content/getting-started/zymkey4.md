@@ -239,9 +239,10 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter<
 
 <hr>
 <h4 id="finished-cut-should-be-flush-to-edge-">Finished cut should be flush to edge.</h4>
-<h2 id="-650x434-upload-i4h8sjj3l5zo67ato3bskajs9wd-png-"><img src="../ZK-cut-tab-3.png" alt="Zymkey Cut Tab 3"></h2>
+<p><img src="../ZK-cut-tab-3.png" alt="Zymkey Cut Tab 3"></p>
 <h4 id="once-you-have-successfully-cut-the-lock-tab-and-have-rebooted-your-system-the-blink-pattern-will-change-to-3-rapid-blinks-once-every-3-seconds-to-indicate-that-zymkey-has-bound-to-the-host-in-production-mode-">Once you have successfully cut the lock tab and have rebooted your system, the blink pattern will change to 3 rapid blinks once every 3 seconds to indicate that Zymkey has bound to the host in production mode.</h4>
-<h2 id="-">----------</h2>
+<hr>
+
 <h2 id="perimeter-detect">PERIMETER DETECT</h2>
 <p>Refer to <a href="https://community.zymbit.com/c/zymkey/63/">Using Perimeter Detect</a></p>
 <hr>
