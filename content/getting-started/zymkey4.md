@@ -118,12 +118,16 @@ Be sure to follow the images below to ensure the first 10 GPIO pins are correctl
 <h4 id="zymkey-operational-but-not-configured">Zymkey operational, but not configured</h4>
 <p>(If the blue LED blinks erratically, or not at all, then there is an installation error and you should check your connections.)</p>
 
+<hr>
+
 <blockquote>
 <h2 id="power-quality">Power Quality</h2>
-<p><a href="https://community.zymbit.com/t/243">Learn why power quality matters to the reliable and secure operation of your system and Zymkey. </a></p>
+<p>Power quality matters to the reliable and secure operation of your system and Zymkey.
+<a href="https://community.zymbit.com/t/243"><strong>Learn more&gt;</strong></a></p>
 </blockquote>
 
 <hr>
+
 <h2 id="3-configure-the-i2c-bus">3. CONFIGURE THE I2C BUS</h2>
 <h3 id="i2c-rpi">For Raspberry Pi</h3>
 <p>For Raspbian Operating Systems you must configure the state of the I2C bus to &quot;ON&quot;. </p>
