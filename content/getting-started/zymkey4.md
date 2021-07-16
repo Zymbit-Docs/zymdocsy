@@ -8,6 +8,7 @@ images: []
 type: "docs"
 layout: "single"
 weight: -690
+toc: true
 ---
 
 <p>ZYMKEY4i is the fourth generation of the Zymbit security module designed specifically to work with Raspberry Pi and NVIDIA Jetson. It connects to the GPIO header of the SBC and uses the I2C bus and GPIO-4 to communicate with the SBC CPU via an encrypted channel. </p>
@@ -115,9 +116,10 @@ Be sure to follow the images below to ensure the first 10 GPIO pins are correctl
 
 <h4 id="zymkey-operational-but-not-configured">Zymkey operational, but not configured</h4>
 <p>(If the blue LED blinks erratically, or not at all, then there is an installation error and you should check your connections.)</p>
+
 <blockquote>
 <h2 id="power-quality">Power Quality</h2>
-<p><a href="https://community.zymbit.com/t/power-quality-considerations-draft/243">Learn why power quality matters to the reliable and secure operation of your system and Zymkey. </a></p>
+<p><a href="https://community.zymbit.com/t/243">Learn why power quality matters to the reliable and secure operation of your system and Zymkey. </a></p>
 </blockquote>
 
 <hr>
@@ -247,7 +249,7 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter<
 <hr>
 <h2 id="api-documentation">API DOCUMENTATION</h2>
 <p>API&#39;s are available for Python, C, C++
-<a href="https://community.zymbit.com/t/189">Go to API Documents &gt;</a>  </p>
+<a href="https://docs.zymbit.com/api/api_docs_intro/">Go to API Documents &gt;</a>  </p>
 <hr>
 <h2 id="application-examples">APPLICATION EXAMPLES</h2>
 <p>The quickest way to get started is to see the various methods at work by running these scripts:
