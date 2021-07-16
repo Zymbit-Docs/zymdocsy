@@ -11,8 +11,6 @@ weight: -690
 toc: true
 ---
 
-<div id='toc'></div>
-
 <p>ZYMKEY4i is the fourth generation of the Zymbit security module designed specifically to work with Raspberry Pi and NVIDIA Jetson. It connects to the GPIO header of the SBC and uses the I2C bus and GPIO-4 to communicate with the SBC CPU via an encrypted channel. </p>
 
 <hr>
@@ -89,8 +87,8 @@ toc: true
 <p><strong>IMPORTANT:</strong> Installing your hardware correctly is important to avoid destroying your SBC or Zymkey. 
 Be sure to follow the images below to ensure the first 10 GPIO pins are correctly aligned with the Zymkey header. Note: the coin cell battery should be facing up.</p>
 
-<p><img src="../ZK4-hw-install-1.png" alt="Zymkey RPi Hardware Install"><img src="../ZK4-hw-install-nvidia-1.png" alt="Zymkey Jetson Hardware Install"></p>
-<p><img src="../ZK4-hw-install-2.png" alt="Zymkey RPi Hardware Install 2"><img src="../ZK4-hw-install-nvidia-2.png" alt="Zymkey Jetson Hardware Install 2"></p>
+<p><img src="../ZK4-hw-install-1.png" alt="Zymkey RPi Hardware Install" width="50%"><img src="../ZK4-hw-install-nvidia-1.png" alt="Zymkey Jetson Hardware Install" width="50%"></p>
+<p><img src="../ZK4-hw-install-2.png" alt="Zymkey RPi Hardware Install 2" width="50%"><img src="../ZK4-hw-install-nvidia-2.png" alt="Zymkey Jetson Hardware Install 2" width="50%"></p>
 
 <p>Fit the Zymkey 4i with LED and battery holder facing upwards. Be sure the black connector is properly aligned with the first 10 GPIO pins and that pressed firmly down onto the header. If misaligned, this could cause damage to the Zymkey and/or your Raspberry Pi. Your Zymkey should fit relatively snug and maintain a tight interference fit around the pins.</p>
 <p>Zymkey occupies 10 pins on the GPIO header. It can also be used with other GPIO devices attached, or other i2c devices attached. See options later for correct address range and use of IO pins.</p>
@@ -116,6 +114,7 @@ Be sure to follow the images below to ensure the first 10 GPIO pins are correctl
 
 <p><img src="../ZK-LED-power.gif" alt="Zymkey LED 5 per sec"> </p>
 
+<hr>
 <h4 id="zymkey-operational-but-not-configured">Zymkey operational, but not configured</h4>
 <p>(If the blue LED blinks erratically, or not at all, then there is an installation error and you should check your connections.)</p>
 
@@ -148,29 +147,22 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter<
 
 <hr>
 <h2 id="4-software-package-installation-api">4. SOFTWARE PACKAGE INSTALLATION &amp; API</h2>
-<h3 id="sw-rpi">For Raspberry Pi</h3>
-<p>For a bare raspbian system, first login to your pi.</p>
-<p>NOTE: Your Zymkey will require a number of packages to be installed from the Raspberry Pi and Zymbit apt repositories. The following setup script will be installing a number of files and software packages on your system:</p>
+
+<p>Login to your host device.</p>
+<p>NOTE: Your Zymkey will require a number of packages to be installed from the Raspberry Pi/ Canonical and Zymbit apt repositories. The following setup script will be installing a number of files and software packages on your system:</p>
 <ul>
 <li>Zymbit .service files located in the /etc/systemd/system directory</li>
 <li>pip</li>
 </ul>
+
+<p>Make sure curl is installed (typically not included with Tegra [Ubuntu 18.04] by default):</p>
+<p><code>sudo apt install curl</code></p>
+
 <p>Download and install the necessary Zymbit services onto your device. 
 <code>curl -G https://s3.amazonaws.com/zk-sw-repo/install_zk_sw.sh | sudo bash</code>
+
 (grab a cup of coffee because this will take between 4 and 20 minutes).</p>
 
-<h3 id="sw-jetson">For NVIDIA Jetson Nano/ Xavier</h3>
-<p>Login to your Jetson</p>
-<p>NOTE: Your Zymkey will require a number of packages to be installed from the Canonical and Zymbit repositories. The following setup script will be installing a number of files and software packages on your system:</p>
-<ul>
-<li>Zymbit .service files located in the /etc/systemd/system directory</li>
-<li>pip</li>
-</ul>
-<p>The Zymbit install process uses curl which is not included with Tegra (Ubuntu 18.04) by default.  Install curl:</p>
-<p><code>sudo apt install curl</code></p>
-<p>Download and install the necessary Zymbit services onto your SBC.</p>
-<p><code>curl -G https://s3.amazonaws.com/zk-sw-repo/install_zk_sw.sh | sudo bash</code></p>
-<p>(grab a cup of coffee because this will take between 4 and 20 minutes).</p>
 
 <h3 id="binding-device-id-and-authentication-">Binding, Device ID and Authentication.</h3>
 <p>Good security begins with assigning each device a unique and unalterable identity (Device ID), that is used to authenticate subsequent interactions with the device. </p>
