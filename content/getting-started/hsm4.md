@@ -8,10 +8,9 @@ images: []
 type: "docs"
 layout: "single"
 weight: -670
+toc: true
 ---
 
-# Install HSM4 Developer Kit onto Raspberry Pi
------
 ## Prerequisites
 
 * Raspberry Pi 3 or 4.
@@ -25,41 +24,43 @@ weight: -670
 
 Fit your HSM onto the PiZero HAT (Hardware Attached on Top). The connector plugs into the pins on the board.
 
-![HSM4 Pi HAT Installation|533x500](upload://8g7eLTZw3fkQ3GWXkNLoEfzz9v2.jpeg) 
+![HSM4 Pi HAT Installation](../HSM-install-to-hat.png) 
 
 ----------
-## 2. Install Battery  (Optional, but highly recommended)
+## 2. Install Battery  
+##### Optional, but highly recommended
 Battery installation is highly recommended if your device is vulnerable to physical access. If main power to the HSM is removed, then the real-time-clock and tamper detect features will not function. The battery is used to maintain operation of the real-time-clock and tamper detect features in the event that main power (from the GPIO header) is lost. 
-### Primary Battery Holder (Recommended)
+
+##### Primary Battery Holder (Recommended)
 YourPiZero HAT can be fitted with a **3V CR2032  coincell**. This battery should last 3-5 years. We recommend using a high quality one like [this](https://www.amazon.com/Batteries-Panasonic-Lithium-Battery-Blister/dp/B002U00ZNK/ref=sr_1_5?crid=1YG7IIRUM96SP&dchild=1&keywords=panasonic+cr2032+3v+battery&qid=1602709891&sprefix=panasonic%2Caps%2C180&sr=8-5). 
 
 **IMPORTANT:** Note the correct polarity with **+ve  facing upwards !!**
 
-![HSM4 Battery Installation|690x260](upload://pT4n2n4gtcAlhFtwyVuFQX3ESDg.jpeg)
+![HSM4 Battery Installation](../HSM-battery-install.png)
  
-### Optional Battery Connector (Alternative)
+##### Optional Battery Connector (Alternative)
 **Caution**: Ensure you select the right connector type-- Molex 51021-0200-B (1.25mm Pitch). You can purchase the battery [here](https://www.amazon.com/CR2032-Battery-51021-0200-B-1-25mm-Connector/dp/B07TS54R42/ref=b2b_nav_d_bia_2/133-6806428-1529144?_encoding=UTF8&pd_rd_i=B07TS54R42&pd_rd_r=d30b0d19-eeab-4b5c-a2ee-0ceef542a1a2&pd_rd_w=ZXBat&pd_rd_wg=U87Gu&pf_rd_p=4a93c781-cfc8-46bb-85fa-dc304a3c96a9&pf_rd_r=91SXE6T1J2V2ZYD7C6FD&psc=1&refRID=91SXE6T1J2V2ZYD7C6FD).
 
 Battery should look like this:
-![Screen Shot 2020-12-27 at 1.52.28 PM|690x391, 100%](upload://igXmwkIGOlBKIE43hp9kqMfvH4Q.jpeg) 
+![HSM-battery-connector](../HSM-battery-connector.png) 
 
 Mating component specifications:
-![Screen Shot 2020-12-27 at 1.52.50 PM|690x289](upload://sUwbnof3ob2eYsDBbkoJoCyC852.jpeg) 
+![HSM-Molex-specs](../HSM-molex-specs.png) 
 
 Plug wired CR2032 battery into optional battery connector, located below. 
-![Optional Battery Connector Location|605x500, 75%](upload://s9PcuOAKHc3eldQTa2SoB0aeuyf.jpeg) 
+![Optional Battery Connector Location](../HSM-battery-plugin.png) 
 
 
 ----------
 
 ## 3. Install Pi HAT
 
-### - **Power off your Raspberry Pi before proceeding**
+**Power off your Raspberry Pi before proceeding**
 
 
-![Install PiHAT onto RPi - Open|375x500, 80%](upload://luxwE7RP7KXj8j0Py76xxCNJlDg.jpeg) 
+![Install PiHAT onto RPi - Open](../HSM-install-hat-1.png) 
 
-![Install PiHAT onto RPi - Closed|437x499, 80%](upload://1hjPgfXG8ENWZjtHEhNF3YOSPz0.png) 
+![Install PiHAT onto RPi - Closed](../HSM-install-hat-2.png) 
 
 Follow the above pictures to position the PiHAT. The HSM and battery should be facing the Raspberry Pi and concealed from view. You should not be able to see the 3V battery slot when looking down at your pi. 
 
@@ -69,11 +70,7 @@ Once aligned properly, press firmly down onto the header. Your PiHAT should fit 
 
 Now power up the Pi and you will see a blue LED blinking rapidly and consistently (5 blinks per second). This indicates the HSM is operational but not configured. If the blue LED blinks erratically, or not at all, then there is an installation error and you should check your connections.
 
-![HSM4-LED-5times-per-second|250x500, 50%](upload://iRs7gviGGcMsiSc9CNSYVM4XNdp.gif) 
-
-
-
-
+![HSM4-LED-5times-per-second](../HSM4-LED-5times-per-second.gif) 
 
 ----------
 
@@ -101,7 +98,7 @@ Then download and install the necessary Zymbit services onto your Pi.
 ## 6. Developer Mode (temporary binding)
 When the software installation has completed, reboot your Pi. After rebooting, the Pi will temporarily bind the HSM to itself. Once bound, the blue LED should blink once every 3 seconds.
 
-![HSM4-LED-every-3-seconds|250x500, 50%](upload://2CDJTdoS1Mj21iPk5Q4S7Dk9YUd.gif) 
+![HSM4-LED-every-3-seconds](../HSM4-LED-every-3-seconds.gif) 
 
 Your HSM is now in Developer Mode. The binding is temporary and the HSM can be moved to another Pi and the binding process repeated. Now is the time to prototype. Do all development work with the HSM in this mode. You can safely test the self-destruct features here. A self-destruct in this mode will stop all HSM functionality until the Pi is rebooted. Only in production mode will the HSM actually self-destruct.
 
@@ -124,7 +121,7 @@ To test some of the API and see it's functionality, you can also run these pre-i
 
 When you are ready to deploy your system into the field we recommend that you permanently bind your HSM to a specific host Pi and SD card.
 
-#### **WARNING: THIS BINDING PROCESS IS PERMANENT AND CANNOT BE REVERSED. PAY ATTENTION TO THE FOLLOWING:**
+##### **WARNING: THIS BINDING PROCESS IS PERMANENT AND CANNOT BE REVERSED. PAY ATTENTION TO THE FOLLOWING:**
 * Your specific HSM will be locked to the specific host Pi and it is impossible to move or bind your HSM to another Pi. There are no factory resets, masterkeys or other forms of recovery. 
 
 * If you are using the perimeter_detect features, the sequence in which you arm, disarm is very important in production mode. Be sure to follow the process steps below.
@@ -134,7 +131,7 @@ When you are ready to deploy your system into the field we recommend that you pe
 
 * If you decide that you are not ready for permanent binding then leave it in developer mode, but beware this makes it easier for a bad actor to replace the host with rogue hardware.
 
-### **Moving from Developer Mode to Production Mode**
+##### **Moving from Developer Mode to Production Mode**
 **Pre-binding Checklist**
 Make sure this is done before continuing
 1.    Install the battery onto HAT and install HSM onto HAT
@@ -150,7 +147,10 @@ Make sure this is done before continuing
 With the Zymkey, a physical tab was cut to go into production mode. In the HSM models, to go into production mode it only requires a function call followed by a reboot.
 
 The API function lock binding puts the HSM into production mode. Below are three scripts which check the current binding info, lock the HSM binding, then check the current binding info again. Remove the comments around the lock binding function to move to production mode.
-[details="C - zkLockBinding"]
+
+<details>
+<summary>C - zkLockBinding</summary>
+<br>
 ```
 void check_code(int code, char* location){
   if (code < 0)
@@ -213,9 +213,11 @@ int main()
   return 0;
 }
 ```
-[/details]
+</details>
 
-[details="C++ - lockBinding"]
+<details>
+<summary>C++ - lockBinding</summary>
+<br>
 ```
 #include <stdio.h>
 #include <zkAppUtilsClass.h>
@@ -258,9 +260,11 @@ int main()
   return 0;
 }
 ```
-[/details]
+</details>
 
-[details="Python - lock_binding"]
+<details>
+<summary>Python - lock_binding</summary>
+<br>
 ```
 import zymkey
 tup = zymkey.client.get_current_binding_info()
@@ -273,14 +277,14 @@ tup = zymkey.client.get_current_binding_info()
 print("HSM is bound: " + str(tup[1]))
 print("Binding is locked: " + str(tup[0]))
 ```
-[/details]
+</details>
 
 
 Once you have successfully moved to Production Mode and rebooted your system, the LED blink pattern will change to **3 rapid blinks once every 3 seconds** to indicate that HSM has bound to the host in production mode.
+![HSM4-LED-3times-every-3-seconds](../HSM4-LED-3times-every-3-seconds.gif) 
 
-![HSM4-LED-3times-every-3-seconds|250x500, 50%](upload://mfI00r0r9hkZYEmN1maboZRXi2q.gif) 
 ----
-### Prime perimeter detect (optional)
+##### Prime perimeter detect (optional)
 After bind locking the HSM, if using the perimeter detect features, prime your perimeter detect using the API.
 
 1.    Close your perimeter circuit(s) (enclosure lid)
