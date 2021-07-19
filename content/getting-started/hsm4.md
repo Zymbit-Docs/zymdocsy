@@ -27,7 +27,7 @@ Fit your HSM onto the PiZero HAT (Hardware Attached on Top). The connector plugs
 ![HSM4 Pi HAT Installation](../HSM-install-to-hat.png) 
 
 ----------
-## 2. Install Battery  
+## 2. Install Battery
 ##### **Optional, but highly recommended**
 Battery installation is highly recommended if your device is vulnerable to physical access. If main power to the HSM is removed, then the real-time-clock and tamper detect features will not function. The battery is used to maintain operation of the real-time-clock and tamper detect features in the event that main power (from the GPIO header) is lost. 
 
@@ -57,10 +57,8 @@ Plug wired CR2032 battery into optional battery connector, located below.
 
 **Power off your Pi or Jetson before proceeding**
 
-
-![Install PiHAT onto RPi - Open](../HSM-install-hat-1.png){ width=50% } ![Install PiHAT onto RPi - Open Nvidia](../HSM-install-hat-nvidia-1.png){ width=50% }
-
-![Install PiHAT onto RPi - Closed](../HSM-install-hat-2.png){ width=50% } ![Install PiHAT onto RPi - Closed Nvidia](../HSM-install-hat-nvidia-2.png){ width=50% }
+<p><img src="../HSM-install-hat-1.png" alt="Install PiHAT onto RPi - Open" width="50%"><img src="../HSM-install-hat-nvidia-1.png" alt="Install PiHAT onto RPi - Open Nvidia" width="50%"></p>
+<p><img src="../HSM-install-hat-2.png" alt="Install PiHAT onto RPi - Closed" width="50%"><img src="../HSM-install-hat-nvidia-2.png" alt="Install PiHAT onto RPi - Closed Nvidia" width="50%"></p>
 
 Follow the above pictures to position the PiHAT. The HSM and battery should be facing the Raspberry Pi and concealed from view.
 
@@ -70,7 +68,7 @@ Once aligned properly, press firmly down onto the header. Your PiHAT should fit 
 
 Now power up the Pi and you will see a blue LED blinking rapidly and consistently (5 blinks per second). This indicates the HSM is operational but not configured. If the blue LED blinks erratically, or not at all, then there is an installation error and you should check your connections.
 
-![HSM4-LED-5times-per-second](../HSM4-LED-5times-per-second.gif){ width=50% }
+<img src="../HSM4-LED-5times-per-second.gif" alt="HSM4-LED-5times-per-second" width="50%">
 
 ----------
 
@@ -105,7 +103,7 @@ Then download and install the necessary Zymbit services onto your Pi.
 ## 6. Developer Mode (temporary binding)
 When the software installation has completed, reboot. After rebooting, the Pi/ Jetson will temporarily bind the HSM to itself. Once bound, the blue LED should blink once every 3 seconds.
 
-![HSM4-LED-every-3-seconds](../HSM4-LED-every-3-seconds.gif){ width=50% }
+<img src="../HSM4-LED-every-3-seconds.gif" alt="HSM4-LED-every-3-seconds" width="50%">
 
 Your HSM is now in Developer Mode. The binding is temporary and the HSM can be moved to another host device and the binding process repeated. Now is the time to prototype. Do all development work with the HSM in this mode. You can safely test the self-destruct features here. A self-destruct in this mode will stop all HSM functionality until the host is rebooted. Only in production mode will the HSM actually self-destruct.
 
@@ -288,7 +286,8 @@ print("Binding is locked: " + str(tup[0]))
 
 
 Once you have successfully moved to Production Mode and rebooted your system, the LED blink pattern will change to **3 rapid blinks once every 3 seconds** to indicate that HSM has bound to the host in production mode.
-![HSM4-LED-3times-every-3-seconds](../HSM4-LED-3times-every-3-seconds.gif){ width=50% }
+
+<img src="../HSM4-LED-3times-every-3-seconds.gif" alt="HSM4-LED-3times-every-3-seconds" width="50%">
 
 ----
 ##### Prime perimeter detect (optional)
