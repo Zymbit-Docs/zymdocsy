@@ -14,7 +14,7 @@ toc: true
 <p>ZYMKEY4i is the fourth generation of the Zymbit security module designed specifically to work with Raspberry Pi and NVIDIA Jetson. It connects to the GPIO header of the SBC and uses the I2C bus and GPIO-4 to communicate with the SBC CPU via an encrypted channel. </p>
 
 <hr>
-<h2 id="summary-of-setup-steps">Summary of Sstup Steps</h2>
+<h2 id="summary-of-setup-steps">Summary of Setup Steps</h2>
 <table>
 <thead>
 <tr>
@@ -69,13 +69,13 @@ toc: true
 <hr>
 
 ## <span class="markdown-h2 include-toc">0. Hardware &amp; Connectors</span>
-<h2 id="0-hardware-connectors">0. Hardware &amp; Connectors</h2>
 
 <p><img src="../ZK4-top-bottom.png" alt="Zymkey Hardware"></p>
 
 <hr>
+
 ## <span class="markdown-h2 include-toc">1. Battery Installation (Recommended)</span>
-<h2 id="1-battery-installation-recommended-">1. Battery Installation (Recommended)</h2>
+
 <p>Your Zymkey 4i  can be fitted with a <strong>3V CR1025  coincell</strong> battery that is used to maintain operation of the real-time-clock (RTC) and tamper detect features in the event that main power (from the GPIO header) is lost. </p>
 <p>If you choose not to fit a battery, then these important security features will not function in the event main power is removed. </p>
 <p><strong>Battery installation is highly recommended if your device is vulnerable to physical access !</strong></p>
@@ -85,8 +85,9 @@ toc: true
 <p><img src="../ZK4-battery-install.png" alt="Battery Install"></p>
 
 <hr>
+
 ## <span class="markdown-h2 include-toc">2. Hardware Installation</span>
-<h2 id="2-hardware-installation">2. Hardware Installation</h2>
+
 <p><strong>Power down your Raspberry Pi or NVIDIA Jetson first!</strong></p>
 <p><strong>IMPORTANT:</strong> Installing your hardware correctly is important to avoid destroying your SBC or Zymkey. 
 Be sure to follow the images below to ensure the first 10 GPIO pins are correctly aligned with the Zymkey header. Note: the coin cell battery should be facing up.</p>
@@ -131,7 +132,7 @@ Be sure to follow the images below to ensure the first 10 GPIO pins are correctl
 <hr>
 
 ## <span class="markdown-h2 include-toc">3. Configure the I2C Bus</span>
-<h2 id="3-configure-the-i2c-bus">3. Configure the I2C Bus</h2>
+
 <h3 id="i2c-rpi">For Raspberry Pi</h3>
 <p>For Raspbian Operating Systems you must configure the state of the I2C bus to &quot;ON&quot;. </p>
 <p>For Ubuntu Operating Systems, the I2C bus is automatically configured and you may skip this step.</p>
@@ -155,7 +156,6 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter<
 <hr>
 
 ## <span class="markdown-h2 include-toc">4. Software Package Installation &amp; API</span>
-<h2 id="4-software-package-installation-api">4. Software Package Installation &amp; API</h2>
 
 <p>Login to your host device.</p>
 <p>NOTE: Your Zymkey will require a number of packages to be installed from the Raspberry Pi/ Canonical and Zymbit apt repositories. The following setup script will be installing a number of files and software packages on your system:</p>
@@ -182,8 +182,10 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter<
 <li>Production Mode: binding is permanent!  zymkey  can <strong>NOT</strong> be moved to different Pi/ Jetson hosts or SD cards</li>
 </ol>
 
-## <span class="markdown-h2 include-toc">5. Developer Mode</span>
-<h2 id="5-developer-mode-temporary-binding-">5. Developer Mode (temporary binding)</h2>
+<hr>
+
+## <span class="markdown-h2 include-toc">5. Developer Mode (temporary binding)</span>
+
 <p>When the software installation has completed, reboot your device. After the reboot has completed, the Pi/ Jetson will perform an operation that will temporarily bind the Zymkey to your SBC. Once the Zymkey is bound to the SBC, the Zymkey&#39;s blue LED should blink slowly - once every 3 seconds - to indicate that the binding is complete. </p>
 
 <p><img src="../ZK-LED-bound.gif" alt="Zymkey LED once per 3 sec"> </p>
@@ -193,8 +195,8 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter<
 
 <hr>
 
-## <span class="markdown-h2 include-toc">6. Production Mode</span>
-<h2 id="6-production-mode-permanent-binding-">6. Production Mode (permanent binding)</h2>
+## <span class="markdown-h2 include-toc">6. Production Mode (permanent binding)</span>
+
 <p>When you have completed all your development work and you are ready to deploy your system into the field we recommend that you permanently bind your Zymkey to a &#39;specific host device and SD card &#39;.</p>
 <p><strong>WARNING: THIS BINDING PROCESS IS PERMANENT AND CANNOT BE REVERSED. PAY ATTENTION TO  THE FOLLOWING:</strong></p>
 <ul>
