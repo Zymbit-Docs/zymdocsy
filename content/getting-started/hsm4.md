@@ -68,7 +68,7 @@ Once aligned properly, press firmly down onto the header. Your PiHAT should fit 
 
 Now power up the Pi and you will see a blue LED blinking rapidly and consistently (5 blinks per second). This indicates the HSM is operational but not configured. If the blue LED blinks erratically, or not at all, then there is an installation error and you should check your connections.
 
-<img src="../HSM4-LED-5times-per-second.gif" alt="HSM4-LED-5times-per-second" width="50%">
+<img src="../HSM4-LED-5times-per-second.gif" alt="HSM4-LED-5times-per-second" width="25%">
 
 ----------
 
@@ -103,7 +103,7 @@ Then download and install the necessary Zymbit services onto your Pi.
 ## 6. Developer Mode (temporary binding)
 When the software installation has completed, reboot. After rebooting, the Pi/ Jetson will temporarily bind the HSM to itself. Once bound, the blue LED should blink once every 3 seconds.
 
-<img src="../HSM4-LED-every-3-seconds.gif" alt="HSM4-LED-every-3-seconds" width="50%">
+<img src="../HSM4-LED-every-3-seconds.gif" alt="HSM4-LED-every-3-seconds" width="25%">
 
 Your HSM is now in Developer Mode. The binding is temporary and the HSM can be moved to another host device and the binding process repeated. Now is the time to prototype. Do all development work with the HSM in this mode. You can safely test the self-destruct features here. A self-destruct in this mode will stop all HSM functionality until the host is rebooted. Only in production mode will the HSM actually self-destruct.
 
@@ -154,8 +154,10 @@ With the Zymkey, a physical tab was cut to go into production mode. In the HSM m
 The API function lock binding puts the HSM into production mode. Below are three scripts which check the current binding info, lock the HSM binding, then check the current binding info again. Remove the comments around the lock binding function to move to production mode.
 
 <details>
+
 <summary>C - zkLockBinding</summary>
 <br>
+
 ```
 void check_code(int code, char* location){
   if (code < 0)
@@ -220,9 +222,11 @@ int main()
 ```
 </details>
 
+
 <details>
 <summary>C++ - lockBinding</summary>
 <br>
+
 ```
 #include <stdio.h>
 #include <zkAppUtilsClass.h>
@@ -268,8 +272,10 @@ int main()
 </details>
 
 <details>
+
 <summary>Python - lock_binding</summary>
 <br>
+
 ```
 import zymkey
 tup = zymkey.client.get_current_binding_info()
@@ -287,7 +293,7 @@ print("Binding is locked: " + str(tup[0]))
 
 Once you have successfully moved to Production Mode and rebooted your system, the LED blink pattern will change to **3 rapid blinks once every 3 seconds** to indicate that HSM has bound to the host in production mode.
 
-<img src="../HSM4-LED-3times-every-3-seconds.gif" alt="HSM4-LED-3times-every-3-seconds" width="50%">
+<img src="../HSM4-LED-3times-every-3-seconds.gif" alt="HSM4-LED-3times-every-3-seconds" width="25%">
 
 ----
 ##### Prime perimeter detect (optional)
@@ -300,6 +306,3 @@ After bind locking the HSM, if using the perimeter detect features, prime your p
 5.  **Your system is now armed.**
 
 Please see Zymbit software documentation for further details.
-
-----------
-<div data-theme-toc="true"> </div>
