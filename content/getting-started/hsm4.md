@@ -13,11 +13,11 @@ toc: true
 
 ## Prerequisites
 
-* Raspberry Pi 3 or 4.
-* Raspbian or Ubuntu is installed.
+* Raspberry Pi 3 or 4, if using Raspberry Pi.
+* Raspbian or Ubuntu/ Tegra is installed.
     * Other Linux distributions will work, but may require extra configuration. We will gladly provide guidance, but cannot guarantee support. For information see the [Operating Systems](https://community.zymbit.com/c/23) section.
 * Adequate power supply is used (5V).
-    * If the Red Power LED on the Pi is not illuminated this means the supply voltage is inadequate.
+    * **For Pi users:** if the Red Power LED on the Pi is not illuminated this means the supply voltage is inadequate.
     * More info [here](https://community.zymbit.com/t/243).
 ----------
 ## 1. Install the HSM4
@@ -28,17 +28,17 @@ Fit your HSM onto the PiZero HAT (Hardware Attached on Top). The connector plugs
 
 ----------
 ## 2. Install Battery  
-##### Optional, but highly recommended
+##### **Optional, but highly recommended**
 Battery installation is highly recommended if your device is vulnerable to physical access. If main power to the HSM is removed, then the real-time-clock and tamper detect features will not function. The battery is used to maintain operation of the real-time-clock and tamper detect features in the event that main power (from the GPIO header) is lost. 
 
-##### Primary Battery Holder (Recommended)
-YourPiZero HAT can be fitted with a **3V CR2032  coincell**. This battery should last 3-5 years. We recommend using a high quality one like [this](https://www.amazon.com/Batteries-Panasonic-Lithium-Battery-Blister/dp/B002U00ZNK/ref=sr_1_5?crid=1YG7IIRUM96SP&dchild=1&keywords=panasonic+cr2032+3v+battery&qid=1602709891&sprefix=panasonic%2Caps%2C180&sr=8-5). 
+##### **Primary Battery Holder (Recommended)**
+Your PiZero HAT can be fitted with a **3V CR2032  coincell**. This battery should last 3-5 years. We recommend using a high quality one like [this](https://www.amazon.com/Batteries-Panasonic-Lithium-Battery-Blister/dp/B002U00ZNK/ref=sr_1_5?crid=1YG7IIRUM96SP&dchild=1&keywords=panasonic+cr2032+3v+battery&qid=1602709891&sprefix=panasonic%2Caps%2C180&sr=8-5). 
 
 **IMPORTANT:** Note the correct polarity with **+ve  facing upwards !!**
 
-![HSM4 Battery Installation](../HSM-battery-install.png)
+![HSM4 Battery Installation](../HSM-battery-install.jpg)
  
-##### Optional Battery Connector (Alternative)
+##### **Optional Battery Connector (Alternative)**
 **Caution**: Ensure you select the right connector type-- Molex 51021-0200-B (1.25mm Pitch). You can purchase the battery [here](https://www.amazon.com/CR2032-Battery-51021-0200-B-1-25mm-Connector/dp/B07TS54R42/ref=b2b_nav_d_bia_2/133-6806428-1529144?_encoding=UTF8&pd_rd_i=B07TS54R42&pd_rd_r=d30b0d19-eeab-4b5c-a2ee-0ceef542a1a2&pd_rd_w=ZXBat&pd_rd_wg=U87Gu&pf_rd_p=4a93c781-cfc8-46bb-85fa-dc304a3c96a9&pf_rd_r=91SXE6T1J2V2ZYD7C6FD&psc=1&refRID=91SXE6T1J2V2ZYD7C6FD).
 
 Battery should look like this:
@@ -55,27 +55,30 @@ Plug wired CR2032 battery into optional battery connector, located below.
 
 ## 3. Install Pi HAT
 
-**Power off your Raspberry Pi before proceeding**
+**Power off your Pi or Jetson before proceeding**
 
 
-![Install PiHAT onto RPi - Open](../HSM-install-hat-1.png) 
+![Install PiHAT onto RPi - Open](../HSM-install-hat-1.png){ width=50% } ![Install PiHAT onto RPi - Open Nvidia](../HSM-install-hat-nvidia-1.png){ width=50% }
 
-![Install PiHAT onto RPi - Closed](../HSM-install-hat-2.png) 
+![Install PiHAT onto RPi - Closed](../HSM-install-hat-2.png){ width=50% } ![Install PiHAT onto RPi - Closed Nvidia](../HSM-install-hat-nvidia-2.png){ width=50% }
 
-Follow the above pictures to position the PiHAT. The HSM and battery should be facing the Raspberry Pi and concealed from view. You should not be able to see the 3V battery slot when looking down at your pi. 
+Follow the above pictures to position the PiHAT. The HSM and battery should be facing the Raspberry Pi and concealed from view.
 
-**WARNING**: Be sure all the GPIO pins are aligned and have a respective slot. If misaligned, this could cause damage to the HSM, PiHAT, and/or your Raspberry Pi.
+**WARNING**: Be sure all the GPIO pins are aligned and have a respective slot. If misaligned, this could cause damage to the HSM, PiHAT, and/or your host device.
 
 Once aligned properly, press firmly down onto the header. Your PiHAT should fit relatively snug.
 
 Now power up the Pi and you will see a blue LED blinking rapidly and consistently (5 blinks per second). This indicates the HSM is operational but not configured. If the blue LED blinks erratically, or not at all, then there is an installation error and you should check your connections.
 
-![HSM4-LED-5times-per-second](../HSM4-LED-5times-per-second.gif) 
+![HSM4-LED-5times-per-second](../HSM4-LED-5times-per-second.gif){ width=50% }
 
 ----------
 
 ## 4. Turn on the I2C Bus
 
+For the Jetson, the Operating System - Tegra - is based on Ubuntu. The I2C bus is enabled by default. There are no additional steps required.
+
+For the RPi, follow these steps to enable the I2C bus:
 1. Log in to your pi and run `sudo raspi-config`
 2. Select Interfacing Options -> I2C -> 
 Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter
@@ -88,6 +91,10 @@ The default I2C address for HSM is 0x30. If needed, you can [change the I2C Addr
 ----------
 
 ## 5. Install Software Packages and API
+
+The Zymbit install process uses curl which is not included with Tegra (Ubuntu 18.04) by default. 
+Install curl: sudo apt install curl
+
 For a bare Raspbian system, first login to your Pi.
 
 Then download and install the necessary Zymbit services onto your Pi. 
@@ -96,18 +103,18 @@ Then download and install the necessary Zymbit services onto your Pi.
 
 ----------
 ## 6. Developer Mode (temporary binding)
-When the software installation has completed, reboot your Pi. After rebooting, the Pi will temporarily bind the HSM to itself. Once bound, the blue LED should blink once every 3 seconds.
+When the software installation has completed, reboot. After rebooting, the Pi/ Jetson will temporarily bind the HSM to itself. Once bound, the blue LED should blink once every 3 seconds.
 
-![HSM4-LED-every-3-seconds](../HSM4-LED-every-3-seconds.gif) 
+![HSM4-LED-every-3-seconds](../HSM4-LED-every-3-seconds.gif){ width=50% }
 
-Your HSM is now in Developer Mode. The binding is temporary and the HSM can be moved to another Pi and the binding process repeated. Now is the time to prototype. Do all development work with the HSM in this mode. You can safely test the self-destruct features here. A self-destruct in this mode will stop all HSM functionality until the Pi is rebooted. Only in production mode will the HSM actually self-destruct.
+Your HSM is now in Developer Mode. The binding is temporary and the HSM can be moved to another host device and the binding process repeated. Now is the time to prototype. Do all development work with the HSM in this mode. You can safely test the self-destruct features here. A self-destruct in this mode will stop all HSM functionality until the host is rebooted. Only in production mode will the HSM actually self-destruct.
 
 Before moving on to Production mode, ensure your application is running correctly. Explore our HSM resources for help: 
 * [Perimeter Detect](https://community.zymbit.com/t/913)
 * [Encrypting your root file system](https://community.zymbit.com/t/968)
 * [Encrypting & decrypting sensor data on disk](https://community.zymbit.com/t/1015)
 * [Using the Real Time Clock](https://community.zymbit.com/t/1014)
-* [Zymbit API's](https://community.zymbit.com/t/1013) for Python, C and C++.
+* [Zymbit APIs](https://docs.zymbit.com/api/api_docs_intro/).
 
 If you have any questions, feel free to create a new post here in the Community and we will get back to you.
 
@@ -119,10 +126,10 @@ To test some of the API and see it's functionality, you can also run these pre-i
 ----------
 ## 7. Production Mode (permanent binding)
 
-When you are ready to deploy your system into the field we recommend that you permanently bind your HSM to a specific host Pi and SD card.
+When you are ready to deploy your system into the field we recommend that you permanently bind your HSM to a specific host device and SD card.
 
 ##### **WARNING: THIS BINDING PROCESS IS PERMANENT AND CANNOT BE REVERSED. PAY ATTENTION TO THE FOLLOWING:**
-* Your specific HSM will be locked to the specific host Pi and it is impossible to move or bind your HSM to another Pi. There are no factory resets, masterkeys or other forms of recovery. 
+* Your specific HSM will be locked to the specific host device and it is impossible to move or bind your HSM to another host. There are no factory resets, masterkeys or other forms of recovery. 
 
 * If you are using the perimeter_detect features, the sequence in which you arm, disarm is very important in production mode. Be sure to follow the process steps below.
 
@@ -135,8 +142,8 @@ When you are ready to deploy your system into the field we recommend that you pe
 **Pre-binding Checklist**
 Make sure this is done before continuing
 1.    Install the battery onto HAT and install HSM onto HAT
-2.    Place HAT onto the Pi (with power down on the Pi)
-3.    Turn on the Pi (LED: 5 blinks per second)
+2.    Place HAT onto the host device (with power down on the host)
+3.    Turn on the host (LED: 5 blinks per second)
 4.    Configure the I2C bus
 5.    Install HSM interface software package (LED: 1 blink every 3 seconds)
 6.    Set Perimeter Event Actions to “none” or “notify only” (It is "none" by default)
@@ -281,7 +288,7 @@ print("Binding is locked: " + str(tup[0]))
 
 
 Once you have successfully moved to Production Mode and rebooted your system, the LED blink pattern will change to **3 rapid blinks once every 3 seconds** to indicate that HSM has bound to the host in production mode.
-![HSM4-LED-3times-every-3-seconds](../HSM4-LED-3times-every-3-seconds.gif) 
+![HSM4-LED-3times-every-3-seconds](../HSM4-LED-3times-every-3-seconds.gif){ width=50% }
 
 ----
 ##### Prime perimeter detect (optional)
