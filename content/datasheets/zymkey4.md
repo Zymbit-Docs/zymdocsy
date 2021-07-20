@@ -10,4 +10,4 @@ layout: "single"
 weight: -790
 ---
 
-<p><a href="https://www.zymbit.com/wp-content/uploads/2018/12/Zymbit-Data-Sheet-Zymkey-4i-DATA-SHEET-04100910A2.pdf" target="_blank" rel="noopener noreferrer">Zymkey4 Datasheet Here</a></p>
+<p><a href="https://www.zymbit.com/wp-content/uploads/2018/12/Zymbit-Data-Sheet-Zymkey-4i-DATA-SHEET-04100910A2.pdf" target="_blank" rel="noopener noreferrer">Zymkey4 Datasheet</a></p>
