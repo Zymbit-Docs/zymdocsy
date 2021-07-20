@@ -10,4 +10,4 @@ layout: "single"
 weight: -1000
 ---
 
-This is the documentation site for Zymbit. This is the homepage.
+<h3 id="welcome-to-the-homepage-of-zymbit-s-documentation-site-">Welcome to the homepage of Zymbit&#39;s documentation site.</h3>
