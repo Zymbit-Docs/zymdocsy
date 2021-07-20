@@ -75,17 +75,3 @@ module:
       target: static
     - source: archetypes
       target: archetypes
-      
-      
-{{ $mid := printf "m-%s" (.RelPermalink | anchorize) }}
-{{ $active := eq . $p }}
-  {{ if .Params.externalLink }}
-    <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $shouldDelayActive) $active }} active{{ end }}" id="{{ $mid }}" href="{{ .Params.externalLink }}">{{ .LinkTitle }}</a>
-    {{ $externalLinkOrig := .Params.externalLink }}
-    <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $shouldDelayActive) $active }} active{{ end }}" id="{{ $mid }}" href="{{$externalLinkOrig}}" {{ if .Params.externalLinkTitle }}title="{{ .Params.externalLinkTitle }}"{{ end }} {{ if .Params.externalLinkTarget }}target="{{ .Params.externalLinkTarget }}"{{ if eq .Params.externalLinkTarget "_blank" }} rel=noopener {{ end }}{{ end }}>{{ .LinkTitle }}</a>
-  {{ else if .Params.externalLinkRelref }}
-    {{ $externalLinkOrig := .Params.externalLinkRelref }}
-    <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $shouldDelayActive) $active }} active{{ end }}" id="{{ $mid }}" href="{{ relref . $externalLinkOrig }}" {{ if .Params.externalLinkTitle }}title="{{ .Params.externalLinkTitle }}"{{ end }} {{ if .Params.externalLinkTarget }}target="{{ .Params.externalLinkTarget }}"{{ if eq .Params.externalLinkTarget "_blank" }} rel=noopener {{ end }}{{ end }}>{{ .LinkTitle }}</a>
-  {{ else }}
-    <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $shouldDelayActive) $active }} active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-  {{ end }}
