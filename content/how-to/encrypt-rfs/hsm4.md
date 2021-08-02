@@ -1,5 +1,5 @@
 ---
-title : "Getting Started with HSM4"
+title : "Encrypting Root File System with HSM4"
 linkTitle: "HSM4"
 description: ""
 date: ""
@@ -12,298 +12,253 @@ weight: -670
 toc: true
 ---
 
-## Prerequisites
+#### Prerequisites
 
-* Raspberry Pi 3 or 4, if using Raspberry Pi.
-* Raspbian or Ubuntu/ Tegra is installed.
-    * Other Linux distributions will work, but may require extra configuration. We will gladly provide guidance, but cannot guarantee support. For information see the [Operating Systems](https://community.zymbit.com/c/23) section.
-* Adequate power supply is used (5V).
-    * **For Pi users:** if the Red Power LED on the Pi is not illuminated this means the supply voltage is inadequate.
-    * More info [here](https://community.zymbit.com/t/243).
-----------
-## 1. Install the HSM4
+##### Raspberry Pi:
+* Raspbian: Buster (32 or 64 bit); or Ubuntu 18 or 20 (32 or 64 bit)
 
-Fit your HSM onto the PiZero HAT (Hardware Attached on Top). The connector plugs into the pins on the board.
+##### Nvidia Jetson:
+* Jetson Xavier NX or Nano
+* Jetpack 4.4 or earlier
 
-![HSM4 Pi HAT Installation](../HSM-install-to-hat.png) 
+![image1](../erfs-hsm-1.jpeg)
 
-----------
-## 2. Install Battery
-##### **Optional, but highly recommended**
-Battery installation is highly recommended if your device is vulnerable to physical access. If main power to the HSM is removed, then the real-time-clock and tamper detect features will not function. The battery is used to maintain operation of the real-time-clock and tamper detect features in the event that main power (from the GPIO header) is lost. 
+## WHY ENCRYPT?
 
-##### **Primary Battery Holder (Recommended)**
-Your PiZero HAT can be fitted with a **3V CR2032  coincell**. This battery should last 3-5 years. We recommend using a high quality one like [this](https://www.amazon.com/Batteries-Panasonic-Lithium-Battery-Blister/dp/B002U00ZNK/ref=sr_1_5?crid=1YG7IIRUM96SP&dchild=1&keywords=panasonic+cr2032+3v+battery&qid=1602709891&sprefix=panasonic%2Caps%2C180&sr=8-5). 
+There are many reasons to encrypt the Root File System (RFS), from keeping WiFi credentials immutable to keeping proprietary software and sensitive data from being cloned.
 
-**IMPORTANT:** Note the correct polarity with **+ve  facing upwards !!**
+For many Raspberry Pi configurations, only two partitions exist:
 
-![HSM4 Battery Installation](../HSM-battery-install.jpg)
- 
-##### **Optional Battery Connector (Alternative)**
-**Caution**: Ensure you select the right connector type-- Molex 51021-0200-B (1.25mm Pitch). You can purchase the battery [here](https://www.amazon.com/CR2032-Battery-51021-0200-B-1-25mm-Connector/dp/B07TS54R42/ref=b2b_nav_d_bia_2/133-6806428-1529144?_encoding=UTF8&pd_rd_i=B07TS54R42&pd_rd_r=d30b0d19-eeab-4b5c-a2ee-0ceef542a1a2&pd_rd_w=ZXBat&pd_rd_wg=U87Gu&pf_rd_p=4a93c781-cfc8-46bb-85fa-dc304a3c96a9&pf_rd_r=91SXE6T1J2V2ZYD7C6FD&psc=1&refRID=91SXE6T1J2V2ZYD7C6FD).
+* /boot   <nbsp> on    /dev/mmcblk0p1
+* /          on   /dev/mmcblk0p2
 
-Battery should look like this:
-![HSM-battery-connector](../HSM-battery-connector.png) 
+For Jetson configurations, many small partitions are created but the / file system including the /boot area is located here:
 
-Mating component specifications:
-![HSM-Molex-specs](../HSM-molex-specs.png) 
-
-Plug wired CR2032 battery into optional battery connector, located below. 
-![Optional Battery Connector Location](../HSM-battery-plugin.png) 
+* /dev/mmcblk0p1
 
 
-----------
-
-## 3. Install Pi HAT
-
-**Power off your Pi or Jetson before proceeding**
-
-<p><img src="../HSM-install-hat-1.png" alt="Install PiHAT onto RPi - Open" width="50%"><img src="../HSM-install-hat-nvidia-1.png" alt="Install PiHAT onto RPi - Open Nvidia" width="50%"></p>
-<p><img src="../HSM-install-hat-2.png" alt="Install PiHAT onto RPi - Closed" width="50%"><img src="../HSM-install-hat-nvidia-2.png" alt="Install PiHAT onto RPi - Closed Nvidia" width="50%"></p>
-
-Follow the above pictures to position the PiHAT. The HSM and battery should be facing the Raspberry Pi and concealed from view.
-
-**WARNING**: Be sure all the GPIO pins are aligned and have a respective slot. If misaligned, this could cause damage to the HSM, PiHAT, and/or your host device.
-
-Once aligned properly, press firmly down onto the header. Your PiHAT should fit relatively snug.
-
-Now power up the Pi and you will see a blue LED blinking rapidly and consistently (5 blinks per second). This indicates the HSM is operational but not configured. If the blue LED blinks erratically, or not at all, then there is an installation error and you should check your connections.
-
-<img src="../HSM4-LED-5times-per-second.gif" alt="HSM4-LED-5times-per-second" width="25%">
-
-----------
-
-## 4. Turn on the I2C Bus
-
-For the Jetson, the Operating System - Tegra - is based on Ubuntu. The I2C bus is enabled by default. There are no additional steps required.
-
-For the RPi, follow these steps to enable the I2C bus:
-1. Log in to your pi and run `sudo raspi-config`
-2. Select Interfacing Options -> I2C -> 
-Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter
-3. Arrow Right to Finish
-
-Your I2C bus is now on and ready to talk to the HSM.
-
-The default I2C address for HSM is 0x30. If needed, you can [change the I2C Address](https://community.zymbit.com/t/1044) after following steps 5 and 6.
-
-----------
-
-## 5. Install Software Packages and API
-
-The Zymbit install process uses curl which is not included with Tegra (Ubuntu 18.04) by default. 
-Install curl: sudo apt install curl
-
-For a bare Raspbian system, first login to your Pi.
-
-Then download and install the necessary Zymbit services onto your Pi. 
-`curl -G https://s3.amazonaws.com/zk-sw-repo/install_zk_sw.sh | sudo bash`
-(grab a cup of coffee because this will take between 4 and 20 minutes).
-
-----------
-## 6. Developer Mode (temporary binding)
-When the software installation has completed, reboot. After rebooting, the Pi/ Jetson will temporarily bind the HSM to itself. Once bound, the blue LED should blink once every 3 seconds.
-
-<img src="../HSM4-LED-every-3-seconds.gif" alt="HSM4-LED-every-3-seconds" width="25%">
-
-Your HSM is now in Developer Mode. The binding is temporary and the HSM can be moved to another host device and the binding process repeated. Now is the time to prototype. Do all development work with the HSM in this mode. You can safely test the self-destruct features here. A self-destruct in this mode will stop all HSM functionality until the host is rebooted. Only in production mode will the HSM actually self-destruct.
-
-Before moving on to Production mode, ensure your application is running correctly. Explore our HSM resources for help: 
-* [Perimeter Detect](https://docs.zymbit.com/perimeter-detect/hsm4)
-* [Encrypting your root file system](https://community.zymbit.com/t/968)
-* [Encrypting & decrypting sensor data on disk](https://community.zymbit.com/t/1015)
-* [Using the Real Time Clock](https://community.zymbit.com/t/1014)
-* [Zymbit APIs](https://docs.zymbit.com/api/api_docs_intro/).
-
-If you have any questions, feel free to create a new post here in the Community and we will get back to you.
+So it makes sense to encrypt the root partition as a way of encrypting everything.
 
 
-To test some of the API and see it's functionality, you can also run these pre-installed scripts:
-`python /usr/local/share/zymkey/examples/zk_app_utils_test.py`
-`python /usr/local/share/zymkey/examples/zk_crypto_test.py`
+------------
+
+## INTRODUCING LUKS
+
+LUKS (**L**inux **U**nified **K**ey **S**etup) is the popular key management setup for dm-crypt, the de-facto standard for block device encryption with Linux.
+
+LUKS provides a robust and flexible mechanism for multiple users (and services) to interface to and access Linux's '[dm-crypt](https://wiki.archlinux.org/index.php/dm-crypt)' infrastructure.
+
+_dm-crypt_ is a transparent disk encryption subsystem in Linux kernel versions 2.6 and later and is part of the device mapper infrastructure, and uses cryptographic routines from the kernel's Crypto API. Both are widely used and understood in the IT community.
+
+
+
+### Weaknesses of single Master key
+dm-crypt has a single Master Key that is used to encrypt / decrypt data in/out of the block. To ensure long term security and deal with changing authorized users/services, it would be necessary to change the Master Key frequently, and potentially share it with multiple users/services on a regular basis. Every new iteration of Master Key would require the underlying data block to be re-encrypted everytime. In real systems, touched by different users/services, this is impractical.
+
+### Hierarchical key management
+A more practical solution is to have a hierarchical  key management setup  in which users/services are given User Keys that are used to release the MasterKey.  User Keys can be easily changed and revoked, without having to re-encrypt the underlying data block.
+The management of such a hirearchical key managers is the role of LUKS.
+
+In this post we show how to use HSM4 to lock a User Key, that is subsequently used to unlock the Master Key and provide access to the Root File System. If you'd like to learn more about LUKS see the References at the bottom of this post.
+
+![image2](../erfs2.png)
+
+--------
+
+## SECURE STORAGE OF LUKS USER KEYS
+The security efficacy of your LUKS encrypted RFS is highly dependent upon how the User Keys are generated and where they are stored.
+
+### The SD Card is NOT a secure storage location
+
+The growing single board computer family is awesome, and we love it! It is inexpensive, has an incredible amount of computing power for an embedded device and has a very robust software development ecosystem.
+
+However, these devices have an Achilles heel: the SD card is the primary software deployment media, and it can be very easily removed and manipulated.
+
+The natural inclination would be to encrypt the file system using LUKS on dm-crypt, but for unattended use across many deployed units the obvious question is: where is the LUKS key stored? Of course, it's the file system. Even if you try to obfuscate it through various programmatic means, the key is still very vulnerable to attack.
+
+
+
+## Securing LUKS User Key with HSM4 Security Module.
+
+![image1](../erfs-hsm-1.jpeg)
+
+
+
+HSM4 provides a general "locking" service whereby a block of plaintext data is encrypted and signed.
+
+When used with LUKS, the User Key is sent to the HSM4 to be locked (encrypted and signed) when the file system is created. When the system boots and needs to decrypt the root file system, the locked LUKS key is "unlocked" (signature verified and contents decrypted) and presented to dm-crypt. If the key was unlocked successfully, the boot process continues normally. Here is the boot sequence with a LUKS/dm-crypt filesystem where the key is protected by HSM4:
+
+1. The kernel initializes initramfs
+2. initramfs presents the locked LUKS key to HSM4
+3. HSM4 validates the signature and decrypts the key*
+4. The decrypted key is presented to LUKS and the root file system is then decrypted
+
+*requires that HSM4 operational status is "secure"
+
+
+------
+_HSM4 fitted to Raspberry Pi and Jetson_
+
+<p><img src="../erfs3.png" alt="rpi" width="50%"><img src="../jetson3.png" alt="jetson" width="50%"></p>
+
+**HSM4 Authenticates Host System Before Unlocking LUKS Key**
+
+One of the key features of HSM4 is to generate a unique Identity (ID) for the host system, based upon a fingerprint that measures specific system components. This fingerprinting process is used to "bind" together a specific HSM4 (root of trust, key store, crypto services), a specific host computer and a specific SD card. Once bound, these components form a permanent and immutable ID of the host system.
+
+Each time the host device boots, and at random intervals thereafter, the HSM4 rechecks the ID fingerprint. If any of the system components have changed the fingerprint changes and the system is deemed to have been compromised, authentication fails and all security services are shut down.
+
+Using this ID / Authentication feature, HSM4 can be used to protect LUKS User Keys in unattended applications, where it might be easy to remove and copy SD card content. (HSM4 also has other physical security features which are also used to lock/enable security services)
+
+
+![image4](../erfs-hsm-3.jpeg)
 
 ----------
-## 7. Production Mode (permanent binding)
 
-When you are ready to deploy your system into the field we recommend that you permanently bind your HSM to a specific host device and SD card.
+## WHERE TO STORE YOUR LUKS ENCRYPTED RFS
+LUKS is very versatile and can be applied to both SD Card and external storage media. Lets review the pros and cons of each option:
 
-##### **WARNING: THIS BINDING PROCESS IS PERMANENT AND CANNOT BE REVERSED. PAY ATTENTION TO THE FOLLOWING:**
-* Your specific HSM will be locked to the specific host device and it is impossible to move or bind your HSM to another host. There are no factory resets, masterkeys or other forms of recovery. 
-
-* If you are using the perimeter_detect features, the sequence in which you arm, disarm is very important in production mode. Be sure to follow the process steps below.
+### Option 1 - Convert existing SD Card to LUKS
 
 
-* Once you have locked your HSM into production mode, Zymbit cannot guarantee its operation if you subsequently do a major distribution upgrade (e.g. Raspbian Jessie to Stretch). [Contact Zymbit for more information.](https://zymbit.com/contact-form/)
+Converting the existing root file system on the SD card still requires an external device (e.g. USB flash drive) that is used as a temporary boot root file system: this provide an easier and lower risk means to convert and copy the original contents. The external devices needs to be a little larger than the existing root file system in order to store the old file system.
 
-* If you decide that you are not ready for permanent binding then leave it in developer mode, but beware this makes it easier for a bad actor to replace the host with rogue hardware.
+**Pros:**
+1. Less physical space requirements.
+2. Much less power required.
 
-##### **Moving from Developer Mode to Production Mode**
-**Pre-binding Checklist**
-Make sure this is done before continuing
-1.    Install the battery onto HAT and install HSM onto HAT
-2.    Place HAT onto the host device (with power down on the host)
-3.    Turn on the host (LED: 5 blinks per second)
-4.    Configure the I2C bus
-5.    Install HSM interface software package (LED: 1 blink every 3 seconds)
-6.    Set Perimeter Event Actions to “none” or “notify only” (It is "none" by default)
-7.    Create your LUKS encrypted volume (If encrypting SD card)
-8.    Install your applications into your encrypted volume (If encrypting SD card)
-9.    Confirm your system and applications work fully as you intend
-
-With the Zymkey, a physical tab was cut to go into production mode. In the HSM models, to go into production mode it only requires a function call followed by a reboot.
-
-The API function lock binding puts the HSM into production mode. Below are three scripts which check the current binding info, lock the HSM binding, then check the current binding info again. Remove the comments around the lock binding function to move to production mode.
-
-<details>
-
-<summary>C - zkLockBinding</summary>
-<br>
-
-```
-void check_code(int code, char* location){
-  if (code < 0)
-  {
-    fprintf(stderr, "FAILURE: %s - %s\n", location, strerror(code));
-  }
-  else if (code >= 0)
-  {
-    fprintf(stdout, "SUCCESS: %s - %d\n", location, code);
-  }
-}
-
-void HSM_soft_bind(zkCTX zk_ctx)
-{
-  bool binding_is_locked = false;
-  bool is_bound = false;
-  int ret = zkGetCurrentBindingInfo(zk_ctx, &binding_is_locked, &is_bound);
-  check_code(ret, "zkGetCurrentBindingInfo");
-  printf("Binding is locked: ");
-  printf(binding_is_locked ? "true" : "false");
-  printf("\n");
-  printf("HSM is bound: ");
-  printf(is_bound ? "true" : "false");
-  printf("\n\n");
-
-  //ret = zkLockBinding(zk_ctx);
-  //if(binding_is_locked && is_bound)
-  //{
-  //  check_code(ret, "zkLockBinding - Already Bound");
-  //}
-  //else
-  //{
-  //  check_code(ret, "zkLockBinding");
-  //}
-  //printf("\n");
-
-  ret = zkGetCurrentBindingInfo(zk_ctx, &binding_is_locked, &is_bound);
-  check_code(ret, "zkGetCurrentBindingInfo");
-  printf("Binding is locked: ");
-  printf(binding_is_locked ? "true" : "false");
-  printf("\n");
-  printf("HSM is bound: ");
-  printf(is_bound ? "true" : "false");
-  printf("\n\n");
-}
-
-int main()
-{
-  zkCTX zk_ctx;
-  int status = zkOpen(&zk_ctx);
-  check_code(status, "zkOpen");
-  printf("\n\n");
-
-  HSM_soft_bind(zk_ctx);
-
-  status = zkClose(zk_ctx);
-  check_code(status, "zkClose");
-  printf("\n");
-
-  return 0;
-}
-```
-</details>
+**Cons:**
+1. Conversion is more complex and time consuming than migrating to an external drive.
+2. Data space constraints.
+3. Write cycle constraints.
+4. Access speed constraints.
 
 
-<details>
-<summary>C++ - lockBinding</summary>
-<br>
-
-```
-#include <stdio.h>
-#include <zkAppUtilsClass.h>
-
-using namespace std;
-using namespace zkAppUtils;
-
-void HSM_soft_bind(zkClass* zk_inst)
-{
-  bool binding_is_locked = false;
-  bool is_bound = false;
-  zk_inst->getCurrentBindingInfo(binding_is_locked, is_bound);
-  printf("Binding is locked: ");
-  printf(binding_is_locked ? "true" : "false");
-  printf("\n");
-  printf("HSM is bound: ");
-  printf(is_bound ? "true" : "false");
-  printf("\n");
-
-  //zk_inst->lockBinding();
-  //printf("lockBinding successful\n");
-
-  zk_inst->getCurrentBindingInfo(binding_is_locked, is_bound);
-  printf("Binding is locked: ");
-  printf(binding_is_locked ? "true" : "false");
-  printf("\n");
-  printf("HSM is bound: ");
-  printf(is_bound ? "true" : "false");
-  printf("\n");
-}
-
-int main()
-{
-  zkClass* zk_inst;
-  zk_inst = new zkClass();
- 
-  HSM_soft_bind(zk_inst);
-
-  delete zk_inst;
-  return 0;
-}
-```
-</details>
-
-<details>
-
-<summary>Python - lock_binding</summary>
-<br>
-
-```
-import zymkey
-tup = zymkey.client.get_current_binding_info()
-print("HSM is bound: " + str(tup[1]))
-print("Binding is locked: " + str(tup[0]))
-
-#zymkey.client.lock_binding()
-
-tup = zymkey.client.get_current_binding_info()
-print("HSM is bound: " + str(tup[1]))
-print("Binding is locked: " + str(tup[0]))
-```
-</details>
+**Process Steps:**
+1. Make a tarball of the original root file system and store it on the external device
+2. Copy the original root file system files to the external device to form a temporary file system
+3. Boot to the temporary file system. Once booted, the temporary file system will:
+a. Create a LUKS key
+b. Lock the LUKS key with HSM4
+c. Create a LUKS volume on the original root partition. The standard Jetson installation creates up to 14 partitions. In most cases, the new partition will be mmcblk0p13 or mmcblk0p15.
+d. Create an ext4 partition on the LUKS volume on the original root partition
+e. Untar the root file system tarball into the converted partition
+f. For Jetson users: Untar the /boot area into the original SD card partition, mmcblk0p1
 
 
-Once you have successfully moved to Production Mode and rebooted your system, the LED blink pattern will change to **3 rapid blinks once every 3 seconds** to indicate that HSM has bound to the host in production mode.
 
-<img src="../HSM4-LED-3times-every-3-seconds.gif" alt="HSM4-LED-3times-every-3-seconds" width="25%">
 
-----
-##### Prime perimeter detect (optional)
-After bind locking the HSM, if using the perimeter detect features, prime your perimeter detect using the API.
+### Option 2 - Migrate existing SD card to external LUKS storage device.
 
-1.    Close your perimeter circuit(s) (enclosure lid)
-2.    Clear Perimeter Detect Events
-3.    Get Perimeter Detect Info to confirm prior events are cleared and the perimeter is closed.
-4.    If the Perimeter Detect Event returns clear, then you can ‘arm your system’ as you require by setting Set Perimeter Event Actions to “none”, “notify” or “selfdestruct” (You can only do this once!).
-5.  **Your system is now armed.**
 
-Please see Zymbit software documentation for further details.
+The existing root file system can be migrated to an external LUKS encrypted USB flash, hard drive or SSD.
+
+**Pros:**
+1. External devices can hold much more data.
+2. Migration is easier and quicker than SD card conversion method.
+3. Some external devices have much faster data access than SD cards.
+4. Some external devices (e.g. HDD) can tolerate many more write cycles than an SD card.
+
+**Cons:**
+1. For HDD and SSD and non-compact USB flash devices, there are additional power requirements.
+2. Except for compact USB flash devices, physical space requirements also increase. This may be especially important for the Raspberry Pi Zero family.
+
+**Process Steps:**
+1. Create the LUKS key
+2. Lock the LUKS key
+3. Create a LUKS volume on an external USB device
+4. Create an ext4 partition on the LUKS volume
+5. Move the existing root file system to the LUKS volume on the external device
+6. For RPi users: Boot to the new root file system and erase the previous root volume
+6. For Jetson users: Copy the /boot area into the original SD card partition mmcblk0p1
+7. Boot to the new root file system
+
+
+----------
+
+
+## BUILDING YOUR LUKS ENCRYPTED RFS
+### Prerequisites
+Make sure you have the HSM4 software suite already running and operational as well as insuring that your HSM4 is bound. Instructions [here](https://docs.zymbit.com/how-to/getting-started/HSM4).
+
+#### NOTE for RPi users: For the CM4/IO Module with eMMC, additional steps are needed due to the fact that the USB 2.0 ports are disabled by default:
+1. Upgrade the bootloader version: Jan. 16 2021
+2. Set the boot order to allow booting off USB: 0xf15
+3. Modify /boot/config.txt and add the line "otg_mode=1" under [all]. This replaces the line, "dtoverlay=dwc2,dr_mode=host" if added.
+
+
+### Option 1 - Convert existing SD Card to LUKS
+
+To convert your root file system to LUKS/dm-crypt, you will need to connect an external USB disk (as temporary storage). As mentioned previously, this is necessary because it is not possible to encrypt the partition in place, so the external disk is needed as temporary storage and a temporary root file system while the conversion takes place. The external disk needs to be at least twice as big as the root partition. Next, run the following script:
+
+`curl -G https://s3.amazonaws.com/zk-sw-repo/mk_encr_sd_rfs.sh | sudo bash`
+
+For RPi users: This script is parameterized, so if you have special requirements (e.g. root file system lives on /dev/mmcblk0p4), you can invoke it in the following fashion:
+
+`curl -G https://s3.amazonaws.com/zk-sw-repo/mk_encr_sd_rfs.sh | sudo bash -s -- -x <path to external storage device (e.g. /dev/sdX> -m <source partition number>`
+
+In the above invocation with no parameters, the defaults are:
+ 1. Original root file system located on /dev/mmcblk0p2
+ 2. Temporary root file system/storage for original root tarball located on /dev/sda
+ 3. Temporary root file system takes up entirety of new device
+
+**The very first run of this script on a new temporary external USB disk could take a long time. Also, two reboots are required before the script is complete.**
+
+One thing to note is that, if the external storage device has an ext4 formatted partition with the original root file system partition (e.g. /dev/mmcblk0p2) on it, this script will use what is already on the external storage device to convert the SD card. This cuts down time for converting lots of device root file systems and allows the script to be used in a mass production deployment.
+
+On a Pi3 with an attached USB SSD as the external device on a bare Jessie "full" version (~4GB), the first run of this script requires about an hour to complete the first phase. The second phase takes around 15 minutes.
+
+The same platform with a Jessie "lite" version (~1.6GB) takes around 20 minutes for phase 1 and 5 minutes for phase 2.
+
+For Jetson, the first run of this script can take upwards of 30 minutes to an hour to complete the first phase. The second phase takes around 15 minutes.
+
+Based on the above, using the formatted external device to convert subsequent units should only take 15 minutes.
+
+
+
+
+
+### Option 2 - Migrate existing SD card to external LUKS storage device.
+
+
+To migrate your root file system to an external USB device, you can run the following script:
+
+`curl -G https://s3.amazonaws.com/zk-sw-repo/mk_encr_ext_rfs.sh | sudo bash`
+
+This script is parameterized, so if you have special requirements, you can invoke in the following fashion:
+
+`curl -G https://s3.amazonaws.com/zk-sw-repo/mk_encr_ext_rfs.sh | sudo bash -s -- -x <path to external storage device (e.g. /dev/sdX> -p <destination partition number -s <max size of new root partition> -m <source partition number>`
+
+
+In the above invocation with no parameters, the defaults for RPi are:
+ 1. Original root file system located on /dev/mmcblk0p2
+ 2. New root file system located on /dev/sda1
+ 3. New root file system takes up entirety of new device
+The defaults for Jetson are:
+1. Original root file system located on /dev/mmcblk0p1
+2. Temporary root file system/storage for original root tarball located on /dev/sda
+3. Temporary root file system takes up entirety of new device
+
+Please note that the new root file system should be at least a little larger in size than the original root partition
+
+Running this script takes around 30-40 minutes. The HSM4's LED flashes rapidly until the process has completed.
+
+
+
+----------
+## INTEGRATING LUKS INTO VOLUME MANUFACTURING WORKFLOW
+
+The examples above are designed to help you get up and running with single and low volume applications.
+
+If you require support in developing a high volume manufacturing encryption workflow then please [contact us](https://www.zymbit.com/contact-form/) to discuss our OEM engineering services.
+
+----------
+## REFERENCES
+
+* [LUKS features - the de-facto standard in Linux Kernel.](https://wiki.archlinux.org/index.php/disk_encryption#Comparison_table)
+* [Wiki overview to dm-crypt](https://en.wikipedia.org/wiki/Dm-crypt)
+* [ArchLinux - adding LUKS keys to dm-crypt device encryption](https://wiki.archlinux.org/index.php/Dm-crypt/Device_encryption#Adding_LUKS_keys)
+
+* [GitLab - LUKS and Cryptsetup - FAQ](https://gitlab.com/cryptsetup/cryptsetup/wikis/FrequentlyAskedQuestions)
+
+
+* [GitLab - LUKS and Cryptsetup - open-source disk encryption](https://gitlab.com/cryptsetup/cryptsetup)
