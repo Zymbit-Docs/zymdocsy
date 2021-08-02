@@ -142,7 +142,7 @@ aws iot register-ca-certificate --ca-certificate file://CA_files/zk_ca.crt \
 
 ---
 ### Setup AWS Credentials Provider
----
+
 All of these steps happen on the **provisioning** device
 1. Create an IAM role for credentials provider
    - `aws iam create-role --role-name credential_helper --assume-role-policy-document file://aws-credentials-provider/role-trust-policy.json`
@@ -193,7 +193,7 @@ All of these steps happen on the **provisioning** device
 5. Run `mkdir ~/.aws && cp ~/aws-credentials-provider/config ~/.aws/config`
 
 ---
-## Provisioning an IoT Device
+### Provisioning an IoT Device
 1. On the **IoT** device
      - Run ```openssl req -key nonzymkey.key -new -out zymkey.csr -engine zymkey_ssl -keyform e```
      - Fill in the request with the specified values

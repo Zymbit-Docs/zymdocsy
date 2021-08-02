@@ -147,7 +147,7 @@ If you are fitting a Zymbit security module, here's where it goes. Fit the perim
 
 **Sequence for Fitting Zymkey4 and Perimeter Adapter**
 
-![graphic18](graphic18.png)
+![graphic18](graphic18.gif)
 
 ----------
 ### Configuring Perimeter Detect Circuits
