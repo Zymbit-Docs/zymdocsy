@@ -1,5 +1,6 @@
 ---
 title : "Getting Started with HSM4"
+linkTitle: "HSM4"
 description: ""
 date: ""
 lastmod: ""
@@ -108,7 +109,7 @@ When the software installation has completed, reboot. After rebooting, the Pi/ J
 Your HSM is now in Developer Mode. The binding is temporary and the HSM can be moved to another host device and the binding process repeated. Now is the time to prototype. Do all development work with the HSM in this mode. You can safely test the self-destruct features here. A self-destruct in this mode will stop all HSM functionality until the host is rebooted. Only in production mode will the HSM actually self-destruct.
 
 Before moving on to Production mode, ensure your application is running correctly. Explore our HSM resources for help: 
-* [Perimeter Detect](https://community.zymbit.com/t/913)
+* [Perimeter Detect](https://docs.zymbit.com/perimeter-detect/hsm4)
 * [Encrypting your root file system](https://community.zymbit.com/t/968)
 * [Encrypting & decrypting sensor data on disk](https://community.zymbit.com/t/1015)
 * [Using the Real Time Clock](https://community.zymbit.com/t/1014)

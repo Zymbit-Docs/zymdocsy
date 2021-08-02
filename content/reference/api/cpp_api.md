@@ -1,5 +1,6 @@
 ---
-title: C++ API Documentation
+title: "C++ API Documentation"
+linkTitle: "C++"
 description: C++ interface to Zymkey Application Utilities Library.
 lastmod:
 draft: false

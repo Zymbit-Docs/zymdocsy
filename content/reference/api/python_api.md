@@ -1,5 +1,6 @@
 ---
-title: Python API Documentation
+title: "Python API Documentation"
+linkTitle: "PYTHON"
 description: Python interface module to Zymkey Application Utilities Library.
 lastmod:
 draft: false

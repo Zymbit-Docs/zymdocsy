@@ -1,5 +1,6 @@
 ---
 title : "Getting Started with Zymkey4"
+linkTitle: "ZYMKEY4"
 description: ""
 date: ""
 lastmod: ""
@@ -255,14 +256,14 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter<
 
 ## <span class="markdown-h2 include-toc">Additional Resources</span>
 
-<h2 id="perimeter-detect">Perimeter Detect</h2>
-<p>Refer to <a href="https://community.zymbit.com/c/zymkey/63/">Using Perimeter Detect</a></p>
-<hr>
-<h2 id="api-documentation">API Documentation</h2>
+<h3 id="perimeter-detect">Perimeter Detect</h3>
+<p>Refer to <a href="https://docs.zymbit.com/perimeter-detect/zymkey4">Using Perimeter Detect</a></p>
+
+<h3 id="api-documentation">API Documentation</h3>
 <p>API&#39;s are available for Python, C, C++
 <a href="https://docs.zymbit.com/api/api_docs_intro/">Go to API Documents &gt;</a>  </p>
-<hr>
-<h2 id="application-examples">Application Examples</h2>
+
+<h3 id="application-examples">Application Examples</h3>
 <p>The quickest way to get started is to see the various methods at work by running these scripts:
 <code>python /usr/local/share/zymkey/examples/zk_app_utils_test.py</code>
 <code>python /usr/local/share/zymkey/examples/zk_crypto_test.py</code></p>

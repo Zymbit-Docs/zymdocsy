@@ -1,5 +1,6 @@
 ---
-title: "Getting Started"
+title: "Get Started"
+icon: "fas fa-caret-down"
 description: ""
 date: ""
 lastmod: ""
@@ -7,8 +8,6 @@ draft: false
 images: []
 type: "docs"
 layout: "single"
-weight: -950
-headless: true
 ---
 
 <p><a href="https://docs.zymbit.com/getting-started/zymkey4">Zymkey4 Getting Started</a></p>
