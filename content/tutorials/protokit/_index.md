@@ -49,7 +49,7 @@ This kit comes assembled and ready to start building your prototype in to. The f
 
 
 
-## [BUY NOW >](https://store.zymbit.com/products/protokit-5)
+### [BUY NOW >](https://store.zymbit.com/products/protokit-5)
 
 ----------
 
@@ -165,7 +165,7 @@ Typically the two circuits are configured to provide independent layers of physi
 
 On ProtoKit 5 there are several ways to configure PERIM 1 and PERIM 2.  By default both circuits are closed with two jumpers.  1A<>1B   , 2A<>2B.
 
-![image20](image20.png)
+<p><img src="image20.png" alt="image20" width="25%"></p>
 
 ### Using Tamper Switches
 The protoboard includes two tamper switches, PERIM_SWA and PERIM_SWB,  that are connected in series to the PERIM 1 tamper circuit. To configure and activate these switches follow these steps:
@@ -233,11 +233,6 @@ There a many different types of cable glands: size, cable clamp, strain relief, 
 
 ![image30](image30.png)
 
-
-----------
-
-
-### Add Wires that Connect Externally
 
 ----------
 
