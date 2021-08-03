@@ -1,5 +1,6 @@
 ---
 title: "Digital Wallet"
+icon: "far fa-circle"
 description: ""
 date: ""
 lastmod: ""

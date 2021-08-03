@@ -1,7 +1,7 @@
 ---
 title: "Encrypt Your Root File System with dm-crypt and LUKS"
 linkTitle: "Encrypt Root File System"
-icon: "fas fa-caret-down"
+icon: "fas fa-caret-right"
 description: ""
 date: ""
 lastmod: ""

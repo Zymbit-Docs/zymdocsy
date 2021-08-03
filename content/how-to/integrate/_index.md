@@ -1,5 +1,6 @@
 ---
 title: "Integrate with AWS"
+icon: "far fa-circle"
 description: ""
 date: ""
 lastmod: ""

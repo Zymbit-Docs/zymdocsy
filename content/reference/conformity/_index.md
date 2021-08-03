@@ -1,6 +1,6 @@
 ---
 title: "Conformity Documents"
-icon: "fas fa-caret-down"
+icon: "fas fa-caret-right"
 description: ""
 date: ""
 lastmod: ""
