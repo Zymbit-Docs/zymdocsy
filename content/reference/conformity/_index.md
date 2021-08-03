@@ -1,5 +1,5 @@
 ---
-title: "Product Briefs"
+title: "Conformity Documents"
 icon: "fas fa-caret-down"
 description: ""
 date: ""
@@ -9,8 +9,6 @@ images: []
 type: "docs"
 layout: "single"
 ---
-
-## Conformity Documents
 
 [**EU** Declaration of Conformity](https://www.zymbit.com/documentation/zymkey/conformity/Zymbit_EU-Declaration-of-Conformity_ZYMKEY4i)
 
