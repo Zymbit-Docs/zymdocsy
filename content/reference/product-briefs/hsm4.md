@@ -1,5 +1,5 @@
 ---
-title: "HSM4 Datasheet"
+title: "HSM4 Product Brief"
 linkTitle: "HSM4"
 manualLink: "https://www.zymbit.com/wp-content/uploads/2021/05/Zymbit-DataSheet_HSM4_24000910_20210513_D1.pdf"
 manualLinkTitle: ""
@@ -11,4 +11,4 @@ weight: -770
 description: ""
 ---
 
-<p><a href="https://www.zymbit.com/wp-content/uploads/2021/05/Zymbit-DataSheet_HSM4_24000910_20210513_D1.pdf" target="_blank" rel="noopener noreferrer">HSM4 Datasheet</a></p>
+<p><a href="https://www.zymbit.com/wp-content/uploads/2021/05/Zymbit-DataSheet_HSM4_24000910_20210513_D1.pdf" target="_blank" rel="noopener noreferrer">HSM4 Product Brief</a></p>
