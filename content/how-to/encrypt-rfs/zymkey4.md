@@ -12,16 +12,16 @@ weight: -690
 toc: true
 ---
 
+![image1](../erfs1.png)
+
 #### Prerequisites
 
-##### Raspberry Pi:
+Raspberry Pi:
 * Raspbian: Buster (32 or 64 bit); or Ubuntu 18 or 20 (32 or 64 bit)
 
-##### Nvidia Jetson:
+Nvidia Jetson:
 * Jetson Xavier NX or Nano
 * Jetpack 4.4 or earlier
-
-![image1](../erfs1.png)
 
 ## WHY ENCRYPT?
 
@@ -137,12 +137,12 @@ Converting the existing root file system on the SD card still requires an extern
 1. Make a tarball of the original root file system and store it on the external device
 2. Copy the original root file system files to the external device to form a temporary file system
 3. Boot to the temporary file system. Once booted, the temporary file system will:
-a. Create a LUKS key
-b. Lock the LUKS key with Zymkey
-c. Create a LUKS volume on the original root partition. The standard Jetson installation creates up to 14 partitions. In most cases, the new partition will be mmcblk0p13 or mmcblk0p15.
-d. Create an ext4 partition on the LUKS volume on the original root partition
-e. Untar the root file system tarball into the converted partition
-f. For Jetson users: Untar the /boot area into the original SD card partition, mmcblk0p1
+* Create a LUKS key
+* Lock the LUKS key with Zymkey
+* Create a LUKS volume on the original root partition. The standard Jetson installation creates up to 14 partitions. In most cases, the new partition will be mmcblk0p13 or mmcblk0p15.
+* Create an ext4 partition on the LUKS volume on the original root partition
+* Untar the root file system tarball into the converted partition
+* For Jetson users: Untar the /boot area into the original SD card partition, mmcblk0p1
 
 
 
@@ -169,7 +169,7 @@ The existing root file system can be migrated to an external LUKS encrypted USB 
 4. Create an ext4 partition on the LUKS volume
 5. Move the existing root file system to the LUKS volume on the external device
 6. For RPi users: Boot to the new root file system and erase the previous root volume
-6. For Jetson users: Copy the /boot area into the original SD card partition mmcblk0p1
+* For Jetson users: Copy the /boot area into the original SD card partition mmcblk0p1
 7. Boot to the new root file system
 
 

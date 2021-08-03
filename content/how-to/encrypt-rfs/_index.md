@@ -1,5 +1,6 @@
 ---
-title: "Encrypt Your Root File System"
+title: "Encrypt Your Root File System with dm-crypt and LUKS"
+linkTitle: "Encrypt Root File System"
 icon: "fas fa-caret-down"
 description: ""
 date: ""
