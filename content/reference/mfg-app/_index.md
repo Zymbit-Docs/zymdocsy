@@ -1,6 +1,6 @@
 ---
 title: "Manufacturing Appliance"
-icon: "far fa-circle"
+icon: "fas fa-circle"
 linkTitle: "Manufacturing Appliance"
 manualLink: "https://www.zymbit.com/wp-content/uploads/2020/05/Zymbit-Data-Sheet_Manufacturing-Appliance_-2020_02_V1.1.pdf"
 manualLinkTitle: ""

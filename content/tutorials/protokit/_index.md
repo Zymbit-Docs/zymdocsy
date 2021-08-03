@@ -1,6 +1,6 @@
 ---
 title: "ProtoKit5"
-icon: "far fa-circle"
+icon: "fas fa-circle"
 description: ""
 date: ""
 lastmod: ""
