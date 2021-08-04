@@ -1,6 +1,6 @@
 ---
-title: "Discussion"
-linkTitle: "DISCUSSION"
+title: "Community Forum"
+linkTitle: "FORUM"
 manualLink: "https://community.zymbit.com/"
 manualLinkTitle: ""
 manualLinkTarget: "_blank"
