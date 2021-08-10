@@ -11,7 +11,11 @@ weight: 1
 toc: true
 ---
 
+-----
+
 ## Troubleshooting
+
+-----
 
 #### **Q: Zymkey works intermittently or fails to restart after cycling power.**
 
@@ -21,7 +25,7 @@ toc: true
 
 <br>
 
-A: Zymkey monitors the quality of 5V power coming into the host computer. If the voltage drops below a specified limit, even momentarily, then Zymkey will disable all security services to the host. This is a security feature to prevent power cycle and brown-own attacks. If you are powering a display, modem, or other power-hungry device from your Pi, then check the capacity and quality of your power supply. [**Learn more >**](https://docs.zymbit.com/reference/power-quality/) 
+A: Zymkey monitors the quality of 5V power coming into the host computer. If the voltage drops below a specified limit, even momentarily, then Zymkey will disable all security services to the host. This is a security feature to prevent power cycle and brown-own attacks. If you are powering a display, modem, or other power-hungry device from your Pi, then check the capacity and quality of your power supply. [**Learn more >**](https://docs.zymbit.com/reference/power-quality/)
 
 </details>
 
@@ -58,7 +62,7 @@ A: Check the following:
 
 5. Oftentimes the 1-Wire interface relies on pin 7 (GPIO 4) for communication. If the 1-Wire interface is enabled, try disabling through raspi-config. If that resolves the problem take steps to either move the Zymkey interrupt signal from GPIO 4 or the 1-Wire interface from GPIO 4.
 
-6. if the directory at _/var/lib/zymbit_ or any of the files and/or subdirectories are corrupted or deleted, the Zymkey will fail to work. 
+6. if the directory at _/var/lib/zymbit_ or any of the files and/or subdirectories are corrupted or deleted, the Zymkey will fail to work.
 **IMPORTANT: if this happens when the Zymkey is locked (i.e. Production Mode), the Zymkey can never be used again.**
 
 </details>
@@ -99,10 +103,11 @@ A: Self-destruct mode works only after the Lock Tab has been cut.
 
 </details>
 
+-----
 
-
- 
 ## Features
+
+-----
 
 #### **Q: What do the different LED blinking patterns mean?**
 
@@ -225,8 +230,11 @@ A: You can update your existing key with the following command:
 
 </details>
 
- 
+-----
+
 ## Other
+
+-----
 
 #### **Q: Where can I learn about and/or pre-order future products?**
 
@@ -255,17 +263,17 @@ A: Sign up for our new product email updates [here](https://forms.zohopublic.com
 </details>
 
 #### **Q: Which operating systems does Zymkey support?**
- 
+
 <details>
 
 <summary>Expand for Answer</summary>
 
 <br>
 
-![supported OSs](../supported-os-dots.png) 
+![supported OSs](../supported-os-dots.png)
 
 </details>
-  
+
 
 #### **Q: How much power does Zymkey consume?**
 
