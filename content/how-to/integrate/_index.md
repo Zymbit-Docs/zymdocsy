@@ -1,5 +1,6 @@
 ---
-title: "Integrate with AWS"
+title: "How to Integrate Zymbit with AWS Credentials Provider"
+linkTitle: "Integrate with AWS"
 icon: "fas fa-genderless"
 description: ""
 date: ""
@@ -11,9 +12,6 @@ layout: "single"
 toc: true
 ---
 
-
-## How To Integrate Zymbit with AWS Credentials Provider
----
 The AWS Credentials provider can give a remote device AWS credentials if it has a valid certificate. The device certificate is stored inside AWS IoT's service and can be revoked, deactivated or deleted at any time. AWS IoT can also record and index individual IoT Things within a fleet. Each IoT thing will have its own unique certificate verified by AWS, and can be given unique attributes to identify each device along with policies which control the approved actions of each device.
 
 

@@ -1,5 +1,6 @@
 ---
-title: "Use Alternative GPIO Pin"
+title: "How to Use Alternative GPIO Pin"
+linkTitle: "Use Alternative GPIO Pin"
 icon: "fas fa-genderless"
 description: ""
 date: ""

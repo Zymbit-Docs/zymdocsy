@@ -1,5 +1,6 @@
 ---
-title: "Get Started"
+title: "How to Get Started"
+linkTitle: "Get Started"
 icon: "fas fa-caret-right"
 description: ""
 date: ""

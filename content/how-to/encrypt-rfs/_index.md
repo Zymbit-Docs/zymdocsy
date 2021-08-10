@@ -1,5 +1,5 @@
 ---
-title: "Encrypt Your Root File System with dm-crypt and LUKS"
+title: "How to Encrypt your Root File System with dm-crypt and LUKS"
 linkTitle: "Encrypt Root File System"
 icon: "fas fa-caret-right"
 description: ""
