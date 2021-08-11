@@ -370,6 +370,18 @@ A: We have no plans to release an Arduino shield version. While we love Arduinos
 
 </details>
 
+##### Q: Does Zymkey work with BeagleBone?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: Zymbit does not officially support the BeagleBoard platform at this time.
+
+</details>
+
 
 ##### Q: Which operating systems does Zymkey support?
  
