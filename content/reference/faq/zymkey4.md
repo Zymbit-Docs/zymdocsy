@@ -136,6 +136,23 @@ A: The clock will sync to the current timestamp once the Pi has achieved NTP syn
 
 </details>
 
+##### Q: Should I use an external battery on my Zymkey or HSM?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: The following table compares Zymkey and HSM operational modes while connected to Main Power, Battery Power, and No Power.
+
+The battery is required to maintain the Real Time Clock and the perimeter detect circuits when the host power is removed. Without the battery, these two functions will not be active when the host power is removed.
+
+![external battery matrix](../external-battery.png) 
+
+</details>
+
+
 ##### Q: How do I access the devices (RTC, accelerometer, crypto) on Zymkey?
 
 <details>

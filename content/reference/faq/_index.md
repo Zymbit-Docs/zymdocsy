@@ -12,24 +12,24 @@ layout: "single"
 ---
 
 
-[Zymkey4 FAQ -- Troubleshooting](https://docs.zymbit.com/reference/faq/zymkey4/#troubleshooting)
+[Zymkey4 -- Troubleshooting](https://docs.zymbit.com/reference/faq/zymkey4/#troubleshooting)
 
-[Zymkey4 FAQ -- Features](https://docs.zymbit.com/reference/faq/zymkey4/#features)
+[Zymkey4 -- Features](https://docs.zymbit.com/reference/faq/zymkey4/#features)
 
-[Zymkey4 FAQ -- Other](https://docs.zymbit.com/reference/faq/zymkey4/#other)
-
------
-
-[HSM4 FAQ -- Troubleshooting](https://docs.zymbit.com/reference/faq/hsm4/#troubleshooting)
-
-[HSM4 FAQ -- Features](https://docs.zymbit.com/reference/faq/hsm4/#features)
-
-[HSM4 FAQ -- Other](https://docs.zymbit.com/reference/faq/hsm4/#other)
+[Zymkey4 -- Other](https://docs.zymbit.com/reference/faq/zymkey4/#other)
 
 -----
 
-[HSM6 FAQ -- Troubleshooting](https://docs.zymbit.com/reference/faq/hsm6/#troubleshooting)
+[HSM4 -- Troubleshooting](https://docs.zymbit.com/reference/faq/hsm4/#troubleshooting)
 
-[HSM6 FAQ -- Features](https://docs.zymbit.com/reference/faq/hsm6/#features)
+[HSM4 -- Features](https://docs.zymbit.com/reference/faq/hsm4/#features)
 
-[HSM6 FAQ -- Other](https://docs.zymbit.com/reference/faq/hsm6/#other)
+[HSM4 -- Other](https://docs.zymbit.com/reference/faq/hsm4/#other)
+
+-----
+
+[HSM6 -- Troubleshooting](https://docs.zymbit.com/reference/faq/hsm6/#troubleshooting)
+
+[HSM6 -- Features](https://docs.zymbit.com/reference/faq/hsm6/#features)
+
+[HSM6 -- Other](https://docs.zymbit.com/reference/faq/hsm6/#other)
