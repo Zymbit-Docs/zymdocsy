@@ -12,10 +12,10 @@ toc: true
 ---
 
 ------
-## Troubleshooting
+## **Troubleshooting**
 ------
 
-#### **Q: Why does my Zymkey fail to restart after cycling power?**
+#### Q: Why does my Zymkey fail to restart after cycling power?
 
 <details>
 
@@ -27,7 +27,7 @@ A: Zymkey monitors the quality of 5V power coming into the host computer. If the
 
 </details>
 
-#### **Q: Why is my Zymkey "invisible" to the i2c-tools suite?**
+#### Q: Why is my Zymkey "invisible" to the i2c-tools suite?
 
 <details>
 
@@ -39,7 +39,7 @@ A: Some people have become accustomed to using i2c-detect to do a first level ch
 
 </details>
 
-#### **Q: Why does the LED continue to blink rapidly? It never blinks with the described pattern of once (in Development mode) or three times (in Production mode) every three seconds.**
+#### Q: Why does the LED continue to blink rapidly? It never blinks with the described pattern of once (in Development mode) or three times (in Production mode) every three seconds.
 
 <details>
 
@@ -64,7 +64,7 @@ A: Check the following:
 
 </details>
 
-**Q: The LED blinks rapidly when booting, but eventually turns off. It doesn't blink once or three times every 3 seconds as described.**
+Q: The LED blinks rapidly when booting, but eventually turns off. It doesn't blink once or three times every 3 seconds as described.
 
 <details>
 
@@ -77,10 +77,10 @@ A: This issue could be caused by the same issues described in the first question
 </details>
  
 ------
-## Features
+## **Features**
 ------
 
-#### **Q: What do the different LED blinking patterns mean?**
+#### Q: What do the different LED blinking patterns mean?
 
 <details>
 
@@ -91,27 +91,34 @@ A: This issue could be caused by the same issues described in the first question
 1. 1 second very rapid flash, 1 second off, 8 slow blinks
    * This indicates interrupted communications.
 
+
 2. Quickly 10 times, then slowly 8 times
    * This indicates an electrical connection issue.
+
 
 3. Constant rapid blinking
    * This indicates that your Zymkey is operational but not yet configured.
 
+
 4. Once every 3 seconds
    * This indicates that your Zymkey is working and running.
+
 
 5. Rapid blinking, then slowly 5 times
    * This indicates a failure to communicate with ATECC. The most likely cause is the Zymkey is in Production Mode, tamper detect was set to self-destruct, and a tamper detect event caused the Zymkey to self-destruct. If tamper detect is not armed, this indicates a hardware problem.
 
+
 6. Three rapid blinks every 3 seconds
    * This indicates the Zymkey is in Production Mode and is working and running.
+
 
 7. Rapid blinking then LED off
    * This indicates the Zymkey is in Production Mode but cannot bind with the RPi / SD card pair.  In Production Mode the binding with a particular Pi and SD card becomes permanent. Most likely cause for this is that the Zymkey, the SD card, or the PI has been swapped out.
 
+
 </details>
 
-#### **Q: How can I reset the clock to the current timestamp?**
+#### Q: How can I reset the clock to the current timestamp?
 
 <details>
 
@@ -122,7 +129,8 @@ A: This issue could be caused by the same issues described in the first question
 A: The clock will sync to the current timestamp once the Pi has achieved NTP sync. This requires you to have access to the Internet.
 
 </details>
-#### **Q: How do I access the devices (RTC, accelerometer, crypto) on Zymkey?**
+
+#### Q: How do I access the devices (RTC, accelerometer, crypto) on Zymkey?
 
 <details>
 
@@ -134,7 +142,7 @@ A: For Zymkey and HSMs, kernel drivers and libraries for all of the devices are 
 
 </details>
 
-#### **Q: My GPG Key expired and I cannot access the Zymkey Repository. How do I update the Key?**
+#### Q: My GPG Key expired and I cannot access the Zymkey Repository. How do I update the Key?
 
 
 <details>
@@ -149,7 +157,7 @@ A: You can update your existing key with the following command:
 
 </details>
 
-#### **Q: Do any of Zymbit’s products provide capabilities for hashing and HMAC (for example SHA-1 and SHA-256 based HMAC and hashing)?**
+#### Q: Do any of Zymbit’s products provide capabilities for hashing and HMAC (for example SHA-1 and SHA-256 based HMAC and hashing)?
 
 <details>
 
@@ -162,7 +170,7 @@ A:   All of our products can do ECDSA-SHA256 signing using private keys that are
 </details>
 
 
-#### **Q: Can the Zymkey detect if the SD card has been removed?**
+#### Q: Can the Zymkey detect if the SD card has been removed?
 
 <details>
 
@@ -174,9 +182,9 @@ A: No, but perimeter detect can be configured to prevent access to the SD card. 
 
 </details>
 
-### Kernel & Kernel Boot Questions
+### **Kernel & Kernel Boot Questions**
 
-#### **Q: Can you tell the kernel not to run a shell?**
+#### Q: Can you tell the kernel not to run a shell?
 
 <details>
 
@@ -188,7 +196,7 @@ A: Someone could easily replace the kernel and, while it is possible to configur
 
 </details>
 
-#### **Q:  Can you tell the kernel to ignore cmdline.txt?**
+#### Q:  Can you tell the kernel to ignore cmdline.txt?
 
 <details>
 
@@ -202,7 +210,7 @@ A: There are many reasons why this is infeasible, but the main one is that, sinc
 </details>
 
 
-#### **Q: Is it possible to encrypt the boot partition?**
+#### Q: Is it possible to encrypt the boot partition?
 
 <details>
 
@@ -215,7 +223,7 @@ A: No because the GPU bootloader does not have encryption features implemented a
 
 </details>
 
-#### **Q: Can you boot a custom kernel?**
+#### Q: Can you boot a custom kernel?
 
 <details>
 
@@ -228,9 +236,9 @@ A: Of course, but it would be trivial to replace the kernel image if one could g
 
 </details>
 
-### Production (“self-destruct”) Mode Questions
+### **Production (“self-destruct”) Mode Questions**
 
-#### **Q: When using the perimeter-detect feature, does the “self-destruct” mode work (destroy all of its key material) even when the Lock Tab hasn’t been cut?**
+#### Q: When using the perimeter-detect feature, does the “self-destruct” mode work (destroy all of its key material) even when the Lock Tab hasn’t been cut?
 
 <details>
 
@@ -242,7 +250,7 @@ A: Self-destruct mode works only after the Lock Tab has been cut.
 
 </details>
 
-#### **Q: Is there a way to turn off “self-destruct” mode?**
+#### Q: Is there a way to turn off “self-destruct” mode?
 
 <details>
 
@@ -255,7 +263,7 @@ A: Yes, but only before cutting the tab.
 </details>
 
 
-#### **Q: If my Zymkey does “self-destruct,” can I create new keys and reuse the hardware?**
+#### Q: If my Zymkey does “self-destruct,” can I create new keys and reuse the hardware?
 
 <details>
 
@@ -269,7 +277,7 @@ A: Yes, but only before cutting the tab.
 
 </details>
 
-#### **Q: If I cut the Lock-Tab on a Zymkey, can I move that Zymkey to another Pi or change the SD card?**
+#### Q: If I cut the Lock-Tab on a Zymkey, can I move that Zymkey to another Pi or change the SD card?
 
 <details>
 
@@ -281,7 +289,7 @@ A: No. Cutting the Lock-Tab **permanently** binds that instance of Zymkey to the
 
 </details>
 
-#### **Q: Will Zymkey still self-destruct, even when my SBC is powered off?**
+#### Q: Will Zymkey still self-destruct, even when my SBC is powered off?
 
 <details>
 
@@ -295,10 +303,10 @@ A: Yes, because Zymkey is battery powered. As long as the battery is sufficientl
 
  
 ------
-## Other
+## **Other**
 ------
 
-#### **Q: Where can I learn about and/or pre-order future products?**
+#### Q: Where can I learn about and/or pre-order future products?
 
 <details>
 
@@ -310,7 +318,7 @@ A: Sign up for our new product email updates [here](https://forms.zohopublic.com
 
 </details>
 
-#### **Q: Which SBCs are compatible with Zymkey 4?**
+#### Q: Which SBCs are compatible with Zymkey 4?
 
 <details>
 
@@ -325,7 +333,7 @@ A: Sign up for our new product email updates [here](https://forms.zohopublic.com
 
 </details>
 
-#### **Q: Does Zymkey work with Arduino?**
+#### Q: Does Zymkey work with Arduino?
 
 <details>
 
@@ -339,7 +347,7 @@ A: We have no plans to release an Arduino shield version. While we love Arduinos
 </details>
 
 
-#### **Q: Which operating systems does Zymkey support?**
+#### Q: Which operating systems does Zymkey support?
  
 <details>
 
@@ -352,7 +360,7 @@ A: We have no plans to release an Arduino shield version. While we love Arduinos
 </details>
   
 
-#### **Q: How much power does Zymkey consume?**
+#### Q: How much power does Zymkey consume?
 
 <details>
 
