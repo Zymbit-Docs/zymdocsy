@@ -11,13 +11,11 @@ weight: 1
 toc: true
 ---
 
------
-
+------
 ## Troubleshooting
+------
 
------
-
-#### **Q: Zymkey works intermittently or fails to restart after cycling power.**
+#### **Q: Why does my Zymkey fail to restart after cycling power?**
 
 <details>
 
@@ -25,10 +23,9 @@ toc: true
 
 <br>
 
-A: Zymkey monitors the quality of 5V power coming into the host computer. If the voltage drops below a specified limit, even momentarily, then Zymkey will disable all security services to the host. This is a security feature to prevent power cycle and brown-own attacks. If you are powering a display, modem, or other power-hungry device from your Pi, then check the capacity and quality of your power supply. [**Learn more >**](https://docs.zymbit.com/reference/power-quality/)
+A: Zymkey monitors the quality of 5V power coming into the host computer. If the voltage drops below a specified limit, even momentarily, then Zymkey will disable all security services to the host. This is a security feature to prevent power cycle and brown-own attacks. If you are powering a display, modem, or other power-hungry device from your Pi, then check the capacity and quality of your power supply. [**Learn more >**](https://docs.zymbit.com/reference/power-quality/) 
 
 </details>
-
 
 #### **Q: Why is my Zymkey "invisible" to the i2c-tools suite?**
 
@@ -62,7 +59,7 @@ A: Check the following:
 
 5. Oftentimes the 1-Wire interface relies on pin 7 (GPIO 4) for communication. If the 1-Wire interface is enabled, try disabling through raspi-config. If that resolves the problem take steps to either move the Zymkey interrupt signal from GPIO 4 or the 1-Wire interface from GPIO 4.
 
-6. if the directory at _/var/lib/zymbit_ or any of the files and/or subdirectories are corrupted or deleted, the Zymkey will fail to work.
+6. if the directory at _/var/lib/zymbit_ or any of the files and/or subdirectories are corrupted or deleted, the Zymkey will fail to work. 
 **IMPORTANT: if this happens when the Zymkey is locked (i.e. Production Mode), the Zymkey can never be used again.**
 
 </details>
@@ -78,36 +75,10 @@ A: Check the following:
 A: This issue could be caused by the same issues described in the first question (Why does the LED continue to blink rapidly?). Additionally, this can be caused if a locked (Production Mode) Zymkey is moved to another Pi.
 
 </details>
-
-#### **Q: If I cut the Lock-Tab on a Zymkey can I move that Zymkey to another Pi, or change the SD card ?**
-
-<details>
-
-<summary>Expand for Answer</summary>
-
-<br>
-
-A: No. Cutting the Lock-Tab **permanently** binds that instance of Zymkey to the specific instances of host computer and SD card. This is a security feature to prevent credentials being moved from one host to another. **DO NOT cut the Lock-Tab if you are still in development and expect to change the host or SD cards.**
-
-</details>
-
-#### **Q: When using the perimeter-detect feature, does the “self-destruct” mode work (destroy all of its key material) even when the Lock Tab hasn’t been cut?**
-
-<details>
-
-<summary>Expand for Answer</summary>
-
-<br>
-
-A: Self-destruct mode works only after the Lock Tab has been cut.
-
-</details>
-
------
-
+ 
+------
 ## Features
-
------
+------
 
 #### **Q: What do the different LED blinking patterns mean?**
 
@@ -151,8 +122,7 @@ A: Self-destruct mode works only after the Lock Tab has been cut.
 A: The clock will sync to the current timestamp once the Pi has achieved NTP sync. This requires you to have access to the Internet.
 
 </details>
-
-#### **Q: Does “self-destruct” mode work before the tab has been cut?**
+#### **Q: How do I access the devices (RTC, accelerometer, crypto) on Zymkey?**
 
 <details>
 
@@ -160,7 +130,115 @@ A: The clock will sync to the current timestamp once the Pi has achieved NTP syn
 
 <br>
 
-A: No, it needs to be activated by cutting off the tab.
+A: For Zymkey and HSMs, kernel drivers and libraries for all of the devices are included in the Zymkey software package.
+
+</details>
+
+#### **Q: My GPG Key expired and I cannot access the Zymkey Repository. How do I update the Key?**
+
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: You can update your existing key with the following command:
+
+`curl -L https://zk-sw-repo.s3.amazonaws.com/apt-zymkey-pubkey.gpg | apt-key add -`
+
+</details>
+
+#### **Q: Do any of Zymbit’s products provide capabilities for hashing and HMAC (for example SHA-1 and SHA-256 based HMAC and hashing)?**
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A:   All of our products can do ECDSA-SHA256 signing using private keys that are stored in the module. 
+
+</details>
+
+
+#### **Q: Can the Zymkey detect if the SD card has been removed?**
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: No, but perimeter detect can be configured to prevent access to the SD card. When a tamper event is detected, the Zymkey will, when properly configured via the API, destroy all critical key material and the root fs will fail to be decrypted upon boot.
+
+</details>
+
+### Kernel & Kernel Boot Questions
+
+#### **Q: Can you tell the kernel not to run a shell?**
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: Someone could easily replace the kernel and, while it is possible to configure initramfs to not permit the busybox shell to, that can be sidestepped as well. Even if you hack your own changes to the kernel to ignore the `init` option, someone could replace your kernel. Also, kernel updates would have to be done manually and the updates from the apt repo would have to be blacklisted.
+
+</details>
+
+#### **Q:  Can you tell the kernel to ignore cmdline.txt?**
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: There are many reasons why this is infeasible, but the main one is that, since the GPU initially functions as a bootloader processor during boot and since Broadcom has not made the GPU compiler publicly available as well as the source code for the bootloader, one cannot simply compile their own code that would ignore cmdline.txt.
+
+
+</details>
+
+
+#### **Q: Is it possible to encrypt the boot partition?**
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: No because the GPU bootloader does not have encryption features implemented and, even in lieu of that, it does not know how to communicate with Zymkey. The best solution, then, would be to implement an independent secure boot procedure. As mentioned above, we are currently working on adding this feature in a future product.
+
+
+</details>
+
+#### **Q: Can you boot a custom kernel?**
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: Of course, but it would be trivial to replace the kernel image if one could gain access to the SD card.
+
+
+</details>
+
+### Production (“self-destruct”) Mode Questions
+
+#### **Q: When using the perimeter-detect feature, does the “self-destruct” mode work (destroy all of its key material) even when the Lock Tab hasn’t been cut?**
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: Self-destruct mode works only after the Lock Tab has been cut.
 
 </details>
 
@@ -191,6 +269,18 @@ A: Yes, but only before cutting the tab.
 
 </details>
 
+#### **Q: If I cut the Lock-Tab on a Zymkey, can I move that Zymkey to another Pi or change the SD card?**
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: No. Cutting the Lock-Tab **permanently** binds that instance of Zymkey to the specific instances of host computer and SD card. This is a security feature to prevent credentials being moved from one host to another. **DO NOT cut the Lock-Tab if you are still in development and expect to change the host or SD cards.**
+
+</details>
+
 #### **Q: Will Zymkey still self-destruct, even when my SBC is powered off?**
 
 <details>
@@ -203,38 +293,10 @@ A: Yes, because Zymkey is battery powered. As long as the battery is sufficientl
 
 </details>
 
-#### **Q: How do I access the devices (RTC, accelerometer, crypto) on Zymkey?**
-
-<details>
-
-<summary>Expand for Answer</summary>
-
-<br>
-
-A: For Zymkey and HSMs, kernel drivers and libraries for all of the devices are included in the Zymkey software package.
-
-</details>
-
-#### **Q: My GPG Key expired and I cannot access the Zymkey Repository. How do I update the Key?**
-
-
-<details>
-
-<summary>Expand for Answer</summary>
-
-<br>
-
-A: You can update your existing key with the following command:
-
-`curl -L https://zk-sw-repo.s3.amazonaws.com/apt-zymkey-pubkey.gpg | apt-key add -`
-
-</details>
-
------
-
+ 
+------
 ## Other
-
------
+------
 
 #### **Q: Where can I learn about and/or pre-order future products?**
 
@@ -256,13 +318,14 @@ A: Sign up for our new product email updates [here](https://forms.zohopublic.com
 
 <br>
 
-*  Raspberry Pi 3, 3B+, 4, Zero, Compute Module
-*  NVIDIA Jetson Nano
+*  Raspberry Pi 3, 3B+, 4, Zero
+*  RPi Compute Module 3, 4
+*  NVIDIA Jetson Nano, Xavier
 *  Electrically, the Zymkey-I2C will interface to any single board computer using I2C. Check compatibility with your particular Linux distribution.
 
 </details>
 
-#### **Q: Which operating systems does Zymkey support?**
+#### **Q: Does Zymkey work with Arduino?**
 
 <details>
 
@@ -270,10 +333,24 @@ A: Sign up for our new product email updates [here](https://forms.zohopublic.com
 
 <br>
 
-![supported OSs](../supported-os-dots.png)
+A: We have no plans to release an Arduino shield version. While we love Arduinos and use them all the time, they generally don’t have enough resources to handle cryptographic operations at this level.
+
 
 </details>
 
+
+#### **Q: Which operating systems does Zymkey support?**
+ 
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+![supported OSs](../supported-os-dots.png) 
+
+</details>
+  
 
 #### **Q: How much power does Zymkey consume?**
 
@@ -286,18 +363,6 @@ A: Sign up for our new product email updates [here](https://forms.zohopublic.com
 *   Zymkey-RPi (3.3V): idle approx. 1mA; max active < 25mA with LED off, < 35mA with LED on.
 *   Zymkey-USB (5V): idle approx. 1.5mA; max active < 40mA with LEDs off, < 60mA with LEDs on.
 
-</details>
-
-
-#### **Q: Does Zymkey work with Arduino?**
-
-<details>
-
-<summary>Expand for Answer</summary>
-
-<br>
-
-A: We have no plans to release an Arduino shield version. While we love Arduinos and use them all the time, they generally don’t have enough resources to handle cryptographic operations at this level.
-
+See [Power Quality]( https://docs.zymbit.com/reference/power-quality/) for more information.
 
 </details>
