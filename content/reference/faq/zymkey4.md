@@ -118,11 +118,93 @@ A: This issue could be caused by the same issues described in the first question
    * This indicates the Zymkey is in Production Mode but cannot bind with the RPi / SD card pair.  In Production Mode the binding with a particular Pi and SD card becomes permanent. Most likely cause for this is that the Zymkey, the SD card, or the PI has been swapped out.
 
 </details>
+
+##### Q: Why doesn’t Zymkey show up when I run `$ sudo i2cdetect -y 1` ?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: This is by design, as an additional security feature. You can tell if you successfully installed it by observing the blue LED. If it is flashing once every 3 seconds, then binding completed. You can also use the systemctl command. It should say “active (running)”:
+`systemctl status zkifc`
+
+</details>
+
+##### Q: If the install fails, can I run it more than once?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: Yes, you should have no problem running it multiple times if it were to fail.
+
+</details>
+
  
 
 ------
 ## **Features**
 ------
+
+##### Q: How do I use HSM6’s `store_foreign_public_key` function to store a Zymkey or HSM4 public key on HSM6?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: The easiest way is to save the HSM4 key directly to a binary file, copy that file to the HSM6 and read in the binary file.
+
+HSM4 side:
+
+
+```
+#!/usr/bin/python3
+import zymkey
+
+# Get the public key from slot 0 and save it in a file
+pub_key_file = '/tmp/pub_key_slot0'
+slot = 0
+key = zymkey.client.get_public_key(slot)
+with open(pub_key_file, "wb") as f:
+    f.write(key)
+```
+
+*copy /tmp/pub_key_slot0 over to the HSM6 PI*
+
+HSM6 side:
+
+```
+#!/usr/bin/python3
+import zymkey
+
+key_file = "/tmp/pub_key_slot0"
+key = open(key_file, "rb").read()
+# Store the key in the foreign key store
+foreign_slot = zymkey.client.store_foreign_public_key('secp256r1', key)
+```
+
+</details>
+
+
+##### Q: What curves are supported for Zymbit products?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: Zymkey and HSM4: NIST P-256 and secp256r1
+HSM6: NIST P-256, secp256r1, secp256k1, X25519, ED25519
+
+</details>
+
 
 ##### Q: How can I reset the clock to the current timestamp?
 
@@ -135,23 +217,6 @@ A: This issue could be caused by the same issues described in the first question
 A: The clock will sync to the current timestamp once the Pi has achieved NTP sync. This requires you to have access to the Internet.
 
 </details>
-
-##### Q: Should I use an external battery on my Zymkey or HSM?
-
-<details>
-
-<summary>Expand for Answer</summary>
-
-<br>
-
-A: The following table compares Zymkey and HSM operational modes while connected to Main Power, Battery Power, and No Power.
-
-The battery is required to maintain the Real Time Clock and the perimeter detect circuits when the host power is removed. Without the battery, these two functions will not be active when the host power is removed.
-
-![external battery matrix](../external-battery.png) 
-
-</details>
-
 
 ##### Q: How do I access the devices (RTC, accelerometer, crypto) on Zymkey?
 
@@ -202,6 +267,56 @@ A:   All of our products can do ECDSA-SHA256 signing using private keys that are
 <br>
 
 A: No, but perimeter detect can be configured to prevent access to the SD card. When a tamper event is detected, the Zymkey will, when properly configured via the API, destroy all critical key material and the root fs will fail to be decrypted upon boot.
+
+</details>
+
+
+##### Q: Is it possible to keep the same encryption key for two Zymkey/ HSMs used in two different SBCs?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: This is only available for HSM6, because of the foreign key storage feature.
+
+</details>
+
+
+### **Battery & Power Questions**
+
+##### Q: Should I use an external battery on my Zymkey or HSM?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: The following table compares Zymkey and HSM operational modes while connected to Main Power, Battery Power, and No Power.
+
+The battery is required to maintain the Real Time Clock and the perimeter detect circuits when the host power is removed. Without the battery, these two functions will not be active when the host power is removed.
+
+![external battery matrix](../external-battery.png) 
+
+</details>
+
+##### Q: What happens when the battery dies? How can I change the battery when it dies, without self-destructing my device?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: If the battery dies and the host is not connected to power, some features will go out, such as Perimeter Detect and Real Time Clock. See the table below for more information.
+
+![external battery matrix](../external-battery.png) 
+
+With Zymkey and HSM4, if tamper detect is enabled and the battery dies or is removed, the device will self-destruct. This is an intentional security feature. If tamper detect is NOT enabled, you should connect the host device to power to change the battery.
+
+HSM6 has a battery monitoring feature to help the user prevent the battery from dying. If the battery dies, HSM6 users have the ability to choose whether the device should self-destruct or hold in reset mode until the battery is changed.
 
 </details>
 
