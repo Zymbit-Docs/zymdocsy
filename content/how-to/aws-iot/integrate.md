@@ -1,6 +1,6 @@
 ---
 title: "How to Integrate Zymbit with AWS Credentials Provider"
-linkTitle: "Integrate with AWS"
+linkTitle: "Integrate with AWS Credentials Provider"
 icon: "fas fa-genderless"
 description: ""
 date: ""
@@ -19,7 +19,7 @@ Using AWS IoT also allows device data to be used by other AWS cloud services. On
 
 The IoT device's AWS credentials are only valid for a period of time. If the credentials expire, when the AWS CLI tries to connect to AWS servers, it will run an installed script to get new credentials.
 
-![aws-image1](aws1.png)
+![aws-image1](../aws1.png)
 
 ---
 ## Device Setup

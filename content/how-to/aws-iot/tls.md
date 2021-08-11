@@ -1,5 +1,5 @@
 ---
-title : "AWS IoT - TLS Client Certificate Authentication using Zymkey 4i"
+title : "AWS IoT - TLS Client Certificate Authentication"
 linkTitle: "Transport Level Security"
 description: ""
 date: ""
@@ -38,7 +38,7 @@ With Zymkey, authentication is done by a key that can no be read/exported and th
 
 ## Prerequisites 
 
-Install the necessary software packages and insure the Zymkey is bound to its host using the [Getting Started Guide](https://docs.zymbit.com/how-to/getting-started/zymkey4/). 
+Install the necessary software packages and insure the Zymkey is bound to its host using the [Getting Started Guide](https://docs.zymbit.com/how-to/getting-started/). 
 
 Have a registered AWS Account, a free developer account can be made [here](https://aws.amazon.com/free/).
 
@@ -154,7 +154,7 @@ with open('zymkey.crt', 'w') as zymkey_cert_file:
 
 ---
 
-* ### Option B - Using your own Certificate Authority
+### Option B - Using your own Certificate Authority
 
 <details>
 
@@ -371,10 +371,13 @@ The first thing to do is to look for your AWS endpoint:
 You should see a successful TLS connection, but receive a **403 Forbidden Exception** from AWS. This is because the certificate you registered, **zymkey.crt** doesn't have the approrpiate permissions to **publish** a message to the topic **hello/world**. We can fix this by **adding a policy** and **attaching it to the certificate**.
 
 ---
+
 Here's what the **successful TLS connection** looks like:
 
 ![tls-success|690x161](../tls-success.png) 
+
 ---
+
 Here's the **403 exception** you should receive:
 
 ![403-except|581x164](../tls-403exception.png) 
@@ -383,7 +386,7 @@ Here's the **403 exception** you should receive:
 
 ---
 
-## Attaching Policy to Certificate and Publishing to AWS IoT:
+## Attaching Policy to Certificate and Publishing to AWS IoT
 
 <details>
 
