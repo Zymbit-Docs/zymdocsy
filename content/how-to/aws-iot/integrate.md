@@ -1,7 +1,6 @@
 ---
 title: "How to Integrate Zymbit with AWS Credentials Provider"
 linkTitle: "Integrate with AWS Credentials Provider"
-icon: "fas fa-genderless"
 description: ""
 date: ""
 lastmod: ""
