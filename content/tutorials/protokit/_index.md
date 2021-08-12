@@ -1,6 +1,6 @@
 ---
 title: "ProtoKit5"
-icon: "fas fa-genderless"
+icon: "fas fa-square"
 description: ""
 date: ""
 lastmod: ""
@@ -37,15 +37,25 @@ ProtoKit5 replaces the ProtoKit4. We had a lot of great feedback from customers 
 This kit comes assembled and ready to start building your prototype in to. The following components are included:
 
 ❶ IP67 enclosure, dustproof, waterproof enclosure with lid
+
 ❷ Integrated protoboard.
+
 ❸ Adapter for perimeter circuits
+
 ❹ GPIO connector extension
+
 ❺ Standoffs for Pi, M2.5 - x 3
+
 ❻ Screws for Pi, M2,5 Torx T8 - x 3
+
 ❼ Screws for protoboard fix - x5
+
 ❽ Cable glands, 3/4 - x2
+
 ❾ IP67 lid with neoprene gasket
+
 ❿ Screws for lid - x6
+
 ⓫ Tamper switch actuators - x2
 
 

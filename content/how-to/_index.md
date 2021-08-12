@@ -1,6 +1,6 @@
 ---
-title: "How To"
-linkTitle: "HOW TO"
+title: "How To Guides"
+linkTitle: "HOW TO GUIDES"
 description: ""
 date: ""
 lastmod: ""

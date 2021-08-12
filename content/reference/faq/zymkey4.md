@@ -142,7 +142,53 @@ A: Yes, you should have no problem running it multiple times if it were to fail.
 
 </details>
 
- 
+### **Encrypting Root File System**
+
+##### Q: How can I check if the system matches the default parameters?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: 
+
+-----
+
+</details>
+
+##### Q: How can I monitor the status after phase 1 reboot?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: Once you get to the second phase and login, you can monitor progress with 
+
+`journalctl -fu cfg_SD_crfs`
+
+That will show you progress of the second half of the encryption process.
+
+-----
+
+</details>
+
+##### Q: How can I confirm my file system is encrypted and protected?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: 
+
+-----
+
+</details>
 
 ------
 ## **Features**

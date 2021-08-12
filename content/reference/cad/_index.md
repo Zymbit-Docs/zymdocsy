@@ -1,6 +1,6 @@
 ---
 title: "CAD"
-icon: "fas fa-genderless"
+icon: "fas fa-square"
 type: docs
 date: ""
 draft: false
