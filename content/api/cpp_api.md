@@ -1,5 +1,6 @@
 ---
 title: C++ API Documentation
+linkTitle: C++ API Documentation
 description: C++ interface to Zymkey Application Utilities Library.
 lastmod:
 draft: false
@@ -561,6 +562,51 @@ toc: true
 <li class="param-item">
 <span class="name">slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>The key slot to use for verification.</p>
+</span>
+</li>
+</ul>
+</div>
+<div class="exceptions">
+<h5>Exceptions</h5>
+<ul>
+<li class="exc-item">
+<span class="name">zkAppUtilsException</span>
+<span class="description">upon error</span>
+</li>
+</ul>
+</div>
+<div class="returns">
+<h5>Returns</h5>
+<span class="return_value">
+<p>Byte container with binary signature.</p>
+</span>
+</div>
+</div>
+</div>
+<div class="method">
+
+#### <span><span class="pointer-ref">\*</span> <span class="name">genECDSASigFromDigest</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">digest</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">uint8\_t</span> <span class="pointer-ref">&amp;</span> <span class="name">recovery\_id</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="genECDSASigFromDigest-149b5f84" class="markdown-h4 signature include-toc"}
+
+<div class="body">
+<div class="description">
+<p>Generate a signature from a data digest using the Zymkey&#8217;s private key.</p>
+</div>
+<div class="parameters">
+<h5>Parameters</h5>
+<ul>
+<li class="param-item">
+<span class="name">digest</span><span class="param-desc-divider"> &#8212; </span><span class="description">
+<p>Currently, this should be a SHA256 digest.</p>
+</span>
+</li>
+<li class="param-item">
+<span class="name">slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
+<p>The key slot to use for verification.</p>
+</span>
+</li>
+<li class="param-item">
+<span class="name">recovery_id</span><span class="param-desc-divider"> &#8212; </span><span class="description">
+<p>[Output]Returns recovery id value needed for ethereum key recovery.</p>
 </span>
 </li>
 </ul>
