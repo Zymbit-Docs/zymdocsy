@@ -10,6 +10,7 @@ layout: "single"
 weight: -1000
 ---
 
-<h3 id="welcome">Welcome to the homepage of Zymbit&#39;s documentation site.</h3>
+Welcome to Zymbit's Documentation Site. Here, you will find all the resources you need to learn about and to use Zymbit's embedded security modules. 
+
 
 At Zymbit, we design and build specialized products that protect digital assets in vulnerable IoT and edge devices. Our embedded security modules are easy to integrate and tough to infiltrate, giving developers the freedom to innovate, securely.
