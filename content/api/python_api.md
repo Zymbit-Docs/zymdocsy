@@ -1,5 +1,6 @@
 ---
 title: Python API Documentation
+linkTitle: Python API Documentation
 description: Python interface module to Zymkey Application Utilities Library.
 lastmod:
 draft: false
@@ -338,7 +339,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">sign</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">src</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="sign-6a6a9010" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">sign</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">src</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">return\_recid</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="sign-05259f19" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -353,20 +354,32 @@ toc: true
 </li>
 <li class="param-item">
 <span class="name">slot</span>
-<span class="type-paren paren-open">(</span><span class="type">int</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">The key slot used for signing.</span>
+<span class="type-paren paren-open">(</span><span class="type">int</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">The key slot used for signing. [HSM6]Slot can&#8217;t contain a X25519 key pair</span>
+</li>
+<li class="param-item">
+<span class="name">return_recid</span>
+<span class="type-paren paren-open">(</span><span class="type">bool</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">This parameter asks for the y parity to be returned.</span>
 </li>
 </ul>
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">bytearray</span><span class="param-desc-divider"> &#8212; </span>
-<span class="return_value">A bytearray of the signature.</span>
+<span class="return_type">
+</span><span class="param-desc-divider"> &#8212; </span>
+<span class="return_value">
+<ul>
+<li>
+<em>bytearray</em> &#8211; A bytearray of the signature. </li>
+<li>
+<em>int</em> &#8211; If return_recid = True, then return the y parity of the signature (either a 1 or 0). </li>
+</ul>
+</span>
 </div>
 </div>
 </div>
 <div class="method">
 
-#### <span><span class="name">sign\_digest</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">sha256</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="signdigest-fb1afb00" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">sign\_digest</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">sha256</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">slot</span> = <span class="default-val">0</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">return\_recid</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="signdigest-fab8e8da" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -381,7 +394,11 @@ toc: true
 </li>
 <li class="param-item">
 <span class="name">slot</span>
-<span class="type-paren paren-open">(</span><span class="type">int</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">This parameter specifies the key slot used for signing.</span>
+<span class="type-paren paren-open">(</span><span class="type">int</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">This parameter specifies the key slot used for signing. [HSM6]Slot can&#8217;t contain a X25519 key pair</span>
+</li>
+<li class="param-item">
+<span class="name">return_recid</span>
+<span class="type-paren paren-open">(</span><span class="type">bool</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">This parameter asks for the y parity to be returned.</span>
 </li>
 </ul>
 </div>
@@ -396,8 +413,16 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">bytearray</span><span class="param-desc-divider"> &#8212; </span>
-<span class="return_value">The signature of the SHA-256 digest passed to this method.</span>
+<span class="return_type">
+</span><span class="param-desc-divider"> &#8212; </span>
+<span class="return_value">
+<ul>
+<li>
+<em>bytearray</em> &#8211; The signature of the SHA-256 digest passed to this method. </li>
+<li>
+<em>int</em> &#8211; If return_recid = True, then return the y parity of the signature (either a 1 or 0). </li>
+</ul>
+</span>
 </div>
 </div>
 </div>
@@ -880,25 +905,12 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">invalidate\_ephemeral\_key</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">foreign</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="invalidateephemeralkey-de6d0145" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">invalidate\_ephemeral\_key</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="invalidateephemeralkey-f24db7dc" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
 <p>Invalidate the ephemeral key (model &gt;= HSM6).</p>
 <p>This method invalidates the ephemeral key, effectively removing it from service until a new key is generated.</p>
-</div>
-<div class="parameters">
-<h5>Parameters</h5>
-<ul>
-<li class="param-item">
-<span class="name">slot</span>
-<span class="type-paren paren-open">(</span><span class="type">int</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">The key slot for the key.</span>
-</li>
-<li class="param-item">
-<span class="name">foreign</span>
-<span class="type-paren paren-open">(</span><span class="type">bool</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">If true, a public key in the foreign keyring will be deleted.</span>
-</li>
-</ul>
 </div>
 <div class="exceptions">
 <h5>Exceptions</h5>
@@ -908,11 +920,6 @@ toc: true
 <span class="description">If <span class="title-reference">ret</span> is a bad return code from the Zymkey library function. </span>
 </li>
 </ul>
-</div>
-<div class="returns">
-<h5>Returns</h5>
-<span class="return_type">int</span><span class="param-desc-divider"> &#8212; </span>
-<span class="return_value">TODO</span>
 </div>
 </div>
 </div>
@@ -930,7 +937,7 @@ toc: true
 <ul>
 <li class="param-item">
 <span class="name">key_type</span>
-<span class="type"></span><span class="param-desc-divider"> &#8212; </span><span class="description">This parameter indicates the EC curve type that should be associated with the new key pair.</span>
+<span class="type"></span><span class="param-desc-divider"> &#8212; </span><span class="description">This parameter indicates the EC curve type that should be associated with the new key pair. (Curve25519 Not Supported)</span>
 </li>
 <li class="param-item">
 <span class="name">master_gen_key</span>
@@ -1000,7 +1007,7 @@ toc: true
 <ul>
 <li class="param-item">
 <span class="name">key_type</span>
-<span class="type"></span><span class="param-desc-divider"> &#8212; </span><span class="description">This parameter indicates the EC curve type that should be associated with the new key pair.</span>
+<span class="type"></span><span class="param-desc-divider"> &#8212; </span><span class="description">This parameter indicates the EC curve type that should be associated with the new key pair. (Curve25519 Not Supported)</span>
 </li>
 <li class="param-item">
 <span class="name">master_gen_key</span>
