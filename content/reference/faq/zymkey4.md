@@ -15,30 +15,6 @@ toc: true
 ## **Troubleshooting**
 ------
 
-##### Q: Why does my Zymkey fail to restart after cycling power?
-
-<details>
-
-<summary>Expand for Answer</summary>
-
-<br>
-
-A: Zymkey monitors the quality of 5V power coming into the host computer. If the voltage drops below a specified limit, even momentarily, then Zymkey will disable all security services to the host. This is a security feature to prevent power cycle and brown-own attacks. If you are powering a display, modem, or other power-hungry device from your Pi, then check the capacity and quality of your power supply. [**Learn more >**](https://docs.zymbit.com/reference/power-quality/) 
-
-</details>
-
-##### Q: Why is my Zymkey "invisible" to the i2c-tools suite?
-
-<details>
-
-<summary>Expand for Answer</summary>
-
-<br>
-
-A: Some people have become accustomed to using i2c-detect to do a first level check for correct installation and baseline functionality of i2c devices. However, these tools only really work if the i2c device communicates via a protocol that sits on top of i2c called SMBus or SMB ([System Management Bus](https://en.wikipedia.org/wiki/System_Management_Bus)). Instead, Zymkey communicates to the host at a much more fundamental level, in part because the Zymkey protocol traffic is encrypted. While we're on the topic, perhaps i2c-tools should have been called "smb-tools"? ;-)
-
-</details>
-
 ##### Q: Why does the LED continue to blink rapidly? It never blinks with the described pattern of once (in Development mode) or three times (in Production mode) every three seconds.
 
 <details>
@@ -62,6 +38,8 @@ A: Check the following:
 6. if the directory at _/var/lib/zymbit_ or any of the files and/or subdirectories are corrupted or deleted, the Zymkey will fail to work. 
 **IMPORTANT: if this happens when the Zymkey is locked (i.e. Production Mode), the Zymkey can never be used again.**
 
+-----
+
 </details>
 
 ##### Q: The LED blinks rapidly when booting, but eventually turns off. It doesn't blink once or three times every 3 seconds as described.
@@ -73,6 +51,36 @@ A: Check the following:
 <br>
 
 A: This issue could be caused by the same issues described in the first question (Why does the LED continue to blink rapidly?). Additionally, this can be caused if a locked (Production Mode) Zymkey is moved to another Pi.
+
+-----
+
+</details>
+
+##### Q: Why does my Zymkey fail to restart after cycling power?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: Zymkey monitors the quality of 5V power coming into the host computer. If the voltage drops below a specified limit, even momentarily, then Zymkey will disable all security services to the host. This is a security feature to prevent power cycle and brown-own attacks. If you are powering a display, modem, or other power-hungry device from your Pi, then check the capacity and quality of your power supply. [**Learn more >**](https://docs.zymbit.com/reference/power-quality/) 
+
+-----
+
+</details>
+
+##### Q: Why is my Zymkey "invisible" to the i2c-tools suite?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: Some people have become accustomed to using i2c-detect to do a first level check for correct installation and baseline functionality of i2c devices. However, these tools only really work if the i2c device communicates via a protocol that sits on top of i2c called SMBus or SMB ([System Management Bus](https://en.wikipedia.org/wiki/System_Management_Bus)). Instead, Zymkey communicates to the host at a much more fundamental level, in part because the Zymkey protocol traffic is encrypted. While we're on the topic, perhaps i2c-tools should have been called "smb-tools"? ;-)
+
+-----
 
 </details>
 
@@ -117,6 +125,8 @@ A: This issue could be caused by the same issues described in the first question
 7. Rapid blinking then LED off
    * This indicates the Zymkey is in Production Mode but cannot bind with the RPi / SD card pair.  In Production Mode the binding with a particular Pi and SD card becomes permanent. Most likely cause for this is that the Zymkey, the SD card, or the PI has been swapped out.
 
+-----
+
 </details>
 
 ##### Q: Why doesn’t Zymkey show up when I run `$ sudo i2cdetect -y 1` ?
@@ -130,6 +140,8 @@ A: This issue could be caused by the same issues described in the first question
 A: This is by design, as an additional security feature. You can tell if you successfully installed it by observing the blue LED. If it is flashing once every 3 seconds, then binding completed. You can also use the systemctl command. It should say “active (running)”:
 `systemctl status zkifc`
 
+-----
+
 </details>
 
 ##### Q: If the install fails, can I run it more than once?
@@ -141,6 +153,8 @@ A: This is by design, as an additional security feature. You can tell if you suc
 <br>
 
 A: Yes, you should have no problem running it multiple times if it were to fail.
+
+-----
 
 </details>
 
@@ -189,6 +203,8 @@ key = open(key_file, "rb").read()
 foreign_slot = zymkey.client.store_foreign_public_key('secp256r1', key)
 ```
 
+-----
+
 </details>
 
 
@@ -200,8 +216,11 @@ foreign_slot = zymkey.client.store_foreign_public_key('secp256r1', key)
 
 <br>
 
-A: Zymkey and HSM4: NIST P-256 and secp256r1
+Zymkey and HSM4: NIST P-256 and secp256r1
+
 HSM6: NIST P-256, secp256r1, secp256k1, X25519, ED25519
+
+-----
 
 </details>
 
@@ -216,6 +235,8 @@ HSM6: NIST P-256, secp256r1, secp256k1, X25519, ED25519
 
 A: The clock will sync to the current timestamp once the Pi has achieved NTP sync. This requires you to have access to the Internet.
 
+-----
+
 </details>
 
 ##### Q: How do I access the devices (RTC, accelerometer, crypto) on Zymkey?
@@ -227,6 +248,8 @@ A: The clock will sync to the current timestamp once the Pi has achieved NTP syn
 <br>
 
 A: For Zymkey and HSMs, kernel drivers and libraries for all of the devices are included in the Zymkey software package.
+
+-----
 
 </details>
 
@@ -243,6 +266,8 @@ A: You can update your existing key with the following command:
 
 `curl -L https://zk-sw-repo.s3.amazonaws.com/apt-zymkey-pubkey.gpg | apt-key add -`
 
+-----
+
 </details>
 
 ##### Q: Do any of Zymbit’s products provide capabilities for hashing and HMAC (for example SHA-1 and SHA-256 based HMAC and hashing)?
@@ -254,6 +279,8 @@ A: You can update your existing key with the following command:
 <br>
 
 A:   All of our products can do ECDSA-SHA256 signing using private keys that are stored in the module. 
+
+-----
 
 </details>
 
@@ -268,6 +295,8 @@ A:   All of our products can do ECDSA-SHA256 signing using private keys that are
 
 A: No, but perimeter detect can be configured to prevent access to the SD card. When a tamper event is detected, the Zymkey will, when properly configured via the API, destroy all critical key material and the root fs will fail to be decrypted upon boot.
 
+-----
+
 </details>
 
 
@@ -280,6 +309,8 @@ A: No, but perimeter detect can be configured to prevent access to the SD card. 
 <br>
 
 A: This is only available for HSM6, because of the foreign key storage feature.
+
+-----
 
 </details>
 
@@ -300,6 +331,8 @@ The battery is required to maintain the Real Time Clock and the perimeter detect
 
 ![external battery matrix](../external-battery.png) 
 
+-----
+
 </details>
 
 ##### Q: What happens when the battery dies? How can I change the battery when it dies, without self-destructing my device?
@@ -318,6 +351,8 @@ With Zymkey and HSM4, if tamper detect is enabled and the battery dies or is rem
 
 HSM6 has a battery monitoring feature to help the user prevent the battery from dying. If the battery dies, HSM6 users have the ability to choose whether the device should self-destruct or hold in reset mode until the battery is changed.
 
+-----
+
 </details>
 
 ### **Kernel & Kernel Boot Questions**
@@ -332,6 +367,8 @@ HSM6 has a battery monitoring feature to help the user prevent the battery from 
 
 A: Someone could easily replace the kernel and, while it is possible to configure initramfs to not permit the busybox shell to, that can be sidestepped as well. Even if you hack your own changes to the kernel to ignore the `init` option, someone could replace your kernel. Also, kernel updates would have to be done manually and the updates from the apt repo would have to be blacklisted.
 
+-----
+
 </details>
 
 ##### Q:  Can you tell the kernel to ignore cmdline.txt?
@@ -344,6 +381,8 @@ A: Someone could easily replace the kernel and, while it is possible to configur
 
 A: There are many reasons why this is infeasible, but the main one is that, since the GPU initially functions as a bootloader processor during boot and since Broadcom has not made the GPU compiler publicly available as well as the source code for the bootloader, one cannot simply compile their own code that would ignore cmdline.txt.
 
+
+-----
 
 </details>
 
@@ -359,6 +398,8 @@ A: There are many reasons why this is infeasible, but the main one is that, sinc
 A: No because the GPU bootloader does not have encryption features implemented and, even in lieu of that, it does not know how to communicate with Zymkey. The best solution, then, would be to implement an independent secure boot procedure. As mentioned above, we are currently working on adding this feature in a future product.
 
 
+-----
+
 </details>
 
 ##### Q: Can you boot a custom kernel?
@@ -371,6 +412,8 @@ A: No because the GPU bootloader does not have encryption features implemented a
 
 A: Of course, but it would be trivial to replace the kernel image if one could gain access to the SD card.
 
+
+-----
 
 </details>
 
@@ -386,6 +429,8 @@ A: Of course, but it would be trivial to replace the kernel image if one could g
 
 A: Self-destruct mode works only after the Lock Tab has been cut.
 
+-----
+
 </details>
 
 ##### Q: Is there a way to turn off “self-destruct” mode?
@@ -397,6 +442,8 @@ A: Self-destruct mode works only after the Lock Tab has been cut.
 <br>
 
 A: Yes, but only before cutting the tab.
+
+-----
 
 </details>
 
@@ -413,6 +460,8 @@ A: Yes, but only before cutting the tab.
 *   Because the SD card contents are encrypted and the decryption key was destroyed, the data is lost.
 *   The Zymkey will not be reusable because the key slots will be destroyed.
 
+-----
+
 </details>
 
 ##### Q: If I cut the Lock-Tab on a Zymkey, can I move that Zymkey to another Pi or change the SD card?
@@ -425,6 +474,8 @@ A: Yes, but only before cutting the tab.
 
 A: No. Cutting the Lock-Tab **permanently** binds that instance of Zymkey to the specific instances of host computer and SD card. This is a security feature to prevent credentials being moved from one host to another. **DO NOT cut the Lock-Tab if you are still in development and expect to change the host or SD cards.**
 
+-----
+
 </details>
 
 ##### Q: Will Zymkey still self-destruct, even when my SBC is powered off?
@@ -436,6 +487,8 @@ A: No. Cutting the Lock-Tab **permanently** binds that instance of Zymkey to the
 <br>
 
 A: Yes, because Zymkey is battery powered. As long as the battery is sufficiently charged, it will still self-destruct.
+
+-----
 
 </details>
 
@@ -455,6 +508,8 @@ A: Yes, because Zymkey is battery powered. As long as the battery is sufficientl
 
 A: Sign up for our new product email updates [here](https://forms.zohopublic.com/phil12/form/EmailSubscription/formperma/HghiKe8SDz8pgAlFEVpaQTBSEaV9edCxXt4f1VJGMlE).
 
+-----
+
 </details>
 
 ##### Q: Which SBCs are compatible with Zymkey 4?
@@ -470,6 +525,8 @@ A: Sign up for our new product email updates [here](https://forms.zohopublic.com
 *  NVIDIA Jetson Nano, Xavier
 *  Electrically, the Zymkey-I2C will interface to any single board computer using I2C. Check compatibility with your particular Linux distribution.
 
+-----
+
 </details>
 
 ##### Q: Does Zymkey work with Arduino?
@@ -483,6 +540,8 @@ A: Sign up for our new product email updates [here](https://forms.zohopublic.com
 A: We have no plans to release an Arduino shield version. While we love Arduinos and use them all the time, they generally don’t have enough resources to handle cryptographic operations at this level.
 
 
+-----
+
 </details>
 
 ##### Q: Does Zymkey work with BeagleBone?
@@ -494,6 +553,8 @@ A: We have no plans to release an Arduino shield version. While we love Arduinos
 <br>
 
 A: Zymbit does not officially support the BeagleBoard platform at this time.
+
+-----
 
 </details>
 
@@ -507,6 +568,8 @@ A: Zymbit does not officially support the BeagleBoard platform at this time.
 <br>
 
 ![supported OSs](../supported-os-dots.png) 
+
+-----
 
 </details>
   
@@ -523,5 +586,7 @@ A: Zymbit does not officially support the BeagleBoard platform at this time.
 *   Zymkey-USB (5V): idle approx. 1.5mA; max active < 40mA with LEDs off, < 60mA with LEDs on.
 
 See [Power Quality]( https://docs.zymbit.com/reference/power-quality/) for more information.
+
+-----
 
 </details>
