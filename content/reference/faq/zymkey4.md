@@ -25,11 +25,11 @@ toc: true
 
 A: Check the following:
 
-1. Make sure that you have enabled i2c support using raspi-config BEFORE your install the software. Also, when you enable i2c communications be sure to follow the enable-disable-enable sequence.
+1. Check that the Raspberry Pi power is sufficient. The red LED on most Raspberry Pi models indicates if the Pi is being powered adequately. If it is not lit at all or flashes intermittently, try a different power supply or a different USB cable. For the RPi4, your power supply must provide at least 3 Amps.
 
-2. If i2c support has been enabled correctly and the Zymkey LED is still rapidly blinking, check proper physical installation of the Zymkey as detailed in this "Getting Started" guide.
+2. Make sure that you have enabled i2c support using raspi-config BEFORE your install the software. Also, when you enable i2c communications be sure to follow the enable-disable-enable sequence.
 
-3. Check that the Raspberry Pi power is sufficient. The red LED on most Raspberry Pi models indicates if the Pi is being powered adequately. If it is not lit at all or flashes intermittently, try a different power supply or a different USB cable.
+3. If i2c support has been enabled correctly and the Zymkey LED is still rapidly blinking, check proper physical installation of the Zymkey as detailed in this "Getting Started" guide.
 
 4. Zymkey uses GPIO header pins 3 and 5 for i2c communications and pin 7 as an interrupt signal to the Pi. Pin 7 should preferably be dedicated exclusively to Zymkey. Other devices may share the i2c bus with Zymkey, but there may still be address conflicts. By default, Zymkey uses slave address 0x30. If the address conflict cannot be resolved on the other i2c devices, there is a way of changing the i2c address on the Zymkey via the command line on the Pi (**coming soon!**). Using this application, the Zymkey address can be changed anywhere in the ranges of 0x30-0x37 or 0x60-0x67.
 
@@ -51,6 +51,46 @@ A: Check the following:
 <br>
 
 A: This issue could be caused by the same issues described in the first question (Why does the LED continue to blink rapidly?). Additionally, this can be caused if a locked (Production Mode) Zymkey is moved to another Pi.
+
+-----
+
+</details>
+
+##### Q: What do the different LED blinking patterns mean?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+1. 1 second very rapid flash, 1 second off, 8 slow blinks
+   * This indicates interrupted communications.
+
+<p></p>
+
+2. 1 second very rapid flash, 1 second off, 5 slow blinks
+   * This indicates a failure to communicate with ATECC. The most likely cause is the Zymkey is in Production Mode, tamper detect was set to self-destruct, and a tamper detect event caused the Zymkey to self-destruct. If tamper detect is not armed, this indicates a hardware problem.
+
+<p></p>
+
+3. Constant rapid blinking (waiting for host to connect)
+   * This indicates that you Zymkey is operational but has not bound to the host. If the Zymkey continues to blink this pattern, it could mean that there is a problem with the host Pi or that the i2c is not configured or that the i2c and wake pins are not making contact.
+
+<p></p>
+
+4. Once every 3 seconds
+   * This indicates that your Zymkey is working and running.
+
+<p></p>
+
+5. Three rapid blinks every 3 seconds
+   * This indicates the Zymkey is in Production Mode and is working and running.
+
+<p></p>
+
+6. Rapid blinking then LED off permanently
+   * This indicates the Zymkey is in Production Mode but cannot bind with the RPi / SD card pair.  In Production Mode the binding with a particular Pi and SD card becomes permanent. Most likely cause for this is that the Zymkey, the SD card, or the PI has been swapped out.
 
 -----
 
@@ -78,66 +118,10 @@ A: Zymkey monitors the quality of 5V power coming into the host computer. If the
 
 <br>
 
-A: Some people have become accustomed to using i2c-detect to do a first level check for correct installation and baseline functionality of i2c devices. However, these tools only really work if the i2c device communicates via a protocol that sits on top of i2c called SMBus or SMB ([System Management Bus](https://en.wikipedia.org/wiki/System_Management_Bus)). Instead, Zymkey communicates to the host at a much more fundamental level, in part because the Zymkey protocol traffic is encrypted. While we're on the topic, perhaps i2c-tools should have been called "smb-tools"? ;-)
+A: Some people have become accustomed to using i2c-detect to do a first level check for correct installation and baseline functionality of i2c devices. However, these tools only really work if the i2c device communicates via a protocol that sits on top of i2c called SMBus or SMB ([System Management Bus](https://en.wikipedia.org/wiki/System_Management_Bus)). Instead, Zymkey communicates to the host at a much more fundamental level, in part because the Zymkey protocol traffic is encrypted. 
 
------
+You can tell if you successfully installed it by observing the blue LED. If it is flashing once every 3 seconds, then binding completed. You can also use the systemctl command. It should say “active (running)”:
 
-</details>
-
-##### Q: What do the different LED blinking patterns mean?
-
-<details>
-
-<summary>Expand for Answer</summary>
-
-<br>
-
-1. 1 second very rapid flash, 1 second off, 8 slow blinks
-   * This indicates interrupted communications.
-
-<p></p>
-
-2. Quickly 10 times, then slowly 8 times
-   * This indicates an electrical connection issue.
-
-<p></p>
-
-3. Constant rapid blinking
-   * This indicates that your Zymkey is operational but not yet configured.
-
-<p></p>
-
-4. Once every 3 seconds
-   * This indicates that your Zymkey is working and running.
-
-<p></p>
-
-5. Rapid blinking, then slowly 5 times
-   * This indicates a failure to communicate with ATECC. The most likely cause is the Zymkey is in Production Mode, tamper detect was set to self-destruct, and a tamper detect event caused the Zymkey to self-destruct. If tamper detect is not armed, this indicates a hardware problem.
-
-<p></p>
-
-6. Three rapid blinks every 3 seconds
-   * This indicates the Zymkey is in Production Mode and is working and running.
-
-<p></p>
-
-7. Rapid blinking then LED off
-   * This indicates the Zymkey is in Production Mode but cannot bind with the RPi / SD card pair.  In Production Mode the binding with a particular Pi and SD card becomes permanent. Most likely cause for this is that the Zymkey, the SD card, or the PI has been swapped out.
-
------
-
-</details>
-
-##### Q: Why doesn’t Zymkey show up when I run `$ sudo i2cdetect -y 1` ?
-
-<details>
-
-<summary>Expand for Answer</summary>
-
-<br>
-
-A: This is by design, as an additional security feature. You can tell if you successfully installed it by observing the blue LED. If it is flashing once every 3 seconds, then binding completed. You can also use the systemctl command. It should say “active (running)”:
 `systemctl status zkifc`
 
 -----
@@ -163,6 +147,22 @@ A: Yes, you should have no problem running it multiple times if it were to fail.
 ------
 ## **Features**
 ------
+
+##### Q: What curves are supported for Zymbit products?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+Zymkey and HSM4: NIST P-256 and secp256r1
+
+HSM6: NIST P-256, secp256r1, secp256k1, X25519, ED25519
+
+-----
+
+</details>
 
 ##### Q: How do I use HSM6’s `store_foreign_public_key` function to store a Zymkey or HSM4 public key on HSM6?
 
@@ -207,24 +207,6 @@ foreign_slot = zymkey.client.store_foreign_public_key('secp256r1', key)
 
 </details>
 
-
-##### Q: What curves are supported for Zymbit products?
-
-<details>
-
-<summary>Expand for Answer</summary>
-
-<br>
-
-Zymkey and HSM4: NIST P-256 and secp256r1
-
-HSM6: NIST P-256, secp256r1, secp256k1, X25519, ED25519
-
------
-
-</details>
-
-
 ##### Q: How can I reset the clock to the current timestamp?
 
 <details>
@@ -247,7 +229,7 @@ A: The clock will sync to the current timestamp once the Pi has achieved NTP syn
 
 <br>
 
-A: For Zymkey and HSMs, kernel drivers and libraries for all of the devices are included in the Zymkey software package.
+A: For Zymkey and HSMs, kernel drivers and libraries for all of the devices are included in the Zymkey software package via the APIs.
 
 -----
 
@@ -270,21 +252,6 @@ A: You can update your existing key with the following command:
 
 </details>
 
-##### Q: Do any of Zymbit’s products provide capabilities for hashing and HMAC (for example SHA-1 and SHA-256 based HMAC and hashing)?
-
-<details>
-
-<summary>Expand for Answer</summary>
-
-<br>
-
-A:   All of our products can do ECDSA-SHA256 signing using private keys that are stored in the module. 
-
------
-
-</details>
-
-
 ##### Q: Can the Zymkey detect if the SD card has been removed?
 
 <details>
@@ -298,22 +265,6 @@ A: No, but perimeter detect can be configured to prevent access to the SD card. 
 -----
 
 </details>
-
-
-##### Q: Is it possible to keep the same encryption key for two Zymkey/ HSMs used in two different SBCs?
-
-<details>
-
-<summary>Expand for Answer</summary>
-
-<br>
-
-A: This is only available for HSM6, because of the foreign key storage feature.
-
------
-
-</details>
-
 
 ### **Battery & Power Questions**
 
@@ -402,21 +353,6 @@ A: No because the GPU bootloader does not have encryption features implemented a
 
 </details>
 
-##### Q: Can you boot a custom kernel?
-
-<details>
-
-<summary>Expand for Answer</summary>
-
-<br>
-
-A: Of course, but it would be trivial to replace the kernel image if one could gain access to the SD card.
-
-
------
-
-</details>
-
 ### **Production (“self-destruct”) Mode Questions**
 
 ##### Q: When using the perimeter-detect feature, does the “self-destruct” mode work (destroy all of its key material) even when the Lock Tab hasn’t been cut?
@@ -441,7 +377,7 @@ A: Self-destruct mode works only after the Lock Tab has been cut.
 
 <br>
 
-A: Yes, but only before cutting the tab.
+A: No, once turned on, "self-destruct" mode is permanent.
 
 -----
 
@@ -520,10 +456,10 @@ A: Sign up for our new product email updates [here](https://forms.zohopublic.com
 
 <br>
 
+*  Electrically, the Zymkey-I2C will interface to any single board computer using I2C. Check compatibility with your particular Linux distribution.
 *  Raspberry Pi 3, 3B+, 4, Zero
 *  RPi Compute Module 3, 4
-*  NVIDIA Jetson Nano, Xavier
-*  Electrically, the Zymkey-I2C will interface to any single board computer using I2C. Check compatibility with your particular Linux distribution.
+*  NVIDIA Jetson Nano, Xavier NX
 
 -----
 
