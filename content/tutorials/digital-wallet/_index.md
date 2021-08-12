@@ -1,6 +1,6 @@
 ---
 title: "Digital Wallet"
-icon: "fas fa-minus"
+icon: "fas fa-genderless"
 description: ""
 date: ""
 lastmod: ""

@@ -1,6 +1,6 @@
 ---
 title: "Real Time Clock Operation"
-icon: "fas fa-minus"
+icon: "fas fa-genderless"
 description: ""
 date: ""
 lastmod: ""

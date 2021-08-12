@@ -1,6 +1,6 @@
 ---
 title: "ProtoKit5"
-icon: "fas fa-minus"
+icon: "fas fa-genderless"
 description: ""
 date: ""
 lastmod: ""
