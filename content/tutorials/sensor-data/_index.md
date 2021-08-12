@@ -1,7 +1,7 @@
 ---
 title: "Encrypting & Decrypting Sensor Data on Disk"
 linkTitle: "Encrypt Sensor Data"
-icon: "fas fa-square"
+icon: "fas fa-minus"
 description: ""
 date: ""
 lastmod: ""

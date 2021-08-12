@@ -1,6 +1,6 @@
 ---
 title: "Power Quality Considerations"
-icon: "fas fa-square"
+icon: "fas fa-minus"
 description: ""
 date: ""
 lastmod: ""

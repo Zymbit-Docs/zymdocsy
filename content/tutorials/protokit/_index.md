@@ -1,6 +1,6 @@
 ---
 title: "ProtoKit5"
-icon: "fas fa-square"
+icon: "fas fa-minus"
 description: ""
 date: ""
 lastmod: ""

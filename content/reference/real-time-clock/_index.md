@@ -1,6 +1,6 @@
 ---
 title: "Real Time Clock Operation"
-icon: "fas fa-square"
+icon: "fas fa-minus"
 description: ""
 date: ""
 lastmod: ""
