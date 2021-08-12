@@ -1,6 +1,6 @@
 ---
-title: "C API Documentation"
-linkTitle: "C"
+title: C API Documentation
+linkTitle: C API Documentation
 description: C interface to Zymkey Application Utilities Library.
 lastmod:
 draft: false
@@ -138,6 +138,18 @@ toc: true
 <span class="enum-signature">
 <span class="annotation">enumerator </span> 
 <span class="name">ZK_SECP256K1</span>
+</span>
+</div>
+<div class="enum-value">
+<span class="enum-signature">
+<span class="annotation">enumerator </span> 
+<span class="name">ZK_ED25519</span>
+</span>
+</div>
+<div class="enum-value">
+<span class="enum-signature">
+<span class="annotation">enumerator </span> 
+<span class="name">ZK_X25519</span>
 </span>
 </div>
 </div>
@@ -791,6 +803,57 @@ toc: true
 <li class="param-item">
 <span class="name">sig_sz</span><span class="param-desc-divider"> &#8212; </span><span class="description">
 <p>(output) A pointer to an integer which contains the size of the signature.</p>
+</span>
+</li>
+</ul>
+</div>
+<div class="returns">
+<h4>Returns</h4>
+<span class="return_value">
+<p>0 for success, less than 0 for failure.</p>
+</span>
+</div>
+</div>
+</div>
+<div class="method">
+
+### <span><span class="returns">int</span>  <span class="pointer-ref"></span> <span class="name">zkGenECDSASigFromDigestWithRecID</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkCTX</span> <span class="pointer-ref"></span> <span class="name">ctx</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation">const</span>  <span class="type">uint8\_t</span> <span class="pointer-ref">\*</span> <span class="name">digest</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">uint8\_t</span> <span class="pointer-ref">\*\*</span> <span class="name">sig</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref">\*</span> <span class="name">sig\_sz</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">uint8\_t</span> <span class="pointer-ref">\*</span> <span class="name">recovery\_id</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="int--zkGenECDSASigFromDigestWithRecID-37a9cb7b" class="markdown-h3 signature include-toc"}
+
+<div class="body">
+<div class="description">
+<p>Generate a signature using the Zymkey&#8217;s ECDSA private key.</p>
+</div>
+<div class="parameters">
+<h4>Parameters</h4>
+<ul>
+<li class="param-item">
+<span class="name">ctx</span><span class="param-desc-divider"> &#8212; </span><span class="description">
+<p>(input) Zymkey context.</p>
+</span>
+</li>
+<li class="param-item">
+<span class="name">digest</span><span class="param-desc-divider"> &#8212; </span><span class="description">
+<p>(input) This parameter contains the digest of the data that will be used to generate the signature.</p>
+</span>
+</li>
+<li class="param-item">
+<span class="name">slot</span><span class="param-desc-divider"> &#8212; </span><span class="description">
+<p>(input) The key slot to generate a signature from. This parameter is only valid for Zymkey models 4i and beyond.</p>
+</span>
+</li>
+<li class="param-item">
+<span class="name">sig</span><span class="param-desc-divider"> &#8212; </span><span class="description">
+<p>(output) A pointer to a pointer to an array of unsigned bytes which contains the generated signature. This pointer is created by this function and must be freed by the application when no longer needed.</p>
+</span>
+</li>
+<li class="param-item">
+<span class="name">sig_sz</span><span class="param-desc-divider"> &#8212; </span><span class="description">
+<p>(output) A pointer to an integer which contains the size of the signature.</p>
+</span>
+</li>
+<li class="param-item">
+<span class="name">recovery_id</span><span class="param-desc-divider"> &#8212; </span><span class="description">
+<p>(output) Returns recovery id value needed for ethereum key recovery.</p>
 </span>
 </li>
 </ul>
