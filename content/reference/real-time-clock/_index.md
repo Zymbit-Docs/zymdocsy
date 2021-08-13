@@ -44,6 +44,6 @@ In order for the RTC feature to be activated, the Zymkey/ HSM needs to have itâ€
 
 Zymkeys and HSMs with integrated RTC are supplied with Standard Accuracy calibration. This is generally suitable for commercial applications that are not exposed to extreme temperature ranges and not disconnected from NTP for months on end. (see specs below)
 
-An optional High Accuracy RTC are available, providing additional stability over extended temperature ranges.
+An optional High Accuracy RTC is available, providing additional stability over extended temperature ranges.
 
 ![image|498x400](rtc3.png)
