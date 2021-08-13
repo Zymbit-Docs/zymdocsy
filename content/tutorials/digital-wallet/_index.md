@@ -151,3 +151,9 @@ zymkey.client.remove_key(master_slot)
 restored_seed_slot = zymkey.client.restore_wallet_master_seed_from_bip39_mnemonic("nistp256", bytearray("3xampleM@sterK3Y", 'utf-8'), "MyExampleWallet", bip39_mnemonic)
 print("Restored slot:%s" % (restored_seed_slot,))
 ```
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li><a href="https://docs.zymbit.com/reference/faq/hsm6/#troubleshooting">HSM6 Troubleshooting FAQ</a></li>
+<li><a href="https://community.zymbit.com/">Community Forum</a></li>
+</ul>

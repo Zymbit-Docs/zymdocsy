@@ -163,3 +163,9 @@ SUCCESS: zkClose - 0
 ### Perimeter Detect Circuit Examples
 For best practices and examples of how to physically configure perimeter circuits: 
 [Learn more>](https://community.zymbit.com/t/426)
+
+<h2 id="troubleshooting">TROUBLESHOOTING</h2>
+<ul>
+<li><a href="https://docs.zymbit.com/reference/faq/hsm4/#troubleshooting">HSM4 Troubleshooting FAQ</a></li>
+<li><a href="https://community.zymbit.com/">Community Forum</a></li>
+</ul>

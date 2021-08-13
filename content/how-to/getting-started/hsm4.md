@@ -311,7 +311,7 @@ After bind locking the HSM, if using the perimeter detect features, prime your p
 
 <h3 id="troubleshooting">Troubleshooting</h3>
 <ul>
-<li><a href="https://docs.zymbit.com/reference/faq/hsm4/#troubleshooting">Zymkey Troubleshooting FAQ</a></li>
+<li><a href="https://docs.zymbit.com/reference/faq/hsm4/#troubleshooting">HSM4 Troubleshooting FAQ</a></li>
 <li><a href="https://community.zymbit.com/">Community Forum</a></li>
 </ul>
 

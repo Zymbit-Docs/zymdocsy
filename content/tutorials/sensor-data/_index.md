@@ -191,3 +191,9 @@ action=data, key=temperature, tags.unit=c, tags.sensor_id=ds18b20:280000061543fd
 action=data, key=temperature, tags.unit=c, tags.sensor_id=ds18b20:28000006156310,timestamp=2016-12-13 22:55:04, value= 19.3
 action=data, key=temperature, tags.unit=c, tags.sensor_id=ds18b20:28000006e10735,
 ```
+
+<h2 id="troubleshooting">TROUBLESHOOTING</h2>
+<ul>
+<li><a href="https://docs.zymbit.com/reference/faq/">Troubleshooting FAQ</a></li>
+<li><a href="https://community.zymbit.com/">Community Forum</a></li>
+</ul>
