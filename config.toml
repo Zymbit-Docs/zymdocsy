@@ -23,7 +23,8 @@ mediaType = "text/html"
 path = "_print"
 permalinkable = false
 
-offlineSearch = true
+# offlineSearch = true
+
 
 # User interface configuration
 [params.ui]
