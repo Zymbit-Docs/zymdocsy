@@ -31,7 +31,21 @@ A: Check the following:
 
 3. If i2c support has been enabled correctly and the Zymkey LED is still rapidly blinking, check proper physical installation of the Zymkey as detailed in this "Getting Started" guide.
 
-4. Zymkey uses GPIO header pins 3 and 5 for i2c communications and pin 7 as an interrupt signal to the Pi. Pin 7 should preferably be dedicated exclusively to Zymkey. Other devices may share the i2c bus with Zymkey, but there may still be address conflicts. By default, Zymkey uses slave address 0x30. If the address conflict cannot be resolved on the other i2c devices, there is a way of changing the i2c address on the Zymkey via the command line on the Pi (**coming soon!**). Using this application, the Zymkey address can be changed anywhere in the ranges of 0x30-0x37 or 0x60-0x67.
+4. Zymkey uses GPIO header pins 3 and 5 for i2c communications and pin 7 as an interrupt signal to the Pi. Pin 7 should preferably be dedicated exclusively to Zymkey. Other devices may share the i2c bus with Zymkey, but there may still be address conflicts. By default, Zymkey uses slave address 0x30. If the address conflict cannot be resolved on the other i2c devices, there is a way of changing the i2c address through an API call. Using this application, the Zymkey address can be changed anywhere in the ranges of 0x30-0x37 or 0x60-0x67. 
+
+<details>
+
+<summary>Expand for API information to change i2c address</summary>
+
+<br>
+
+Python: `set_i2c_address`
+
+C: `int zkSetI2CAddr ( zkCTX ctx, int addr)`
+
+[See API Documentation](http://docs.zymbit.com/reference/api/)
+
+</details>
 
 5. Oftentimes the 1-Wire interface relies on pin 7 (GPIO 4) for communication. If the 1-Wire interface is enabled, try disabling through raspi-config. If that resolves the problem take steps to either move the Zymkey interrupt signal from GPIO 4 or the 1-Wire interface from GPIO 4.
 

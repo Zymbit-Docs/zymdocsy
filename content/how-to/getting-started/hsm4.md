@@ -16,10 +16,10 @@ toc: true
 
 * Raspberry Pi 3 or 4, if using Raspberry Pi.
 * Raspbian or Ubuntu/ Tegra is installed.
-    * Other Linux distributions will work, but may require extra configuration. We will gladly provide guidance, but cannot guarantee support. For information see the [Operating Systems](https://community.zymbit.com/c/23) section.
+    * Other Linux distributions will work, but may require extra configuration. We will gladly provide guidance, but cannot guarantee support. For information see the [Operating Systems](https://community.zymbit.com/c/23) Community Forum.
 * Adequate power supply is used (5V).
     * **For Pi users:** if the Red Power LED on the Pi is not illuminated this means the supply voltage is inadequate.
-    * More info [here](https://community.zymbit.com/t/243).
+    * More info [here](https://docs.zymbit.com/reference/power-quality/).
 ----------
 ## 1. Install the HSM4
 
