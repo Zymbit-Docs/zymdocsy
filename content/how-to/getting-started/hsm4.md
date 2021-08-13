@@ -306,4 +306,30 @@ After bind locking the HSM, if using the perimeter detect features, prime your p
 4.    If the Perimeter Detect Event returns clear, then you can ‘arm your system’ as you require by setting Set Perimeter Event Actions to “none”, “notify” or “selfdestruct” (You can only do this once!).
 5.  **Your system is now armed.**
 
-Please see Zymbit software documentation for further details.
+
+## <span class="markdown-h2 include-toc">Additional Resources</span>
+
+<h3 id="troubleshooting">Troubleshooting</h3>
+<ul>
+<li><a href="https://docs.zymbit.com/reference/faq/hsm4/#troubleshooting">Zymkey Troubleshooting FAQ</a></li>
+<li><a href="https://community.zymbit.com/">Community Forum</a></li>
+</ul>
+
+<h3 id="perimeter-detect">Perimeter Detect</h3>
+<p>Refer to <a href="https://docs.zymbit.com/tutorials/perimeter-detect/hsm4">Using Perimeter Detect</a></p>
+
+<h3 id="api-documentation">API Documentation</h3>
+<p>API&#39;s are available for Python, C, C++
+<a href="https://docs.zymbit.com/reference/api">Go to API Documents &gt;</a>  </p>
+
+<h3 id="application-examples">Application Examples</h3>
+<p>The quickest way to get started is to see the various methods at work by running these scripts:
+<code>python /usr/local/share/zymkey/examples/zk_app_utils_test.py</code>
+<code>python /usr/local/share/zymkey/examples/zk_crypto_test.py</code></p>
+<p>More Resources:</p>
+<ul>
+<li><a href="https://community.zymbit.com/">Community Forum</a></li>
+<li><a href="https://docs.zymbit.com/tutorials/encrypt-rfs/hsm4">LUKS filesystem encryption</a></li>
+<li><a href="https://docs.zymbit.com/tutorials/sensor-data/">Encrypting &amp; decrypting sensor data on disk</a></li>
+<li><a href="https://docs.zymbit.com/reference/real-time-clock/">Real Time Clock</a></li>
+</ul>

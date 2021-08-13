@@ -256,20 +256,27 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter<
 
 ## <span class="markdown-h2 include-toc">Additional Resources</span>
 
+<h3 id="troubleshooting">Troubleshooting</h3>
+<ul>
+<li><a href="https://docs.zymbit.com/reference/faq/zymkey4/#troubleshooting">Zymkey Troubleshooting FAQ</a></li>
+<li><a href="https://community.zymbit.com/">Community Forum</a></li>
+</ul>
+
 <h3 id="perimeter-detect">Perimeter Detect</h3>
-<p>Refer to <a href="https://docs.zymbit.com/perimeter-detect/zymkey4">Using Perimeter Detect</a></p>
+<p>Refer to <a href="https://docs.zymbit.com/tutorials/perimeter-detect/zymkey4">Using Perimeter Detect</a></p>
 
 <h3 id="api-documentation">API Documentation</h3>
 <p>API&#39;s are available for Python, C, C++
-<a href="https://docs.zymbit.com/api/api_docs_intro/">Go to API Documents &gt;</a>  </p>
+<a href="https://docs.zymbit.com/reference/api">Go to API Documents &gt;</a>  </p>
 
 <h3 id="application-examples">Application Examples</h3>
 <p>The quickest way to get started is to see the various methods at work by running these scripts:
 <code>python /usr/local/share/zymkey/examples/zk_app_utils_test.py</code>
 <code>python /usr/local/share/zymkey/examples/zk_crypto_test.py</code></p>
-<p>Please read the Zymkey community pages for documentation on:</p>
+
+<p>More Resources:</p>
 <ul>
-<li><a href="https://community.zymbit.com/t/encrypt-your-root-file-system-on-raspberry-pi/150">LUKS filesystem encryption</a></li>
-<li><a href="https://community.zymbit.com/t/zymkey-encrypting-decrypting-sensor-data-on-disk/94">Encrypting &amp; decrypting sensor data on disk</a></li>
-<li><a href="https://community.zymbit.com/t/zymkey-rtc-real-time-clock-support/84">Real Time Clock</a></li>
+<li><a href="https://docs.zymbit.com/tutorials/encrypt-rfs/zymkey4">LUKS filesystem encryption</a></li>
+<li><a href="https://docs.zymbit.com/tutorials/sensor-data/">Encrypting &amp; decrypting sensor data on disk</a></li>
+<li><a href="https://docs.zymbit.com/reference/real-time-clock/">Real Time Clock</a></li>
 </ul>

@@ -13,7 +13,7 @@ toc: true
 
 -----
 
-### Products
+### **Products**
 
 ##### Q: Where can I learn about and/or pre-order future products?
 
@@ -60,8 +60,7 @@ See [Power Quality]( https://docs.zymbit.com/reference/power-quality/) for more 
 
 </details>
 
-Operating System & Single Board Computer 
-### Compatibility
+### **Compatibility**
 
 ##### Q: Which operating systems does Zymbit support?
  
