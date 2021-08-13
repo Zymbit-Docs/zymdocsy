@@ -46,6 +46,7 @@ C: `int zkSetI2CAddr ( zkCTX ctx, int addr)`
 [See API Documentation](http://docs.zymbit.com/reference/api/)
 
 </details>
+<p></p>
 
 5. Oftentimes the 1-Wire interface relies on pin 7 (GPIO 4) for communication. If the 1-Wire interface is enabled, try disabling through raspi-config. If that resolves the problem take steps to either move the HSM4 interrupt signal from GPIO 4 or the 1-Wire interface from GPIO 4.
 
