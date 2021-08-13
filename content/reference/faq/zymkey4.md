@@ -152,7 +152,16 @@ A: Yes, you should have no problem running it multiple times if it were to fail.
 
 <br>
 
-A: 
+A: `lsblk` will show you the partitions. Look for the name of your / partition (default is mmcblk0p2) and the USB device (default is sda). Example output:
+
+```
+NAME         MAJ:MIN  RM   SIZE  RO TYPE  MOUNTPOINT
+mmcblk0      179:0    0   14.9G   0  disk
+|-mmcblk0p1  179:1    0    256M   0  part   /boot
+`-mmcblk0p2  179:2    0   14.6G   0  part   /
+sda            8:0    0   32.0G   0  disk
+|_sda1         8:1    0   32.0G   0  part   
+```
 
 -----
 
@@ -184,11 +193,17 @@ That will show you progress of the second half of the encryption process.
 
 <br>
 
-A: 
+A: Since `zkifc` is stopped during the process, the blue LED will flash rapidly until the whole process completes. Once both of the automautic reboots are completed, the blue LED will return to flashing once every 3 seconds. 
+
+`lsblk` will show you that you now have a "cryptrfs" partition under your mmcblk0p2 (default)
+
+If your system reboots twice, the LED returns to flashing once every 3 seconds, and `lsblk` displays a "cryptrfs" partition, you can be confident your system is encrypted and protected.
 
 -----
 
 </details>
+
+### For more help, see Zymbit's [Community Forum](https://community.zymbit.com/).
 
 ------
 ## **Features**
@@ -494,7 +509,7 @@ A: Sign up for our new product email updates [here](https://forms.zohopublic.com
 
 </details>
 
-##### Q: Which SBCs are compatible with Zymkey 4?
+##### Q: Which SBCs are compatible with Zymkey?
 
 <details>
 

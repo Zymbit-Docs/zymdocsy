@@ -33,3 +33,9 @@ layout: "single"
 [HSM6 -- Features](https://docs.zymbit.com/reference/faq/hsm6/#features)
 
 [HSM6 -- Other](https://docs.zymbit.com/reference/faq/hsm6/#other)
+
+-----
+
+[General -- Products](https://docs.zymbit.com/reference/faq/general/#products)
+
+[General -- Compatibility](https://docs.zymbit.com/reference/faq/general/#compatibility)
