@@ -9,6 +9,7 @@ draft: false
 images: []
 type: "docs"
 layout: "single"
+weight: -100
 ---
 
 <p><a href="https://docs.zymbit.com/quickstart/getting-started/zymkey4">Zymkey4 Getting Started</a></p>
