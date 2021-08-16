@@ -109,11 +109,11 @@ When the software installation has completed, reboot. After rebooting, the Pi/ J
 Your HSM is now in Developer Mode. The binding is temporary and the HSM can be moved to another host device and the binding process repeated. Now is the time to prototype. Do all development work with the HSM in this mode. You can safely test the self-destruct features here. A self-destruct in this mode will stop all HSM functionality until the host is rebooted. Only in production mode will the HSM actually self-destruct.
 
 Before moving on to Production mode, ensure your application is running correctly. Explore our HSM resources for help: 
-* [Perimeter Detect](https://docs.zymbit.com/perimeter-detect/hsm4)
-* [Encrypting your root file system](https://community.zymbit.com/t/968)
-* [Encrypting & decrypting sensor data on disk](https://community.zymbit.com/t/1015)
-* [Using the Real Time Clock](https://community.zymbit.com/t/1014)
-* [Zymbit APIs](https://docs.zymbit.com/api/api_docs_intro/).
+* [Perimeter Detect](https://docs.zymbit.com/tutorials/perimeter-detect/hsm4)
+* [Encrypting your root file system](https://docs.zymbit.com/tutorials/encrypt-rfs/hsm4)
+* [Encrypting & decrypting sensor data on disk](https://docs.zymbit.com/tutorials/sensor-data/hsm4)
+* [Using the Real Time Clock](https://docs.zymbit.com/reference/real-time-clock/)
+* [Zymbit APIs](https://docs.zymbit.com/quickstart/api/).
 
 If you have any questions, feel free to create a new post here in the Community and we will get back to you.
 
@@ -311,7 +311,7 @@ After bind locking the HSM, if using the perimeter detect features, prime your p
 
 <h3 id="troubleshooting">Troubleshooting</h3>
 <ul>
-<li><a href="https://docs.zymbit.com/reference/faq/hsm4/#troubleshooting">HSM4 Troubleshooting FAQ</a></li>
+<li><a href="https://docs.zymbit.com/quickstart/faq/hsm4/#troubleshooting">HSM4 Troubleshooting FAQ</a></li>
 <li><a href="https://community.zymbit.com/">Community Forum</a></li>
 </ul>
 
@@ -320,7 +320,7 @@ After bind locking the HSM, if using the perimeter detect features, prime your p
 
 <h3 id="api-documentation">API Documentation</h3>
 <p>API&#39;s are available for Python, C, C++
-<a href="https://docs.zymbit.com/reference/api">Go to API Documents &gt;</a>  </p>
+<a href="https://docs.zymbit.com/quickstart/api">Go to API Documents &gt;</a>  </p>
 
 <h3 id="application-examples">Application Examples</h3>
 <p>The quickest way to get started is to see the various methods at work by running these scripts:

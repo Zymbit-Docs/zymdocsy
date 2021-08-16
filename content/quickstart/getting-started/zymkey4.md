@@ -33,7 +33,7 @@ toc: true
 <tr>
 <td>1</td>
 <td><strong>Battery Install</strong></td>
-<td>The battery is required to maintain the Real Time Clock and the perimeter detect circuits when the host power is removed. See <a href="https://community.zymbit.com/t/zymkey-battery-do-i-need-it/779/2?u=michelle_of_zymbit">this chart</a> for more information.</td>
+<td>The battery is required to maintain the Real Time Clock and the perimeter detect circuits when the host power is removed. See <a href="https://docs.zymbit.com/quickstart/faq/zymkey4/#q-should-i-use-an-external-battery-on-my-zymkey-or-hsm">this chart</a> for more information.</td>
 </tr>
 <tr>
 <td>2</td>
@@ -104,7 +104,7 @@ Be sure to follow the images below to ensure the first 10 GPIO pins are correctl
 <blockquote>
 <h2 id="using-an-alternative-gpio-pin">Using an alternative GPIO pin</h2>
 <p>The default configuration uses GPIO4. This can be reconfigured to use another GPIO of your choice. 
-<a href="https://community.zymbit.com/t/589"><strong>Learn more&gt;</strong></a></p>
+<a href="https://docs.zymbit.com/tutorials/alternative-gpio/"><strong>Learn more&gt;</strong></a></p>
 <h2 id="using-an-alternative-i2c-address">Using an alternative I2C address</h2>
 <p>The default I2C address for Zymkey is 0x30. If this conflicts with another device in your system, you can reconfigure the Zymkey to use another address of your choice.
 <a href="https://community.zymbit.com/t/639"><strong>Learn more&gt;</strong></a></p>
@@ -128,7 +128,7 @@ Be sure to follow the images below to ensure the first 10 GPIO pins are correctl
 
 <h3 id="power-quality">Power Quality</h3>
 <p>Power quality matters to the reliable and secure operation of your system and Zymkey.
-<a href="https://community.zymbit.com/t/243"><strong>Learn more&gt;</strong></a></p>
+<a href="https://docs.zymbit.com/reference/power-quality/"><strong>Learn more&gt;</strong></a></p>
 
 <hr>
 
@@ -147,7 +147,7 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter<
 <p>Your I2C bus is now configured and ready to talk to the Zymkey. Next install the Zymkey interface software (ZKIFC) onto your Pi. </p>
 <p>The default I2C address for Zymkey is 0x30.</p>
 <p><strong>IMPORTANT: The default mode for the cpu scaling governor is ondemand. There have been some issues with the interaction between the zymkey and the I2C bus, when the governor is set to ondemand. We highly recommend to switching the governor to performance to get the most out of the zymkey. 
-<a href="https://community.zymbit.com/t/dev-team-known-issues/996">How to set cpu governor to performance.</a></strong></p>
+<a href="https://docs.zymbit.com/reference/known-issues/cpu-scaling/">How to set cpu governor to performance.</a></strong></p>
 
 <h3 id="i2c-jetson">For NVIDIA Jetson Nano/ Xavier</h3>
 <p>For the Jetson the Operating System - Tegra - is based on Ubuntu. The I2C bus is enabled by default. There are no additional steps required.</p>
@@ -258,7 +258,7 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter<
 
 <h3 id="troubleshooting">Troubleshooting</h3>
 <ul>
-<li><a href="https://docs.zymbit.com/reference/faq/zymkey4/#troubleshooting">Zymkey Troubleshooting FAQ</a></li>
+<li><a href="https://docs.zymbit.com/quickstart/faq/zymkey4/#troubleshooting">Zymkey Troubleshooting FAQ</a></li>
 <li><a href="https://community.zymbit.com/">Community Forum</a></li>
 </ul>
 
@@ -267,7 +267,7 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter<
 
 <h3 id="api-documentation">API Documentation</h3>
 <p>API&#39;s are available for Python, C, C++
-<a href="https://docs.zymbit.com/reference/api">Go to API Documents &gt;</a>  </p>
+<a href="https://docs.zymbit.com/quickstart/api">Go to API Documents &gt;</a>  </p>
 
 <h3 id="application-examples">Application Examples</h3>
 <p>The quickest way to get started is to see the various methods at work by running these scripts:

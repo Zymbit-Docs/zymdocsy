@@ -12,30 +12,30 @@ layout: "single"
 ---
 
 
-[Zymkey4 -- Troubleshooting](https://docs.zymbit.com/reference/faq/zymkey4/#troubleshooting)
+[Zymkey4 -- Troubleshooting](https://docs.zymbit.com/quickstart/faq/zymkey4/#troubleshooting)
 
-[Zymkey4 -- Features](https://docs.zymbit.com/reference/faq/zymkey4/#features)
+[Zymkey4 -- Features](https://docs.zymbit.com/quickstart/faq/zymkey4/#features)
 
-[Zymkey4 -- Other](https://docs.zymbit.com/reference/faq/zymkey4/#other)
-
------
-
-[HSM4 -- Troubleshooting](https://docs.zymbit.com/reference/faq/hsm4/#troubleshooting)
-
-[HSM4 -- Features](https://docs.zymbit.com/reference/faq/hsm4/#features)
-
-[HSM4 -- Other](https://docs.zymbit.com/reference/faq/hsm4/#other)
+[Zymkey4 -- Other](https://docs.zymbit.com/quickstart/faq/zymkey4/#other)
 
 -----
 
-[HSM6 -- Troubleshooting](https://docs.zymbit.com/reference/faq/hsm6/#troubleshooting)
+[HSM4 -- Troubleshooting](https://docs.zymbit.com/quickstart/faq/hsm4/#troubleshooting)
 
-[HSM6 -- Features](https://docs.zymbit.com/reference/faq/hsm6/#features)
+[HSM4 -- Features](https://docs.zymbit.com/quickstart/faq/hsm4/#features)
 
-[HSM6 -- Other](https://docs.zymbit.com/reference/faq/hsm6/#other)
+[HSM4 -- Other](https://docs.zymbit.com/quickstart/faq/hsm4/#other)
 
 -----
 
-[General -- Products](https://docs.zymbit.com/reference/faq/general/#products)
+[HSM6 -- Troubleshooting](https://docs.zymbit.com/quickstart/faq/hsm6/#troubleshooting)
 
-[General -- Compatibility](https://docs.zymbit.com/reference/faq/general/#compatibility)
+[HSM6 -- Features](https://docs.zymbit.com/quickstart/faq/hsm6/#features)
+
+[HSM6 -- Other](https://docs.zymbit.com/quickstart/faq/hsm6/#other)
+
+-----
+
+[General -- Products](https://docs.zymbit.com/quickstart/faq/general/#products)
+
+[General -- Compatibility](https://docs.zymbit.com/quickstart/faq/general/#compatibility)

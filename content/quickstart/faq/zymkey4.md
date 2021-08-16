@@ -17,13 +17,12 @@ toc: true
 
 ### **Troubleshooting Checklist**
 
-Before contacting Zymbit with troubleshooting related questions, please read through the following checklist.
+Before contacting Zymbit with troubleshooting related questions, please read through the following troubleshooting checklist.
 
-1. 
-2. 
-3. 
-4. 
-5. 
+1. Power supply. The recommended power for the PI4 is 5V and 3 amps. Most of the problems we see are from a poor power source. Start with a good power supply from the PI foundation or Canakit, not a phone charger.
+2. I2C enabled. Double check that you have enabled the I2C bus. An easy way to check is "ls -l /dev/i2c-1". If /dev/i2c-1 exists, the I2C bus is enabled.
+3. apt update and upgrade. Be sure that your software is up to date.
+4. Installation. The curl script will reboot your system once completed. After the reboot, the blue LED on your Zymbit device should blink once every 3 seconds. You must get to this step before proceeding to encryption, etc.
 
 If your issue is not related to any of the above list, read through the FAQ below to see if your issue is answered. If you still do not see a solution to your problem, reach out on our [Community Forum](https://community.zymbit.com/). Thank you!
 
@@ -55,7 +54,7 @@ Python: `set_i2c_address`
 
 C: `int zkSetI2CAddr ( zkCTX ctx, int addr)`
 
-[See API Documentation](http://docs.zymbit.com/reference/api/)
+[See API Documentation](http://docs.zymbit.com/quickstart/api/)
 
 </details>
 <p></p>
@@ -170,6 +169,14 @@ A: Yes, you should have no problem running it multiple times if it were to fail.
 </details>
 
 ### **Encrypting Root File System**
+
+##### Summary of steps
+
+* Start with a blank USB device.
+* USB storage should be twice the size of the SD card.
+* The process for encrypting the SD card stops zkifc. The blue LED will flash rapidly during the encryption process. It will return to blinking once every 3 seconds when complete.
+* The process will automatically do two reboots. Be patient.
+* If the encryption process does not complete, it's best to start fresh and try again.
 
 ##### Q: How can I check if the system matches the default parameters?
 

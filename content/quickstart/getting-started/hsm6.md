@@ -109,11 +109,12 @@ When the software installation has completed, reboot. After rebooting, the Pi/ J
 Your HSM is now in Developer Mode. The binding is temporary and the HSM can be moved to another host device and the binding process repeated. Now is the time to prototype. Do all development work with the HSM in this mode. You can safely test the self-destruct features here. A self-destruct in this mode will stop all HSM functionality until the host is rebooted. Only in production mode will the HSM actually self-destruct.
 
 Before moving on to Production mode, ensure your application is running correctly. Explore our HSM resources for help: 
-* [Perimeter Detect](https://docs.zymbit.com/perimeter-detect/hsm6)
-* [Encrypting your root file system](https://community.zymbit.com/t/968)
-* [Encrypting & decrypting sensor data on disk](https://community.zymbit.com/t/1015)
-* [Using the Real Time Clock](https://community.zymbit.com/t/1014)
-* [Zymbit APIs](https://docs.zymbit.com/api/api_docs_intro/).
+
+* [Perimeter Detect](https://docs.zymbit.com/tutorials/perimeter-detect/hsm6)
+* [Encrypting your root file system](https://docs.zymbit.com/tutorials/encrypt-rfs/hsm6)
+* [Encrypting & decrypting sensor data on disk](https://docs.zymbit.com/tutorials/sensor-data/hsm6)
+* [Using the Real Time Clock](https://docs.zymbit.com/reference/real-time-clock/)
+* [Zymbit APIs](https://docs.zymbit.com/quickstart/api/).
 
 If you have any questions, feel free to create a new post here in the Community and we will get back to you.
 
@@ -310,7 +311,7 @@ After bind locking the HSM, if using the perimeter detect features, prime your p
 
 <h3 id="troubleshooting">Troubleshooting</h3>
 <ul>
-<li><a href="https://docs.zymbit.com/reference/faq/hsm6/#troubleshooting">HSM6 Troubleshooting FAQ</a></li>
+<li><a href="https://docs.zymbit.com/quickstart/faq/hsm6/#troubleshooting">HSM6 Troubleshooting FAQ</a></li>
 <li><a href="https://community.zymbit.com/">Community Forum</a></li>
 </ul>
 
