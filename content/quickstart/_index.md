@@ -1,6 +1,6 @@
 ---
-title: "How To Guides"
-linkTitle: "HOW TO GUIDES"
+title: "Quickstart"
+linkTitle: "QUICKSTART"
 description: ""
 date: ""
 lastmod: ""
@@ -8,6 +8,6 @@ draft: false
 images: []
 type: "docs"
 layout: "single"
-weight: -8
+weight: -2
 headless: true
 ---
