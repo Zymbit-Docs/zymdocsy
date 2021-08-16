@@ -15,6 +15,18 @@ toc: true
 ## **Troubleshooting**
 ------
 
+### **Troubleshooting Checklist**
+
+Before contacting Zymbit with troubleshooting related questions, please read through the following checklist.
+
+1. 
+2. 
+3. 
+4. 
+5. 
+
+If your issue is not related to any of the above list, read through the FAQ below to see if your issue is answered. If you still do not see a solution to your problem, reach out on our [Community Forum](https://community.zymbit.com/). Thank you!
+
 ##### Q: Why does the LED continue to blink rapidly? It never blinks with the described pattern of once (in Development mode) or three times (in Production mode) every three seconds.
 
 <details>
