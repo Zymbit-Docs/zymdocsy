@@ -23,7 +23,7 @@ toc: true
 
 <br>
 
-A: Sign up for our new product email updates [here](https://forms.zohopublic.com/phil12/form/EmailSubscription/formperma/HghiKe8SDz8pgAlFEVpaQTBSEaV9edCxXt4f1VJGMlE).
+A: Sign up for our new product email updates at the bottom of [Zymbit's homepage](https://www.zymbit.com/).
 
 -----
 
