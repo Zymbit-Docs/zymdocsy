@@ -123,6 +123,26 @@ A: This issue could be caused by the same issues described in the first question
 
 </details>
 
+##### Q: How do I set an alternative I2C address?
+
+<details>
+
+<summary>Expand for Answer</summary>
+
+<br>
+
+A: You can change the I2C address through our standard APIs:
+* C: `int zkSetI2CAddr ( zkCTX ctx, int addr)`
+* Python: `set_i2c_address`
+
+The I2C communication between the Zymkey and the Host is encrypted, but will not interfere with other devices on the same bus (assuming there is no address conflict).
+
+[See API Documentation](http://docs.zymbit.com/quickstart/api/)
+
+-----
+
+</details>
+
 ##### Q: Why does my HSM6 fail to restart after cycling power?
 
 <details>

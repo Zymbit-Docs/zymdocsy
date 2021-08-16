@@ -85,7 +85,7 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter
 
 Your I2C bus is now on and ready to talk to the HSM.
 
-The default I2C address for HSM is 0x30. If needed, you can [change the I2C Address](https://community.zymbit.com/t/1044) after following steps 5 and 6.
+The default I2C address for HSM is 0x30. If needed, you can [change the I2C Address](https://docs.zymbit.com/quickstart/faq/hsm4/#q-how-do-i-set-an-alternative-i2c-address) after following steps 5 and 6.
 
 ----------
 

@@ -107,7 +107,7 @@ Be sure to follow the images below to ensure the first 10 GPIO pins are correctl
 <a href="https://docs.zymbit.com/tutorials/alternative-gpio/"><strong>Learn more&gt;</strong></a></p>
 <h2 id="using-an-alternative-i2c-address">Using an alternative I2C address</h2>
 <p>The default I2C address for Zymkey is 0x30. If this conflicts with another device in your system, you can reconfigure the Zymkey to use another address of your choice.
-<a href="https://community.zymbit.com/t/639"><strong>Learn more&gt;</strong></a></p>
+<a href="https://docs.zymbit.com/quickstart/faq/zymkey4/#q-how-do-i-set-an-alternative-i2c-address"><strong>Learn more&gt;</strong></a></p>
 </blockquote>
 
 <hr>
