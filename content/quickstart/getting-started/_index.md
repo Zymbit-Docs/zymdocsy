@@ -1,6 +1,6 @@
 ---
-title: "How to Get Started"
-linkTitle: "Get Started"
+title: "Getting Started with Zymbit Products"
+linkTitle: "Getting Started"
 icon: "fas fa-caret-right"
 description: ""
 date: ""
