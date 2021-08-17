@@ -1,9 +1,9 @@
 ---
 
-main:
-  - name: Docs
-    url: /
-    weight: 10
+#main:
+#  - name: Docs
+#    url: /
+#    weight: 10
 
 
 social:
