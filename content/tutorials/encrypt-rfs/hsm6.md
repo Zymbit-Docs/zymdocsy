@@ -23,7 +23,11 @@ Nvidia Jetson:
 * Jetson Xavier NX or Nano
 * Jetpack 4.4 or earlier
 
-## WHY ENCRYPT?
+## **BACKGROUND** 
+
+To skip the background information and start encrypting your RFS, click [here](https://docs.zymbit.com/tutorials/encrypt-rfs/zymkey4/#how-to-encrypt).
+
+### WHY ENCRYPT?
 
 
 There are many reasons to encrypt the Root File System (RFS), from keeping WiFi credentials immutable to keeping proprietary software and sensitive data from being cloned.
@@ -43,7 +47,7 @@ So it makes sense to encrypt the root partition as a way of encrypting everythin
 
 ------------
 
-## INTRODUCING LUKS
+### INTRODUCING LUKS
 
 LUKS (**L**inux **U**nified **K**ey **S**etup) is the popular key management setup for dm-crypt, the de-facto standard for block device encryption with Linux.
 
@@ -51,12 +55,12 @@ LUKS provides a robust and flexible mechanism for multiple users (and services) 
 
 _dm-crypt_ is a transparent disk encryption subsystem in Linux kernel versions 2.6 and later and is part of the device mapper infrastructure, and uses cryptographic routines from the kernel's Crypto API. Both are widely used and understood in the IT community.
 
+#### Weaknesses of single Master key
 
-
-### Weaknesses of single Master key
 dm-crypt has a single Master Key that is used to encrypt / decrypt data in/out of the block. To ensure long term security and deal with changing authorized users/services, it would be necessary to change the Master Key frequently, and potentially share it with multiple users/services on a regular basis. Every new iteration of Master Key would require the underlying data block to be re-encrypted everytime. In real systems, touched by different users/services, this is impractical.
 
-### Hierarchical key management
+#### Hierarchical key management
+
 A more practical solution is to have a hierarchical  key management setup  in which users/services are given User Keys that are used to release the MasterKey.  User Keys can be easily changed and revoked, without having to re-encrypt the underlying data block.
 The management of such a hirearchical key managers is the role of LUKS.
 
@@ -66,10 +70,10 @@ In this post we show how to use HSM6 to lock a User Key, that is subsequently us
 
 --------
 
-## SECURE STORAGE OF LUKS USER KEYS
+### SECURE STORAGE OF LUKS USER KEYS
 The security efficacy of your LUKS encrypted RFS is highly dependent upon how the User Keys are generated and where they are stored.
 
-### The SD Card is NOT a secure storage location
+#### The SD Card is NOT a secure storage location
 
 The growing single board computer family is awesome, and we love it! It is inexpensive, has an incredible amount of computing power for an embedded device and has a very robust software development ecosystem.
 
@@ -77,13 +81,9 @@ However, these devices have an Achilles heel: the SD card is the primary softwar
 
 The natural inclination would be to encrypt the file system using LUKS on dm-crypt, but for unattended use across many deployed units the obvious question is: where is the LUKS key stored? Of course, it's the file system. Even if you try to obfuscate it through various programmatic means, the key is still very vulnerable to attack.
 
-
-
-## Securing LUKS User Key with HSM6 Security Module.
+### Securing LUKS User Key with HSM6 Security Module.
 
 ![image1](../erfs-hsm-1.jpeg)
-
-
 
 HSM6 provides a general "locking" service whereby a block of plaintext data is encrypted and signed.
 
@@ -115,10 +115,11 @@ Using this ID / Authentication feature, HSM6 can be used to protect LUKS User Ke
 
 ----------
 
-## WHERE TO STORE YOUR LUKS ENCRYPTED RFS
+### WHERE TO STORE YOUR LUKS ENCRYPTED RFS
+
 LUKS is very versatile and can be applied to both SD Card and external storage media. Lets review the pros and cons of each option:
 
-### Option 1 - Convert existing SD Card to LUKS
+#### Option 1 - Convert existing SD Card to LUKS
 
 
 Converting the existing root file system on the SD card still requires an external device (e.g. USB flash drive) that is used as a temporary boot root file system: this provide an easier and lower risk means to convert and copy the original contents. The external devices needs to be a little larger than the existing root file system in order to store the old file system.
@@ -145,11 +146,7 @@ Converting the existing root file system on the SD card still requires an extern
 * Untar the root file system tarball into the converted partition
 * For Jetson users: Untar the /boot area into the original SD card partition, mmcblk0p1
 
-
-
-
-### Option 2 - Migrate existing SD card to external LUKS storage device.
-
+#### Option 2 - Migrate existing SD card to external LUKS storage device.
 
 The existing root file system can be migrated to an external LUKS encrypted USB flash, hard drive or SSD.
 
@@ -176,10 +173,12 @@ The existing root file system can be migrated to an external LUKS encrypted USB 
 
 ----------
 
+## **HOW TO ENCRYPT**
 
-## BUILDING YOUR LUKS ENCRYPTED RFS
-### Prerequisites
-Make sure you have the HSM6 software suite already running and operational as well as insuring that your HSM6 is bound. Instructions [here](https://docs.zymbit.com/how-to/getting-started/HSM6).
+### BUILDING YOUR LUKS ENCRYPTED RFS
+
+#### Prerequisites
+Make sure you have the HSM6 software suite already running and operational as well as insuring that your HSM6 is bound. Instructions [here](https://docs.zymbit.com/quickstart/getting-started/HSM6).
 
 #### NOTE for RPi users: For the CM4/IO Module with eMMC, additional steps are needed due to the fact that the USB 2.0 ports are disabled by default:
 1. Upgrade the bootloader version: Jan. 16 2021
@@ -187,7 +186,7 @@ Make sure you have the HSM6 software suite already running and operational as we
 3. Modify /boot/config.txt and add the line "otg_mode=1" under [all]. This replaces the line, "dtoverlay=dwc2,dr_mode=host" if added.
 
 
-### Option 1 - Convert existing SD Card to LUKS
+#### Option 1 - Convert existing SD Card to LUKS
 
 To convert your root file system to LUKS/dm-crypt, you will need to connect an external USB disk (as temporary storage). As mentioned previously, this is necessary because it is not possible to encrypt the partition in place, so the external disk is needed as temporary storage and a temporary root file system while the conversion takes place. The external disk needs to be at least twice as big as the root partition. Next, run the following script:
 
@@ -214,11 +213,7 @@ For Jetson, the first run of this script can take upwards of 30 minutes to an ho
 
 Based on the above, using the formatted external device to convert subsequent units should only take 15 minutes.
 
-
-
-
-
-### Option 2 - Migrate existing SD card to external LUKS storage device.
+#### Option 2 - Migrate existing SD card to external LUKS storage device.
 
 
 To migrate your root file system to an external USB device, you can run the following script:
@@ -246,14 +241,14 @@ Running this script takes around 30-40 minutes. The HSM6's LED flashes rapidly u
 
 
 ----------
-## INTEGRATING LUKS INTO VOLUME MANUFACTURING WORKFLOW
+### INTEGRATING LUKS INTO VOLUME MANUFACTURING WORKFLOW
 
 The examples above are designed to help you get up and running with single and low volume applications.
 
 If you require support in developing a high volume manufacturing encryption workflow then please [contact us](https://www.zymbit.com/contact-form/) to discuss our OEM engineering services.
 
 ----------
-## REFERENCES
+### REFERENCES
 
 * [LUKS features - the de-facto standard in Linux Kernel.](https://wiki.archlinux.org/index.php/disk_encryption#Comparison_table)
 * [Wiki overview to dm-crypt](https://en.wikipedia.org/wiki/Dm-crypt)
