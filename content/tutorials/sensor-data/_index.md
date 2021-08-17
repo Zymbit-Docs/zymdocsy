@@ -24,7 +24,7 @@ The process we describe here can also be used more generally to encrypt binary l
 
 ## What you will need
 
-If you have not already setup and bound your HSM please visit the [Getting Started](https://docs.zymbit.com/getting-started/) page.
+If you have not already setup and bound your HSM please visit the [Getting Started](https://docs.zymbit.com/quickstart/getting-started/) page.
 
 We will use temperature data from a DS18B20 OneWire probe. We will encrypt the data to disk using the HSM python package, and then decrypt in a different session. For the purpose of this tutorial I will not be going over the circuit setup and one-wire configuration. That is adequately covered [here. ](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing/hardware) If you have questions however, we are happy to help!
 
@@ -194,6 +194,6 @@ action=data, key=temperature, tags.unit=c, tags.sensor_id=ds18b20:28000006e10735
 
 <h2 id="troubleshooting">TROUBLESHOOTING</h2>
 <ul>
-<li><a href="https://docs.zymbit.com/reference/faq/">Troubleshooting FAQ</a></li>
+<li><a href="https://docs.zymbit.com/quickstart/faq/">Troubleshooting FAQ</a></li>
 <li><a href="https://community.zymbit.com/">Community Forum</a></li>
 </ul>
