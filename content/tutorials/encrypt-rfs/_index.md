@@ -11,6 +11,6 @@ type: "docs"
 layout: "single"
 ---
 
-<p><a href="https://docs.zymbit.com/how-to/encrypt-rfs/zymkey4">Zymkey4 Encrypt Root File System</a><p>
-<p><a href="https://docs.zymbit.com/how-to/encrypt-rfs/hsm4">HSM4 Encrypt Root File System</a></p>
-<p><a href="https://docs.zymbit.com/how-to/encrypt-rfs/hsm6">HSM6 Encrypt Root File System</a></p>
+<p><a href="https://docs.zymbit.com/tutorials/encrypt-rfs/zymkey4">Zymkey4 Encrypt Root File System</a><p>
+<p><a href="https://docs.zymbit.com/tutorials/encrypt-rfs/hsm4">HSM4 Encrypt Root File System</a></p>
+<p><a href="https://docs.zymbit.com/tutorials/encrypt-rfs/hsm6">HSM6 Encrypt Root File System</a></p>
