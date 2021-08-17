@@ -320,7 +320,7 @@ After bind locking the HSM, if using the perimeter detect features, prime your p
 
 <h3 id="api-documentation">API Documentation</h3>
 <p>API&#39;s are available for Python, C, C++
-<a href="https://docs.zymbit.com/reference/api">Go to API Documents &gt;</a>  </p>
+<a href="https://docs.zymbit.com/quickstart/api">Go to API Documents &gt;</a>  </p>
 
 <h3 id="application-examples">Application Examples</h3>
 <p>The quickest way to get started is to see the various methods at work by running these scripts:
