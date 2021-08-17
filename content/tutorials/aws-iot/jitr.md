@@ -25,7 +25,7 @@ AWS IoT requires an IoT device to register and activate a certificate with AWS b
 
 ## Prerequisites:
 
-* Follow the [Getting Started guide](https://docs.zymbit.com/how-to/getting-started/) first.
+* Follow the [Getting Started guide](https://docs.zymbit.com/quickstart/getting-started/) first.
 
 ---
 

@@ -112,7 +112,7 @@ Before moving on to Production mode, ensure your application is running correctl
 
 * [Perimeter Detect](https://docs.zymbit.com/tutorials/perimeter-detect/hsm6)
 * [Encrypting your root file system](https://docs.zymbit.com/tutorials/encrypt-rfs/hsm6)
-* [Encrypting & decrypting sensor data on disk](https://docs.zymbit.com/tutorials/sensor-data/hsm6)
+* [Encrypting & decrypting sensor data on disk](https://docs.zymbit.com/tutorials/sensor-data/)
 * [Using the Real Time Clock](https://docs.zymbit.com/reference/real-time-clock/)
 * [Zymbit APIs](https://docs.zymbit.com/quickstart/api/).
 
@@ -134,7 +134,7 @@ When you are ready to deploy your system into the field we recommend that you pe
 * If you are using the perimeter_detect features, the sequence in which you arm, disarm is very important in production mode. Be sure to follow the process steps below.
 
 
-* Once you have locked your HSM into production mode, Zymbit cannot guarantee its operation if you subsequently do a major distribution upgrade (e.g. Raspbian Jessie to Stretch). [Contact Zymbit for more information.](https://zymbit.com/contact-form/)
+* Once you have locked your HSM into production mode, Zymbit cannot guarantee its operation if you subsequently do a major distribution upgrade (e.g. Raspbian Jessie to Stretch). [Contact Zymbit for more information.](https://www.zymbit.com/contact-us/)
 
 * If you decide that you are not ready for permanent binding then leave it in developer mode, but beware this makes it easier for a bad actor to replace the host with rogue hardware.
 

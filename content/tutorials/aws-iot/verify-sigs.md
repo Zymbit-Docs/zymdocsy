@@ -40,8 +40,8 @@ All these examples will be done via Python using the Python-ECDSA library, a fut
 
 ## Prerequisites
 
- 1. Follow the [Getting Started guide](https://docs.zymbit.com/how-to/getting-started/) first, installing all baseline software. 
- 2. If you wish to try Signature validation on AWS, you need a [valid device certificate](https://docs.zymbit.com/how-to/aws-iot/tls/) attached to your AWS account.
+ 1. Follow the [Getting Started guide](https://docs.zymbit.com/quickstart/getting-started/) first, installing all baseline software. 
+ 2. If you wish to try Signature validation on AWS, you need a [valid device certificate](https://docs.zymbit.com/tutorials/aws-iot/tls/) attached to your AWS account.
 3. The device certificate needs to have a policy attached giving it permission to publish data.
 
 ### Simple Signature Validation against Zymkey Public Key
@@ -240,7 +240,7 @@ PyCurl is simply a wrapper on the libssl library for C/C++. So they must be inst
 
 **Registering Zymkey device Certificate**
 
-Connecting to and Publishing data to AWS IoT requries you to present a valid certificate that has been regsitered with your AWS account. You can find how how to do this by following my [post here](https://community.zymbit.com/t/aws-iot-authentication-and-data-publishing-with-zymkey-4i-certificate/214/3). Make sure that the certificate has a policy attached to allow data publication on AWS, if you follow the post completely this should be done.
+Connecting to and Publishing data to AWS IoT requries you to present a valid certificate that has been regsitered with your AWS account. You can find how how to do this by following my [post here](https://docs.zymbit.com/tutorials/aws-iot/tls/). Make sure that the certificate has a policy attached to allow data publication on AWS, if you follow the post completely this should be done.
 
 You don't need to specifically use your Zymkey public/private key pair for the device certificate, but it would be a good idea to do so to implement an extra layer of private key security.
 
@@ -345,7 +345,7 @@ The lambda function is the python code that actually validates your Zymkey signa
 
 **Packaging function with Python-ECDSA**
 
-You can download a pre-configured zip file with Python-ECDSA included [here](). You can  modify the lambda function however you want here, but make sure you change the public key in particular if you want to test out simple validation. **If you change the lambda function make sure it is changed inside the zip file.**
+You can download a pre-configured zip file with Python-ECDSA included here. You can  modify the lambda function however you want here, but make sure you change the public key in particular if you want to test out simple validation. **If you change the lambda function make sure it is changed inside the zip file.**
 
 Otherwise just **zip up the lambda function** with the **ecdsa directory** you made in the **build directory**. You can do this by first cloning the Github repository. Then build the project by running this build command while inside the project directory.
 

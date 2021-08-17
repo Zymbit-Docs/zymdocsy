@@ -33,7 +33,7 @@ Zymkey4 uses a standard microUSB connector to interface to perimeter circuits 1 
 
 <p><img src="../ZK4-cable-connector.png" alt="Zymkey4 Cable Connector" width="50%"></p>
 
-(For high volume applications, different connector types are available.  [Contact Zymbit](https://zymbit.com/contact-form/) for more details.)
+(For high volume applications, different connector types are available.  [Contact Zymbit](https://www.zymbit.com/contact-us/) for more details.)
 
 
 

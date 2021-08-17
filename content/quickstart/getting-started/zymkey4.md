@@ -205,7 +205,7 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter<
 </li>
 <li><p>If you are using the perimeter_detect features, then the sequence in which you arm, disarm is very important. Be sure to follow the process steps below.</p>
 </li>
-<li><p>Once you have locked your Zymkey into production mode, zymbit cannot guarantee its operation if you subsequently do a major distribution upgrade (e.g. Raspbian Jessie to Stretch).** <a href="https://zymbit.com/contact-form/">Contact Zymbit for more information.</a></p>
+<li><p>Once you have locked your Zymkey into production mode, zymbit cannot guarantee its operation if you subsequently do a major distribution upgrade (e.g. Raspbian Jessie to Stretch).** <a href="https://www.zymbit.com/contact-us/">Contact Zymbit for more information.</a></p>
 </li>
 <li><p>If you decide that you are not ready for permanent binding then leave it in developer mode, but beware this makes it easier for a bad actor to replace the host with a rogue hardware.</p>
 </li>

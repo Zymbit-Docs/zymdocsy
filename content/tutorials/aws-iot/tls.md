@@ -38,7 +38,7 @@ With Zymkey, authentication is done by a key that can no be read/exported and th
 
 ## Prerequisites 
 
-Install the necessary software packages and insure the Zymkey is bound to its host using the [Getting Started Guide](https://docs.zymbit.com/how-to/getting-started/). 
+Install the necessary software packages and insure the Zymkey is bound to its host using the [Getting Started Guide](https://docs.zymbit.com/quickstart/getting-started/). 
 
 Have a registered AWS Account, a free developer account can be made [here](https://aws.amazon.com/free/).
 

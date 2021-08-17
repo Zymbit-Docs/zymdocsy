@@ -284,7 +284,7 @@ This enclosure can be mounted directly to a wall or flat surface using two self 
 
 
 **Pole Mounting**
-This enclosure can be easily mounted to a pole using a [pole mounting brackets available from the Zymbit store.](https://www.zymbit.com/product/c-00-1001/)
+This enclosure can be easily mounted to a pole using a [pole mounting brackets available from the Zymbit store.](https://store.zymbit.com/products/protokit-pole-mount-brackets)
 
 ![image32](image32.png)
 ![image33](image33.png)

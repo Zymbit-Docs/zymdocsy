@@ -92,7 +92,7 @@ Check out the [Raspberry Pi Stack Exchange](https://raspberrypi.stackexchange.co
 ----------
 ### Can I disable Zymkey power quality monitor?
 
-No, not for standard products. This is an intentional design feature that protects the security of your critical keys and intraboard communications. If your system requires a different behaviour then please [Contact Zymbit engineering services.](https://zymbit.com/contact-form/)
+No, not for standard products. This is an intentional design feature that protects the security of your critical keys and intraboard communications. If your system requires a different behaviour then please [Contact Zymbit engineering services.](https://www.zymbit.com/contact-us/)
 
 ----------
 

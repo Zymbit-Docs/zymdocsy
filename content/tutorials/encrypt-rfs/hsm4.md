@@ -184,7 +184,7 @@ The existing root file system can be migrated to an external LUKS encrypted USB 
 
 #### Prerequisites
 
-Make sure you have the HSM4 software suite already running and operational as well as insuring that your HSM4 is bound. Instructions [here](https://docs.zymbit.com/quickstart/getting-started/HSM4).
+Make sure you have the HSM4 software suite already running and operational as well as insuring that your HSM4 is bound. Instructions [here](https://docs.zymbit.com/quickstart/getting-started/hsm4).
 
 ##### NOTE for RPi users: For the CM4/IO Module with eMMC, additional steps are needed due to the fact that the USB 2.0 ports are disabled by default:
 1. Upgrade the bootloader version: Jan. 16 2021
@@ -249,7 +249,7 @@ Running this script takes around 30-40 minutes. The HSM4's LED flashes rapidly u
 
 The examples above are designed to help you get up and running with single and low volume applications.
 
-If you require support in developing a high volume manufacturing encryption workflow then please [contact us](https://www.zymbit.com/contact-form/) to discuss our OEM engineering services.
+If you require support in developing a high volume manufacturing encryption workflow then please [contact us](https://www.zymbit.com/contact-us/) to discuss our OEM engineering services.
 
 ----------
 ### REFERENCES

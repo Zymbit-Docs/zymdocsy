@@ -249,7 +249,7 @@ Running this script takes around 30-40 minutes. The Zymkey's LED flashes rapidly
 
 The examples above are designed to help you get up and running with single and low volume applications.
 
-If you require support in developing a high volume manufacturing encryption workflow then please [contact us](https://www.zymbit.com/contact-form/) to discuss our OEM engineering services.
+If you require support in developing a high volume manufacturing encryption workflow then please [contact us](https://www.zymbit.com/contact-us/) to discuss our OEM engineering services.
 
 ----------
 ### REFERENCES

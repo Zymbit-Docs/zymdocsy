@@ -32,7 +32,7 @@ HSM4 HAT provides four pin header and FPC connectors to interface to perimeter c
 
 ![HSM Perimeter Connector](../HSM-PD-connector.jpeg) 
 
-(For high volume applications, different connector types are available.  [Contact Zymbit](https://zymbit.com/contact-form/) for more details.)
+(For high volume applications, different connector types are available.  [Contact Zymbit](https://www.zymbit.com/contact-us/) for more details.)
 
 
 ### Electrical Circuit
