@@ -172,6 +172,6 @@ HSM6 has two additional self destruct policies, independent of Perimeter Detect-
 
 <h2 id="troubleshooting">TROUBLESHOOTING</h2>
 <ul>
-<li><a href="https://docs.zymbit.com/reference/faq/hsm6/#troubleshooting">HSM6 Troubleshooting FAQ</a></li>
+<li><a href="https://docs.zymbit.com/quickstart/faq/hsm6/#troubleshooting">HSM6 Troubleshooting FAQ</a></li>
 <li><a href="https://community.zymbit.com/">Community Forum</a></li>
 </ul>

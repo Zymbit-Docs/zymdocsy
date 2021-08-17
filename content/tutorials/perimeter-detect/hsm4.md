@@ -166,6 +166,6 @@ For best practices and examples of how to physically configure perimeter circuit
 
 <h2 id="troubleshooting">TROUBLESHOOTING</h2>
 <ul>
-<li><a href="https://docs.zymbit.com/reference/faq/hsm4/#troubleshooting">HSM4 Troubleshooting FAQ</a></li>
+<li><a href="https://docs.zymbit.com/quickstart/faq/hsm4/#troubleshooting">HSM4 Troubleshooting FAQ</a></li>
 <li><a href="https://community.zymbit.com/">Community Forum</a></li>
 </ul>
