@@ -32,21 +32,21 @@ The raspberry pi sets the **scaling governor** to be "**ondemand**" by default. 
 2. **Write this code to .service file:**
 
 > [Unit]
-
+>
 > Description=Set scaling governor to performance
-
+>
 > After=multi-user.target
-
+>
 > Before=zkbootrtc.service
-
+>
 > [Service]
-
+>
 > Type=oneshot
-
+>
 > ExecStart=/bin/sh -c "echo performance > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor"
-
+>
 > [Install]
-
+>
 > WantedBy=multi-user.target
 
 3. Enable the service:  sudo systemctl enable yourservice
