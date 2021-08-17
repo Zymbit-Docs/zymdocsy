@@ -49,5 +49,8 @@
     "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0",
     "theme": "file:themes/docs-theme"
+  },
+  "dependencies": {
+    "lunr": "^2.3.9"
   }
 }
