@@ -21,16 +21,18 @@ toc: true
 
 The following post will show you how to create and register a Zymkey Client Certificate for devices connecting to  AWS IoT, as well as how to publish data to AWS IoT using Zymkey. This will allow you to connect a client device to AWS IoT using the private key stored in a Zymkey hardware security module, which is inherently a more secure client certification and authentication method.
 
-_If you have a large number of client devices to connect to AWS IoT, considering using the more automated Just In Time Registration Process using Zymkey. [More details.](https://docs.zymbit.com/tutorials/aws-iot/jitr/)_ 
+_If you have a large number of client devices to connect to AWS IoT, consider using the more automated Just In Time Registration Process using Zymkey. [More details.](https://docs.zymbit.com/tutorials/aws-iot/jitr/)_ 
 
 ---
 AWS IoT uses a certificate based system for its TLS client authentication. This means that any attempted connection to the AWS IoT servers such as when pulling/publishing data, which is done through TLS/HTTPS, requires the client to **present a valid client certificate** as well as a **valid certificate authority certificate**. Furthermore the client must be able to **prove that they have the private key associated with the provided certificate**. Client Certificates are considered valid if they are registered with Amazon.
 
-In this example we will be using **AWS IoT's BYOC (Bring Your Own Certicate)** system to create a certificate based on Zymkey's private key and register it with Amazon. **The Zymkey certificate can be signed by either the AWS IoT root certificate authority or your own certificate authority, both methods will be covered here**. Once the setup is complete, you will be able to work with AWS IoT using their REST API, authenticating with Zymkey's private key. 
+In this example we will be using **AWS IoT's BYOC (Bring Your Own Certicate)** system to create a certificate based on Zymkey's private key and register it with Amazon. **The Zymkey certificate can be signed by either the AWS IoT root certificate authority or your own certificate authority. Both methods will be covered here**. Once the setup is complete, you will be able to work with AWS IoT using their REST API, authenticating with Zymkey's private key. 
 
 Classic client TLS authentication requires the user to keep their private key stored in a file, such as in a file called **zymkey.key**, and the key is read by whatever client is establishing the TLS connection so that it can be used to prove that you own the key. 
 
-With Zymkey, authentication is done by a key that can no be read/exported and that isn't kept on the file system. This is done with CURL to make HTTPS requests, **but a future post will show how communicate with AWS IoT through their [REST API](http://docs.aws.amazon.com/iot/latest/apireference/Welcome.html) and authenticating with Zymkey's private key in Python.**
+With Zymkey, authentication is done by a key that cannot be read/exported and that isn't kept on the file system. The key is always stored in the Zymkey hardware. 
+
+Lastly, we will show you how to test your setup. This is done with CURL to make HTTPS requests. A future post will show how communicate with AWS IoT through their [REST API](http://docs.aws.amazon.com/iot/latest/apireference/Welcome.html) and authenticating with Zymkey's private key in Python.
 
 
 
@@ -64,7 +66,7 @@ Have a registered AWS Account, a free developer account can be made [here](https
 
 <br>
 
-All AWS settings can be configured both manually through the AWS web interface or programatically through [AWS' boto 3 module](https://boto3.readthedocs.io/en/latest/reference/services/iot.html) in Python. If you would like to use scripts to programatically set up your client certificate, you will need to do the following steps.
+All AWS settings can be configured either manually through the AWS web interface or programatically through [AWS' boto 3 module](https://boto3.readthedocs.io/en/latest/reference/services/iot.html) in Python. If you would like to use scripts to programatically set up your client certificate, you will need to do the following steps.
 
 First, follow these instructions on the boto3 page to set up the boto3 module for Python:
 http://boto3.readthedocs.io/en/latest/guide/quickstart.html
@@ -119,10 +121,10 @@ Using AWS' Certificate Authority is the easier option in terms of setup and allo
 2. From the console, select the **AWS IoT Core service**
 3. Under the **secure** tab, click on **Certificates** and click the blue **Create a certificate** bar
 4. Choose the **Create with CSR** option
-5. When the File Selection menu pops up **point to your CSR file**. It shoud be **zymkey.csr** by default. We created this file on your IoT device, you may need to transfer it to where your logged into AWS.
-6. **Download the Certificate file** on the next screen and save as **zymkey.crt**. Transfer this file to your IoT device, we will use this later.
-7. Download the **AWS Root CA**, by **clicking Download**, scroll down to the section **CA certificates for server authentication**, click **ECC 256 bit key** and **copy the public key** into a **AWS_CA.pem** file. Transfer **AWS_CA.pem** to your IoT device, we will use this later.
-8. Back in the AWS IoT page, Click **Activate**
+5. When the File Selection menu pops up **point to your CSR file**. It shoud be **zymkey.csr** by default. Choose **Upload file**. We created this file on your IoT device, you may need to transfer it to where your logged into AWS.
+6. **Download the Certificate file** on the next screen and save as **zymkey.crt**. If you are not logged into AWS from your IoT device, transfer this file to your IoT device. We will use this later.
+7. You also need to download the **root CA for AWS IoT**, by **clicking Download**. On the page that opens, scroll down to the section **CA certificates for server authentication**, click **ECC 256 bit key** and click on the adjacent link **Amazon Root CA 3**. Copy the public key into a file named **AWS_CA.pem** file. If you are not logged into AWS from your IoT device, transfer **AWS_CA.pem** to your IoT device. We will use this later.
+8. Return to the **Create Certificate** **AWS IoT** page and click **Activate**
 
 ---
 
@@ -313,8 +315,9 @@ Now that your **Certificate Authority** has been **registered with AWS IoT**, al
 **Manually:**
 1. From the **AWS IoT Console** click **Certificates** and then click the blue **Create** button
 2. Under **Use My Certificate** click the **Get Started** button
-3. Choose the **CA you registered** on the Select a CA screen, then click on the **Register Certificate** button
-4. Select the **Certificate file** that was **signed by your CA**, its default name is **zymkey.crt**
+3. If you registered your own CA, choose the **CA you registered** on the Select a CA screen, then click on the **Register CA** button
+4. Click **Next**
+5. Click **Select certificate** and navigate to the certificate that was signed by your CA. Its default name is **zymkey.crt**
 5. Make sure to check the **activate** circle on the certificate box, and finally click the blue **Register certificates** button.
 
 ---
@@ -350,7 +353,7 @@ activate_cert_AWS(CA_path='CA_files/zk_ca.crt', Cert_path='zymkey.crt')
 
 ## Testing TLS connection with Zymkey Device Certificate:
 
-**If you are using a certificate signed by AWS IoT's Root CA, check this page [here](http://docs.aws.amazon.com/iot/latest/developerguide/managing-device-certs.html). In the server authentication section, look for the link to the AWS IoT Root CA file. Copy the public key and save it in a file called AWS_CA.pem. When running the CURL command, make sure to point to this CA file.**
+If you did not save the AWS IoT root CA to the file AWS_CA.pem earlier, you can do it now. Reference the following page for AWS IoT root CA certificates. [here](http://docs.aws.amazon.com/iot/latest/developerguide/managing-device-certs.html). On that page, look in the **CA certificates for server authentication** look for the link to adjacent to the ECC256 bit key. Copy the public key and save it in a file called AWS_CA.pem. When running the CURL command, make sure to point to this CA file.
 
 You can now test that your certificate **zymkey.crt** has been registered correctly by testing a **TLS connection** with your **AWS IoT endpoint**. We will be doing this with CURL. 
 
@@ -362,13 +365,13 @@ You can now test that your certificate **zymkey.crt** has been registered correc
 
 The first thing to do is to look for your AWS endpoint:
 1. From the **AWS IoT console screen**, click on **Settings** in the left hand bar.
-2. Copy the link in the **Custom Endpoint** box
-3. Now run the following command, making sure to do it in the same directory where you keep your signed certificate, **zymkey.crt** and your CA cert/pem file, **CA_files/zk_ca.pem**:
+2. In the **Device data endpoint** section, copy the **Endpoint**.
+3. Replace **endpoint.iot.region** with the **Endpoint** you just copied in the following command. Now run the command, making sure to do it in the same directory where you keep your signed certificate, **zymkey.crt** and your CA cert/pem file, **AWS_CA.pem, or CA_files/zk_ca.pem**:
 
-       #replace endpoint and region with the appropriate values
-	   curl --tlsv1.2 --cacert CA_files/zk_ca.pem --cert zymkey.crt --key nonzymkey.key --engine zymkey_ssl --key-type ENG -v -X POST -d "{ \"hello\": \"world\"}" "https://endpoint.iot.region.amazonaws.com:8443/topics/hello/world"
+       #replace endpoint iot region with the copied endpoint
+	   curl --tlsv1.2 --cacert AWS_CA.pem --cert zymkey.crt --key nonzymkey.key --engine zymkey_ssl --key-type ENG -v -X POST -d "{ \"hello\": \"world\"}" "https://endpoint.iot.region.amazonaws.com:8443/topics/hello/world"
 
-You should see a successful TLS connection, but receive a **403 Forbidden Exception** from AWS. This is because the certificate you registered, **zymkey.crt** doesn't have the approrpiate permissions to **publish** a message to the topic **hello/world**. We can fix this by **adding a policy** and **attaching it to the certificate**.
+You should see a successful TLS connection, but receive a **403 Forbidden Exception** from AWS. This is because the certificate you registered, **zymkey.crt** doesn't have the appropriate permissions to **publish** a message to the topic **hello/world**. We can fix this by **adding a policy** and **attaching it to the certificate**.
 
 ---
 
@@ -406,7 +409,7 @@ Here we will attach a Policy to your Zymkey certificate that allows it to publis
 
 		*
 
-5. Click on the **Allow** box, and hit **Create**
+5. Check the **Allow** box, and click **Create**
 6. Now, click the **Certificates** tab on the left and click on the **...** option on the top right corner of your certificate. Select **Attach Policy**
 7. Attach the appropriate policy and you are done.
 
@@ -425,10 +428,10 @@ Here we will attach a Policy to your Zymkey certificate that allows it to publis
 Now the previous command should work and **{"hello": "world"}** should be published to the **hello/world** topic on your AWS IoT endpoint.
 
 1. On the **AWS IoT console** and the **left hand bar**, click on the **Test** option.
-2. Under **Subscribe** and **Subscription Topic**, type in **hello/world**.
+2. In the **Subscribe to a topic** tab, in the **Topic filter** box, type in **hello/world**. Click the **Subscribe** button
 3. Test your TLS connection with the following **CURL** command pointing to the **CA cert/pem file** and your **Zymkey certificate**:
 	
-		#replace endpoint and region with the appropriate values
+		#replace endpoint.iot.region with the appropriate values
 		curl --tlsv1.2 --cacert CA_files/zk_ca.pem --cert zymkey.crt --key nonzymkey.key --engine zymkey_ssl --key-type ENG -v -X POST -d "{ \"hello\": \"world\"}" "https://endpoint.iot.region.amazonaws.com:8443/topics/hello/world"
  
  If it works, your command line should have indication of successful TLS connection and **"hello": "world"** should show up in your subscribed topic.
