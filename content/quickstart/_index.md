@@ -13,5 +13,7 @@ headless: true
 ---
 
 [Getting Started](https://docs.zymbit.com/quickstart/getting-started/)
+
 [API Documentation](https://docs.zymbit.com/quickstart/api/)
+
 [FAQ & Troubleshooting](https://docs.zymbit.com/quickstart/faq/)
