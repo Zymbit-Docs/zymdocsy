@@ -69,7 +69,7 @@ Use a standard microUSB extension cable to close circuits P1 and P2 as follows.
 
 ## Adapter Connect to Zymkey 4i
 
-Several adapters are available from Zymbit that simplify connection from the microUSB to header and FPC. These are convenient for development.  [Buy Adapters >](https://store.zymbit.com/products/adapter-zymkey4-perim)
+Several adapters are available from Zymbit that simplify connection from the microUSB to header and FPC. These are convenient for development.  [Buy Adapters >](https://store.zymbit.com/)
 
 ![Perimeter Adapter Types 2020.06|690x491](../image6.png) 
 
@@ -137,7 +137,7 @@ Zymbit secure compute motherboard for RPi
 
 ![Zymbit Tamper-Circuit-Example-12|666x500](../image20.jpeg) 
 
-![Zymbit Tamper-Circuit-Example-13|666x500](../image21).jpeg)
+![Zymbit Tamper-Circuit-Example-13|666x500](../image21.jpeg)
 
 Internal Tamper Switches
 
