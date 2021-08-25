@@ -163,7 +163,7 @@ SUCCESS: zkClose - 0
 ----------
 ### Perimeter Detect Circuit Examples
 For best practices and examples of how to physically configure perimeter circuits: 
-[Learn more>](https://community.zymbit.com/t/426)
+[Learn more>](https://docs.zymbit.com/tutorials/perimeter-detect/examples)
 
 ### Additional Self Destruct Policies
 

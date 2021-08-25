@@ -16,7 +16,7 @@ toc: true
 
 This section explains the perimeter detect feature on Zymkey4 and how to use it in your software application with a simple two wire loop physical configuration. 
 
-For alternative physical configurations and best practices: [Learn more >](https://community.zymbit.com/t/426)
+For alternative physical configurations and best practices: [Learn more >](https://docs.zymbit.com/tutorials/perimeter-detect/examples)
 
 ![Zymkey4-PD-thick-lines](../ZK4-perim-detect-thick-lines.png)
 
@@ -182,7 +182,7 @@ SUCCESS: zkClose - 0
 ----------
 ### Perimeter Detect Circuit Examples
 For best practices and examples of how to physically configure perimeter circuits: 
-[Learn more>](https://community.zymbit.com/t/426)
+[Learn more>](https://docs.zymbit.com/tutorials/perimeter-detect/examples)
 
 <h2 id="troubleshooting">TROUBLESHOOTING</h2>
 <ul>
