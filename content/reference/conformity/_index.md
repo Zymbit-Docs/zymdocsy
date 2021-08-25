@@ -10,10 +10,8 @@ type: "docs"
 layout: "single"
 ---
 
-[**EU** Declaration of Conformity](https://www.zymbit.com/documentation/zymkey/conformity/Zymbit_EU-Declaration-of-Conformity_ZYMKEY4i)
+[Zymkey4 Conformity Documents](https://docs.zymbit.com/reference/conformity/zymkey4/)
 
-[**FCC** Declaration of Conformity](https://www.zymbit.com/documentation/zymkey/conformity/Zymbit_FCC-Declaration-of-Conformity_ZYMKEY4i)
+[HSM4 Conformity Documents](https://docs.zymbit.com/reference/conformity/hsm4/)
 
-[**RoHS/Reach**  Declaration of Conformity](https://www.zymbit.com/documentation/zymkey/conformity/Zymbit_ROHS-Declaration-of-Conformity_ZYMKEY4i)
-
-[**California Prop 65**  Declaration of Conformity](https://www.zymbit.com/documentation/zymkey/conformity/Zymbit_CA-Prop65-Declaration-of-Conformity_ZYMKEY4i)
+[HSM6 Conformity Documents](https://docs.zymbit.com/reference/conformity/hsm6/)
