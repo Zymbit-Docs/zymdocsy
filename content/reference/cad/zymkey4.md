@@ -13,7 +13,7 @@ layout: "single"
 
 ## 3D Step Model
 
-![Zymkey 3D model](../Z04401-004-F1.step)
+![Zymkey 3D model](../Z04401-004-F1.step.zip)
 
 ## 2D Drawing
 
