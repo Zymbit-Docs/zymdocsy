@@ -1,7 +1,7 @@
 ---
 title: "HSM6 Product Brief"
 linkTitle: "HSM6"
-manualLink: "https://www.zymbit.com/wp-content/uploads/2021/05/Zymbit-DataSheet_HSM6_24000911_20210513_D1.pdf"
+manualLink: "https://www.zymbit.com/datasheets/hsm6"
 manualLinkTitle: ""
 manualLinkTarget: "_blank"
 type: docs
@@ -11,4 +11,4 @@ weight: -760
 description: ""
 ---
 
-<p><a href="https://www.zymbit.com/wp-content/uploads/2021/05/Zymbit-DataSheet_HSM6_24000911_20210513_D1.pdf" target="_blank" rel="noopener noreferrer">HSM6 Product Brief</a></p>
+<p><a href="https://www.zymbit.com/datasheets/hsm6" target="_blank" rel="noopener noreferrer">HSM6 Product Brief</a></p>

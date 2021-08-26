@@ -1,7 +1,7 @@
 ---
 title: "ZYMKEY4 Product Brief"
 linkTitle: "ZYMKEY4"
-manualLink: "https://www.zymbit.com/wp-content/uploads/2018/12/Zymbit-Data-Sheet-Zymkey-4i-DATA-SHEET-04100910A2.pdf"
+manualLink: "https://www.zymbit.com/datasheets/zymkey-4i"
 manualLinkTitle: ""
 manualLinkTarget: "_blank"
 type: docs
@@ -11,4 +11,4 @@ weight: -790
 description: ""
 ---
 
-<p><a href="https://www.zymbit.com/wp-content/uploads/2018/12/Zymbit-Data-Sheet-Zymkey-4i-DATA-SHEET-04100910A2.pdf" target="_blank" rel="noopener noreferrer">Zymkey4 Product Brief</a></p>
+<p><a href="https://www.zymbit.com/datasheets/zymkey-4i" target="_blank" rel="noopener noreferrer">Zymkey4 Product Brief</a></p>

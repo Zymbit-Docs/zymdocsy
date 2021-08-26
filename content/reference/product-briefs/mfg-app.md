@@ -1,7 +1,7 @@
 ---
 title: "Manufacturing Appliance"
 linkTitle: "Manufacturing Appliance"
-manualLink: "https://www.zymbit.com/wp-content/uploads/2020/05/Zymbit-Data-Sheet_Manufacturing-Appliance_-2020_02_V1.1.pdf"
+manualLink: "https://www.zymbit.com/datasheets/manufacturing-appliance-1"
 manualLinkTitle: ""
 manualLinkTarget: "_blank"
 type: docs
@@ -11,4 +11,4 @@ weight: -700
 description: ""
 ---
 
-<p><a href="https://www.zymbit.com/wp-content/uploads/2020/05/Zymbit-Data-Sheet_Manufacturing-Appliance_-2020_02_V1.1.pdf" target="_blank" rel="noopener noreferrer">Manufacturing Appliance</a></p>
+<p><a href="https://www.zymbit.com/datasheets/manufacturing-appliance-1" target="_blank" rel="noopener noreferrer">Manufacturing Appliance</a></p>
