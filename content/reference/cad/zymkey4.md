@@ -13,7 +13,7 @@ layout: "single"
 
 ## 3D Step Model
 
-![Zymkey 3D model](../ZK4-3D-model.step.zip)
+[Zymkey 3D model](../ZK4-3D-model.step.zip)
 
 ## 2D Drawing
 
