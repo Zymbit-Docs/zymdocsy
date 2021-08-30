@@ -46,6 +46,8 @@ jobs:
       - name: Hugo-ify the API docs
         id: hugoify
         uses: zymbit-docs/actions-hugoify-api-docs@master
+        with:
+          outputPath: ./content/quickstart/api/
 
       - name: Prepare processed files for commit
         id: prepare-commit
