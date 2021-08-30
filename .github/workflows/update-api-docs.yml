@@ -60,8 +60,8 @@ jobs:
           git config user.email github-actions[bot]@users.noreply.github.com
 
           rm -r ./content/GENERATED/GENERATED_*
-          mv ./content/GENERATED/* ./content/api/
-          git add ./content/api/
+          mv ./content/GENERATED/* ./content/quickstart/api/
+          git add ./content/quickstart/api/
           git rm -r ./content/GENERATED/
 
           LAST_COMMIT_MSG=$(git log -1 --grep="^docs" --format="%s" -- content/GENERATED/)
