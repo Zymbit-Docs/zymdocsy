@@ -51,7 +51,7 @@ toc: true
 
 <div class="body">
 <div class="description"></div>
-<p>The class initialization opens and stores an instance of a Zymkey context.</p>
+<p>Initialize an instance of a Zymkey context.</p>
 </div>
 </div>
 <div class="method">
@@ -211,11 +211,10 @@ toc: true
 <div class="body">
 <div class="description">
 <p>Lock up source (plaintext) data.</p>
-<p>This methods encrupts and signs a block of data.</p>
-<p>The Zymkey has two keys that can be used for locking/unlocking operations, designated as &#8220;shared&#8221; and &#8220;one-way&#8221;:</p>
+<p>This methods encrypts and signs a block of data.</p>
+<p>The Zymkey that can be used for locking/unlocking operations.</p>
 <ol>
 <li>The one-way key is meant to lock up data only on the local host computer. Data encrypted using this key cannot be exported and deciphered anywhere else.</li>
-<li>The shared key is meant for publishing data to other sources that have the capability to generate the shared key, such as the Zymbit cloud server.</li>
 </ol>
 </div>
 <div class="parameters">
@@ -245,7 +244,7 @@ toc: true
 <span class="name">encryption_key</span>
 <span class="type-paren paren-open">(</span><span class="type">str</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">This specifies which key will be used to lock the data. A value of
                                                 &#8220;zymbit&#8221; (default) specifies that the Zymkey will use the one-way
-                                                key. A value of &#8220;cloud&#8221; specifies that the shared key is used.</span>
+                                                key.</span>
 </li>
 </ul>
 </div>
@@ -276,10 +275,9 @@ toc: true
 <div class="description">
 <p>Unlock source (ciphertext) data.</p>
 <p>This method verifies a locked object signature and decrypts the associated ciphertext data.</p>
-<p>The Zymkey has two keys that can be used for locking/unlocking operations, designated as &#8220;shared&#8221; and &#8220;one-way&#8221;:</p>
+<p>The Zymkey has two keys that can be used for locking/unlocking operations.</p>
 <ol>
 <li>The one-way key is meant to lock up data only on the local host computer. Data encrypted using this key cannot be exported and deciphered anywhere else.</li>
-<li>The shared key is meant for publishing data to other sources that have the capability to generate the shared key, such as the Zymbit cloud server.</li>
 </ol>
 </div>
 <div class="parameters">
@@ -309,7 +307,7 @@ toc: true
 <span class="name">encryption_key</span>
 <span class="type-paren paren-open">(</span><span class="type">str</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">This specifies which key will be used to lock the data. A value of
                                                 &#8220;zymbit&#8221; (default) specifies that the Zymkey will use the one-way
-                                                key. A value of &#8220;cloud&#8221; specifies that the shared key is used.</span>
+                                                key.</span>
 </li>
 <li class="param-item">
 <span class="name">raise_exception</span>
@@ -537,7 +535,7 @@ toc: true
 </li>
 <li class="param-item">
 <span class="name">peer_pubkey</span>
-<span class="type-paren paren-open">(</span><span class="type">Union[List[bytes], int]</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">The public key of the peer used to generate the pre-master secret
+<span class="type-paren paren-open">(</span><span class="type">t.Union[t.List[bytes], int]</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">The public key of the peer used to generate the pre-master secret
                                                 against the private key located in <span class="title-reference">local_slot</span>. This parameter can
                                                 be a list of <span class="title-reference">bytes</span> if the key is provided explicitly or an <span class="title-reference">int</span>
                                                 if it refers to a key slot. </span>
@@ -565,11 +563,11 @@ toc: true
 </li>
 <li class="param-item">
 <span class="name">salt</span>
-<span class="type-paren paren-open">(</span><span class="type">Optional[List[bytes]]</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">A unique identifier for KDF. Ignored for <span class="title-reference">kdf_func_type=&#8217;none&#8217;</span>. </span>
+<span class="type-paren paren-open">(</span><span class="type">t.Optional[t.List[bytes]]</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">A unique identifier for KDF. Ignored for <span class="title-reference">kdf_func_type=&#8217;none&#8217;</span>. </span>
 </li>
 <li class="param-item">
 <span class="name">info</span>
-<span class="type-paren paren-open">(</span><span class="type">Optional[List[bytes]]</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">A unique field for rfc5869. Ignore for other KDF types.</span>
+<span class="type-paren paren-open">(</span><span class="type">t.Optional[t.List[bytes]]</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">A unique field for rfc5869. Ignore for other KDF types.</span>
 </li>
 <li class="param-item">
 <span class="name">num_iterations</span>
@@ -767,7 +765,7 @@ toc: true
 </div>
 <div class="returns">
 <h5>Returns</h5>
-<span class="return_type">Tuple[list, int]</span><span class="param-desc-divider"> &#8212; </span>
+<span class="return_type">t.Tuple[list, int]</span><span class="param-desc-divider"> &#8212; </span>
 <span class="return_value">The allocation list and the maximum number of keys</span>
 </div>
 </div>
@@ -925,7 +923,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">gen\_wallet\_master\_seed</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">key\_type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">master\_gen\_key</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">wallet\_name</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">bip39</span> = <span class="default-val">False</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="genwalletmasterseed-d9fe906e" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">gen\_wallet\_master\_seed</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param">key\_type</span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param">master\_gen\_key</span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param">wallet\_name</span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param">recovery\_strategy=&lt;zymkey.RecoveryStrategy object&gt;</span></span><span class="param-paren paren-close">)</span></span></span> {id="genwalletmasterseed-9d67892f" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -948,8 +946,8 @@ toc: true
 <span class="type"></span><span class="param-desc-divider"> &#8212; </span><span class="description">The name of the wallet (string) that this master seed is attached to.</span>
 </li>
 <li class="param-item">
-<span class="name">bip39</span>
-<span class="type"></span><span class="param-desc-divider"> &#8212; </span><span class="description">If true, generate the seed per BIP39 and return the mnemonic string.</span>
+<span class="name">recovery_strategy</span>
+<span class="type"></span><span class="param-desc-divider"> &#8212; </span><span class="description">RecoveryStrategy() class that defines what strategy to be used {None, Bip39, Slip39[not supported right now]}. Bip39Strategy-&gt;passphrase must be b64 encoded.</span>
 </li>
 </ul>
 </div>
@@ -995,7 +993,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="name">restore\_wallet\_master\_seed\_from\_bip39\_mnemonic</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">key\_type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">master\_gen\_key</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">wallet\_name</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">bip39\_mnemonic</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="restorewalletmasterseedfrombip39mnemonic-ab9d87fd" class="markdown-h4 signature include-toc"}
+#### <span><span class="name">restore\_wallet\_master\_seed\_from\_bip39\_mnemonic</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">key\_type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">master\_gen\_key</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">wallet\_name</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">bip39\_passphrase</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="name">bip39\_mnemonic</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="restorewalletmasterseedfrombip39mnemonic-dd28a734" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1012,6 +1010,14 @@ toc: true
 <li class="param-item">
 <span class="name">master_gen_key</span>
 <span class="type"></span><span class="param-desc-divider"> &#8212; </span><span class="description">The master generator key used in the derivation of the child key.</span>
+</li>
+<li class="param-item">
+<span class="name">wallet_name</span>
+<span class="type"></span><span class="param-desc-divider"> &#8212; </span><span class="description">Name of the new wallet to be generated.</span>
+</li>
+<li class="param-item">
+<span class="name">bip39_passphrase</span>
+<span class="type"></span><span class="param-desc-divider"> &#8212; </span><span class="description">Passphrase used to generate the bip39_mnemonic.</span>
 </li>
 <li class="param-item">
 <span class="name">bip39_mnemonic</span>
@@ -1236,6 +1242,11 @@ toc: true
 <span class="type"></span><span class="param-desc-divider"> &#8212; </span><span class="description">If true, this API returns the time after the next second falls. This means that the caller could be blocked up to one second. If False, the API returns immediately with the current time reading.</span>
 </li>
 </ul>
+</div>
+<div class="returns">
+<h5>Returns</h5>
+<span class="return_type">Time in epoch seconds</span><span class="param-desc-divider"> &#8212; </span>
+<span class="return_value"></span>
 </div>
 </div>
 </div>
@@ -1560,7 +1571,7 @@ toc: true
 <div class="body">
 <div class="description">
 <p>Sets the battery voltage threshold. (model &gt;= HSM6).</p>
-<p>This function sets the threshold at which if the battery voltage falls bellow, the action set by set_battery_voltage_action will be carried out. The recommended threshold is 2.3V. If this function isn&#8217;t called 2.5V is assumed by default.</p>
+<p>This function sets the threshold at which if the battery voltage falls bellow, the action set by set_battery_voltage_action will be carried out. The recommended threshold is 2.3V is assumed by default. Threshold must be below 2.5V.</p>
 </div>
 <div class="parameters">
 <h5>Parameters</h5>
@@ -1640,6 +1651,52 @@ toc: true
 <li class="param-item">
 <span class="name">threshold</span>
 <span class="type"></span><span class="param-desc-divider"> &#8212; </span><span class="description">The threshold in celsius.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="class">
+
+### <span class="markdown-h3 signature include-toc"><span class="annotation">class</span> <span class="addname">zymkey.</span><span class="name">RecoveryStrategy</span></span>
+
+<div class="body">
+<p>The RecoveryStrategy class definition.</p>
+<p>This class specifies the recovery strategy used for wallet generation within Python. Base class strategy is to do no recovery.</p>
+<div class="method">
+
+#### <span><span class="name">\_\_init\_\_</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="init-f24db7dc" class="markdown-h4 signature include-toc"}
+
+<div class="body">
+<div class="description"></div>
+<p>Initialize an instance of RecoveryStrategy.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="class">
+
+### <span><span class="annotation">class</span> <span class="addname">zymkey.</span><span class="name">RecoveryStrategyBip39</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">passphrase</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="class-zymkey.-RecoveryStrategyBip39-2eda8ac2" class="markdown-h3 signature include-toc"}
+
+<div class="body">
+<p>The RecoveryStrategyBip39 class definition.</p>
+<p>This class specifies the Bip39 recovery strategy used for wallet generation within Python. Derived from RecoveryStrategy class.</p>
+<div class="method">
+
+#### <span><span class="name">\_\_init\_\_</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="name">passphrase</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="init-2eda8ac2" class="markdown-h4 signature include-toc"}
+
+<div class="body">
+<div class="description">
+<p>Initialize an instance of RecoveryStrategyBip39.</p>
+</div>
+<div class="parameters">
+<h5>Parameters</h5>
+<ul>
+<li class="param-item">
+<span class="name">passphrase</span>
+<span class="type-paren paren-open">(</span><span class="type">str</span><span class="type-paren paren-close">)</span><span class="param-desc-divider"> &#8212; </span><span class="description">Passphrase used for bip39 generation. Can be empty string. Must be b64 encoded.</span>
 </li>
 </ul>
 </div>
