@@ -17,7 +17,7 @@ toc: true
 
 ## Overview
 
-![AWS-IoT-BYOC-graphic-2](../aws-iot-tls.png) 
+![AWS-IoT-BYOC-graphic-2](aws-iot-tls.png)
 
 The following post will show you how to create and register a Zymkey Client Certificate for devices connecting to  AWS IoT, as well as how to publish data to AWS IoT using Zymkey. This will allow you to connect a client device to AWS IoT using the private key stored in a Zymkey hardware security module, which is inherently a more secure client certification and authentication method.
 
@@ -373,13 +373,13 @@ You should see a successful TLS connection, but receive a **403 Forbidden Except
 
 Here's what the **successful TLS connection** looks like:
 
-![tls-success|690x161](../tls-success.png) 
+![tls-success|690x161](tls-success.png)
 
 ---
 
 Here's the **403 exception** you should receive:
 
-![403-except|581x164](../tls-403exception.png) 
+![403-except|581x164](tls-403exception.png)
 
 </details>
 

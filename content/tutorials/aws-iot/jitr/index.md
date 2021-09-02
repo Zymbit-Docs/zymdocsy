@@ -19,7 +19,7 @@ toc: true
 
 AWS IoT requires an IoT device to register and activate a certificate with AWS before communicating. For large scale deployments, AWS provides an automated process called **Just-In-Time-Registration**. This allows a user to register a Certificate Authority with AWS so that upon a device's first TLS connection to AWS servers, if the device certificate was signed by this Certificate Authority, the certificate will be quickly activated by a lambda-function and be ready to use.
 
-![AWS-IoT-JITR-graphic-2](../aws-iot-jitr.png)
+![AWS-IoT-JITR-graphic-2](aws-iot-jitr.png)
 
 ---
 
