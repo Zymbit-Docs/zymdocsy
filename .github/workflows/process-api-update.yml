@@ -120,6 +120,12 @@ jobs:
       UPSTREAM_COMMIT_HASH: ${{ needs.prepare-hugo-environment.outputs.upstream_commit_hash }}
 
     steps:
+      - name: Checkout the branch with updated API docs
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
       - name: Install the latest GitHub CLI from apt repo
         run: |
           sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
