@@ -111,6 +111,147 @@ toc: true
 
 <div class="class">
 
+### <span class="markdown-h3 signature include-toc"><span class="annotation">class</span> <span class="name">recoveryStrategyBaseType</span></span>
+
+<div class="body">
+<span class="source-file">zkAppUtilsClass.h</span>
+<p>Class used for retrieval of recovery mnemonic for Bip32 wallet.</p>
+<p>Subclassed by </p>
+<div class="context">
+<h4 class="context-name">Public Functions</h4>
+<div class="method">
+
+#### <span><span class="name">recoveryStrategyBaseType</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="recoveryStrategyBaseType-f24db7dc" class="markdown-h4 signature include-toc"}
+
+<div class="body">
+<div class="description"></div>
+</div>
+</div>
+<div class="method">
+
+#### <span><span class="annotation">inline</span> ZK_RECOVERY_STRATEGY<span class="name">getRecoveryStrategy</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span><span class="annotation">const</span> </span> {id="inline-getRecoveryStrategy-const-f24db7dc" class="markdown-h4 signature include-toc"}
+
+<div class="body">
+<div class="description"></div>
+</div>
+</div>
+<div class="method">
+
+#### <span><span class="annotation">inline</span> <span class="annotation">virtual</span> std::string<span class="name">getPassPhrase</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span><span class="annotation">const</span> </span> {id="inline-virtual-getPassPhrase-const-f24db7dc" class="markdown-h4 signature include-toc"}
+
+<div class="body">
+<div class="description"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="class">
+
+### <span class="markdown-h3 signature include-toc"><span class="annotation">class</span> <span class="name">recoveryStrategyBip39</span></span>
+
+<div class="body">
+<span class="source-file">zkAppUtilsClass.h</span>
+<p>Class used for bip39 recovery strategy. Contains a b64 encoded passphrase to use.</p>
+<div class="context">
+<h4 class="context-name">Public Functions</h4>
+<div class="method">
+
+#### <span><span class="name">recoveryStrategyBip39</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="recoveryStrategyBip39-f24db7dc" class="markdown-h4 signature include-toc"}
+
+<div class="body">
+<div class="description"></div>
+</div>
+</div>
+<div class="method">
+
+#### <span><span class="name">recoveryStrategyBip39</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation">const</span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span> <span class="name">passphrase</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="recoveryStrategyBip39-b6dabcc6" class="markdown-h4 signature include-toc"}
+
+<div class="body">
+<div class="description"></div>
+</div>
+</div>
+<div class="method">
+
+#### <span><span class="annotation">inline</span> void<span class="name">setPassPhrase</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation">const</span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span> <span class="name">passphrase</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="inline-setPassPhrase-b6dabcc6" class="markdown-h4 signature include-toc"}
+
+<div class="body">
+<div class="description"></div>
+</div>
+</div>
+<div class="method">
+
+#### <span><span class="annotation">inline</span> <span class="annotation">virtual</span> std::string<span class="name">getPassPhrase</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span><span class="annotation">const</span> </span> {id="inline-virtual-getPassPhrase-const-f24db7dc" class="markdown-h4 signature include-toc"}
+
+<div class="body">
+<div class="description"></div>
+</div>
+</div>
+</div>
+<div class="context">
+<h4 class="context-name">Private Members</h4>
+<div class="struct-var">
+
+#### <span class="markdown-h4 signature include-toc"><span class="returns">std::string</span> <span class="name">passPhrase</span></span>
+
+<div class="body">
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<div class="class">
+
+### <span class="markdown-h3 signature include-toc"><span class="annotation">class</span> <span class="name">recoveryStrategySlip39</span></span>
+
+<div class="body">
+<div class="context">
+<h4 class="context-name">Public Functions</h4>
+<div class="method">
+
+#### <span><span class="name">recoveryStrategySlip39</span> <span class="param-list"><span class="param-paren paren-open">(</span><span class="param-paren paren-close">)</span></span></span> {id="recoveryStrategySlip39-f24db7dc" class="markdown-h4 signature include-toc"}
+
+<div class="body">
+<div class="description"></div>
+</div>
+</div>
+<div class="method">
+
+#### <span><span class="name">recoveryStrategySlip39</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">x</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">y</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">std::vector&lt;std::string&gt;</span> <span class="pointer-ref"></span> <span class="name">list\_passphrases</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="recoveryStrategySlip39-2a3a015a" class="markdown-h4 signature include-toc"}
+
+<div class="body">
+<div class="description"></div>
+</div>
+</div>
+</div>
+<div class="context">
+<h4 class="context-name">Private Members</h4>
+<div class="struct-var">
+
+#### <span class="markdown-h4 signature include-toc"><span class="returns">int</span> <span class="name">m</span></span>
+
+<div class="body">
+                                </div>
+</div>
+<div class="struct-var">
+
+#### <span class="markdown-h4 signature include-toc"><span class="returns">int</span> <span class="name">n</span></span>
+
+<div class="body">
+                                </div>
+</div>
+<div class="struct-var">
+
+#### <span class="markdown-h4 signature include-toc"><span class="returns">std::vector&lt;std::string&gt;</span> <span class="name">listPassPhrases</span></span>
+
+<div class="body">
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<div class="class">
+
 ### <span class="markdown-h3 signature include-toc"><span class="annotation">class</span> <span class="name">zkClass</span></span>
 
 <div class="body">
@@ -185,7 +326,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">\*</span> <span class="name">getRandBytes</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">rdata\_sz</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="getRandBytes-745f6a2c" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">::</span> <span class="pointer-ref">\*</span><span class="name">getRandBytes</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">rdata\_sz</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="::-getRandBytes-745f6a2c" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -301,7 +442,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">\*</span> <span class="name">lockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation">const</span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span> <span class="name">src\_pt\_filename</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span> <span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="lockData-f6af014d" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">::</span> <span class="pointer-ref">\*</span><span class="name">lockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation">const</span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span> <span class="name">src\_pt\_filename</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span> <span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="::-lockData-f6af014d" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -341,7 +482,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">\*</span> <span class="name">lockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation">const</span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">src\_pt\_data</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span> <span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="lockData-acb5e31b" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">::</span> <span class="pointer-ref">\*</span><span class="name">lockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation">const</span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">src\_pt\_data</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span> <span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="::-lockData-acb5e31b" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -462,7 +603,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">\*</span> <span class="name">unlockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation">const</span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span> <span class="name">src\_ct\_filename</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span> <span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="unlockData-f6af014d" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">::</span> <span class="pointer-ref">\*</span><span class="name">unlockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation">const</span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span> <span class="name">src\_ct\_filename</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span> <span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="::-unlockData-f6af014d" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -502,7 +643,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">\*</span> <span class="name">unlockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation">const</span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">src\_ct\_bytes</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span> <span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="unlockData-acb5e31b" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">::</span> <span class="pointer-ref">\*</span><span class="name">unlockData</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation">const</span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">src\_ct\_bytes</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span> <span class="name">use\_shared\_key</span> = <span class="default-val">false</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="::-unlockData-acb5e31b" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -545,7 +686,7 @@ toc: true
 <h4 class="context-name">ECDSA</h4>
 <div class="method">
 
-#### <span><span class="pointer-ref">\*</span> <span class="name">genECDSASigFromDigest</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">digest</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="genECDSASigFromDigest-067907b4" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">::</span> <span class="pointer-ref">\*</span><span class="name">genECDSASigFromDigest</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">digest</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="::-genECDSASigFromDigest-067907b4" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -585,7 +726,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">\*</span> <span class="name">genECDSASigFromDigest</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">digest</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">uint8\_t</span> <span class="pointer-ref">&amp;</span> <span class="name">recovery\_id</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="genECDSASigFromDigest-149b5f84" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">::</span> <span class="pointer-ref">\*</span><span class="name">genECDSASigFromDigest</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">digest</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">uint8\_t</span> <span class="pointer-ref">&amp;</span> <span class="name">recovery\_id</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="::-genECDSASigFromDigest-149b5f84" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -679,7 +820,7 @@ toc: true
 <h4 class="context-name">ECDH and KDF</h4>
 <div class="method">
 
-#### <span><span class="pointer-ref">\*</span> <span class="name">doRawECDH</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">peer\_pubkey</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="doRawECDH-a77442d1" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">::</span> <span class="pointer-ref">\*</span><span class="name">doRawECDH</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">peer\_pubkey</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="::-doRawECDH-a77442d1" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -711,7 +852,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">\*</span> <span class="name">doRawECDHWithIntPeerPubkey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">peer\_pubkey\_slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span> <span class="name">peer\_pubkey\_slot\_is\_foreign</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="doRawECDHWithIntPeerPubkey-d788e54d" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">::</span> <span class="pointer-ref">\*</span><span class="name">doRawECDHWithIntPeerPubkey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">peer\_pubkey\_slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span> <span class="name">peer\_pubkey\_slot\_is\_foreign</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="::-doRawECDHWithIntPeerPubkey-d788e54d" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -748,7 +889,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">\*</span> <span class="name">doECDHAndKDF</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">ZK\_ECDH\_KDF\_TYPE</span> <span class="pointer-ref"></span> <span class="name">kdf\_type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">peer\_pubkey</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">salt</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">info</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">num\_iterations</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">derived\_key\_sz</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="doECDHAndKDF-f1769cf8" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">::</span> <span class="pointer-ref">\*</span><span class="name">doECDHAndKDF</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">ZK\_ECDH\_KDF\_TYPE</span> <span class="pointer-ref"></span> <span class="name">kdf\_type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">peer\_pubkey</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">salt</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">info</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">num\_iterations</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">derived\_key\_sz</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="::-doECDHAndKDF-f1769cf8" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -800,7 +941,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">\*</span> <span class="name">doECDHAndKDFWithIntPeerPubkey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">ZK\_ECDH\_KDF\_TYPE</span> <span class="pointer-ref"></span> <span class="name">kdf\_type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">peer\_pubkey\_slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span> <span class="name">peer\_pubkey\_slot\_is\_foreign</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">salt</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">info</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">num\_iterations</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">derived\_key\_sz</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="doECDHAndKDFWithIntPeerPubkey-c33b0f50" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">::</span> <span class="pointer-ref">\*</span><span class="name">doECDHAndKDFWithIntPeerPubkey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">ZK\_ECDH\_KDF\_TYPE</span> <span class="pointer-ref"></span> <span class="name">kdf\_type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">peer\_pubkey\_slot</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span> <span class="name">peer\_pubkey\_slot\_is\_foreign</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">salt</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">info</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">num\_iterations</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">derived\_key\_sz</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="::-doECDHAndKDFWithIntPeerPubkey-c33b0f50" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -934,7 +1075,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">\*</span> <span class="name">getECDSAPubKey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="getECDSAPubKey-baa17d4d" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">::</span> <span class="pointer-ref">\*</span><span class="name">getECDSAPubKey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">slot</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="::-getECDSAPubKey-baa17d4d" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -969,7 +1110,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="pointer-ref">\*</span> <span class="name">exportPubKey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">pubkey\_slot</span> = <span class="default-val">0</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span> <span class="name">slot\_is\_foreign</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="exportPubKey-2bc8a24f" class="markdown-h4 signature include-toc"}
+#### <span><span class="pointer-ref">::</span> <span class="pointer-ref">\*</span><span class="name">exportPubKey</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref"></span> <span class="name">pubkey\_slot</span> = <span class="default-val">0</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">bool</span> <span class="pointer-ref"></span> <span class="name">slot\_is\_foreign</span> = <span class="default-val">0</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="::-exportPubKey-2bc8a24f" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1230,53 +1371,7 @@ toc: true
 <h4 class="context-name">Digital Wallet (BIP32/39/44)</h4>
 <div class="method">
 
-#### <span><span class="returns">int</span>  <span class="pointer-ref"></span> <span class="name">genBIP32WalletMasterSeed</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">ZK\_EC\_KEY\_TYPE</span> <span class="pointer-ref"></span> <span class="name">type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span> <span class="name">wallet\_name</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">master\_generator\_key</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="int--genBIP32WalletMasterSeed-05540bde" class="markdown-h4 signature include-toc"}
-
-<div class="body">
-<div class="description">
-<p>Generate a BIP32 master seed to start a new blockchain wallet. (model &gt;= HSM6).</p>
-<p>This function generates a new blockchain master seed for creating a new wallet per BIP32.</p>
-</div>
-<div class="parameters">
-<h5>Parameters</h5>
-<ul>
-<li class="param-item">
-<span class="name">type</span><span class="param-desc-divider"> &#8212; </span><span class="description">
-<p>The type of key to generate (ZK_EC_KEY_TYPE). {ZK_NISTP256, ZK_SECP256R1 = ZK_NISTP256, ZK_SECP256K1}.</p>
-</span>
-</li>
-<li class="param-item">
-<span class="name">wallet_name</span><span class="param-desc-divider"> &#8212; </span><span class="description">
-<p>An ASCII string which contains the name of the wallet.</p>
-</span>
-</li>
-<li class="param-item">
-<span class="name">master_generator_key</span><span class="param-desc-divider"> &#8212; </span><span class="description">
-<p>The master generator key used to help generate the master seed.</p>
-</span>
-</li>
-</ul>
-</div>
-<div class="exceptions">
-<h5>Exceptions</h5>
-<ul>
-<li class="exc-item">
-<span class="name">zkAppUtilsException</span>
-<span class="description">upon error</span>
-</li>
-</ul>
-</div>
-<div class="returns">
-<h5>Returns</h5>
-<span class="return_value">
-<p>Allocated slot number if successful, less than 0 for failure.</p>
-</span>
-</div>
-</div>
-</div>
-<div class="method">
-
-#### <span><span class="returns">std::string \*</span>  <span class="pointer-ref"></span> <span class="name">genBIP39WalletMasterSeed</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">ZK\_EC\_KEY\_TYPE</span> <span class="pointer-ref"></span> <span class="name">type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span> <span class="name">wallet\_name</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">master\_generator\_key</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">int</span> <span class="pointer-ref">\*</span> <span class="name">slot\_num</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="std::string-genBIP39WalletMasterSeed-aada1e84" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">int</span>  <span class="pointer-ref"></span> <span class="name">genWalletMasterSeed</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">ZK\_EC\_KEY\_TYPE</span> <span class="pointer-ref"></span> <span class="name">type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span> <span class="name">wallet\_name</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation">const</span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">master\_generator\_key</span> <span class="type">zkAppUtils::byteArray</span> = <span class="default-val"></span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation">const</span>  <span class="type">zkAppUtils::recoveryStrategyBaseType</span> <span class="pointer-ref">&amp;</span> <span class="name">recovery\_strategy</span> <span class="type">zkAppUtils::recoveryStrategyBaseType</span> = <span class="default-val"></span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">\*</span> <span class="name">mnemonic</span> = <span class="default-val">new std::string("")</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="int--genWalletMasterSeed-babfef8f" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1298,12 +1393,17 @@ toc: true
 </li>
 <li class="param-item">
 <span class="name">master_generator_key</span><span class="param-desc-divider"> &#8212; </span><span class="description">
-<p>The master generator key used to help generate the master seed.</p>
+<p>The master generator key used to help generate the master seed (bip32). Defaults to empty string.</p>
+</span>
+</li>
+<li class="param-item">
+<span class="name">recovery_strategy</span><span class="param-desc-divider"> &#8212; </span><span class="description">
+<p>The recovery strategy object for returning bip39 or slip39(latter not supported currently). Defaults to no recovery strategy.</p>
 </span>
 </li>
 <li class="param-item">
 <span class="name">(output)</span><span class="param-desc-divider"> &#8212; </span><span class="description">
-<p>Allocated slot number if successful.</p>
+<p>Allocated mnemonic if it was asked for.</p>
 </span>
 </li>
 </ul>
@@ -1311,7 +1411,7 @@ toc: true
 <div class="returns">
 <h5>Returns</h5>
 <span class="return_value">
-<p>A pointer to the bip39 mnemonic sentence.The string is null terminated and encoded in UTF-8 NFKD from the BIP39 Enlish dictionary.</p>
+<p>The slot the master seed was allocated to.</p>
 </span>
 </div>
 </div>
@@ -1364,7 +1464,7 @@ toc: true
 </div>
 <div class="method">
 
-#### <span><span class="returns">int</span>  <span class="pointer-ref"></span> <span class="name">restoreWalletMasterSeedFromBIP39Mnemonic</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">ZK\_EC\_KEY\_TYPE</span> <span class="pointer-ref"></span> <span class="name">type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span> <span class="name">wallet\_name</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">master\_generator\_key</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span> <span class="name">bip39\_mnemonic</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="int--restoreWalletMasterSeedFromBIP39Mnemonic-2b185ae7" class="markdown-h4 signature include-toc"}
+#### <span><span class="returns">int</span>  <span class="pointer-ref"></span> <span class="name">restoreWalletMasterSeedFromMnemonic</span> <span class="param-list"><span class="param-paren paren-open">(</span> <span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">ZK\_EC\_KEY\_TYPE</span> <span class="pointer-ref"></span> <span class="name">type</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span> <span class="name">wallet\_name</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::byteArray</span> <span class="pointer-ref">&amp;</span> <span class="name">master\_generator\_key</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">zkAppUtils::recoveryStrategyBaseType</span> <span class="pointer-ref">&amp;</span> <span class="name">recovery\_strategy</span></span><span class="param-divider">, </span></span><span class="param-item-wrapper"><span class="param"><span class="annotation"></span>  <span class="type">std::string</span> <span class="pointer-ref">&amp;</span> <span class="name">mnemonic</span></span></span><span class="param-paren paren-close">)</span></span></span> {id="int--restoreWalletMasterSeedFromMnemonic-d9a7dfc1" class="markdown-h4 signature include-toc"}
 
 <div class="body">
 <div class="description">
@@ -1390,8 +1490,13 @@ toc: true
 </span>
 </li>
 <li class="param-item">
-<span class="name">bip39_mnemonic</span><span class="param-desc-divider"> &#8212; </span><span class="description">
-<p>The bip39_mnemonic string, null terminated and UTF-8 NFKD encoded from the BIP39 English dictionary.</p>
+<span class="name">recovery_strategy</span><span class="param-desc-divider"> &#8212; </span><span class="description">
+<p>The recovery strategy used.</p>
+</span>
+</li>
+<li class="param-item">
+<span class="name">mnemonic</span><span class="param-desc-divider"> &#8212; </span><span class="description">
+<p>The mnemonic string, null terminated and UTF-8 NFKD encoded from the BIP39 English dictionary.</p>
 </span>
 </li>
 </ul>
@@ -2259,7 +2364,7 @@ toc: true
 <div class="body">
 <div class="description">
 <p>Sets the battery voltage threshold. (model &gt;= HSM6).</p>
-<p>This function sets the threshold at which if the battery voltage falls bellow, the action set by zkSetBatteryVoltageAction will be carried out. The recommended threshold is 2.3V. If this function isn&#8217;t called 2.5V is assumed by default.</p>
+<p>This function sets the threshold at which if the battery voltage falls bellow, the action set by zkSetBatteryVoltageAction will be carried out. The recommended threshold is 2.3V is assumed by default. Threshold must be below 2.5V.</p>
 </div>
 <div class="parameters">
 <h5>Parameters</h5>
