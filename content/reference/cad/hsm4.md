@@ -59,4 +59,4 @@ layout: "single"
 
 ## CAD Graphic Summary
 
-![cad](../cad-summary.jpeg)
+![cad](../HSM-CAD-Summary-20210920a.png)
