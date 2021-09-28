@@ -28,6 +28,7 @@
 @import "pageinfo";
 @import "api";
 @import "callouts";
+@import "resource-links";
 
 @if $td-enable-google-fonts {
     @import url($web-font-path);
