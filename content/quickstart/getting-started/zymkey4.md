@@ -270,9 +270,9 @@ Would you like the ARM I2C interface to be enabled? select  (Yes), enter, enter<
 <a href="https://docs.zymbit.com/quickstart/api">Go to API Documents &gt;</a>  </p>
 
 <h3 id="application-examples">Application Examples</h3>
-<p>The quickest way to get started is to see the various methods at work by running these scripts:
-<code>python /usr/local/share/zymkey/examples/zk_app_utils_test.py</code>
-<code>python /usr/local/share/zymkey/examples/zk_crypto_test.py</code></p>
+<p>The quickest way to get started is to see the various methods at work by running these scripts:</p>
+<p><code>python3 /usr/local/share/zymkey/examples/zk_app_utils_test.py</code></p>
+<p><code>python3 /usr/local/share/zymkey/examples/zk_crypto_test.py</code></p>
 
 <p>More Resources:</p>
 <ul>
