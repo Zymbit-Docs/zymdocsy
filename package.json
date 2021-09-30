@@ -41,7 +41,7 @@
     "markdownlint-cli": "^0.26",
     "mermaid": "^8.9.2",
     "postcss": "^8.2.4",
-    "postcss-cli": "^8.3",
+    "postcss-cli": "^9.0",
     "purgecss-whitelister": "^2.4",
     "rimraf": "^3.0",
     "shx": "^0.3.3",
