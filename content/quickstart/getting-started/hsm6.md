@@ -119,9 +119,11 @@ Before moving on to Production mode, ensure your application is running correctl
 If you have any questions, feel free to create a new post here in the Community and we will get back to you.
 
 
-To test some of the API and see it's functionality, you can also run these pre-installed scripts:
-`python /usr/local/share/zymkey/examples/zk_app_utils_test.py`
-`python /usr/local/share/zymkey/examples/zk_crypto_test.py`
+To test some of the API and see it's functionality, you can also run these pre-installed scripts: 
+
+`python3 /usr/local/share/zymkey/examples/zk_app_utils_test.py`
+
+`python3 /usr/local/share/zymkey/examples/zk_crypto_test.py`
 
 ----------
 ## 7. Production Mode (permanent binding)
