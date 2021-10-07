@@ -1,15 +1,13 @@
 ---
 title: "Tutorials"
-linkTitle: "TUTORIALS"
 description: ""
 date: ""
 lastmod: ""
 draft: false
 images: []
 type: "docs"
-layout: "single"
 weight: -6
-headless: true
+# headless: true
 ---
 
 [Using an Alternative GPIO Pin](https://docs.zymbit.com/tutorials/alternative-gpio/)

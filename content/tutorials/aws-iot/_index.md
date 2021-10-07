@@ -1,7 +1,7 @@
 ---
 title: "AWS IoT Integrations & Client Certificates"
 linkTitle: "Integrate Zymbit with AWS"
-icon: "fas fa-caret-right"
+icon: ""
 description: ""
 date: ""
 lastmod: ""

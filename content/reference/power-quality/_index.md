@@ -1,6 +1,6 @@
 ---
 title: "Power Quality Considerations"
-icon: "fas fa-genderless"
+icon: ""
 description: ""
 date: ""
 lastmod: ""
