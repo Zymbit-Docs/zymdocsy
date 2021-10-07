@@ -1,6 +1,6 @@
 ---
 title: "HSM6 Conformity Documents"
-linkTitle: "HSM6"
+toc_title: "HSM6"
 description: ""
 date: ""
 lastmod: ""

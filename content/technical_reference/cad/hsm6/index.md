@@ -1,13 +1,13 @@
 ---
-title: "HSM4 CAD Files"
-linkTitle: "HSM4"
+title: "HSM6 CAD Files"
+linkTitle: "HSM6"
 description: ""
 date: ""
 lastmod: ""
 draft: false
 images: []
 type: "docs"
-weight: 2
+weight: 3
 layout: "single"
 ---
 
@@ -53,10 +53,9 @@ layout: "single"
 ---
 ## 3D Step Model
 
-[HSM4 Can Assembly REV D 1.0.1.STEP.zip](../zymbit-hsm4.STEP.zip) (378.5 KB)
+[HSM6 Can Assembly REV D 1.0.1.STEP.zip](zymbit-hsm6.STEP.zip) (378.5 KB)
 
 ---
 
 ## CAD Graphic Summary
-
 ![cad](../HSM-CAD-Summary-20210920a.png)
