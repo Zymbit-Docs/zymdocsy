@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with Zymbit Products"
 linkTitle: "Getting Started"
-icon: "fas fa-caret-right"
+icon: ""
 description: ""
 date: ""
 lastmod: ""

@@ -1,6 +1,6 @@
 ---
 title: "Product Briefs"
-icon: "fas fa-caret-right"
+icon: ""
 description: ""
 date: ""
 lastmod: ""

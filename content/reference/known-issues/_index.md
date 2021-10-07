@@ -1,7 +1,6 @@
 ---
-title: "Dev Team: Known Issues"
-linkTitle: "Known Issues"
-icon: "fas fa-caret-right"
+title: "Known Issues"
+icon: ""
 description: ""
 date: ""
 lastmod: ""

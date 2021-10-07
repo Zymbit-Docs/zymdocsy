@@ -1,7 +1,7 @@
 ---
 title: "Using an Alternative GPIO Pin"
 linkTitle: "Alternative GPIO Pin"
-icon: "fas fa-genderless"
+icon: ""
 description: ""
 date: ""
 lastmod: ""

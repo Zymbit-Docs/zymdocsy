@@ -1,7 +1,7 @@
 ---
 title: "API Documentation"
 linkTitle: "API"
-icon: "fas fa-caret-right"
+icon: ""
 description: ""
 date: ""
 lastmod: ""

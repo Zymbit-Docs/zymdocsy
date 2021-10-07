@@ -1,6 +1,6 @@
 ---
 title: "Perimeter Detect"
-icon: "fas fa-caret-right"
+icon: ""
 description: ""
 date: ""
 lastmod: ""
