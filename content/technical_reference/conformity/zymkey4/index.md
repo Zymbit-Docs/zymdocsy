@@ -1,6 +1,6 @@
 ---
 title: "Zymkey4 Conformity Documents"
-linkTitle: "ZYMKEY4"
+toc_title: "Zymkey4"
 description: ""
 date: ""
 lastmod: ""
