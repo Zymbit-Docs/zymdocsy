@@ -83,15 +83,19 @@ In this Getting Started Guide we describe how to install your Zymkey 4i to a Ras
 
 Your Zymkey 4i  can be fitted with a **3V CR1025  coincell** battery that is used to maintain operation of the real-time-clock (RTC) and tamper detect features in the event that main power (from the GPIO header) is lost.
 
-If you choose not to fit a battery, then these important security features will not function in the event main power is removed.
+{{< callout warning >}}
+Battery installation is highly recommended if your device is vulnerable to physical access!
+{{< /callout >}}
 
-**Battery installation is highly recommended if your device is vulnerable to physical access!**
+If you choose not to fit a battery, then these important security features will not function in the event main power is removed.
 
 Use a **high quality 3V CR1025** coincell battery such as the [Panasonic - CR-1025EL, LITHIUM MANGANESE DIOXIDE](https://www.mouser.com/datasheet/2/315/3635_fileversion-1627310.pdf).
 
-**IMPORTANT:** Note the correct polarity with **+ve  facing upwards!!**
+{{< callout notice Important >}}
+Note the correct polarity with **+ve  facing upwards!**
 
 ![Battery Install](ZK4-battery-install.png)
+{{< /callout >}}
 
 
 ---
@@ -100,7 +104,11 @@ Use a **high quality 3V CR1025** coincell battery such as the [Panasonic - CR-10
 
 **Power down your Raspberry Pi or NVIDIA Jetson first!**
 
-**IMPORTANT:** Installing your hardware correctly is important to avoid destroying your SBC or Zymkey. Be sure to follow the images below to ensure the first 10 GPIO pins are correctly aligned with the Zymkey header. Note: the coin cell battery should be facing up.
+{{< callout danger >}}
+Installing your hardware correctly is important to avoid destroying your SBC or Zymkey. Be sure to follow the images below to ensure the first 10 GPIO pins are correctly aligned with the Zymkey header.
+
+Note that the coin cell battery should be facing up.
+{{< /callout >}}
 
 <img src="ZK4-hw-install-1.png" alt="Zymkey RPi Hardware Install" width="50%"><img src="ZK4-hw-install-nvidia-1.png" alt="Zymkey Jetson Hardware Install" width="50%">
 
@@ -114,24 +122,19 @@ Zymkey occupies 10 pins on the GPIO header. It can also be used with other GPIO 
 
 ![Zymkey Pinout](ZK4-pinout.png)
 
+{{< resource_link "tutorials/alternative-gpio" >}}
+The default configuration uses GPIO4. This can be reconfigured to use another GPIO of your choice.
+{{< /resource_link >}}
 
-
-<blockquote>
-<h2 id="using-an-alternative-gpio-pin">Using an alternative GPIO pin</h2>
-<p>The default configuration uses GPIO4. This can be reconfigured to use another GPIO of your choice. 
-<a href="https://docs.zymbit.com/tutorials/alternative-gpio/">**Learn more&gt;**</a></p>
-<h2 id="using-an-alternative-i2c-address">Using an alternative I2C address</h2>
-<p>The default I2C address for Zymkey is 0x30. If this conflicts with another device in your system, you can reconfigure the Zymkey to use another address of your choice.
-<a href="https://docs.zymbit.com/quickstart/faq/zymkey4/#q-how-do-i-set-an-alternative-i2c-address">**Learn more&gt;**</a></p>
-</blockquote>
+{{< resource_link "troubleshooting/zymkey4/#q-how-do-i-set-an-alternative-i2c-address" >}}
+The default I2C address for Zymkey is 0x30. If this conflicts with another device in your system, you can reconfigure the Zymkey to use another address of your choice.
+{{< /resource_link >}}
 
 ---
 
 **Option (RPi):** Using Zymkey with another Pi Plate fitted.
 
 ![Zymkey Pi Plate Fitted](ZK4-pi-fitted.png)
-
-
 
 ### Power On, Confirm Operation {#power-on-confirm-operation}
 
@@ -150,8 +153,9 @@ Finally, power up the device and you will see a blue LED blinking rapidly and co
 
 ### Power Quality {#power-quality}
 
+{{< resource_link "reference/power-quality/" >}}
 Power quality matters to the reliable and secure operation of your system and Zymkey.
-[**Learn more&gt;**](https://docs.zymbit.com/reference/power-quality/)
+{{< /resource_link >}}
 
 ---
 
@@ -173,7 +177,14 @@ Your I2C bus is now configured and ready to talk to the Zymkey. Next install the
 
 The default I2C address for Zymkey is 0x30.
 
-**IMPORTANT: The default mode for the cpu scaling governor is ondemand. There have been some issues with the interaction between the zymkey and the I2C bus, when the governor is set to ondemand. We highly recommend to switching the governor to performance to get the most out of the zymkey. [How to set cpu governor to performance.](https://docs.zymbit.com/reference/known-issues/cpu-scaling/)**
+{{< callout notice >}}
+The default mode for the cpu scaling governor is ondemand. There have been some issues with the interaction between the zymkey and the I2C bus, when the governor is set to ondemand. We highly recommend to switching the governor to performance to get the most out of the zymkey.
+
+{{< /callout >}}
+
+{{< resource_link "reference/known-issues/cpu-scaling/" >}}
+How to set cpu governor to performance.
+{{< /resource_link >}}
 
 ### For NVIDIA Jetson Nano/Xavier {#i2c-jetson}
 
