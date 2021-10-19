@@ -1,6 +1,7 @@
+# Hostname (and path) to the root
 baseurl: "https://docs.zymbit.com"
-disableAliases: true
-disableHugoGeneratorInject: true
+
+# General site configuration
 enableEmoji: true
 enableGitInfo: true
 enableRobotsTXT: true
@@ -59,21 +60,6 @@ taxonomies:
 
 permalinks:
   docs: "/:sections/:slug/"
-
-module:
-  mounts:
-    - source: content
-      target: content
-    - source: assets
-      target: assets
-    - source: layouts
-      target: layouts
-    - source: data
-      target: data
-    - source: static
-      target: static
-    - source: archetypes
-      target: archetypes
 
 # Because this is primarily a docs site, we want all of our pages to use the
 # docs formatting. Normally, the layout is chosen by the name of the first
