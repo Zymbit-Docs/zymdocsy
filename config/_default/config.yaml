@@ -10,7 +10,6 @@ rssLimit: 10
 
 theme:
   - docsy
-  # - docs-theme
 
 outputs:
   home:
@@ -75,3 +74,16 @@ module:
       target: static
     - source: archetypes
       target: archetypes
+
+# Because this is primarily a docs site, we want all of our pages to use the
+# docs formatting. Normally, the layout is chosen by the name of the first
+# directory under `content/`. Since we don't want to have to put `type: docs`
+# in every page or have to put the entire site within a `content/docs/` directory,
+# we can define cascading frontmatter that causes every page below this to
+# inherit `type: docs`
+#
+# Any other key-value pairs added under the `cascade` key will be inherited by
+# every other site page. More information about front matter cascades:
+# https://gohugo.io/content-management/front-matter#front-matter-cascade
+cascade:
+  type: docs
