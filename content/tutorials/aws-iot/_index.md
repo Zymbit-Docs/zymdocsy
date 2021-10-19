@@ -7,5 +7,4 @@ date: ""
 lastmod: ""
 draft: false
 images: []
-layout: "list"
 ---

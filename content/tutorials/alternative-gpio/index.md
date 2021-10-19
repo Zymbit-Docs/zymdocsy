@@ -7,7 +7,6 @@ date: ""
 lastmod: ""
 draft: false
 images: []
-layout: "single"
 toc: true
 ---
 
