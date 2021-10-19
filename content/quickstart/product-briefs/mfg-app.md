@@ -6,8 +6,6 @@ manualLinkTitle: ""
 manualLinkTarget: "_blank"
 date: ""
 draft: false
-weight: -700
+weight: 40
 description: ""
 ---
-
-<p><a href="https://www.zymbit.com/datasheets/manufacturing-appliance-1" target="_blank" rel="noopener noreferrer">Manufacturing Appliance</a></p>

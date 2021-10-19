@@ -6,8 +6,6 @@ manualLinkTitle: ""
 manualLinkTarget: "_blank"
 date: 2020-11-27T00:00:00+01:00
 draft: false
-weight: -770
+weight: 20
 description: ""
 ---
-
-<p><a href="https://www.zymbit.com/datasheets/hsm4" target="_blank" rel="noopener noreferrer">HSM4 Product Brief</a></p>
