@@ -6,7 +6,6 @@ date: ""
 lastmod: ""
 draft: false
 images: []
-layout: "single"
 weight: -690
 toc: true
 ---

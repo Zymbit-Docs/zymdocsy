@@ -5,7 +5,6 @@ lastmod:
 draft: false
 images: []
 api_docs: true
-layout: single
 weight: 1
 toc: true
 ---

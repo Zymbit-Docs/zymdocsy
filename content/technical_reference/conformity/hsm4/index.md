@@ -7,7 +7,6 @@ lastmod: ""
 draft: false
 images: []
 weight: 2
-layout: "single"
 ---
 
 <p><a href="https://www.zymbit.com/wp-content/uploads/2021/05/Zymbit_EU-Declaration-of-Conformity_HSM4_2021.02.pdf" target="_blank" rel="noopener noreferrer"><b>EU</b> Declaration of Conformity</a></p>

@@ -7,7 +7,6 @@ lastmod: ""
 draft: false
 images: []
 weight: 1
-layout: "single"
 ---
 
 ## 3D Step Model

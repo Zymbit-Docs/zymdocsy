@@ -7,7 +7,6 @@ lastmod: ""
 draft: false
 images: []
 weight: 2
-layout: "single"
 ---
 
 ## Altium
