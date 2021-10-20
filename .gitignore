@@ -1,9 +1,12 @@
-functions
-node_modules
-public
-resources
+node_modules/
 
-# Utility files for CI purposes that should be ignored
-.GHA-LOG
-.NEW_COMMIT_MSG
-/.gtm/
+# vim temporary files
+*~
+*.sw?
+
+# system files
+.DS_Store
+
+# IDE files
+.idea
+.vscode
