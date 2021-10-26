@@ -1,11 +1,12 @@
-*.sublime-workspace
+node_modules/
 
-functions
-node_modules
-public
-resources
+# vim temporary files
+*~
+*.sw?
 
-# Utility files for CI purposes that should be ignored
-.GHA-LOG
-.NEW_COMMIT_MSG
-/.gtm/
+# system files
+.DS_Store
+
+# IDE files
+.idea
+.vscode
