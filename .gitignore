@@ -1,4 +1,11 @@
 node_modules/
+package-lock.json
+/tmp
+
+# Hugo
+.hugo_build.lock
+/public
+resources/
 
 # vim temporary files
 *~
@@ -9,4 +16,7 @@ node_modules/
 
 # IDE files
 .idea
-.vscode
+
+# VS Code
+/.vscode/**
+!/.vscode/cspell.json
